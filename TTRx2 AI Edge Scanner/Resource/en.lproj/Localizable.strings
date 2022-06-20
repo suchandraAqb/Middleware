@@ -1,0 +1,951 @@
+/* 
+  Localizable.strings
+  TTRx2 AI Edge Scanner
+
+  Created by Amit Yadav on 17/04/20.
+  Copyright © 2020 AQB Solutions Private Limited. All rights reserved.
+*/
+
+
+
+"Back" = "Back";
+"Welcome" = "Welcome";
+"EnterUsername" = "Please enter username";
+"RememberMe" = "Remember me";
+"EnterPassword" = "Please enter username and password";
+"Password" = "Password";
+"Enter" = "Please enter";
+"SFC" = "Second Factor Code";
+"Username" = "Username";
+"Login" = "Login";
+"ForgotPassword" = "Forgot password";
+"Dashboard" = "Dashboard";
+"Logout" = "Logout";
+"SerialFinder" = "Serial Finder";
+"Receiving" = "Receiving";
+"Inventory" = "Inventory";
+"Transaction" = "Transaction";
+"NoInternet" = "Please check your internet connection..";
+"NoDataFound" = "No data found";
+"LogoutMsg" = "Do you want to Logout?";
+"Error" = "Error";
+"Returns(VRS)"= "Returns(VRS)";
+"Transfer"= "Transfer";
+"Quarantine"= "Quarantine";
+"Destruction"= "Destruction";
+"Dispense"= "Dispense";
+"Manufacturer"= "Manufacturer";
+"CommSerials"= "Commission Serials";
+"Search Shipment" = "Search Shipment";
+"Click camera to scan your receiving items" = "Click camera to scan your receiving items";
+"Search Manually" = "Search Manually";
+"Manual Search" = "Manual Search";
+"Trading Partner" = "Trading Partner";
+"PO#" = "PO#";
+"Shipment Date" = "Shipment Date";
+"Delivery Date" = "Delivery Date";
+"Invoice Number" = "Invoice Number";
+"Order Number" = "Order Number";
+"Release Number" = "Release Number";
+"Search" = "Search";
+"Shipments" = "Shipments";
+"Ship Date" = "Ship Date";
+"Release#" = "Release#";
+"Load more" = "Load more";
+"Select Shipment" = "Select Shipment";
+"Verify Serials" = "Verify Serials";
+"Select Storage" = "Select Storage";
+"Confirm Receiving" = "Confirm Receiving";
+"Shipment" = "Shipment";
+"Invoice#" = "Invoice#";
+"Order#" = "Order#";
+"Not this shipment?" = "Not this shipment?";
+"Scan again" = "Scan again";
+"Do you want to receive this shipment?" = "Do you want to receive this shipment?";
+"Are you sure you want to cancel Receiving" = "Are you sure you want to cancel Receiving";
+"Click on the camera icon to verify the serials" = "Click on the camera icon to verify the serials";
+"Attempt" = "Attempt";
+"Attempt:" = "Attempt:";
+"Verified" = "Verified";
+"Failed" = "Failed";
+"Failed:" = "Failed:";
+"Successfully" = "Successfully";
+"To verify" = "To verify";
+"Select Shelf" = "Select Shelf";
+"Please select a storage area" = "Please select a storage area";
+"Please select a shelf" = "Please select shelf";
+"New Quarantine" = "New Quarantine";
+"Items in Quarantine" = "Items in Quarantine";
+"Storage Area" = "Storage Area";
+"Storage Shelf" = "Storage Shelf";
+"View more" = "View more";
+"Serial Verification" = "Serial Verification";
+"Verification Attempt" = "Verification Attempt";
+"Successfully verified serials" = "Successfully verified serials";
+"Shipment received in" = "Shipment received in";
+"Select from list" = "Select from list";
+"Done" = "Done";
+"Confirm" = "Confirm";
+"Verified Serials" = "Verified Serials";
+"Lot" = "Lot";
+"Status" = "Status";
+"Delete" = "Delete";
+"Sales Order by Picking" = "Sales Order by Picking";
+"Create Sales Order by Picking" = "Create Sales Order by Picking";
+"Picking by Sales Order" = "Picking by Sales Order";
+"Select Vendor" = "Select Vendor";
+"View scanned serials" = "View scanned serials";
+"Serial(s) Verified Successfully." = "Serial(s) Verified Successfully.";
+"Are you sure you want to confirm Receiving" = "Are you sure you want to confirm Receiving";
+"No items found." = "No items found.";
+"View/Edit Details" = "View/Edit Details";
+"Seller Location" = "Seller Location";
+"Other Details" = "Other Details";
+"Shipment Details" = "Shipment Details";
+"Order Date" = "Order Date";
+"Enter Customer Order ID" = "Enter Customer Order ID";
+"Internal Reference Nbr" = "Internal Reference Nbr";
+"Transaction Details" = "Transaction Details";
+"Tracking Number" = "Tracking Number";
+"Shipping Carrier" = "Shipping Carrier";
+"Shipping Method" = "Shipping Method";
+"Lot Based Product" = "Lot Based Product";
+"Add Product" = "Add Product";
+"Add more products" = "Add more products";
+"Lot Number" = "Lot Number";
+"Lot No" = "Lot No";
+"Quantity" = "Quantity";
+"Select Product" = "Select Product";
+"Select Lot No." = "Select Lot No.";
+"Product Lots" = "Product Lots";
+"Filter by Lot Number" = "Filter by Lot Number";
+"Search by NDC" = "Search by NDC";
+"Search by GTIN14" = "Search by GTIN14";
+"There is no lot available for this product" = "There is no lot available for this product";
+"Please select products first." = "Please select products first.";
+"Please select Lot." = "Please select Lot.";
+"Enter quantity more than 0" = "Enter quantity more than 0";
+"Quantity not available. Max available quantity" = "Quantity not available. Max available quantity";
+"Available Qty." = "Available Qty.";
+"Product Lot Breakdown" = "Product Lot Breakdown";
+"Items" = "Items";
+"View Lot Break Down" = "View Lot Break Down";
+"Are you sure you want confirm Picking" = "Are you sure you want confirm Picking";
+"Product Added" = "Product Added";
+"Picking Search" = "Picking Search";
+"Select Location" = "Select Location";
+"Shipment UUID" = "Shipment UUID";
+"Update" = "Update";
+"Update Quantity" = "Update Quantity";
+"Notes" = "Notes";
+"Order No." = "Order No.";
+"Picker" = "Picker";
+"Picking Start" = "Picking Start";
+"Date & Time" = "Date & Time";
+"Picking Details" = "Picking Details";
+"Picking In Progress" = "Picking In Progress";
+"View Picked Items" = "View Picked Items";
+"View SO Items" = "View SO Items";
+"Please scan serials or Add Lot based items before proceed." = "Please scan serials or Add Lot based items before proceeding.";
+"Storage Selection" = "Storage Selection";
+"Partial Picking" = "Partial Picking";
+"Select Storage Area" = "Select Storage Area";
+"Select Lot Storage" = "Select Lot Storage";
+"Shelf" = "Shelf";
+"Products" = "Products";
+"Total Items" = "Total Items";
+"PICK THIS LIST" = "PICK THIS LIST";
+"CONTINUE" = "CONTINUE";
+"All" = "All";
+"To do" = "To do";
+"In Progress" = "In Progress";
+"Do you want to proceed?" = "Do you want to proceed?";
+"Pickings" = "Pickings";
+"Search Quarantine Item" = "Search Quarantine Item";
+"Date" = "Date";
+"Product Name" = "Product Name";
+"Reference#" = "Reference#";
+"Reason" = "Reason";
+"Reference" = "Reference";
+"Items Count" = "Items Count";
+"Products Count" = "Products Count";
+"Un - Quarantine" = "Un - Quarantine";
+"Un-Quarantine" = "Un-Quarantine";
+"General" = "General";
+"Quarantine UUID" = "Quarantine UUID";
+"Preset" = "Preset";
+"Other" = "Other";
+"Choose" = "Choose";
+"Type Reference" = "Type Reference";
+"Un-Quarantine All Remaining Items" = "Un-Quarantine All Remaining Items";
+"Type" = "Type";
+"Product Serials" = "Product Serials";
+"Location" = "Location";
+"Select destination" = "Select destination";
+"items will be put back to inventory" = "items will be put back to inventory";
+"Select Reason" = "Select Reason";
+"Destination Location" = "Destination Location";
+"Quarantine Products" = "Quarantine Products";
+"Some serials did not match exactly but quantity could be found with their Product/Lot combination." = "Some serials did not match exactly but quantity could be found with their Product/Lot combination.";
+"Those items are scanned as Lot based" = "Those items are scanned as Lot based";
+"You are about to delete the resource." = "You are about to delete the resource.";
+"This operation can’t be undone" = "This operation can’t be undone";
+"Proceed to the deletion?" = "Proceed to the deletion?";
+"There are Lot(s) which dont have storage . Please select storage to continue.." = "There are Lot(s) which dont have storage . Please select storage to continue..";
+"There are item(s) attached to this location. Please remove those item(s) first from Items section to change location." = "There are item(s) attached to this location. Please remove those item(s) first from Items section to change location.";
+"Do you want to Un-Quarantine this item?" = "Do you want to Un-Quarantine this item?";
+"Please select item(s) to Un-Quarantine." = "Please select item(s) to Un-Quarantine.";
+"Lot Based Item(s)" = "Lot Based Item(s)";
+"Are you sure you want confirm Un-Quarantine?" = "Are you sure you want confirm Un-Quarantine?";
+"Are you sure you want cancel Un-Quarantine?" = "Are you sure you want cancel Un-Quarantine?";
+"Serial(s) already scanned." = "Serial(s) already scanned.";
+"Container" = "Container";
+"Lot Quantity Updated.." = "Lot Quantity Updated..";
+"No Lot available in the selected location to" = "No Lot available in the selected location to";
+"No Lot available in the selected location." = "No Lot available in the selected location.";
+"Please select different location or remove this lot." = "Please select different location or remove this lot.";
+"Please select/type Un-Quarantine reason." = "Please select/type Un-Quarantine reason.";
+"Are you sure you want cancel Un-Quarantine" = "Are you sure you want cancel Un-Quarantine";
+"Aggregation" = "Aggregation";
+"View Serials" = "View Serials";
+"Un-Quarantine request submitted" = "Un-Quarantine request submitted";
+"Something went wrong.." = "Something went wrong..";
+"Select source" = "Select source";
+"Please select source Location." = "Please select source Location.";
+"Please select destination Location." = "Please select destination Location.";
+"Source and destination location can't be same." = "Source and destination location can't be same.";
+"Please select a Shelf." = "Please select a Shelf.";
+"Please select/type" = "Please select/type";
+"reason." = "reason.";
+"Locations" = "Locations";
+"Are you sure you want cancel" = "Are you sure you want cancel";
+"Source Location" = "Source Location";
+"Adjustment request submitted" = "Adjustment request submitted";
+"Are you sure you want confirm" = "Are you sure you want confirm";
+"Scan Serial(s)" = "Scan Serial(s)";
+"Click camera to scan your items" = "Click camera to scan your items";
+"Shipment PDF" = "Shipment PDF";
+"Finder" = "Finder";
+"Serial Finder" = "Serial Finder";
+"Products Perspective" = "Products Perspective";
+"Products in all shipments" = "Products in all shipments";
+"Serial Based" = "Serial Based";
+"Lot Based" = "Lot Based";
+"Scanned List" = "Scanned List";
+"List View" = "List View";
+"Product View" = "Product View";
+"Serial Details" = "Serial Details";
+"Event Log" = "Event Log";
+"Download" = "Download";
+"Search Filter" = "Search Filter";
+"Product GS1 ID" = "Product GS1 ID";
+"Product GS1 Company Prefix" = "Product GS1 Company Prefix";
+"Transaction Type" = "Transaction Type";
+"Advance Search" = "Advance Search";
+"Clear" = "Clear";
+"View Serial List" = "View Serial List";
+"Not all items are picked for this shipment. You can save as a partial picking and continue picking for this order later, or return and continue picking." = "Not all items are picked for this shipment. You can save as a partial picking and continue picking for this order later, or return and continue picking.";
+"If the item to pick is not present, you must update the shipment and reduce the quantity to ship in order to ship the shipment." = "If the item to pick is not present, you must update the shipment and reduce the quantity to ship in order to ship the shipment.";
+"Return Manager" = "Return Manager";
+"Continue" = "Continue";
+"This will keep the return operation open, and will allow-you to resume it later." = "This will keep the return operation open, and will allow-you to resume it later.";
+"Void Return" = "Void Return";
+"This operation will void the return event." = "This operation will void the return event.";
+"Go back to the Return Merchandise and allow you to continue to process the return." = "Go back to the Return Merchandise and allow you to continue to process the return.";
+"Product Summary" = "Product Summary";
+"To returned" = "To returned";
+"Search by RMA Number" = "Search by RMA Number";
+"View outbound shipment line items" = "View outbound shipment line items";
+"Outbound Shipment Details" = "Outbound Shipment Details";
+"Custom Order ID" = "Custom Order ID";
+"Internal Ref. Nbr" = "Internal Ref. Nbr";
+"Customer Details" = "Customer Details";
+"Product UUID" = "Product UUID";
+"View all products summary" = "View all products summary";
+"General Info" = "General Info";
+"Scan Serials" = "Scan Serials";
+"Return Summery" = "Return Summery";
+"Confirm Return" = "Confirm Return";
+"Return Shipment" = "Return Shipment";
+"Reception Date" = "Reception Date";
+"Time" = "Time";
+"General condition of received shipment" = "General condition of received shipment";
+"Type notes" = "Type notes";
+"Valid" = "Valid";
+"Invalid" = "Invalid";
+"Pending" = "Pending";
+"Removed" = "Removed";
+"View Verfied Serials" = "View Verfied Serials";
+"Return Items" = "Return Items";
+"Items Resalable" = "Items Resalable";
+"items will be quarantined" = "items will be quarantined";
+"Items not Resalable" = "Items not Resalable";
+"items which are not resalable will be destructed" = "items which are not resalable will be destructed";
+"Reception Date&Time" = "Reception Date&Time";
+"View Outbound Shipment Details" = "View Outbound Shipment Details";
+"Are you sure you want to proceed with this shipment?" = "Are you sure you want to proceed with this shipment?";
+"Shipment UUID not found." = "Shipment UUID not found.";
+"Return UUID not found." = "Return UUID not found.";
+"Please select Reception Date." = "Please select Reception Date.";
+"Please select shipment condition." = "Please select shipment condition.";
+"No Shipping method found." = "No Shipping method found.";
+"Shipment Condition" = "Shipment Condition";
+"Shipment date can't before Order Date" = "Shipment date can't before Order Date";
+"Please scan serial(s) first." = "Please scan serial(s) first.";
+"Please select a Location." = "Please select a Location.";
+"Please select/type quarantine reason." = "Please select/type quarantine reason.";
+"Please select/type destruction reason." = "Please select/type destruction reason.";
+"Return request submitted" = "Return request submitted";
+"Are you sure you want confirm Return?" = "Are you sure you want confirm Return?";
+"Your shipment has been Voided" = "Your shipment has been Voided";
+"Filter serials by Status" = "Filter serials by Status";
+"Serial successfully removed." = "Serial successfully removed.";
+"Resalable" = "Resalable";
+"Not Resalable" = "Not Resalable";
+"Product" = "Product";
+"Scan" = "Scan";
+"Save" = "Save";
+"Message..." = "Message...";
+"Message Title..." = "Message Title...";
+"Do you want to remove this message from default?" = "Do you want to remove this message from default?";
+"Do you want to make this your default scan message?" = "Do you want to make this your default scan message?";
+
+//inventory
+"Scan a Container" = "Scan a Container";
+"Items in Inventory" = "Items in Inventory";
+"View the inventory of each item" = "View the inventory of each item";
+"Inventory Count" = "Inventory Count";
+"Container Management" = "Container Management";
+"View the content of a specific container, from it’s Unique Serial. From there, you can add and/or remove content" = "View the content of a specific container, from it’s Unique Serial. From there, you can add and/or remove content";
+"Scanned Summary" = "Scanned Summary";
+"Print" = "Print";
+"Export" = "Export";
+"Container List" = "Container List";
+"View" = "View";
+"Edit" = "Edit";
+"Package Type" = "Package Type";
+"Have Parent" = "Have Parent";
+"View Container" = "View Container";
+"Unique Serial" = "Unique Serial";
+"Container Type" = "Container Type";
+"Stroge Shelf" = "Stroge Shelf";
+"Advanced Option" = "Advanced Option";
+"Disposition" = "Disposition";
+"Business Step" = "Business Step";
+"Edit Container" = "Edit Container";
+"Delete Container" = "Delete Container";
+"Replace Container" = "Replace Container";
+"Delete All Remaining Items" = "Delete All Remaining Items";
+"Remove items" = "Remove items";
+"Move the items to a different existing container" = "Move the items to a different existing container";
+"Destination GS1 Container Unique Serial" = "Destination GS1 Container Unique Serial";
+"Enter GS1 Serial" = "Enter GS1 Serial";
+"Move the items to a storage area/shelf" = "Move the items to a storage area/shelf";
+"Add" = "Add";
+"Generate & Commission Serials" = "Generate & Commission Serials";
+"Request New Container Serials" = "Request New Container Serials";
+"Requested on" = "Requested on";
+"Qty. Generated" = "Qty. Generated";
+"Qty. Commissioned" = "Qty. Commissioned";
+"Request New Serials" = "Request New Serials";
+"Enter Quantity" = "Enter Quantity";
+"Newly commissioned serials must be stored in" = "Newly commissioned serials must be stored in";
+"Confirm Request" = "Confirm Request";
+"View Generated Serials" = "View Generated Serials";
+"GS1 Serial" = "GS1 Serial";
+"GS1 Barcode" = "GS1 Barcode";
+"Simple Serial" = "Simple Serial";
+"Origin Container" = "Origin Container";
+"Destination Container" = "Destination Container";
+"Confirm Container" = "Confirm Container";
+"Click camera to scan your Destination Container" = "Click camera to scan your Destination Container";
+"View Details" = "View Details";
+"Enter Serial" = "Enter Serial";
+"Enter GS1 ID" = "Enter GS1 ID";
+"Click on the camera to scan items to add in Container" = "Click on the camera to scan items to add in Container";
+"Are you sure you want to cancel Replace Container" = "Are you sure you want to cancel Replace Container";
+"Are you sure you want to confirm Replace Container" = "Are you sure you want to confirm Replace Container";
+"Please scan Destination Container before proceed." = "Please scan Destination Container before proceeding.";
+"Lot Products" = "Lot Products";
+"Lot Product" = "Lot Product";
+"Please enter Container Unique Serial." = "Please enter Container Unique Serial.";
+"Please enter GS1 Serial." = "Please enter GS1 Serial.";
+"Please select Container Type." = "Please select Container Type.";
+"Please select Location." = "Please select Location.";
+"Please select Storage Area." = "Please select Storage Area.";
+"Please select Shelf." = "Please select Shelf.";
+"Please select Disposition." = "Please select Disposition.";
+"Please select Business Step." = "Please select Business Step.";
+"Are you sure you want to delete this Container?" = "Are you sure you want to delete this Container?";
+"Please select at least one item" = "Please select at least one item";
+"Lot Based Item" = "Lot Based Item";
+"Please select a Location" = "Please select a Location";
+"Please enter Destination GS1 Container Unique Serial." = "Please enter Destination GS1 Container Unique Serial.";
+"Please try again later." = "Please try again later.";
+"Are you sure you want to remove this serial request?" = "Are you sure you want to remove this serial request?";
+"Pull to refresh" = "Pull to refresh";
+"Request Deleted." = "Request Deleted.";
+"Please select destination Location" = "Please select destination Location";
+"Please enter quantity." = "Please enter quantity.";
+"Generating Commissioning Serials" = "Generating Commissioning Serials";
+"You can safely dismiss this box, this operation will be handled in the background" = "You can safely dismiss this box, this operation will be handled in the background";
+"Are you sure you want cancel Serial Generation Request" = "Are you sure you want cancel Serial Generation Request";
+"Looks into containers" = "Looks into containers";
+"Replace a container" = "Replace a container";
+"Replace existing container(s)" = "Replace existing container(s)";
+"Generate and commission container" = "Generate and commission container";
+"Generate Serial Numbers for new Containers" = "Generate Serial Numbers for new Containers";
+"Delete an existing container, from it’s Unique Serial." = "Delete an existing container, from it’s Unique Serial.";
+"Container not found." = "Container not found.";
+"Please scan some serials and try again later." = "Please scan some serials and try again later.";
+"Delete container" = "Delete container";
+"Product is not valid" = "Product is not valid";
+"failed to removed" = "failed to removed";
+"Device Blocked" = "Device Blocked";
+"Would you like to enroll this device?" = "Would you like to enroll this device?";
+"Enroll Your Device" = "Enroll Your Device";
+"ENROLL NOW" = "ENROLL NOW";
+"Would you like to update the App?" = "Would you like to update the App?";
+"App Update Available" = "App Update Available";
+"UPDATE NOW" = "UPDATE NOW";
+"Please update the App to continue?" = "Please update the App to continue?";
+"App Update Required" = "App Update Required";
+"This container cannot be deleted because it’s not empty" = "This container cannot be deleted because it’s not empty";
+"Container will be updated." = "Container will be updated.";
+"The system will process the request in the background." =  "The system will process the request in the background.";
+"View Existing Items" = "View Existing Items";
+"Warning!" = "Warning!";
+"Information!" = "Information!";
+"Please select your default message before scan." = "Please select your default message before scan.";
+"Are you sure you want to delete this message?" = "Are you sure you want to delete this message?";
+"Title can't be blank." = "Title can't be blank.";
+"Message can't be blank." = "Message can't be blank.";
+"Please choose your color." = "Please choose your color.";
+"Manufacturer Lots" = "Manufacturer Lots";
+"Add Lot" = "Add Lot";
+"Closed" = "Closed";
+"Created" = "Created";
+"Production Date" = "Production Date";
+"Open" = "Open";
+"Voided" = "Voided";
+"Add Lot Based Lot" = "Add Lot Based Lot";
+"Add Serial Based Lot" = "Add Serial Based Lot";
+"View Serial Request" = "View Serial Request";
+"This Lot is open" = "This Lot is open";
+"Sell By Date" = "Sell By Date";
+"Best By Date" = "Best By Date";
+"Add Serial Request" = "Add Serial Request";
+"Quantity to generate" = "Quantity to generate";
+"You can’t edit this field later. You can void serial generated or do an other request for serial generation." = "You can’t edit this field later. You can void serial generated or do an other request for serial generation.";
+"Note:" = "Note:";
+"Requested Serial List" = "Requested Serial List";
+"View/Download Serials" = "View/Download Serials";
+"GS1 Serials URI" = "GS1 Serials URI";
+"GS1 Barcode Format" = "GS1 Barcode Format";
+"Simple Serials Only" = "Simple Serials Only";
+"View Manufacturer Lot" = "View Manufacturer Lot";
+"Edit Manufacturer Lot" = "Edit Manufacturer Lot";
+"Lot Added Successfully" = "Lot Added Successfully";
+"Lot Updated Successfully" = "Lot Updated Successfully";
+"Please enter Lot." = "Please enter Lot.";
+"Please enter quantity more than 0" = "Please enter quantity more than 0";
+"Please select production date." = "Please select production date.";
+"Please select expiration date." = "Please select expiration date.";
+"Expiration date can not be before production date." = "Expiration date can not be before production date.";
+"Expiration date can not be before best by date." = "Expiration date can not be before best by date.";
+"Expiration date can not be before sell by date." = "Expiration date can not be before sell by date.";
+"Best by date can not be before production date." = "Best by date can not be before production date.";
+"Sell by date can not be before production date." = "Sell by date can not be before production date.";
+"Are you sure you want to confirm" = "Are you sure you want to confirm";
+"Are you sure you want to cancel" = "Are you sure you want to cancel";
+"Completed" = "Completed";
+"Lot Based Confirmation" = "Lot Based Confirmation";
+"Once the operation is done, do you want to close the lot?" = "Once the operation is done, do you want to close the lot?";
+"By closing the lot, the lot won’t be editable anymore. However, by keeping the lot open, that will allow possible to make potential manipulation errors. What should be done?" = "By closing the lot, the lot won’t be editable anymore. However, by keeping the lot open, that will allow possible to make potential manipulation errors. What should be done?";
+"Continue and keep the lot open" = "Continue and keep the lot open";
+"Continue and close the lot" = "Continue and close the lot";
+"This operation will create new lot based items and will be immediately available to the inventory. Only increase of quantity is allowed" = "This operation will create new lot based items and will be immediately available to the inventory. Only increase of quantity is allowed";
+"Since the effect is immediate, there is no way to delete this lot excepted by destroying the product from inventory." = "Since the effect is immediate, there is no way to delete this lot excepted by destroying the product from inventory.";
+"Since it’s a Lot Based Quantity, no serial will be emitted." = "Since it’s a Lot Based Quantity, no serial will be emitted.";
+"Continue?" = "Continue?";
+"Add Serialized Lot" = "Add Serialized Lot";
+
+//items in inventory
+"Lot Type" = "Lot Type";
+"In stock" = "In stock";
+"Avail Qty" = "Avail Qty";
+"Generic Name" = "Generic Name";
+"GS1 Company Prefix" = "GS1 Company Prefix";
+"View Lot" = "View Lot";
+"View Inventory" = "View Inventory";
+"View Inventory per location" = "View Inventory per location";
+"Inbound Shipments" = "Inbound Shipments";
+"Outbound Shipments" = "Outbound Shipments";
+"Product Lot Location" = "Product Lot Location";
+"Lot Inventory Details" = "Lot Inventory Details";
+"Inventory Summary" = "Inventory Summary";
+"Stock" = "Stock";
+"Items not available" = "Items not available";
+"Available" = "Available";
+"Allocated" = "Allocated";
+"Locked" = "Locked";
+"To be received" = "To be received";
+"Total items not available" = "Total items not available";
+"View Lots" = "View Lots";
+"Edit Lot" = "Edit Lot";
+"Enter Lot Number" = "Enter Lot Number";
+"Global" = "Global";
+"Lot in Storage Area" = "Lot in Storage Area";
+"Item(s) is pending for verifications." = "Item(s) is pending for verifications.";
+"Lots to Commission" = "Lots to Commission";
+"Commission GS1 Serials" = "Commission GS1 Serials";
+"Serial Count" = "Serial Count";
+"Uncommissioned Serials" = "Uncommissioned Serials";
+"Commission" = "Commission";
+"Lock" = "Lock";
+"Lot#" = "Lot#";
+"Commission Serials" = "Commission Serials";
+"Click on the camera icon to scan serials to Commission" = "Click on the camera icon to scan serials to Commission";
+"Set the commissioned into" = "Set the commissioned into";
+"Close the related lot(s) after commissioning the serials" = "Close the related lot(s) after commissioning the serials";
+"Once closed, the lot cannot be re-opened. Are you sure you want to close this lot?" = "Once closed, the lot cannot be re-opened. Are you sure you want to close this lot?";
+"Closing Lot" = "Closing Lot";
+"Please scan serial before proceed." = "Please scan serial before proceeding.";
+"Serial(s) Scanned Successfully." = "Serial(s) Scanned Successfully.";
+"Close the lot after commissioning the serials" = "Close the lot after commissioning the serials";
+"Password Need to Update" = "Password Need to Update";
+"Enter Old Password" = "Enter Old Password";
+"Enter New Password" = "Enter New Password";
+"Old and New Password can't be same." = "Old and New Password can't be same.";
+"Note" = "Note";
+"This process may take some time to complete. Please check after some time." = "This process may take some time to complete. Please check after some time.";
+"Perform VRS Verification" = "Perform VRS Verification";
+
+///RETURN MANAGER
+"Select Product Type" = "Select Product Type";
+"OK" = "OK";
+
+//DEMO SMART BARCODE SCANNING
+"Verification process is only applicable to serialized product." = "Verification process is only applicable to serialized product.";
+
+//Missing/Stolen
+"Missing / Stolen" = "Missing / Stolen";
+"Delete this inbound" = "Delete this inbound";
+"Delete Inbound Shipment" = "Delete Inbound Shipment";
+"Deleting this inbound transaction will unload the content of this shipment from the data, and remove the shipment. The sender of the data won't be notified." = "Deleting this inbound transaction will unload the content of this shipment from the data, and remove the shipment. The sender of the data won't be notified.";
+"Delete Associated Inbound Transaction" = "Delete Associated Inbound Transaction";
+"Check this box to delete the inbound transaction associated to this shipment. The shipment must have only one transaction, and the transaction must have no other inbound shipments, otherwise the option will be rejected." = "Check this box to delete the inbound transaction associated to this shipment. The shipment must have only one transaction, and the transaction must have no other inbound shipments, otherwise the option will be rejected.";
+"Delete Shipment" = "Delete Shipment";
+"Events" = "Events";
+"My Account" = "My Account";
+"Inbounds" = "Inbounds";
+"outbounds" = "outbounds";
+"Inbound Failed Serials" = "Inbound Failed Serials";
+"You are about to delete this entry from database?" = "You are about to delete this entry from database?";
+
+//Failed Items
+"Serial Number" = "Serial Number";
+"Failed Reason" = "Failed Reason";
+"Are you sure you want to delete the failed item details?" = "Are you sure you want to delete the failed item details?";
+
+//,,,sb8
+//FinderViewController
+"Augmented Reality Viewer" = "Augmented Reality Viewer";
+"Start" = "Start";
+"With no filters" = "With no filters";
+"Filters" = "Filters";
+"Look With" = "Look With";
+"Products who are about to expire" = "Products who are about to expire";
+"Last used A/R Filters" = "Last used A/R Filters";//,,,sb-lang1
+"Last used AR filter deleted successfully" = "Last used AR filter deleted successfully";//,,,sb11-11
+"Do you want to delete last used AR filter?" = "Do you want to delete last used AR filter?";//,,,sb11-11
+//,,,sb8
+
+//,,,sb-lang1
+//AugmentedReality.storyboard
+//ARExportProductFirstViewController
+"Export Products Found" = "Export Products Found";
+"Export Options" = "Export Options";
+"Summary Count of the product found" = "Summary Count of the product found";
+"Include counts per lot found" = "Include counts per lot found";
+"List of Serials found, with the lot number" = "List of Serials found, with the lot number";
+"Include product information on every row" = "Include product information on every row";
+"Format of the serial numbers" = "Format of the serial numbers";
+"Simple Format" = "Simple Format";
+"GS1 URN (if available)" = "GS1 URN (if available)";
+"Include the content of the RAW barcode read" = "Include the content of the RAW barcode read";
+"Data exported successfully" = "Data exported successfully";
+"File Type" = "File Type";//,,,sb10
+
+//ARExportProductSecondViewController
+"Export Products Found Details" = "Export Products Found Details";
+"For Product" = "For Product";
+"Summary Count of the lots found" = "Summary Count of the lots found";
+
+//ARExportProductThirdViewController
+"For Lot" = "For Lot";
+
+//ScanViewController
+
+//ARSFFilterViewController
+"Filters for Augmented Reality Viewer" = "Filters for Augmented Reality Viewer";
+"Create a new filter" = "Create a new filter";
+"Existing Preset A/R Filters" = "Existing Preset A/R Filters";
+"No Data Found" = "No Data Found";//,,,sb11-11
+
+//ARSFCreateNewFilterViewController
+"Create a new Filter" = "Create a new Filter";
+"General" = "General";//,,,sb11-11
+"Criterias" = "Criterias";
+"Add Criteria" = "Add Criteria";
+"Save this file as a preset" = "Save this filter as a preset";//,,,sb11-11
+"Save this filter as a preset" = "Save this filter as a preset";//,,,sb11-11
+"If you don’t save this filter as a preset, it’s will be discarded at the end." = "If you don’t save this filter as a preset, it’s will be discarded at the end.";
+"Description" = "Description";
+"Short Description" = "Short Description";//,,,sb11-11
+"Options" = "Options";
+"Handle Multiple Criteria as cumulative conditions (as “AND”)" = "Handle Multiple Criteria as cumulative conditions (as “AND”)";
+"When enabled, all conditions must be filtered in. When disabled, only one condition need to be meet in order to be filtered in." = "When enabled, all conditions must be filtered in. When disabled, only one condition need to be meet in order to be filtered in.";
+"Check in the aggregation" = "Check in the aggregation";
+"When enabled, the system will also look on the aggregation data who is held into the system." = "When enabled, the system will also look on the aggregation data who is held into the system.";
+"Company Wide search filter" = "Company Wide search filter";
+"When enabled, this parameter make the search filter available to" = "When enabled, this parameter make the search filter available to";
+"Manage Access" = "Manage Access";
+"Type:" = "Type:";//,,,sb11-11
+"Match Type:" = "Match Type:";//,,,sb11-11
+"Value to Match Type:" = "Value to Match Type:";//,,,sb11-11
+"You can delete criterias by a swipe." = "You can delete criterias by a swipe.";//,,,sb11-11
+"Edit Filter" = "Edit Filter";//,,,sb11-11
+"Duplicate Filter" = "Duplicate Filter";//,,,sb11-11
+"The criteria you are set will be removed once you exit the page. Do you want to exit?" = "The criteria you are set will be removed once you exit the page. Do you want to exit?";//,,,sb11-11
+"By not saving as a preset, the criteria you are set will be discarded once you will be done with this search. Continue?" = "By not saving as a preset, the criteria you are set will be discarded once you will be done with this search. Continue?";//,,,sb11-11
+"Please add criteria" = "Please add criteria";//,,,sb11-11
+"Please enter name" = "Please enter name";//,,,sb11-11
+"Value to match:" = "Value to match:";//,,,sb11-11
+"Existing preset AR filter deleted successfully" = "Existing preset AR filter deleted successfully";//,,,sb11-11
+"Do you want to delete existing preset filter?" = "Do you want to delete existing preset filter?";//,,,sb11-11
+
+//ARSFTextBasedCriteriaViewController
+"Edit a filter" = "Edit a filter";
+"Match Type" = "Match Type";
+"Value to match" = "Value to match";
+"Case-sensitive match" = "Case-sensitive match";
+"Delete Criteria" = "Delete Criteria";
+"Please enter value to match." = "Please enter value to match.";//,,,sb11-11
+
+//ARSFDateBoundaryCriteriaViewController
+"Days" = "Days";
+"Start Date" = "Start Date";//,,,sb11-11
+"End Date" = "End Date";//,,,sb11-11
+"Please enter days." = "Please enter days.";//,,,sb11-11
+"Please enter start date." = "Please enter start date.";//,,,sb11-11
+"Please enter end date." = "Please enter end date.";//,,,sb11-11
+"Please enter date." = "Please enter date.";//,,,sb11-11
+
+//ARSFBooleanBasedCriteriaViewController
+
+//ARSFCategoryCriteriaViewController
+"Categories" = "Categories";
+"Please select category." = "Please select category.";//,,,sb11-11
+"Please select match type." = "Please select match type.";//,,,sb11-11
+"Criteria Added" = "Criteria Added";//,,,sb11-11
+"Criteria Edited" = "Criteria Edited";//,,,sb11-11
+
+//ARSFStatusCriteriaViewController
+"Product Status" = "Product Status";
+"Please select status." = "Please select status.";//,,,sb11-11
+
+//ARSFAddCriteriaSelectionViewController
+"Select the new criteria to add" = "Select the new criteria to add";
+
+//ARSFCardViewController
+"Products who are about to expire" = "Products who are about to expire";
+"Find only the products who will expire in 90 days or less, from today." = "Find only the products who will expire in 90 days or less, from today.";
+"Company-Level Preset" = "Company-Level Preset";
+"Edit filter preset" = "Edit filter preset";
+"You can’t update this filter preset because it’s an company-level filter and you don’t have the required permissions to make changes to it." = "You can’t update this filter preset because it’s an company-level filter and you don’t have the required permissions to make changes to it.";
+"You can’t delete this filter preset because it’s a company-level filter and you don’t have the required permissions to delete to it." = "You can’t delete this filter preset because it’s a company-level filter and you don’t have the required permissions to delete to it.";
+"Create a new preset from this preset" = "Create a new preset from this preset";
+"Create a new filter preset by copying this selected filter preset." = "Create a new filter preset by copying this selected filter preset.";
+"Start the augmented reality viewer with this filter." = "Start the augmented reality viewer with this filter.";
+"View filter preset" = "View filter preset";
+"Edit name, short description, criterias etc. of selected filter preset." = "Edit name, short description, criterias etc. of selected filter preset.";//,,,sb11-11
+"Delete selected filter preset. This action is not reversible." = "Delete selected filter preset. This action is not reversible.";//,,,sb11-11
+
+//ARSFProductFoundListViewController
+"Products Found" = "Products Found";
+"lot" = "lot";
+"lots" = "lots";
+"Unit found in" = "Unit found in";
+"Units found in" = "Units found in";
+"Products are either Not found or Non-serialized" = "Products are either Not found or Non-serialized";
+"Lot based data found in scanned result but serial finder is not compatible with lot based data." = "Lot based data found in scanned result but serial finder is not compatible with lot based data.";
+"You are about to delete the product with lots and serials?" = "You are about to delete the product with lots and serials?";
+"Confrimation" = "Confirmation";//,,,sb11-11
+"No Product Found" = "No Product Found";
+"Remove" = "Remove";//,,,sb10
+
+//ARSFProductFoundDetailsViewController
+"Products found details" = "Products found details";
+"You are about to delete the lot?" = "You are about to delete the lot?";
+"Lot Number" = "Lot Number";//,,,sb10
+"Quantity" = "Quantity";//,,,sb10
+"Do you want to delete selected products ?" = "Do you want to delete selected products ?";//,,,sb11-11
+
+//ARSFProductFoundSerialListViewController
+"Serial list of a product found" = "Serial list of a product found";
+"You are about to delete the serial?" = "You are about to delete the serial?";
+"View Event Log" = "View Event Log";//,,,sb10
+
+//ARSFManageAccessViewController
+"Manage access to this filter" = "Manage access to this filter";
+"Delete Selected Access" = "Delete Selected Access";
+
+//ARSFAddAccessViewController
+"Users" = "Users";
+"Roles" = "Roles";
+"Add access to this filter" = "Add access to this filter";
+
+//ARExportProductDownloadableFilesController
+"Download Products" = "Download Products";//,,,sb8
+"Display Name" = "Display Name";
+"Created On" = "Created On";
+"COMPLETED" = "COMPLETED";
+"FAILED" = "FAILED";
+"QUEUED" = "QUEUED";
+"QUEQED" = "QUEUED";
+"Do you want to delete selected products ?" = "Do you want to delete selected products ?";//,,,sb11-11
+
+//ARExportProductDownloadViewController
+"PDF" = "PDF";
+
+//ARSFProductNotFoundListViewController
+"Please enter all product names." = "Please enter all product names.";
+"Enter the product name" = "Enter the product name";
+"ENTER ALL PRODUCT NAMES :" = "ENTER ALL PRODUCT NAMES :";//,,,sb11-11
+"ENTER PRODUCT NAME :" = "ENTER PRODUCT NAME :";//,,,sb11-11
+"Product name already exist" = "Product name already exist";
+"Product Not Found" = "Product Not Found";
+"Product name: " = "Product name: ";
+"Product UUID: " = "Product UUID: ";
+"Simple serial: " = "Simple serial: ";
+"GS1 serial: " = "GS1 serial: ";
+"Product gtin14: " = "Product gtin14: ";
+"Lot number: " = "Lot number: ";
+"Status: " = "Status: ";
+"Expiration date: " = "Expiration date: ";
+"Product Not Found List" = "Product Not Found List";
+"GTIN" = "GTIN";
+"Serial #" = "Serial #";
+"Product Addition" = "Product Addition";
+"GTIN14 :" = "GTIN14 :";
+"LOT NUMBER :" = "LOT NUMBER :";
+"SERIAL NUMBER :" = "SERIAL NUMBER :";
+"EXPIRATION DATE :" = "EXPIRATION DATE :";
+"ENTER PRODUCT NAME :" = "ENTER PRODUCT NAME :";
+"Not Found" = "Not Found";
+"Edit All" = "Edit All";//,,,sb11-11
+"Product name" = "Product name";//,,,sb11-11
+"Simple serial" = "Simple serial";//,,,sb11-11
+"GS1 serial" = "GS1 serial";//,,,sb11-11
+"Product gtin14" = "Product gtin14";//,,,sb11-11
+"Lot number" = "Lot number";//,,,sb11-11
+"Expiration date" = "Expiration date";//,,,sb11-11
+
+//,,,sb10
+//ARExportProductDownloadableSearchViewController
+"Select Date Filter" = "Select Date Filter";
+"Select Date" = "Select Date";
+"From Date" = "From Date";
+"To Date" = "To Date";
+"On" = "On";
+"Before" = "Before";
+"Range" = "Range";
+"After" = "After";
+//,,,sb10
+//,,,sb-lang1
+
+//ARSFFilterSearchViewController //,,,sb11-11
+"Short Description" = "Short Description";//,,,sb11-11
+
+//,,,sb-lang2
+//ScanViewController
+"serial will be removed" = "serial will be removed";
+"serials will be removed" = "serials will be removed";
+"serial scanned" = "serial scanned";
+"serials scanned" = "serials scanned";
+"found" = "found";
+"items" = "items";
+"Item" = "Item";
+"Add items to your list" = "Add items to your list";
+"Alert" = "Alert";
+"Are you sure you want to delete all items?" = "Are you sure you want to delete all items?";
+"Are you sure want to cancel scanning?" = "Are you sure want to cancel scanning?";
+"Are you sure you want to delete this item?" = "Are you sure you want to delete this item?";
+"Not a valid Product" = "Not a valid Product";
+"Scanned Code is not valid. Please try again later." = "Scanned Code is not valid. Please try again later.";
+"Do you want to proceed with this Return?" = "Do you want to proceed with this Return?";
+"Do you want to proceed with this Code?" = "Do you want to proceed with this Code?";
+"Confirmation" = "Confirmation";
+"No" = "No";
+"Yes" = "Yes";
+"Not a valid url. Please try again." = "Not a valid url. Please try again.";
+"Do you want to proceed with this url?" = "Do you want to proceed with this url?";
+"List Scan" = "List Scan";
+"Clear All" = "Clear All";
+
+//Picking.storyboard
+//SelectCustomerViewController
+"Please select customer first." = "Please select customer first.";
+"Select search type" = "Select search type";
+"Name" = "Name";
+"Search by Name" = "Search by Name";
+"Customer ID" = "Customer ID";
+"Search by Customer ID" = "Search by Customer ID";
+"GS1 ID" = "GS1 ID";
+"Search by GS1 ID" = "Search by GS1 ID";
+"Cancel" = "Cancel";
+"Are you sure you want cancel Picking" = "Are you sure you want cancel Picking";
+"CUST ID: " = "CUST ID: ";
+"GLN: " = "GLN: ";
+"Picking" = "Picking";
+"Select Customer" = "Select Customer";
+"Picking Items" = "Picking Items";
+"Confirm Picking" = "Confirm Picking";
+"Start Typing.." = "Start Typing..";
+
+//PickingScanItemsViewController
+"No scanned serials found." = "No scanned serials found.";
+"Item is already picked" = "Item is already picked";
+"Serial(s) Failed to Verify." = "Serial(s) Failed to Verify.";
+" Lot Products" = " Lot Products";
+" Lot Product" = " Lot Product";
+" Serials" = " Serials";
+" Serial" = " Serial";
+"Please scan serials before proceeding." = "Please scan serials before proceeding.";
+"Click camera to scan your picking items" = "Click camera to scan your picking items";
+"Single Scan" = "Single Scan";
+"Multiple Scan" = "Multiple Scan";
+"or" = "or";
+"Add Lot Based Product" = "Add Lot Based Product";
+"View Verified Serials" = "View Verified Serials";
+"Failed Items" = "Failed Items";
+"View Items" = "View Items";
+
+//AddressDetailsViewController
+"Seller Address" = "Seller Address";
+"Sold By" = "Sold By";
+"Ship From" = "Ship From";
+"Trading Partner Address" = "Trading Partner Address";
+"Sold To" = "Sold To";
+"Ship To" = "Ship To";
+"Edit Trading Partner Address" = "Edit Trading Partner Address";
+"Brought By" = "Brought By";
+"Select Address" = "Select Address";
+"Add Custom Address" = "Add Custom Address";
+
+//AddCustomAddressViewController
+"Please enter recipient name." = "Please enter recipient name.";
+"Please enter address." = "Please enter address.";
+"Please enter city name." = "Please enter city name.";
+"Please select state" = "Please select state";
+"Please enter postal code." = "Please enter postal code.";
+"Please enter valid Email." = "Please enter valid Email.";
+"Recipient Name*" = "Recipient Name*";
+"Address*" = "Address*";
+"City*" = "City*";
+"Country" = "Country";
+"State" = "State";
+"Postal Code*" = "Postal Code*";
+"Phone" = "Phone";
+"Email" = "Email";
+
+//PickingSerialListViewController
+"Serials" = "Serials";
+"Serial" = "Serial";
+"successfully removed" = "successfully removed";
+"Please check the product that you scan for remove are already deleted or exist in the picking items." = "Please check the product that you scan for remove are already deleted or exist in the picking items.";
+"Something went wrong. Try again later." = "Something went wrong. Try again later.";
+"Serial successfully deleted." = "Serial successfully deleted.";
+"Are you sure you want to remove this serial?" = "Are you sure you want to remove this serial?";
+"Remove Multiple" = "Remove Multiple";
+"GTIN14" = "GTIN14";
+"NDC" = "NDC";
+"Expiration Date" = "Expiration Date";
+
+//,,,sb-lang2
+
+//Direct picking Lot based
+"Picked Items not available for lot based." = "Picked Items not available for lot based.";
+"Picking will be done with different lot than what was suggested." = "Picking will be done with different lot than what was suggested.";
+
+//Participant Reassign
+"Please choose different participant for reassign." = "Please choose different participant for reassign.";
+"Please select participant for reassign." = "Please select participant for reassign.";
+"Participant Reassign" = "Participant Reassign";
+
+//DPLotbaseupdateview - picking
+"Filter By Participent name." = "Filter By Participent name.";
+
+//PickingDetails
+"Void Picking" = "Void Picking";
+"Your picking will be voided and picked items will be put back to the original location in the inventory." = "Your picking will be voided and picked items will be put back to the original location in the inventory.";
+"Postpone Picking" = "Postpone Picking";
+"This will keep the picking operation open, and will allow-you to resume it later.You can find the same picking in Picking in Progress section." = "This will keep the picking operation open, and will allow-you to resume it later.You can find the same picking in Picking in Progress section.";
+
+//DpViewPickedItems - picking
+"Product Type" = "Product Type";
+
+//Participant Reassign View
+"Change Picking Ownership" = "Change Picking Ownership";
+"Select Participant:" = "Select Participant:";
+
+//DPLotBasedUpdatedView
+"Participant Details" = "Participant Details";
+"Filter By Participant name" = "Filter By Participant name";
+"Participant Name:" = "Participant Name:";
+"Email:" = "Email";
+"Lot Number:" = "Lot Number:";
+"Available Qty:" = "Available Qty:";
+"Expiration Date:" = "Expiration Date:";
+"Picking will be done with a different lot than what was suggested.Do you want to continue?" = "Picking will be done with a different lot than what was suggested.Do you want to continue?";
+
+//DirectPickingScan
+"Pick Items Manually" = "Pick Items Manually";
+
+//PickingManuallySOItems
+"LOT" = "LOT";
+"Qty. To Pick" = "Qty. To Pick";
+"Pick Items" = "Pick Items";
+"Scan Product" = "Scan Product";
+
+//DPPickingItems
+"Product Information" = "Product Information";
+"Product" = "Product";
+"Available Quantity:" = "Available Quantity:";
+"Scan to pick serial based items" = "Scan to pick serial based items";
+"Pick items by Lot Based" = "Pick items by Lot Based";
+"Enter Quantity Picked for this shelf" = "Enter Quantity Picked for this shelf";
+"Add Lot Based Quantity" = "Add Lot Based Quantity";
+"Lot quantity must be provided" = "Lot quantity must be provided";
+"Are you sure? you are about to delete the picked item" = "Are you sure? you are about to delete the picked item";
+
+//PickingSOItems
+"Qty. To Picked" = "Qty. To Picked";
+"Qty. Picked" = "Qty. Picked";
+
+//DirectPickingScan
+"Please scan serials or pick items manually before proceed." = "Please scan serials or pick items manually before proceed.";
+"SO List Scan" = "SO List Scan";
+
+//ToShipEdit
+"Shipment Carrier" = "Shipment Carrier";
+"Shipment Method" = "Shipment Method";
+"Choose the shipping carrier." = "Choose the shipping carrier.";
+"Please add the custom shipping carrier." = "Please add the custom shipping carrier.";
+"Choose the shipping method." = "Choose the shipping method.";
+"Please add the custom shipping method." = "Please add the custom shipping method.";
+
+//Picking Scan Item
+"Please Scan Container Only." = "Please Scan Container Only.";
+"Please Scan Product Only." = "Please Scan Product Only.";

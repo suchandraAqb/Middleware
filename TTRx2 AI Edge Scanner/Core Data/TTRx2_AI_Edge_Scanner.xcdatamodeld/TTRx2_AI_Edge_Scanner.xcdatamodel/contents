@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Adjustments" representedClassName="Adjustments" syncable="YES">
+        <attribute name="adjustment_type" optional="YES" attributeType="String"/>
+        <attribute name="barcode" optional="YES" attributeType="String"/>
+        <attribute name="expiration_date" optional="YES" attributeType="String"/>
+        <attribute name="gs1_serial" optional="YES" attributeType="String"/>
+        <attribute name="gtin" optional="YES" attributeType="String"/>
+        <attribute name="identifier_type" optional="YES" attributeType="String"/>
+        <attribute name="identifier_value" optional="YES" attributeType="String"/>
+        <attribute name="is_lot_based" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="is_send_for_verification" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="is_valid" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="location_uuid" optional="YES" attributeType="String"/>
+        <attribute name="lot_max_quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lot_no" optional="YES" attributeType="String"/>
+        <attribute name="product_name" optional="YES" attributeType="String"/>
+        <attribute name="product_uuid" optional="YES" attributeType="String"/>
+        <attribute name="quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="serial" optional="YES" attributeType="String"/>
+        <attribute name="shelf_uuid" optional="YES" attributeType="String"/>
+        <attribute name="storage_uuid" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ARCriterias" representedClassName="ARCriterias" syncable="YES" codeGenerationType="class">
+        <attribute name="critera_type" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="match_type_json" optional="YES" attributeType="String"/>
+        <attribute name="type_json" optional="YES" attributeType="String"/>
+        <attribute name="value_to_match_json" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="DirectPicking" representedClassName="DirectPicking" syncable="YES">
+        <attribute name="barcode" optional="YES" attributeType="String"/>
+        <attribute name="expiration_date" optional="YES" attributeType="String"/>
+        <attribute name="gs1_serial" optional="YES" attributeType="String"/>
+        <attribute name="gtin" optional="YES" attributeType="String"/>
+        <attribute name="identifier_type" optional="YES" attributeType="String"/>
+        <attribute name="identifier_value" optional="YES" attributeType="String"/>
+        <attribute name="is_container" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="is_lot_based" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="is_send_for_verification" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="is_valid" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="location_uuid" optional="YES" attributeType="String"/>
+        <attribute name="lot_max_quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lot_no" optional="YES" attributeType="String"/>
+        <attribute name="product_name" optional="YES" attributeType="String"/>
+        <attribute name="product_uuid" optional="YES" attributeType="String"/>
+        <attribute name="quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="serial" optional="YES" attributeType="String"/>
+        <attribute name="shelf_uuid" optional="YES" attributeType="String"/>
+        <attribute name="storage_uuid" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="InboundFailedSerials" representedClassName="InboundFailedSerials" syncable="YES">
+        <attribute name="expiration_date" optional="YES" attributeType="String"/>
+        <attribute name="gtin14" optional="YES" attributeType="String"/>
+        <attribute name="lot_number" optional="YES" attributeType="String"/>
+        <attribute name="product_name" optional="YES" attributeType="String"/>
+        <attribute name="product_uuid" optional="YES" attributeType="String"/>
+        <attribute name="reason" optional="YES" attributeType="String"/>
+        <attribute name="scanned_code" optional="YES" attributeType="String"/>
+        <attribute name="serial_number" optional="YES" attributeType="String"/>
+        <attribute name="shipment_id" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="LotbasedTriggerscan" representedClassName="LotbasedTriggerscan" syncable="YES" codeGenerationType="class">
+        <attribute name="gtin" optional="YES" attributeType="String"/>
+        <attribute name="lot_number" optional="YES" attributeType="String"/>
+        <attribute name="product_name" optional="YES" attributeType="String"/>
+        <attribute name="product_quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="MISAggregation" representedClassName="MISAggregation" syncable="YES" codeGenerationType="class">
+        <attribute name="gs1_barcode" optional="YES" attributeType="String"/>
+        <attribute name="gs1_serial" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lot_based_quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="parent_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sdi" optional="YES" attributeType="String"/>
+        <attribute name="serial" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="MISItem" representedClassName="MISItem" syncable="YES" codeGenerationType="class">
+        <attribute name="gtin14" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="line_item_uuid" optional="YES" attributeType="String"/>
+        <attribute name="maxquantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="product_name" optional="YES" attributeType="String"/>
+        <attribute name="product_uuid" optional="YES" attributeType="String"/>
+        <attribute name="quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="MISLotItem" representedClassName="MISLotItem" syncable="YES" codeGenerationType="class">
+        <attribute name="best_by_date" optional="YES" attributeType="String"/>
+        <attribute name="expiration_date" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lot_number" optional="YES" attributeType="String"/>
+        <attribute name="lot_type" optional="YES" attributeType="String"/>
+        <attribute name="misitem_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="production_date" optional="YES" attributeType="String"/>
+        <attribute name="quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sdi" optional="YES" attributeType="String"/>
+        <attribute name="sell_by_date" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ReceiveLineItem" representedClassName="ReceiveLineItem" syncable="YES" codeGenerationType="class">
+        <attribute name="alloc_quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="gtin14" optional="YES" attributeType="String"/>
+        <attribute name="ndc" optional="YES" attributeType="String"/>
+        <attribute name="po_no" optional="YES" attributeType="String"/>
+        <attribute name="product_uuid" optional="YES" attributeType="String"/>
+        <attribute name="productName" optional="YES" attributeType="String"/>
+        <attribute name="quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="shipment_line_item_uuid" optional="YES" attributeType="String"/>
+        <attribute name="unalloc_quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="ReceiveLotEdit" representedClassName="ReceiveLotEdit" syncable="YES" codeGenerationType="class">
+        <attribute name="expiration_date" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isEditable" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="lot_number" optional="YES" attributeType="String"/>
+        <attribute name="lot_type" optional="YES" attributeType="String"/>
+        <attribute name="quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="shipment_line_item_uuid" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Return" representedClassName="Return" syncable="YES">
+        <attribute name="is_active" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="items" optional="YES" attributeType="String"/>
+        <attribute name="rma" optional="YES" attributeType="String"/>
+        <attribute name="source_shipment" optional="YES" attributeType="String"/>
+        <attribute name="uuid" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Return_Lot" representedClassName="Return_Lot" syncable="YES" codeGenerationType="class">
+        <attribute name="condition" optional="YES" attributeType="String"/>
+        <attribute name="expiration_date" optional="YES" attributeType="String"/>
+        <attribute name="lot" optional="YES" attributeType="String"/>
+        <attribute name="lot_based_qty_desturction" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lot_based_qty_quarantine" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lot_based_qty_reusable" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="product_name" optional="YES" attributeType="String"/>
+        <attribute name="product_uuid" optional="YES" attributeType="String"/>
+        <attribute name="quantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="return_id" optional="YES" attributeType="String"/>
+        <attribute name="return_uuid" optional="YES" attributeType="String"/>
+        <attribute name="serial" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Return_Serials" representedClassName="Return_Serials" syncable="YES">
+        <attribute name="barcode" optional="YES" attributeType="String"/>
+        <attribute name="condition" optional="YES" attributeType="String"/>
+        <attribute name="error" optional="YES" attributeType="String"/>
+        <attribute name="event_id" optional="YES" attributeType="String"/>
+        <attribute name="expiration_date" optional="YES" attributeType="String"/>
+        <attribute name="failed_reason" optional="YES" attributeType="String"/>
+        <attribute name="gs1_serial" optional="YES" attributeType="String"/>
+        <attribute name="gtin" optional="YES" attributeType="String"/>
+        <attribute name="is_lot_based" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="is_send_for_verification" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="is_valid" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="lot" optional="YES" attributeType="String"/>
+        <attribute name="lot_based_qty_desturction" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lot_based_qty_quarantine" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lot_based_qty_reusable" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="product_name" optional="YES" attributeType="String"/>
+        <attribute name="product_uuid" optional="YES" attributeType="String"/>
+        <attribute name="return_uuid" optional="YES" attributeType="String"/>
+        <attribute name="serial" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Adjustments" positionX="-36" positionY="108" width="128" height="328"/>
+        <element name="DirectPicking" positionX="-45" positionY="135" width="128" height="328"/>
+        <element name="InboundFailedSerials" positionX="-45" positionY="144" width="128" height="164"/>
+        <element name="LotbasedTriggerscan" positionX="-45" positionY="144" width="128" height="104"/>
+        <element name="MISAggregation" positionX="-27" positionY="162" width="128" height="149"/>
+        <element name="MISItem" positionX="-45" positionY="144" width="128" height="134"/>
+        <element name="MISLotItem" positionX="-36" positionY="153" width="128" height="179"/>
+        <element name="ReceiveLineItem" positionX="-45" positionY="144" width="128" height="179"/>
+        <element name="ReceiveLotEdit" positionX="-45" positionY="144" width="128" height="134"/>
+        <element name="Return" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="Return_Lot" positionX="-45" positionY="144" width="128" height="209"/>
+        <element name="Return_Serials" positionX="-63" positionY="9" width="128" height="329"/>
+        <element name="ARCriterias" positionX="-45" positionY="144" width="128" height="104"/>
+    </elements>
+</model>

@@ -1,0 +1,12 @@
+{
+    "6d72602d-6843-4adc-aedb-5d147d84ffa5" : {
+        "name": "Main Storage",
+        "code": "MS_b592af47-4319-4739-824b-9ca8d93d34cc",
+        "is_have_shelf": false
+    },
+    "c02d4563-1a29-4df9-b7f9-311eca2a9868" : {
+       "name": "Baranagar Hub",
+        "code": "BH-001",
+        "is_have_shelf": true
+    }
+}

@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "5E6F2F0B-12E2-4ACB-B1AA-88AA32F29C1F"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A89E70A3-C7C5-408C-982E-429A02097B6F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/ManualInboundShipment/AddProductViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "262"
+            endingLineNumber = "262"
+            landmarkName = "autoCompleteWithStr(searchStr:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A89E70A3-C7C5-408C-982E-429A02097B6F - ab4935a00cf201d6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RapidRx.AddProductViewController.autoCompleteWithStr(searchStr: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "RapidRx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sayaksarkar/Desktop/aQb%20solutions/ttrx-ai-edge-scanner/TTRx2%20AI%20Edge%20Scanner/Controllers/ManualInboundShipment/AddProductViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "262"
+                  endingLineNumber = "262"
+                  offsetFromSymbolStart = "2356">
+               </Location>
+               <Location
+                  uuid = "A89E70A3-C7C5-408C-982E-429A02097B6F - e383bb5be81d5d16"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; Swift.Bool in RapidRx.AddProductViewController.autoCompleteWithStr(searchStr: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "RapidRx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sayaksarkar/Desktop/aQb%20solutions/ttrx-ai-edge-scanner/TTRx2%20AI%20Edge%20Scanner/Controllers/ManualInboundShipment/AddProductViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "262"
+                  endingLineNumber = "262"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "764FC9EF-55D2-4F0D-81A3-CA0711D7CE3B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/ManualInboundShipment/AddProductViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "264"
+            endingLineNumber = "264"
+            landmarkName = "autoCompleteWithStr(searchStr:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "764FC9EF-55D2-4F0D-81A3-CA0711D7CE3B - ab4935a00cf20114"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RapidRx.AddProductViewController.autoCompleteWithStr(searchStr: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "RapidRx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sayaksarkar/Desktop/aQb%20solutions/ttrx-ai-edge-scanner/TTRx2%20AI%20Edge%20Scanner/Controllers/ManualInboundShipment/AddProductViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "264"
+                  endingLineNumber = "264"
+                  offsetFromSymbolStart = "2692">
+               </Location>
+               <Location
+                  uuid = "764FC9EF-55D2-4F0D-81A3-CA0711D7CE3B - 6deb3be3d3cf73f5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; Swift.Bool in RapidRx.AddProductViewController.autoCompleteWithStr(searchStr: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "RapidRx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sayaksarkar/Desktop/aQb%20solutions/ttrx-ai-edge-scanner/TTRx2%20AI%20Edge%20Scanner/Controllers/ManualInboundShipment/AddProductViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "264"
+                  endingLineNumber = "264"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D17667E6-A5F4-4FBA-B47A-CFBAAF232755"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Picking/Direct Picking/PickingSearchViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "239"
+            endingLineNumber = "239"
+            landmarkName = "searchButtonPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F4B1385F-5DC9-4E06-8400-7117A326743B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Picking/Direct Picking/PickingSearchViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
+            landmarkName = "searchButtonPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "76DE6016-6A9B-436E-A0B8-CD97C0E797C0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Picking/Direct Picking/PickingListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "getPickingListWithQueryParam()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5505E2B4-CD75-452E-9596-211CAA73B705"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Picking/PickingConfirmationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "709"
+            endingLineNumber = "709"
+            landmarkName = "confirmPicking(requestData:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3012E328-8A1F-4067-BB8D-262CD7A86C01"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Picking/PickingConfirmationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "711"
+            endingLineNumber = "711"
+            landmarkName = "confirmPicking(requestData:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9CD631D4-1B83-4C23-B009-6231E0724C5F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Utility/UserInfosModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "getDefaultAddress(is_Default_Location:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F033B9FA-4A63-4563-8261-FE9791E499C7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Utility/UserInfosModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "getDefaultAddress(is_Default_Location:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "03151995-0B51-4755-A3C0-CD3825D497E2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Picking/PickingConfirmationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "329"
+            endingLineNumber = "329"
+            landmarkName = "setup_stepview()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A361E271-88AA-4F89-9800-D348D3DA5AC1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Picking/PickingConfirmationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "857"
+            endingLineNumber = "857"
+            landmarkName = "selectedItem(itemStr:data:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6B34BE52-302D-4071-BCBA-4D5C3BD9FFA3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Picking/PickingConfirmationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "863"
+            endingLineNumber = "863"
+            landmarkName = "selectedItem(itemStr:data:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F14F9E05-AAE0-4F1C-BFF8-0FECFF76BF1B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/ManualInboundShipment/MISPurchaseOrderViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "461"
+            endingLineNumber = "461"
+            landmarkName = "sellerButtonPressed(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F14F9E05-AAE0-4F1C-BFF8-0FECFF76BF1B - 6be8e3e6b7d6961c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RapidRx.MISPurchaseOrderViewController.sellerButtonPressed(__C.UIButton) -&gt; ()"
+                  moduleName = "RapidRx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sayaksarkar/Desktop/aQb%20solutions/ttrx-ai-edge-scanner/TTRx2%20AI%20Edge%20Scanner/Controllers/ManualInboundShipment/MISPurchaseOrderViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "461"
+                  endingLineNumber = "461"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "F14F9E05-AAE0-4F1C-BFF8-0FECFF76BF1B - 6be8e3e6b7d6961c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RapidRx.MISPurchaseOrderViewController.sellerButtonPressed(__C.UIButton) -&gt; ()"
+                  moduleName = "RapidRx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sayaksarkar/Desktop/aQb%20solutions/ttrx-ai-edge-scanner/TTRx2%20AI%20Edge%20Scanner/Controllers/ManualInboundShipment/MISPurchaseOrderViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "461"
+                  endingLineNumber = "461"
+                  offsetFromSymbolStart = "536">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0C09B07B-E11D-426A-8EF4-786593C58499"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/ReceivingConfirmationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "377"
+            endingLineNumber = "377"
+            landmarkName = "confirmShipment()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2AF2EFA2-0270-4056-B020-DF71EB8DDFC2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/ShipmentDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
+            landmarkName = "stepButtonsPressed(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2AF2EFA2-0270-4056-B020-DF71EB8DDFC2 - 15e64a717fda29c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RapidRx.ShipmentDetailsViewController.stepButtonsPressed(__C.UIButton) -&gt; ()"
+                  moduleName = "RapidRx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sayaksarkar/Desktop/aQb%20solutions/ttrx-ai-edge-scanner/TTRx2%20AI%20Edge%20Scanner/Controllers/Receiving/ShipmentDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "200"
+                  endingLineNumber = "200"
+                  offsetFromSymbolStart = "1556">
+               </Location>
+               <Location
+                  uuid = "2AF2EFA2-0270-4056-B020-DF71EB8DDFC2 - 15e64a717fda29c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RapidRx.ShipmentDetailsViewController.stepButtonsPressed(__C.UIButton) -&gt; ()"
+                  moduleName = "RapidRx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sayaksarkar/Desktop/aQb%20solutions/ttrx-ai-edge-scanner/TTRx2%20AI%20Edge%20Scanner/Controllers/Receiving/ShipmentDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "200"
+                  endingLineNumber = "200"
+                  offsetFromSymbolStart = "2536">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7E1B0B03-B9AD-4886-BBCD-5FB3355B325D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/ShipmentDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
+            landmarkName = "stepButtonsPressed(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7E1B0B03-B9AD-4886-BBCD-5FB3355B325D - 15e64a717fda366"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RapidRx.ShipmentDetailsViewController.stepButtonsPressed(__C.UIButton) -&gt; ()"
+                  moduleName = "RapidRx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sayaksarkar/Desktop/aQb%20solutions/ttrx-ai-edge-scanner/TTRx2%20AI%20Edge%20Scanner/Controllers/Receiving/ShipmentDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "206"
+                  endingLineNumber = "206"
+                  offsetFromSymbolStart = "2048">
+               </Location>
+               <Location
+                  uuid = "7E1B0B03-B9AD-4886-BBCD-5FB3355B325D - 15e64a717fda366"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RapidRx.ShipmentDetailsViewController.stepButtonsPressed(__C.UIButton) -&gt; ()"
+                  moduleName = "RapidRx"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sayaksarkar/Desktop/aQb%20solutions/ttrx-ai-edge-scanner/TTRx2%20AI%20Edge%20Scanner/Controllers/Receiving/ShipmentDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "206"
+                  endingLineNumber = "206"
+                  offsetFromSymbolStart = "2552">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D48497DC-6A0A-4D72-ABAF-3E20DEE5F256"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/PurchaseOrderVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "275"
+            endingLineNumber = "275"
+            landmarkName = "fetchFromLocalDB()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D0430544-F9B1-4EF0-9C1D-4E0079A2F178"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/PurchaseOrderVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "265"
+            endingLineNumber = "265"
+            landmarkName = "fetchFromLocalDB()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FC2388E5-0EAE-4292-9ABF-1254096577E8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/PurchaseOrderVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "268"
+            endingLineNumber = "268"
+            landmarkName = "fetchFromLocalDB()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "46A0B38D-08B7-4BA6-B91A-4369902C66E3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/PurchaseOrder/PurchaseOrderAllocVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
+            landmarkName = "doneButtonPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

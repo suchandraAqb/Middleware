@@ -1,0 +1,6 @@
+framework module Pods_TTRx2_AI_Edge_ScannerUITests {
+  umbrella header "Pods-TTRx2 AI Edge ScannerUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

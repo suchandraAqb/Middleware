@@ -1,0 +1,952 @@
+/* 
+  Localizable.strings
+  TTRx2 AI Edge Scanner
+
+  Created by Amit Yadav on 17/04/20.
+  Copyright © 2020 AQB Solutions Private Limited. All rights reserved.
+  ###UPDATED BY LUCAS RODRIGUES - 2021/09/17###
+*/
+//Portuguese
+
+"Back" = "Voltar";
+"Welcome" = "Bem-vindo(a)";
+"EnterUsername" = "Digite o nome de usuário";
+"RememberMe" = "Lembre de mim";
+"EnterPassword" = "Por favor, digite nome de usuário e senha";
+"Password" = "Senha";
+"Enter" = "Por favor, insira";
+"SFC" = "Autenticação de dois fatores";
+"Username" = "Nome do usuário";
+"Login" = "Conectar";
+"ForgotPassword" = "Esqueceu a senha?";
+"Dashboard" = "Dashboard";
+"Logout" = "Sair";
+"SerialFinder" = "Localizador de número de série";
+"Receiving" = "Recebimento";
+"Inventory" = "Inventário";
+"Transaction" = "Transação";
+"NoInternet" = "Por favor, verifique sua conexão..";
+"NoDataFound" = "Nenhum dado encontrado";
+"LogoutMsg" = "Deseja sair?";
+"Error" = "Erro";
+"Returns(VRS)"= "Retorna(VRS)";
+"Transfer"= "Transferir";
+"Quarantine"= "Quarentena";
+"Destruction"= "Destruição";
+"Dispense"= "Dispensar";
+"Manufacturer"= "Fabricante";
+"CommSerials"= "Seriais de Comissão";
+"Search Shipment" = "Pesquisa de Remessa";
+"Click camera to scan your receiving items" = "Clique na câmera para escanear os itens recebidos";
+"Search Manually" = "Pesquisar Manualmente";
+"Manual Search" = "Pesquisa Manual";
+"Trading Partner" = "Parceiro Comercial";
+"PO#" = "PO#";
+"Shipment Date" = "Data de embarque";
+"Delivery Date" = "Data de entrega";
+"Invoice Number" = "Número da Fatura";
+"Order Number" = "Número do pedido";
+"Release Number" = "Número de liberação";
+"Search" = "Procurar";
+"Shipments" = "Remessas";
+"Ship Date" = "Data de envio";
+"Release#" = "Liberação#";
+"Load more" = "Ver mais";
+"Select Shipment" = "Selecione a Remessa";
+"Verify Serials" = "Verificar seriais";
+"Select Storage" = "Selecione o armazenamento";
+"Confirm Receiving" = "Confirmar o recebimento";
+"Shipment" = "Envio";
+"Invoice#" = "Fatura#";
+"Order#" = "Ordem#";
+"Not this shipment?" = "Não é esta remessa?";
+"Scan again" = "Escaneie novamente";
+"Do you want to receive this shipment?" = "Deseja receber esta remessa?";
+"Are you sure you want to cancel Receiving" = "Deseja cancelar o recebimento?";
+"Click on the camera icon to verify the serials" = "Clique na câmera para verificar o(s) serial(is)";
+"Attempt" = "Tentativa";
+"Attempt:" = "Tentativa:";
+"Verified" = "Verificado";
+"Failed" = "Falhou";
+"Failed:" = "Falhou:";
+"Successfully" = "Com sucesso";
+"To verify" = "Verificar";
+"Select Shelf" = "Selecione a estante";
+"Please select a storage area" = "Selecione uma área de armazenamento";
+"Please select a shelf" = "Selecione uma estante";
+"New Quarantine" = "Nova Quarentena";
+"Items in Quarantine" = "Itens em Quarentena";
+"Storage Area" = "Área de Armazenamento";
+"Storage Shelf" = "Prateleira de armazenamento";
+"View more" = "Ver mais";
+"Serial Verification" = "Verificação de Serial";
+"Verification Attempt" = "Tentativa de Verificação";
+"Successfully verified serials" = "Serial(is) verificado(s)";
+"Shipment received in" = "Remessa recebida em";
+"Select from list" = "Selecione na lista";
+"Done" = "Feito";
+"Confirm" = "Confirmar";
+"Verified Serials" = "Serial(is) verificado(s)";
+"Lot" = "Lote";
+"Status" = "Status";
+"Delete" = "Excluir";
+"Sales Order by Picking" = "Pedido de vendas por picking";
+"Create Sales Order by Picking" = "Criar pedido de venda por picking";
+"Picking by Sales Order" = "Picking por ordem de venda";
+"Select Vendor" = "Selecione o fornecedor";
+"View scanned serials" = "Ver serial(is) escaneado(s)";
+"Serial(s) Verified Successfully." = "Serial(is) verificado(s) com sucesso.";
+"Are you sure you want to confirm Receiving" = "Deseja confirmar o recebimento";
+"No items found." = "Nenhum item encontrado.";
+"View/Edit Details" = "Ver / Editar Detalhes";
+"Seller Location" = "Localização do vendedor";
+"Other Details" = "Outros detalhes";
+"Shipment Details" = "Detalhes da Remessa";
+"Order Date" = "Data do Pedido";
+"Enter Customer Order ID" = "ID do pedido do cliente";
+"Internal Reference Nbr" = "Nbr de referência interna";
+"Transaction Details" = "Detalhes da transação";
+"Tracking Number" = "Numero de rastreio";
+"Shipping Carrier" = "Transportadora";
+"Shipping Method" = "Método de Envio";
+"Lot Based Product" = "Produto do lote";
+"Add Product" = "Adicionar Produto";
+"Add more products" = "Adicionar Produto";
+"Lot Number" = "Número de Lote";
+"Lot No" = "Número de Lote";
+"Quantity" = "Quantidade";
+"Select Product" = "Selecione o Produto";
+"Select Lot No." = "Selecionar Lote";
+"Product Lots" = "Lotes de Produtos";
+"Filter by Lot Number" = "Filtrar por número de lote";
+"Search by NDC" = "Pesquisa por NDC";
+"Search by GTIN14" = "Pesquisa por GTIN14";
+"There is no lot available for this product" = "Não há lote disponível para este produto";
+"Please select products first." = "Selecione os produtos primeiro.";
+"Please select Lot." = "Selecione Lote.";
+"Enter quantity more than 0" = "Insira uma quantidade maior que 0";
+"Quantity not available. Max available quantity" = "Quantidade não disponível. Quantidade máxima disponível";
+"Available Qty." = "Quantidade disponível";
+"Product Lot Breakdown" = "Composição do lote";
+"Items" = "Itens";
+"View Lot Break Down" = "Exibir divisão do lote";
+"Are you sure you want confirm Picking" = "Deseja confirmar a escolha?";
+"Product Added" = "Produto adicionado";
+"Picking Search" = "Escolhendo Pesquisa";
+"Select Location" = "Selecione a localização";
+"Shipment UUID" = "Remessa UUID";
+"Update" = "Atualizar";
+"Update Quantity" = "Quantidade de Atualização";
+"Notes" = "Notas";
+"Order No." = "Número do Pedido";
+"Picker" = "Selecionador";
+"Picking Start" = "Iniciar Picking";
+"Date & Time" = "Data e Hora";
+"Picking Details" = "Detalhes de seleção";
+"Picking In Progress" = "Seleção em Andamento";
+"View Picked Items" = "Ver Itens Selecionados";
+"View SO Items" = "Ver item SO";
+"Please scan serials or Add Lot based items before proceed." = "Escaneie o(s) serial(is) ou adicione itens baseados em lote antes de continuar.";
+"Storage Selection" = "Seleção de Armazenamento";
+"Partial Picking" = "Picking Parcial";
+"Select Storage Area" = "Selecione a área de armazenamento";
+"Select Lot Storage" = "Selecionar armazenamento de lote";
+"Shelf" = "Estante";
+"Products" = "Produtos";
+"Total Items" = "Total de Itens";
+"PICK THIS LIST" = "Escolha esta lista";
+"CONTINUE" = "Continuar";
+"All" = "Tudo";
+"To do" = "Façam";
+"In Progress" = "Em progresso";
+"Do you want to proceed?" = "Você quer prosseguir?";
+"Pickings" = "Pickings";
+"Search Quarantine Item" = "Pesquisar item de quarentena";
+"Date" = "Data";
+"Product Name" = "Nome do Produto";
+"Reference#" = "Referência#";
+"Reason" = "Razão";
+"Reference" = "Referência";
+"Items Count" = "Quantidade de itens";
+"Products Count" = "Quantidade de Produtos";
+"Un - Quarantine" = "Não - Quarentena";
+"Un-Quarantine" = "Retirar da Quarentena";
+"General" = "Geral";
+"Quarantine UUID" = "Quarentena UUID";
+"Preset" = "Motivo";
+"Other" = "Outro";
+"Choose" = "Escolher";
+"Type Reference" = "Tipo da Referência";
+"Un-Quarantine All Remaining Items" = "Retirar da quarentena todos os itens restantes";
+"Type" = "Tipo";
+"Product Serials" = "Serial(is) do produto";
+"Location" = "Localização";
+"Select destination" = "Enviar para:";
+"items will be put back to inventory" = "os itens serão colocados de volta no estoque";
+"Select Reason" = "Razão";
+"Destination Location" = "Localização do Destinatário";
+"Quarantine Products" = "Produtos de Quarentena";
+"Some serials did not match exactly but quantity could be found with their Product/Lot combination." = "Algum(s) serial(is) não corresponde(m) exatamente, mas a quantidade pode ser encontrada com a combinação Produto / Lote.";
+"Those items are scanned as Lot based" = "Esses itens são escaneados como lote";
+"You are about to delete the resource." = "Você está prestes a excluir o recurso.";
+"This operation can’t be undone" = "Esta operação não pode ser desfeita";
+"Proceed to the deletion?" = "Continuar para a exclusão?";
+"There are Lot(s) which dont have storage . Please select storage to continue.." = "Existem Lote (s) que não têm arrecadação. Selecione o armazenamento para continuar ..";
+"There are item(s) attached to this location. Please remove those item(s) first from Items section to change location." = "Existem itens anexados a este local. Remova esse (s) item (ns) primeiro da seção Itens para alterar o local.";
+"Do you want to Un-Quarantine this item?" = "Desejar retirar da quarentena este item?";
+"Please select item(s) to Un-Quarantine." = "Selecione o(s) item(ns) para desfazer a quarentena.";
+"Lot Based Item(s)" = "Item(s) baseado(s) em lote";
+"Are you sure you want confirm Un-Quarantine?" = "Deseja confirmar a remoção da quarentena?";
+"Are you sure you want cancel Un-Quarantine?" = "Deseja cancelar a remoção da quarentena?";
+"Serial(s) already scanned." = "Sérial(is) já escaneado(s).";
+"Container" = "Recipiente";
+"Lot Quantity Updated.." = "Quantidade de lote atualizada ..";
+"No Lot available in the selected location to" = "Nenhum lote disponível no local selecionado para";
+"No Lot available in the selected location." = "Nenhum lote disponível no local selecionado.";
+"Please select different location or remove this lot." = "Selecione um local diferente ou remova este lote.";
+"Please select/type Un-Quarantine reason." = "Selecione / digite Motivo de não quarentena.";
+"Are you sure you want cancel Un-Quarantine" = "Deseja cancelar a remoção da quarentena?";
+"Aggregation" = "Agregação";
+"View Serials" = "Ver Seriais";
+"Un-Quarantine request submitted" = "Pedido de retirada da quarentena enviado";
+"Something went wrong.." = "Algo deu errado ..";
+"Select source" = "Saindo de:";
+"Please select source Location." = "Selecione o local do remetente.";
+"Please select destination Location." = "Selecione o local de destinatário.";
+"Source and destination location can't be same." = "O endereço do remetente e do destinatário não podem ser iguais.";
+"Please select a Shelf." = "Selecione uma estante.";
+"Please select/type" = "Selecione / digite";
+"reason." = "Razão.";
+"Locations" = "Localizações";
+"Are you sure you want cancel" = "Deseja cancelar?";
+"Source Location" = "Localização do Remetente";
+"Adjustment request submitted" = "Pedido de ajuste enviado";
+"Are you sure you want confirm" = "Tem certeza que deseja confirmar";
+"Scan Serial(s)" = "Escanear Serial(is)";
+"Click camera to scan your items" = "Clique na câmera para escanear seus itens";
+"Shipment PDF" = "PDF da Remessa";
+"Finder" = "Localizador";
+"Serial Finder" = "Localizar de Serial";
+"Products Perspective" = "Perspectiva de Produtos";
+"Products in all shipments" = "Produtos enviados/recebidos";
+"Serial Based" = "Baseado em Serial";
+"Lot Based" = "Baseado em Lote";
+"Scanned List" = "Lista de Escaneado(s)";
+"List View" = "Exibição de Lista";
+"Product View" = "Visualização do Produto";
+"Serial Details" = "Detalhes do Serial";
+"Event Log" = "Log de Eventos";
+"Download" = "Baixar";
+"Search Filter" = "Filtro de Pesquisa";
+"Product GS1 ID" = "ID GS1 do produto";
+"Product GS1 Company Prefix" = "Prefixo da empresa GS1 do produto";
+"Transaction Type" = "Tipo de transação";
+"Advance Search" = "Busca Avançada";
+"Clear" = "Claro";
+"View Serial List" = "Ver Lista de Seriais";
+"Not all items are picked for this shipment. You can save as a partial picking and continue picking for this order later, or return and continue picking." = "Nem todos os itens são selecionados para esta remessa. Você pode salvar como uma separação parcial e continuar separando para este pedido mais tarde ou retornar e continuar separando.";
+"If the item to pick is not present, you must update the shipment and reduce the quantity to ship in order to ship the shipment." = "Se o item a ser retirado não estiver presente, você deverá atualizar a remessa e reduzir a quantidade a ser enviada; para enviar a remessa.";
+"Return Manager" = "Gerente de Devolução";
+"Continue" = "Continuar";
+"This will keep the return operation open, and will allow-you to resume it later." = "Isso manterá a operação de retorno aberta e permitirá que você a retome mais tarde.";
+"Void Return" = "Retorno nulo";
+"This operation will void the return event." = "Esta operação irá anular o evento de retorno.";
+"Go back to the Return Merchandise and allow you to continue to process the return." = "Volte para a Devolução de mercadoria e permita que você continue a processar a devolução.";
+"Product Summary" = "Sumário de Produtos";
+"To returned" = "Voltar";
+"Search by RMA Number" = "Pesquisa por número RMA";
+"View outbound shipment line items" = "Ver itens de saída";
+"Outbound Shipment Details" = "Detalhes da remessa de saída";
+"Custom Order ID" = "ID de pedido personalizado";
+"Internal Ref. Nbr" = "Ref. Interna Nbr";
+"Customer Details" = "Detalhes do cliente";
+"Product UUID" = "UUID do produto";
+"View all products summary" = "Veja o resumo de todos os produtos";
+"General Info" = "Informações Gerais";
+"Scan Serials" = "Escanear Serial(is)";
+"Return Summery" = "Resumo da Devolução";
+"Confirm Return" = "Confirmar Devolução";
+"Return Shipment" = "Remessa de Devolução";
+"Reception Date" = "Data de Recepção";
+"Time" = "Tempo";
+"General condition of received shipment" = "Condição geral da remessa recebida";
+"Type notes" = "Digite notas";
+"Valid" = "Válida";
+"Invalid" = "Inválida";
+"Pending" = "Pendente";
+"Removed" = "Removida";
+"View Verfied Serials" = "Ver Seriais Verificados";
+"Return Items" = "Devolver itens";
+"Items Resalable" = "Itens revendíveis";
+"items will be quarantined" = "Itens serão colocados em quarentena";
+"Items not Resalable" = "Itens não revendíveis";
+"items which are not resalable will be destructed" = "itens que não podem ser revendidos serão destruídos";
+"Reception Date&Time" = "Data e hora da recepção";
+"View Outbound Shipment Details" = "Exibir detalhes da remessa de saída";
+"Are you sure you want to proceed with this shipment?" = "Deseja prosseguir com este envio?";
+"Shipment UUID not found." = "UUID da remessa não encontrado.";
+"Return UUID not found." = "Retorno UUID não encontrado.";
+"Please select Reception Date." = "Selecione a data de recepção.";
+"Please select shipment condition." = "Selecione a condição de envio.";
+"No Shipping method found." = "Nenhum método de envio encontrado.";
+"Shipment Condition" = "Condição da Remessa";
+"Shipment date can't before Order Date" = "A data de envio não pode ser anterior à data do pedido";
+"Please scan serial(s) first." = "Leia o(s) serial(is) primeiro.";
+"Please select a Location." = "Selecione um local.";
+"Please select/type quarantine reason." = "Selecione / digite o motivo da quarentena.";
+"Please select/type destruction reason." = "Selecione / digite o motivo da destruição.";
+"Return request submitted" = "Pedido de devolução enviado";
+"Are you sure you want confirm Return?" = "Deseja confirmar a devolução?";
+"Your shipment has been Voided" = "Sua remessa foi anulada";
+"Filter serials by Status" = "Filtrar serial(is) por status";
+"Serial successfully removed." = "Serial removido com sucesso.";
+"Resalable" = "Revendível";
+"Not Resalable" = "Não revendível";
+"Product" = "Produtos";
+"Scan" = "Escanear";
+"Save" = "Salve";
+"Message..." = "Mensagem...";
+"Message Title..." = "Título da Mensagem...";
+"Do you want to remove this message from default?" = "Quer remover esta mensagem do padrão?";
+"Do you want to make this your default scan message?" = "Quer tornar esta a sua mensagem de verificação padrão?";
+
+//inventory
+"Scan a Container" = "Escanear um container";
+"Items in Inventory" = "Itens no estoque";
+"View the inventory of each item" = "Veja o inventário de cada item";
+"Inventory Count" = "Contagem de Inventário";
+"Container Management" = "Gerenciamento de Containers";
+"View the content of a specific Container, from it’s Unique Serial. From there, you can add and/or remove content" = "Visualize o conteúdo de um container específico, de seu Serial Único. Em seguida, você pode adicionar e(ou) remover o conteúdo";
+"Scanned Summary" = "Resumo Escaneado";
+"Print" = "Impressão";
+"Export" = "Exportar";
+"Container List" = "Lista de Containers";
+"View" = "Ver";
+"Edit" = "Editar";
+"Package Type" = "Tipo de Pacote";
+"Have Parent" = "Ter pai";
+"View Container" = "Ver Container";
+"Unique Serial" = "Serial Único";
+"Container Type" = "Tipo de Container";
+"Stroge Shelf" = "Prateleira de Armazenamento";
+"Advanced Option" = "Opção Avançada";
+"Disposition" = "Disposição";
+"Business Step" = "Etapa de Negócios";
+"Edit Container" = "Editar Container";
+"Delete Container" = "Excluir Container";
+"Replace Container" = "Substituir o Container";
+"Delete All Remaining Items" = "Excluir todos os itens restantes";
+"Remove items" = "Remover itens";
+"Move the items to a different existing Container" = "Mova os itens para um container existente diferente";
+"Destination GS1 Container Unique Serial" = "Serial exclusivo do container GS1 de destino";
+"Enter GS1 Serial" = "Digite GS1 Serial";
+"Move the items to a storage area/shelf" = "Mova os itens para uma área de armazenamento / prateleira";
+"Add" = "Adicionar";
+"Generate & Commission Serials" = "Gerar e Comissionar Seriais";
+"Request New Container Serials" = "Solicitar novos seriais de container";
+"Requested on" = "Solicitado em";
+"Qty. Generated" = "Qtd. Gerada";
+"Qty. Commissioned" = "Qtd. Comissionado";
+"Request New Serials" = "Solicitar novos seriais";
+"Enter Quantity" = "Insira a quantidade";
+"Newly commissioned serials must be stored in" = "Seriados recém-comissionados devem ser armazenados em";
+"Confirm Request" = "Confirmar pedido";
+"View Generated Serials" = "Ver Seriais Gerados";
+"GS1 Serial" = "GS1 Serial";
+"GS1 Barcode" = "Código de Barras GS1";
+"Simple Serial" = "Serial Simples";
+"Origin Container" = "Container de Origem";
+"Destination Container" = "Container do Destinatário";
+"Confirm Container" = "Confirmar Container";
+"Click camera to scan your Destination Container" = "Clique na câmera para escanear seu container de destino";
+"View Details" = "Ver detalhes";
+"Enter Serial" = "Insira o Serial";
+"Enter GS1 ID" = "Insira o ID GS1";
+"Click on the camera to scan items to add in Container" = "Clique na câmera para verificar os itens a serem adicionados ao Container";
+"Are you sure you want to cancel Replace Container" = "Deseja cancelar a substituição do container?";
+"Are you sure you want to confirm Replace Container" = "Deseja substituir o container?";
+"Please scan Destination Container before proceed." = "Faça o scan do container do destino para continuar.";
+"Lot Products" = "Produtos de lote";
+"Lot Product" = "Produto do lote";
+"Please enter Container Unique Serial." = "Insira o serial único do container.";
+"Please enter GS1 Serial." = "Insira GS1 Serial.";
+"Please select Container Type." = "Selecione o tipo de container.";
+"Please select Location." = "Selecione a localização.";
+"Please select Storage Area." = "Selecione a área de armazenamento.";
+"Please select Shelf." = "Selecione Prateleira.";
+"Please select Disposition." = "Selecione Disposição.";
+"Please select Business Step." = "Selecione a Etapa de Negócios.";
+"Are you sure you want to delete this Container?" = "Deseja excluir este container?";
+"Please select at least one item" = "Selecione pelo menos um item";
+"Lot Based Item" = "Item baseado em lote";
+"Please select a Location" = "Selecione um local";
+"Please enter Destination GS1 Container Unique Serial." = "Insira o Serial GS1 único do container de destino.";
+"Please try again later." = "Por favor, tente novamente mais tarde.";
+"Are you sure you want to remove this serial request?" = "Deseja remover esta solicitação de serial(is)?";
+"Pull to refresh" = "Puxe para atualizar";
+"Request Deleted." = "Solicitação excluída.";
+"Please select destination Location" = "Selecione o local de destino";
+"Please enter quantity." = "Insira a quantidade.";
+"Generating Commissioning Serials" = "Gerando Seriais de Comissionamento";
+"You can safely dismiss this box, this operation will be handled in the background" = "Você pode dispensar esta caixa com segurança, esta operação será realizada em segundo plano";
+"Are you sure you want cancel Serial Generation Request" = "Deseja cancelar a solicitação";
+"Looks into Containers" = "Olha para os containers";
+"Replace a Container" = "Substitua um container";
+"Replace existing Container(s)" = "Substitua o(s) container(s) existente(s)";
+"Generate and commission Container" = "Gerar e comissionar container";
+"Generate Serial Numbers for new Containers" = "Gerar números de série para novos containers";
+"Delete an existing Container, from it’s Unique Serial." = "Exclua um container existente, de seu Serial Único.";
+"Container not found." = "Container não encontrado.";
+"Please scan some serials and try again later." = "Por favor, scaneie alguns seriais e tente novamente mais tarde.";
+"Delete Container" = "Excluir container";
+"Product is not valid" = "Produto não é válido";
+"failed to removed" = "Falhou em remover";
+"Device Blocked" = "Dispositivo bloqueado";
+"Would you like to enroll this device?" = "Você gostaria de cadastrar este dispositivo?";
+"Enroll Your Device" = "Cadastre o seu dispositivo";
+"ENROLL NOW" = "CADASTRE-SE AGORA";
+"Would you like to update the App?" = "Você gostaria de atualizar o aplicativo?";
+"App Update Available" = "Atualização de aplicativo disponível";
+"UPDATE NOW" = "ATUALIZAR AGORA";
+"Please update the App to continue?" = "Atualizar o aplicativo para continuar?";
+"App Update Required" = "Atualização do aplicativo necessária";
+"This Container cannot be deleted because it’s not empty" = "Este container não pode ser excluído porque não está vazio";
+"Container will be updated." = "O container será atualizado.";
+"The system will process the request in the background." =  "O sistema processará a solicitação em segundo plano.";
+"View Existing Items" = "Visualizar Itens Existentes";
+"Warning!" = "Atenção!";
+"Information!" = "Em formação!";
+"Please select your default message before scan." = "Selecione sua mensagem padrão antes de escanear.";
+"Are you sure you want to delete this message?" = "Deseja deletar essa mensagem?";
+"Title can't be blank." = "O título não pode ficar em branco.";
+"Message can't be blank." = "A mensagem não pode ficar em branco.";
+"Please choose your color." = "Por favor, escolha sua cor.";
+"Manufacturer Lots" = "Lotes de fabricantes";
+"Add Lot" = "Adicionar lote";
+"Closed" = "Fechados";
+"Created" = "Criado";
+"Production Date" = "Data de produção";
+"Open" = "Abrir";
+"Voided" = "Anulado";
+"Add Lot Based Lot" = "Adicionar remessa baseada em lote";
+"Add Serial Based Lot" = "Adicionar remessa baseada em série";
+"View Serial Request" = "Ver solicitação serial";
+"This Lot is open" = "Este lote foi aberto";
+"Sell By Date" = "Prazo de validade";
+"Best By Date" = "Melhor por data";
+"Add Serial Request" = "Adicionar pedido ao serial";
+"Quantity to generate" = "Quantidade a gerar";
+"You can’t edit this field later. You can void serial generated or do an other request for serial generation." = "Você não pode editar este campo mais tarde. Você pode cancelar a geração do serial ou fazer outra solicitação para geração do serial.";
+"Note:" = "Nota:";
+"Requested Serial List" = "Lista de seriais solicitados";
+"View/Download Serials" = "Ver / Baixar seriais";
+"GS1 Serials URI" = "GS1 Serials URI";
+"GS1 Barcode Format" = "Código de Barras GS1";
+"Simple Serials Only" = "Seriais simples apenas";
+"View Manufacturer Lot" = "Ver lote do fabricante";
+"Edit Manufacturer Lot" = "Editar lote do fabricante";
+"Lot Added Successfully" = "Lote adicionado com sucesso";
+"Lot Updated Successfully" = "Lote atualizado com sucesso";
+"Please enter Lot." = "Insira o lote.";
+"Please enter quantity more than 0" = "Insira uma quantidade maior que 0";
+"Please select production date." = "Selecione a data de produção.";
+"Please select expiration date." = "Selecione a data de expiração.";
+"Expiration date can not be before production date." = "A data de validade não pode ser anterior à data de produção.";
+"Expiration date can not be before best by date." = "A data de expiração não pode ser anterior à data de validade.";
+"Expiration date can not be before sell by date." = "A data de expiração não pode ser anterior à data de validade.";
+"Best by date can not be before production date." = "O prazo de validade não pode ser anterior à data de produção.";
+"Sell by date can not be before production date." = "A data de venda não pode ser anterior à data de produção.";
+"Are you sure you want to confirm" = "Deseja confirmar?";
+"Are you sure you want to cancel" = "Deseja cancelar?";
+"Completed" = "Concluído";
+"Lot Based Confirmation" = "Confirmação baseada em lote";
+"Once the operation is done, do you want to close the lot?" = "Concluída a operação, deseja fechar o lote?";
+"By closing the lot, the lot won’t be editable anymore. However, by keeping the lot open, that will allow possible to make potential manipulation errors. What should be done?" = "Ao fechar o lote, não será possível editá-lo depois. Caso matenha o lote aberto, poderão acontecer possíveis erros de manipulação. O que deverá ser feito?";
+"Continue and keep the lot open" = "Continue e mantenha o lote aberto";
+"Continue and close the lot" = "Continue e feche o lote";
+"This operation will create new lot based items and will be immediately available to the inventory. Only increase of quantity is allowed" = "Esta operação criará novos itens baseados em lote e estarão imediatamente disponíveis no estoque. Somente o aumento de quantidade é permitido";
+"Since the effect is immediate, there is no way to delete this lot excepted by destroying the product from inventory." = "Como o efeito é imediato, não há como excluir esse lote, exceto destruindo o produto do estoque.";
+"Since it’s a Lot Based Quantity, no serial will be emitted." = "Uma vez que a quantidade baseada é em lote, nenhum serial será emitido.";
+"Continue?" = " Deseja continuar?";
+"Add Serialized Lot" = "Adicionar lote serializado";
+
+//items in inventory
+"Lot Type" = "Tipo de lote";
+"In stock" = "Em estoque";
+"Avail Qty" = "Qtde disponível";
+"Generic Name" = "Nome genérico";
+"GS1 Company Prefix" = "GS1 Prefixo da empresa";
+"View Lot" = "Ver lote";
+"View Inventory" = "Ver Inventário";
+"View Inventory per location" = "Exibir estoque por localização";
+"Inbound Shipments" = "Remessas de Entrada";
+"Outbound Shipments" = "Remessas de Saída";
+"Product Lot Location" = "Localização do lote do produto";
+"Lot Inventory Details" = "Detalhes do inventário do lote";
+"Inventory Summary" = "Resumo do inventário";
+"Stock" = "Estoque";
+"Items not available" = "Itens não disponíveis";
+"Available" = "Acessível";
+"Allocated" = "Alocado";
+"Locked" = "Bloqueado";
+"To be received" = "A ser recebido";
+"Total items not available" = "Total de itens não disponíveis";
+"View Lots" = "Ver lotes";
+"Edit Lot" = "Editar lote";
+"Enter Lot Number" = "Digite o número do lote";
+"Global" = "Global";
+"Lot in Storage Area" = "Lote na área de armazenamento";
+"Item(s) is pending for verifications." = "Item(ns) está(ão) pendente(s) de verificação.";
+"Lots to Commission" = "Lotes para Comissionar";
+"Commission GS1 Serials" = "Comissionar Seriais GS1";
+"Serial Count" = "Números de Série";
+"Uncommissioned Serials" = "Seriais não autorizados";
+"Commission" = "Comissão";
+"Lock" = "Fechar";
+"Lot#" = "Lote#";
+"Commission Serials" = "Seriais de Comissão";
+"Click on the camera icon to scan serials to Commission" = "Clique na câmera para escanear os seriais para a comissão";
+"Set the commissioned into" = "Defina o comissionado em";
+"Close the related lot(s) after commissioning the serials" = "Feche o(s) lote(s) relacionado(s) após o comissionamento do(s) serial(is)";
+"Once closed, the lot cannot be re-opened. Are you sure you want to close this lot?" = "Uma vez fechado, o lote não pode ser reaberto. Deseja fechar este lote?";
+"Closing Lot" = "Lote de Fechamento";
+"Please scan serial before proceed." = "Por favor, escaneie o serial antes de continuar.";
+"Serial(s) Scanned Successfully." = "Sérial(s) escaneado(s) com sucesso.";
+"Close the lot after commissioning the serials" = "Feche o lote após o comissionamento dos seriais";
+"Password Need to Update" = "A senha precisa ser atualizada";
+"Enter Old Password" = "Digite a senha antiga";
+"Enter New Password" = "Insira uma nova senha";
+"Old and New Password can't be same." = "A senha nova não pode ser igual a antiga";
+"Note" = "Nota";
+"This process may take some time to complete. Please check after some time." = "Este processo pode levar algum tempo para ser concluído. Por favor, tente mais tarde";
+"Perform VRS Verification" = "Realizar verificação VRS";
+
+///RETURN MANAGER
+"Select Product Type" = "Selecione o tipo do produto";
+"OK" = "OK";
+
+//DEMO SMART BARCODE SCANNING
+"Verification process is only applicable to serialized product." = "O processo de verificação é aplicável apenas ao produto serializado.";
+
+//Missing/Stolen
+"Missing / Stolen" = "Desaparecido / Roubado";
+"Delete this inbound" = "Exclua esta entrada";
+"Delete Inbound Shipment" = "Excluir Remessa de Entrada";
+"Deleting this inbound transaction will unload the content of this shipment from the data, and remove the shipment. The sender of the data won't be notified." = "Excluir esta transação de entrada irá descarregar o conteúdo desta remessa dos dados e remover a remessa. O remetente dos dados não será notificado.";
+"Delete Associated Inbound Transaction" = "Excluir transação de entrada associada";
+"Check this box to delete the inbound transaction associated to this shipment. The shipment must have only one transaction, and the transaction must have no other inbound shipments, otherwise the option will be rejected." = "Marque esta caixa para excluir a transação de entrada associada a esta remessa. A remessa deve ter apenas uma transação e a transação não deve ter outras remessas de entrada, caso contrário, a opção será rejeitada.";
+"Delete Shipment" = "Excluir Remessa";
+"Events" = "Eventos";
+"My Account" = "Minha conta";
+"Inbounds" = "De entrada";
+"outbounds" = "saída";
+"Inbound Failed Serials" = "Falha de entrada seriadas";
+"You are about to delete this entry from database?" = "Você está prestes a excluir esta entrada do banco de dados?";
+
+//Failed Items
+"Serial Number" = "Número de série";
+"Failed Reason" = "Motivo da falha";
+"Are you sure you want to delete the failed item details?" = "Tem certeza de que deseja excluir os detalhes do item com falha?";
+
+//,,,sb8
+//FinderViewController
+"Augmented Reality Viewer" = "Visualizador de realidade aumentada";
+"Start" = "Começar";
+"With no filters" = "Sem filtros";
+"Filters" = "Filtros";
+"Look With" = "Olhar Com";
+"Products who are about to expire" = "Produtos que estão prestes a expirar";
+"Last used A/R Filters" = "Filtros A/R usados ​​pela última vez";//,,,sb-lang1
+"Last used AR filter deleted successfully" = "Último filtro AR usado excluído com sucesso";//,,,sb11-11
+"Do you want to delete last used AR filter?" = "Deseja excluir o último filtro AR usado?";//,,,sb11-11
+//,,,sb8
+
+//,,,sb-lang1
+//AugmentedReality.storyboard
+//ARExportProductFirstViewController
+"Export Products Found" = "Produtos de exportação encontrados";
+"Export Options" = "Opções de exportação";
+"Summary Count of the product found" = "Contagem resumida do produto encontrado";
+"Include counts per lot found" = "Incluir contagem por lote encontrado";
+"List of Serials found, with the lot number" = "Lista de Séries encontradas, com o número do lote";
+"Include product information on every row" = "Incluir informações do produto em cada linha";
+"Format of the serial numbers" = "Formato dos números de série";
+"Simple Format" = "Formato Simples";
+"GS1 URN (if available)" = "GS1 URN (se disponível)";
+"Include the content of the RAW barcode read" = "Incluir o conteúdo da leitura do código de barras RAW";
+"Data exported successfully" = "Dados exportados com sucesso";
+"File Type" = "Tipo de arquivo";//,,,sb10
+
+//ARExportProductSecondViewController
+"Export Products Found Details" = "Exportar Produtos Encontrados Detalhes";
+"For Product" = "Para produto";
+"Summary Count of the lots found" = "Contagem resumida dos lotes encontrados";
+
+//ARExportProductThirdViewController
+"For Lot" = "Para Lote";
+
+//ScanViewController
+
+//ARSFFilterViewController
+"Filters for Augmented Reality Viewer" = "Filtros para visualizador de realidade aumentada";
+"Create a new filter" = "Criar um novo filtro";
+"Existing Preset A/R Filters" = "Filtros A/R predefinidos existentes";
+"No Data Found" = "Nenhum dado encontrado";//,,,sb11-11
+
+//ARSFCreateNewFilterViewController
+"Create a new Filter" = "Criar um novo filtro";
+"General" = "Em geral";//,,,sb11-11
+"Criterias" = "Critério";
+"Add Criteria" = "Adicionar critérios";
+"Save this file as a preset" = "Salve este filtro como uma predefinição";//,,,sb11-11
+"Save this filter as a preset" = "Salve este filtro como uma predefinição";//,,,sb11-11
+"If you don’t save this filter as a preset, it’s will be discarded at the end." = "Se você não salvar este filtro como uma predefinição, ele será descartado no final.";
+"Description" = "Descrição";
+"Short Description" = "Pequena descrição";//,,,sb11-11
+"Options" = "Opções";
+"Handle Multiple Criteria as cumulative conditions (as “AND”)" = "Lidar com Critérios Múltiplos como condições cumulativas (como “AND”)";
+"When enabled, all conditions must be filtered in. When disabled, only one condition need to be meet in order to be filtered in." = "Quando ativado, todas as condições devem ser filtradas. Quando desativado, apenas uma condição precisa ser atendida para ser filtrada.";
+"Check in the aggregation" = "Confira na agregação";
+"When enabled, the system will also look on the aggregation data who is held into the system." = "Quando ativado, o sistema também procurará os dados de agregação que são mantidos no sistema.";
+"Company Wide search filter" = "Filtro de pesquisa para toda a empresa";
+"When enabled, this parameter make the search filter available to" = "Quando habilitado, este parâmetro disponibiliza o filtro de pesquisa para";
+"Manage Access" = "Gerenciar acesso";
+"Type:" = "Tipo:";//,,,sb11-11
+"Match Type:" = "Tipo de partida:";//,,,sb11-11
+"Value to Match Type:" = "Valor para corresponder ao tipo:";//,,,sb11-11
+"You can delete criterias by a swipe." = "Você pode excluir critérios com um toque.";//,,,sb11-11
+"Edit Filter" = "Editar filtro";//,,,sb11-11
+"Duplicate Filter" = "Filtro duplicado";//,,,sb11-11
+"The criteria you are set will be removed once you exit the page. Do you want to exit?" = "Os critérios definidos serão removidos assim que você sair da página. Você quer sair?";//,,,sb11-11
+"By not saving as a preset, the criteria you are set will be discarded once you will be done with this search. Continue?" = "Ao não salvar como uma predefinição, os critérios definidos serão descartados assim que você terminar essa pesquisa. Continuar?";//,,,sb11-11
+"Please add criteria" = "Por favor, adicione critérios";//,,,sb11-11
+"Please enter name" = "Por favor, digite o nome";//,,,sb11-11
+"Value to match:" = "Valor a combinar:";//,,,sb11-11
+"Existing preset AR filter deleted successfully" = "Filtro AR predefinido existente excluído com sucesso";//,,,sb11-11
+"Do you want to delete existing preset filter?" = "Deseja excluir o filtro predefinido existente?";//,,,sb11-11
+
+//ARSFTextBasedCriteriaViewController
+"Edit a filter" = "Editar um filtro";
+"Match Type" = "Tipo de partida";
+"Value to match" = "Valor a combinar";
+"Case-sensitive match" = "Correspondência que diferencia maiúsculas de minúsculas";
+"Delete Criteria" = "Excluir critériosa";
+"Please enter value to match." = "Insira o valor para corresponder.";//,,,sb11-11
+
+//ARSFDateBoundaryCriteriaViewController
+"Days" = "Dias";
+"Start Date" = "Data de início";//,,,sb11-11
+"End Date" = "Data final";//,,,sb11-11
+"Please enter days." = "Insira os dias.";//,,,sb11-11
+"Please enter start date." = "Insira a data de início.";//,,,sb11-11
+"Please enter end date." = "Insira a data de término.";//,,,sb11-11
+"Please enter date." = "Por favor, insira a data.";//,,,sb11-11
+
+//ARSFBooleanBasedCriteriaViewController
+
+//ARSFCategoryCriteriaViewController
+"Categories" = "Categorias";
+"Please select category." = "Por favor, selecione a categoria.";//,,,sb11-11
+"Please select match type." = "Selecione o tipo de correspondência.";//,,,sb11-11
+"Criteria Added" = "Critérios Adicionados";//,,,sb11-11
+"Criteria Edited" = "Critérios Editados";//,,,sb11-11
+
+//ARSFStatusCriteriaViewController
+"Product Status" = "Status do produto";
+"Please select status." = "Por favor, selecione o estado.";//,,,sb11-11
+
+//ARSFAddCriteriaSelectionViewController
+"Select the new criteria to add" = "Selecione os novos critérios para adicionar";
+
+//ARSFCardViewController
+"Products who are about to expire" = "Produtos que estão prestes a expirar";
+"Find only the products who will expire in 90 days or less, from today." = "Encontre apenas os produtos que expiram em 90 dias ou menos, a partir de hoje.";
+"Company-Level Preset" = "Predefinição de nível de empresa";
+"Edit filter preset" = "Editar predefinição de filtro";
+"You can’t update this filter preset because it’s an company-level filter and you don’t have the required permissions to make changes to it." = "Você não pode atualizar essa predefinição de filtro porque é um filtro no nível da empresa e você não tem as permissões necessárias para fazer alterações nele.";
+"You can’t delete this filter preset because it’s a company-level filter and you don’t have the required permissions to delete to it." = "Você não pode excluir esta predefinição de filtro porque é um filtro de nível de empresa e você não tem as permissões necessárias para excluí-lo.";
+"Create a new preset from this preset" = "Crie uma nova predefinição a partir desta predefinição";
+"Create a new filter preset by copying this selected filter preset." = "Crie uma nova predefinição de filtro copiando esta predefinição de filtro selecionada.";
+"Start the augmented reality viewer with this filter." = "Inicie o visualizador de realidade aumentada com este filtro.";
+"View filter preset" = "Visualizar predefinição de filtro";
+"Edit name, short description, criterias etc. of selected filter preset." = "Edite o nome, breve descrição, critérios etc. da predefinição de filtro selecionada.";//,,,sb11-11
+"Delete selected filter preset. This action is not reversible." = "Excluir predefinição de filtro selecionada. esta ação não é reversível.";//,,,sb11-11
+
+//ARSFProductFoundListViewController
+"Products Found" = "Produtos encontrados";
+"lot" = "muitos";
+"lots" = "grande quantidade";
+"Unit found in" = "Unidade encontrada em";
+"Units found in" = "Unidades encontradas em";
+"Products are either Not found or Non-serialized" = "Os produtos são Não encontrados ou Não serializados";
+"Lot based data found in scanned result but serial finder is not compatible with lot based data." = "Dados baseados em lote encontrados no resultado digitalizado, mas o localizador serial não é compatível com dados baseados em lote.";
+"You are about to delete the product with lots and serials?" = "Você está prestes a excluir o produto com lotes e folhetins?";
+"Confrimation" = "Confirmação";//,,,sb11-11
+"No Product Found" = "Nenhum produto encontrado";
+"Remove" = "Remover";//,,,sb10
+
+//ARSFProductFoundDetailsViewController
+"Products found details" = "Detalhes dos produtos encontrados";
+"You are about to delete the lot?" = "Você está prestes a deletar o lote?";
+"Lot Number" = "Número de lote";//,,,sb10
+"Quantity" = "Quantidade";//,,,sb10
+"Do you want to delete selected products ?" = "Deseja excluir os produtos selecionados?";//,,,sb11-11
+
+//ARSFProductFoundSerialListViewController
+"Serial list of a product found" = "Lista de série de um produto encontrado";
+"You are about to delete the serial?" = "Você está prestes a deletar o serial?";
+"View Event Log" = "Ver registro de eventos";//,,,sb10
+
+//ARSFManageAccessViewController
+"Manage access to this filter" = "Gerenciar o acesso a este filtro";
+"Delete Selected Access" = "Excluir acesso selecionado";
+
+//ARSFAddAccessViewController
+"Users" = "Comercial";
+"Roles" = "Funções";
+"Add access to this filter" = "Adicionar acesso a este filtro";
+
+//ARExportProductDownloadableFilesController
+"Download Products" = "Baixar Produtos";//,,,sb8
+"Display Name" = "Nome de exibição";
+"Created On" = "Criado em";
+"COMPLETED" = "CONCLUÍDO";
+"FAILED" = "FRACASSADO";
+"QUEUED" = "ENFILEIRADOS";
+"QUEQED" = "ENFILEIRADOS";
+"Do you want to delete selected products ?" = "Deseja excluir os produtos selecionados?";//,,,sb11
+
+//ARExportProductDownloadViewController
+"PDF" = "PDF";
+
+//ARSFProductNotFoundListViewController
+"Please enter all product names." = "Insira todos os nomes de produtos.";
+"Enter the product name" = "Digite o nome do produto";
+"ENTER ALL PRODUCT NAMES :" = "INSIRA TODOS OS NOMES DE PRODUTOS:";//,,,sb11-11
+"ENTER PRODUCT NAME :" = "DIGITE O NOME DO PRODUTO:";//,,,sb11-11
+"Product name already exist" = "O nome do produto já existe";
+"Product Not Found" = "Produto não encontrado";
+"Product name: " = "Nome do Produto: ";
+"Product UUID: " = "Produtos UUID: ";
+"Simple serial: " = "Série simples: ";
+"GS1 serial: " = "GS1 serial: ";
+"Product gtin14: " = "Produtos gtin14: ";
+"Lot number: " = "Número de lote: ";
+"Status: " = "Status: ";
+"Expiration date: " = "Data de validade: ";
+"Product Not Found List" = "Lista de produtos não encontrados";
+"GTIN" = "GTIN";
+"Serial #" = "Serial #";
+"Product Addition" = "Adição do produto";
+"GTIN14 :" = "GTIN14 :";
+"LOT NUMBER :" = "NÚMERO DE LOTE :";
+"SERIAL NUMBER :" = "NÚMERO DE SÉRIE :";
+"EXPIRATION DATE :" = "DATA DE VALIDADE :";
+"ENTER PRODUCT NAME :" = "DIGITE O NOME DO PRODUTO :";
+"Not Found" = "Não encontrado";
+"Edit All" = "Editar tudo";//,,,sb11-11
+"Product name" = "Nome do Produto";//,,,sb11-11
+"Simple serial" = "Série simples";//,,,sb11-11
+"GS1 serial" = "Série GS1";//,,,sb11-11
+"Product gtin14" = "Produto gtin 14";//,,,sb11-11
+"Lot number" = "Número de lote";//,,,sb11-11
+"Expiration date" = "Data de validade";//,,,sb11-11
+
+//,,,sb10
+//ARExportProductDownloadableSearchViewController
+"Select Date Filter" = "Selecionar filtro de data";
+"Select Date" = "Selecione a data";
+"From Date" = "Da data";
+"To Date" = "Até a presente data";
+"On" = "Em";
+"Before" = "Antes de";
+"Range" = "Variedade";
+"After" = "Depois de";
+//,,,sb10
+//,,,sb-lang1
+
+//ARSFFilterSearchViewController //,,,sb11-11
+"Short Description" = "Pequena descrição";//,,,sb11-11
+
+//,,,sb-lang2
+//ScanViewController
+"serial will be removed" = "serial será removido";
+"serials will be removed" = "seriais serão removidos";
+"serial scanned" = "serial escaneado";
+"serials scanned" = "seriais escaneados";
+"found" = "Encontrado";
+"items" = "itens";
+"Item" = "Item";
+"Add items to your list" = "Adicionar itens à sua lista";
+"Alert" = "Alerta";
+"Are you sure you want to delete all items?" = "Tem certeza de que deseja excluir todos os itens?";
+"Are you sure want to cancel scanning?" = "Deseja cancelar o scan?";
+"Are you sure you want to delete this item?" = "Deseja excluir este item?";
+"Not a valid Product" = "Não é um produto válido";
+"Scanned Code is not valid. Please try again later." = "O código lido não é válido. Por favor, tente novamente.";
+"Do you want to proceed with this Return?" =  "Deseja continuar com esta Devolução?";
+"Do you want to proceed with this Code?" = "Deseja prosseguir com este Código?";
+"Confirmation" = "Confirmação";
+"No" = "Não";
+"Yes" = "Sim";
+"Not a valid url. Please try again." = "Não é um URL válido. Por favor, tente novamente.";
+"Do you want to proceed with this url?" = "Deseja continuar com este url?";
+"List Scan" = "Listar verificação";
+"Clear All" = "Limpar tudo";
+
+//Picking.storyboard
+//SelectCustomerViewController
+"Please select customer first." = "Por favor, selecione o cliente primeiro.";
+"Select search type" = "Selecione o tipo de pesquisa";
+"Name" = "Nome";
+"Search by Name" = "Procura por nome";
+"Customer ID" = "Identificação do Cliente";
+"Search by Customer ID" = "Pesquisa por ID de cliente";
+"GS1 ID" = "ID GS1";
+"Search by GS1 ID" = "Pesquisar por ID GS1";
+"Cancel" = "Cancelar";
+"Are you sure you want cancel Picking" = "Deseja cancelar a seleção?";
+"CUST ID: " = "CUST ID: ";
+"GLN: " = "GLN: ";
+"Picking" = "Seleção";
+"Select Customer" = "Selecione o cliente";
+"Picking Items" = "Selecionando itens";
+"Confirm Picking" = "Confirmar seleção";
+"Start Typing.." = "Começe a digitar..";
+
+//PickingScanItemsViewController
+"No scanned serials found." = "Nenhum serial escaneado encontrado.";
+"Item is already picked" = "O item já está selecionado";
+"Serial(s) Failed to Verify." = "Serial(is) falhou(aram) ao verificar.";
+" Lot Products" = " Produtos do Lote";
+" Lot Product" = " Produto do Lote";
+" Serials" = " Seriais";
+" Serial" = " Serial";
+"Please scan serials before proceeding." = "Por favor, escaneie o(s) serial(is) antes de continuar.";
+"Click camera to scan your picking items" = "Clique na câmera para escanear o(s) item(s)";
+"Single Scan" = "Scan Único";
+"Multiple Scan" = "Scan Multiplo";
+"or" = "ou";
+"Add Lot Based Product" = "Adicionar Produto de Lote";
+"View Verified Serials" = "Ver serial(is) verificado(s)";
+"Failed Items" = "Itens com falha";
+"View Items" = "Ver itens";
+
+//AddressDetailsViewController
+"Seller Address" = "Endereço do Vendedor";
+"Sold By" = "Vendido por:";
+"Ship From" = "Enviar de:";
+"Trading Partner Address" = "Endereço do parceiro comercial";
+"Sold To" = "Vendido para:";
+"Ship To" = "Enviar para";
+"Edit Trading Partner Address" = "Editar endereço do parceiro comercial";
+"Brought By" = "Trazido por";
+"Select Address" = "Selecione o Endereço";
+"Add Custom Address" = "Adicionar Endereço";
+
+//AddCustomAddressViewController
+"Please enter recipient name." = "Insira o nome do destinatário.";
+"Please enter address." = "Por favor, insira o endereço.";
+"Please enter city name." = "Insira o nome da cidade.";
+"Please select state" = "Selecione o estado";
+"Please enter postal code." = "Insira o código postal.";
+"Please enter valid Email." = "Por favor, insira um e-mail válido.";
+"Recipient Name*" = "Nome do Destinatário*";
+"Address*" = "Endereço*";
+"City*" = "Cidade*";
+"Country" = "País";
+"State" = "Estado";
+"Postal Code*" = "CEP*";
+"Phone" = "Telefone";
+"Email" = "E-mail";
+
+//PickingSerialListViewController
+"Serials" = "Séries";
+"Serial" = "Serial";
+"successfully removed" = "removido com sucesso";
+"Please check the product that you scan for remove are already deleted or exist in the picking items." = "Verifique se o produto que você digitalizou para remover já foi excluído ou existe nos itens de separação.";
+"Something went wrong. Try again later." = "Algo deu errado. Tente mais tarde.";
+"Serial successfully deleted." = "Série excluída com sucesso.";
+"Are you sure you want to remove this serial?" = "Deseja remover este serial?";
+"Remove Multiple" = "Remover Vários";
+"GTIN14" = "GTIN14";
+"NDC" = "NDC";
+"Expiration Date" = "Data de validade";
+
+//,,,sb-lang2
+
+//Direct picking Lot based
+"Picked Items not available for lot based." = "Itens selecionados não disponíveis para lotes.";
+"Picking will be done with different lot than what was suggested." = "A colheita será feita com lote diferente do sugerido.";
+
+//Participant Reassign
+"Please choose different participant for reassign." = "Escolha um participante diferente para reatribuir.";
+"Please select participant for reassign." = "Selecione o participante para reatribuir.";
+"Participant Reassign" = "Reatribuição de Participante";
+
+//DPLotbaseupdateview - picking
+"Filter By Participent name." = "Filtrar por nome do participante";
+"Picking will be done with a different lot than what was suggested.Do you want to continue?" = "A coleta será feita com um lote diferente do sugerido. Deseja continuar?";
+
+//PickingDetails
+"Void Picking" = "Seleção de Vazio";
+"Your picking will be voided and picked items will be put back to the original location in the inventory." = "Sua coleta será anulada e os itens coletados serão colocados de volta no local original no inventário.";
+"Postpone Picking" = "Adiar a coleta";
+"This will keep the picking operation open, and will allow-you to resume it later.You can find the same picking in Picking in Progress section." = "Isso manterá a operação de separação aberta e permitirá que você a retome mais tarde. Você pode encontrar a mesma separação na seção Picking em andamento.";
+
+//DpViewPickedItems - picking
+"Product Type" = "Tipo de Produto";
+
+//Participant Reassign View
+"Change Picking Ownership" = "Alterar propriedade de coleta";
+"Select Participant:" = "Selecione o participante:";
+
+//DPLotBasedUpdatedView
+"Participant Details" = "Detalhes do participante";
+"Filter By Participant name" = "Filtrar por nome do participante";
+"Participant Name:" = "Nome do participante:";
+"Email:" = "E-mail:";
+"Lot Number:" = "Número de lote:";
+"Available Qty:" = "Quantidade disponível:";
+"Expiration Date:" = "Data de validade:";
+
+//DirectPickingScan
+"Pick Items Manually" = "Escolher itens manualmente";
+
+//PickingManuallySOItems
+"LOT" = "MUITOS";
+"Qty. To Pick" = "Qtd. Escolher";
+"Pick Items" = "Escolher itens";
+"Scan Product" = "Digitalizar produto";
+
+//DPPickingItems
+"Product Information" = "informação do produto";
+"Product" = "produtos";
+"Available Quantity:" = "Quantidade disponível:";
+"Scan to pick serial based items" = "Digitalize para escolher itens baseados em série";
+"Pick items by Lot Based" = "Escolha itens por lote";
+"Enter Quantity Picked for this shelf" = "Insira a quantidade retirada para esta prateleira";
+"Add Lot Based Quantity" = "Adicionar Quantidade Baseada em Lote";
+"Lot quantity must be provided" = "A quantidade do lote deve ser fornecida";
+"Are you sure? you are about to delete the picked item" = "Tem certeza? você está prestes a excluir o item selecionado";
+
+//PickingSOItems
+"Qty. To Picked" = "Qtd. Para Escolhido";
+"Qty. Picked" = "Qtd. Escolhido";
+
+//DirectPickingScan
+"Please scan serials or pick items manually before proceed." = "Por favor, escaneie as séries ou selecione os itens manualmente antes de prosseguir.";
+"SO List Scan" = "Verificação da Lista SO";
+
+
+//ToShipEdit
+"Shipment Carrier" = "Transportadora";
+"Shipment Method" = "Método de envio";
+"Choose the shipping carrier." = "Escolha a transportadora.";
+"Please add the custom shipping carrier." = "Por favor, adicione a transportadora personalizada.";
+"Choose the shipping method." = "Escolha a forma de envio.";
+"Please add the custom shipping method." = "Por favor, adicione o método de envio personalizado.";
+
+//Picking Scan Item
+"Please Scan Container Only." = "Por favor, digitalize apenas o contêiner.";
+"Please Scan Product Only." = "Por favor, digitalize apenas o produto.";
