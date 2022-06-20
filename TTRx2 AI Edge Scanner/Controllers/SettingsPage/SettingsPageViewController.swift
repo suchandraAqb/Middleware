@@ -9,7 +9,11 @@
 import UIKit
 
 class SettingsPageViewController: BaseViewController {
-
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var addCredentialButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var settingTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

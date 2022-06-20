@@ -353,6 +353,11 @@ class ThirdViewController: BaseViewController, UIScrollViewDelegate {
         if let refresh_token = responseDict["refresh_token"] as? String,!refresh_token.isEmpty{
             defaults.setValue(refresh_token , forKey: "refreshtoken")
         }
+        if self.rememberMeButton.isSelected{
+            defaults.setValue(true, forKey: "rememberedUser")
+        }else{
+            defaults.setValue(false, forKey: "rememberedUser")
+        }
         if let userDict = responseDict["user"] as? NSDictionary{
             if let domainName = userDict["domain"] as? String,!domainName.isEmpty{
                 defaults.setValue(domainName, forKey: "domainname")
@@ -365,15 +370,20 @@ class ThirdViewController: BaseViewController, UIScrollViewDelegate {
             }
             if let userName = userDict["name"] as? String,!userName.isEmpty{
                 defaults.setValue(userName, forKey: "userName")
+            }
+            
+            if let isconfig = userDict["is_configured"] as? Bool{
+                if !isconfig {
+                    self.moveToSettingsView()
+                }else{
+                    Utility.moveToHomeAsRoot()
                 }
             }
-        if self.rememberMeButton.isSelected{
-            defaults.setValue(true, forKey: "rememberedUser")
-        }else{
-            defaults.setValue(false, forKey: "rememberedUser")
         }
-     
-        Utility.moveToHomeAsRoot()
+    }
+    private func moveToSettingsView(){
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "SettingsPageView") as! SettingsPageViewController
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
 //    private func processLoginResponse(_ responseDict:NSDictionary){
