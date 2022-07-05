@@ -506,6 +506,8 @@ class Utility: NSObject {
                 finalIdStr = "9d111570-82b0-439b-8108-d7fbfc47b4c8"
             }else if type == "erpAction"{
                 finalIdStr = "18a6c216-5320-4ab8-bec7-61a4eb2a9997"
+            }else if type == "getuserSettings"{
+                finalIdStr = "0206493c-0747-49c6-b27f-eacf9c7b35c1"
             }
         return finalIdStr
     }
