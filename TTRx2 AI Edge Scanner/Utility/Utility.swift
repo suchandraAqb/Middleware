@@ -332,6 +332,10 @@ class Utility: NSObject {
             finalUrlStr = BaseUrl + "new-password-required"
         }else  if type == "Logout"{
             finalUrlStr = BaseUrl + "sign-out"
+        }else if type == "ErpList"{
+            finalUrlStr = BaseUrl + "list-erps"
+        }else if type == "ErpAction"{
+            finalUrlStr = BaseUrl + "get-erps-in-action"
         }else  if type == "ShipmentDetails"{
             finalUrlStr = BaseUrl + "shipments/receiving/"
         }else  if type == "GetInboundSerials"{
@@ -498,6 +502,10 @@ class Utility: NSObject {
                 finalIdStr = "cd86196c-47c6-498c-8358-ed5671c2c2dc"
             }else if type == "revalidateAccessToken"{
                 finalIdStr = "3b82ddb7-e456-4627-8e9d-083bc2686839"
+            }else if type == "erpList"{
+                finalIdStr = "9d111570-82b0-439b-8108-d7fbfc47b4c8"
+            }else if type == "erpAction"{
+                finalIdStr = "18a6c216-5320-4ab8-bec7-61a4eb2a9997"
             }
         return finalIdStr
     }
@@ -1276,6 +1284,23 @@ class Utility: NSObject {
         }
         
         return count
+    }
+    class func converJsonToArray(string : String)-> [Any]{
+        var jsonArray: [[String: Any]] = []
+
+        let data = string.data(using: .utf8)!
+        do {
+            if let arr = try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? [Dictionary<String,Any>]
+            {
+               jsonArray = arr
+               print(jsonArray) // use the json here
+            } else {
+                print("bad json")
+            }
+        } catch let error as NSError {
+            print(error)
+        }
+        return jsonArray
     }
     class func convertCoreDataRequestsToJSONArray(moArray: [NSManagedObject]) -> [Any] {
         var jsonArray: [[String: Any]] = []

@@ -373,7 +373,7 @@ class ThirdViewController: BaseViewController, UIScrollViewDelegate {
             }
             
             if let isconfig = userDict["is_configured"] as? Bool{
-                if !isconfig {
+                if isconfig {
                     self.moveToSettingsView()
                 }else{
                     Utility.moveToHomeAsRoot()
