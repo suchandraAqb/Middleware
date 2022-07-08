@@ -78,7 +78,7 @@ class SettingsPageViewController: BaseViewController,UITableViewDataSource,UITab
             if let userName = dict["username"] as? String,userName.isEmpty{
                 isEmpty = true
             }
-            if let userName = dict["username"] as? String,userName.isEmpty{
+            if let password = dict["password"] as? String,password.isEmpty{
                 isEmpty = true
             }
             if isEmpty {
