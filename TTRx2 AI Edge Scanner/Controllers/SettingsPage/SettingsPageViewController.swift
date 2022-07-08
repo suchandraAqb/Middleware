@@ -26,11 +26,10 @@ class SettingsPageViewController: BaseViewController,UITableViewDataSource,UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         addCredentialButton.setRoundCorner(cornerRadious: addCredentialButton.frame.size.height/2)
+        addCredentialButton.isHidden = true
         saveButton.setRoundCorner(cornerRadious: addCredentialButton.frame.size.height/2)
         sectionView.roundTopCorners(cornerRadious: 40)
-        self.populateCrendentialsArr()
         self.createInputAccessoryViewForTableView()
-        self.erpListWebServiceCall()
         self.erpActionWebServiceCall()
 
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -44,8 +43,6 @@ class SettingsPageViewController: BaseViewController,UITableViewDataSource,UITab
         self.arrCount = arrCount + 1
         self.populateCrendentialsArr()
         settingTableView.reloadData()
-//        let indexPath = NSIndexPath(row: 0, section: arrCount)
-//        settingTableView.scrollToRow(at: indexPath as IndexPath, at: .bottom, animated: true)
     }
     
     @IBAction func crossButtonPressed(_ sender:UIButton){
@@ -75,7 +72,29 @@ class SettingsPageViewController: BaseViewController,UITableViewDataSource,UITab
     }
     
     @IBAction func saveButtonPressed(_ sender:UIButton){
+        var isEmpty = false
+        for i in 0..<credentialsArr.count {
+            letlet dict = (credentialsArr[i] as? NSMutableDictionary)!
+            if let userName = dict["username"] as? String,userName.isEmpty{
+                isEmpty = true
+            }
+            if let userName = dict["username"] as? String,userName.isEmpty{
+                isEmpty = true
+            }
+            if isEmpty {
+                Utility.showPopup(Title: App_Title, Message: "Please fill all the details", InViewC: self)
+                return
+            }
+        }
         
+        let arr = NSMutableArray()
+        for i in 0..<credentialsArr.count {
+            var dict = NSMutableDictionary()
+            dict = (credentialsArr[i] as? NSMutableDictionary)!
+            dict.removeObject(forKey: "erp")
+            arr.add(dict)
+        }
+        self.saveuserSettingsWebServiceCall(arr: arr)
     }
     //MARK: - End
     
@@ -113,36 +132,33 @@ class SettingsPageViewController: BaseViewController,UITableViewDataSource,UITab
     
     func populateCrendentialsArr(){
         if credentialsArr.count == 0{
-            for _ in 0..<arrCount{
+            for i in 0..<erpList.count{
                 let dict = NSMutableDictionary()
+                let erpDict = erpList[i] as? NSDictionary
                 dict.setValue("", forKey: "username")
-                dict.setValue("", forKey:"password")
-                dict.setValue("", forKey:"erp")
+                dict.setValue("", forKey: "password")
+                dict.setValue(erpDict?["erp_name"] as! String, forKey:"erp")
+                dict.setValue(erpDict?["erp_uuid"] as! String, forKey: "erp_uuid")
                 credentialsArr.add(dict)
             }
-        }else{
-                let dict = NSMutableDictionary()
-                dict.setValue("", forKey: "username")
-                dict.setValue("", forKey:"password")
-                dict.setValue("", forKey:"erp")
-                credentialsArr.add(dict)
-            }
-        
+        }
+        settingTableView.reloadData()
     }
     
     
     //MARK: - End
     
     //MARK: - Webservice call
-    
-    func erpListWebServiceCall(){
+    func erpActionWebServiceCall(){
         
         var requestDict = [String:Any]()
-        requestDict["action_uuid"] = Utility.getActionId(type:"erpList")
+        requestDict["action_uuid"] = Utility.getActionId(type:"erpAction")
         requestDict["sub"] = defaults.object(forKey:"sub")
+        requestDict["target_action"] = Utility.getActionId(type: "getuserSettings")
+        
 
         self.showSpinner(onView: self.view)
-        Utility.POSTServiceCall(type: "ErpList", serviceParam: requestDict as NSDictionary, parentViewC: self, willShowLoader: false, viewController: self,appendStr: "") { (responseData:Any?, isDone:Bool?, message:String?) in
+        Utility.POSTServiceCall(type: "ErpAction", serviceParam: requestDict as NSDictionary, parentViewC: self, willShowLoader: false, viewController: self,appendStr: "") { (responseData:Any?, isDone:Bool?, message:String?) in
             DispatchQueue.main.async{
                 self.removeSpinner()
                 if isDone! {
@@ -155,6 +171,8 @@ class SettingsPageViewController: BaseViewController,UITableViewDataSource,UITab
                                 if erpArr.count > 0 {
                                     self.erpList = erpArr
                                 }
+                            self.populateCrendentialsArr()
+
                         }else{
                             if responseData != nil{
                                
@@ -181,16 +199,15 @@ class SettingsPageViewController: BaseViewController,UITableViewDataSource,UITab
             }
         }
     }
-    func erpActionWebServiceCall(){
+    func saveuserSettingsWebServiceCall(arr:NSArray){
         
         var requestDict = [String:Any]()
-        requestDict["action_uuid"] = Utility.getActionId(type:"erpAction")
+        requestDict["action_uuid"] = Utility.getActionId(type:"saveusersettings")
         requestDict["sub"] = defaults.object(forKey:"sub")
-        requestDict["target_action"] = Utility.getActionId(type: "getuserSettings")
-        
+        requestDict["credentials"] = Utility.json(from:arr)
 
         self.showSpinner(onView: self.view)
-        Utility.POSTServiceCall(type: "ErpAction", serviceParam: requestDict as NSDictionary, parentViewC: self, willShowLoader: false, viewController: self,appendStr: "") { (responseData:Any?, isDone:Bool?, message:String?) in
+        Utility.POSTServiceCall(type: "saveuserSettings", serviceParam: requestDict as NSDictionary, parentViewC: self, willShowLoader: false, viewController: self,appendStr: "") { (responseData:Any?, isDone:Bool?, message:String?) in
             DispatchQueue.main.async{
                 self.removeSpinner()
                 if isDone! {
@@ -199,10 +216,8 @@ class SettingsPageViewController: BaseViewController,UITableViewDataSource,UITab
                        let statusCode = responseDict["status_code"] as? Bool
                         
                         if statusCode! {
-                            let erpArr = Utility.converJsonToArray(string: responseDict["data"] as! String)
-                                if erpArr.count > 0 {
-                                    self.erpList = erpArr
-                                }
+                            Utility.moveToHomeAsRoot()
+
                         }else{
                             if responseData != nil{
                                
@@ -298,7 +313,7 @@ class SettingsPageViewController: BaseViewController,UITableViewDataSource,UITab
         return view
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return credentialsArr.count
+        return erpList.count
    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
        return 1
@@ -333,15 +348,9 @@ class SettingsPageViewController: BaseViewController,UITableViewDataSource,UITab
                 erpvalueStr = erpvalue
             }
             
-            if erpvalueStr.isEmpty || erpvalueStr == "Choose ERP"{
-                cell.dropdownButton.setTitle("Choose ERP", for: .normal)
-                cell.dropdownButton.setTitleColor(Utility.hexStringToUIColor(hex: "C7C7CD"), for: .normal)
-            }else{
-                cell.dropdownButton.setTitle(erpvalueStr, for: .normal)
-                cell.dropdownButton.setTitleColor(Utility.hexStringToUIColor(hex: "072144"), for: .normal)
-            }
+            cell.credentialsLabel.text = "\(erpvalueStr) Credentials"
         }
-        cell.crossButton.tag = indexPath.section
+//        cell.crossButton.tag = indexPath.section
         cell.dropdownButton.tag = indexPath.section
         cell.usernameTextfield.tag = indexPath.section
         cell.passwordTextfield.tag = indexPath.section
@@ -349,7 +358,7 @@ class SettingsPageViewController: BaseViewController,UITableViewDataSource,UITab
         cell.passwordTextfield.accessibilityHint = "Password"
 
         return cell
-   
+    
    }
     //MARK: - SingleSelectDropdownDelegate
 
@@ -373,6 +382,7 @@ class SettingsPageViewController: BaseViewController,UITableViewDataSource,UITab
     @IBOutlet weak var dropdownButton:UIButton!
     @IBOutlet weak var erpview:UIView!
     @IBOutlet weak var crossButton:UIButton!
+     @IBOutlet weak var credentialsLabel:UILabel!
      
      override func awakeFromNib() {
          usernameTextfield.setRoundCorner(cornerRadious: 10)

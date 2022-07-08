@@ -489,6 +489,8 @@ class Utility: NSObject {
             finalUrlStr = BaseUrl + "company_management/staff_mgt"
         }else if type == "revalidateAccessToken"{
             finalUrlStr = BaseUrl + "revalidate-access-token"
+        }else if type == "saveuserSettings"{
+            finalUrlStr = BaseUrl + "save-user-settings"
         }
         return finalUrlStr
     }
@@ -508,6 +510,8 @@ class Utility: NSObject {
                 finalIdStr = "18a6c216-5320-4ab8-bec7-61a4eb2a9997"
             }else if type == "getuserSettings"{
                 finalIdStr = "0206493c-0747-49c6-b27f-eacf9c7b35c1"
+            }else if type == "saveusersettings"{
+                finalIdStr = "a1141524-b22b-4304-bbe5-620b54612db1"
             }
         return finalIdStr
     }

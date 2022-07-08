@@ -247,7 +247,9 @@ class ThirdViewController: BaseViewController, UIScrollViewDelegate {
         requestDict["action_uuid"] = Utility.getActionId(type:"Login")
         requestDict["email"] = userNameTextField.text
         requestDict["password"] = passwordTextField.text
-
+        requestDict["os"] = deviceDetails.deviceType
+        requestDict["device_id"] = deviceDetails.currentDeviceId
+        
         self.showSpinner(onView: self.view)
         Utility.POSTServiceCall(type: "Login", serviceParam: requestDict as NSDictionary, parentViewC: self, willShowLoader: false, viewController: self,appendStr: "") { (responseData:Any?, isDone:Bool?, message:String?) in
             DispatchQueue.main.async{
