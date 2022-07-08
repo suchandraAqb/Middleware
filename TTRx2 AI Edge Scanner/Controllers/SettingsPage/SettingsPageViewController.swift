@@ -74,7 +74,7 @@ class SettingsPageViewController: BaseViewController,UITableViewDataSource,UITab
     @IBAction func saveButtonPressed(_ sender:UIButton){
         var isEmpty = false
         for i in 0..<credentialsArr.count {
-            letlet dict = (credentialsArr[i] as? NSMutableDictionary)!
+            let dict = (credentialsArr[i] as? NSMutableDictionary)!
             if let userName = dict["username"] as? String,userName.isEmpty{
                 isEmpty = true
             }
