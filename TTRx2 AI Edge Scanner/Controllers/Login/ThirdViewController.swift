@@ -248,7 +248,13 @@ class ThirdViewController: BaseViewController, UIScrollViewDelegate {
         requestDict["email"] = userNameTextField.text
         requestDict["password"] = passwordTextField.text
         requestDict["os"] = deviceDetails.deviceType
-        requestDict["device_id"] = deviceDetails.currentDeviceId
+        
+        if let receivedData = KeyChain.load(key: "deviceID") {
+            let result = receivedData.to(type: Int.self)
+            requestDict["device_id"] = "[\"BF476C95-1BD8-4638-B30B-ADE9DBD03610\"]" //deviceDetails.currentDeviceId
+
+        }
+        requestDict["device_id"] = "[\"BF476C95-1BD8-4638-B30B-ADE9DBD03610\"]" //deviceDetails.currentDeviceId
         
         self.showSpinner(onView: self.view)
         Utility.POSTServiceCall(type: "Login", serviceParam: requestDict as NSDictionary, parentViewC: self, willShowLoader: false, viewController: self,appendStr: "") { (responseData:Any?, isDone:Bool?, message:String?) in
@@ -260,6 +266,10 @@ class ThirdViewController: BaseViewController, UIScrollViewDelegate {
                        let statusCode = responseDict["status_code"] as? Bool
                         
                         if statusCode! {
+                            let int: Int = Int(self.deviceDetails.currentDeviceId) ?? 0
+                            let data = Data(from: int)
+                            let status = KeyChain.save(key: "deviceID", data: data)
+                            
                             let dict = Utility.convertToDictionary(text: responseDict["data"] as! String) as NSDictionary?
                             if let session = dict?["session"] as? String,!session.isEmpty{
                                 self.updatePasswordView.isHidden = false

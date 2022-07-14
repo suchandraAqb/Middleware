@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
         <array key="Merriweather-Bold.ttf">
             <string>Merriweather-Bold</string>
         </array>
@@ -371,13 +374,13 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkE-a1-aNC">
-                                                                <rect key="frame" x="0.0" y="0.0" width="334" height="21"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="334" height="17.5"/>
                                                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="22"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Please enter username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0w0-2S-gwX">
-                                                                <rect key="frame" x="0.0" y="21" width="334" height="19"/>
+                                                                <rect key="frame" x="0.0" y="17.5" width="334" height="22.5"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                                 <color key="textColor" red="0.47843137250000001" green="0.77647058820000003" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -450,7 +453,7 @@
                                                                         </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOx-MP-gtR">
-                                                                        <rect key="frame" x="28" y="13" width="306" height="16.5"/>
+                                                                        <rect key="frame" x="28" y="11" width="306" height="20"/>
                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                                                         <color key="textColor" red="0.19607843137254902" green="0.54509803921568623" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -777,10 +780,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z02-Lp-n3n">
-                                <rect key="frame" x="0.0" y="113" width="414" height="783"/>
+                                <rect key="frame" x="0.0" y="117" width="414" height="779"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tex-1c-Ts8">
-                                        <rect key="frame" x="20" y="20" width="374" height="763"/>
+                                        <rect key="frame" x="20" y="20" width="374" height="759"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemsTableViewCell" rowHeight="257" id="PsW-Cf-5II" customClass="ItemsTableViewCell" customModule="RapidRx" customModuleProvider="target">
@@ -1063,7 +1066,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBR-Op-Fqj">
-                                <rect key="frame" x="20" y="64" width="374" height="24"/>
+                                <rect key="frame" x="20" y="64" width="374" height="28"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Items" image="arrow_left.png"/>
@@ -1103,10 +1106,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4j7-3S-ASh">
-                                <rect key="frame" x="0.0" y="113" width="414" height="783"/>
+                                <rect key="frame" x="0.0" y="117" width="414" height="779"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="60" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="wb0-54-hAW">
-                                        <rect key="frame" x="20" y="20" width="374" height="763"/>
+                                        <rect key="frame" x="20" y="20" width="374" height="759"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemsTableViewCell" rowHeight="43" id="40T-iS-yBC" customClass="ItemsTableViewCell" customModule="RapidRx" customModuleProvider="target">
@@ -1175,7 +1178,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzT-gg-L5X">
-                                <rect key="frame" x="20" y="64" width="374" height="24"/>
+                                <rect key="frame" x="20" y="64" width="374" height="28"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Serials" image="arrow_left.png"/>
@@ -2299,10 +2302,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lde-rD-Ce2">
-                                <rect key="frame" x="0.0" y="113" width="414" height="783"/>
+                                <rect key="frame" x="0.0" y="117" width="414" height="779"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RRb-hD-Bcc">
-                                        <rect key="frame" x="20" y="65" width="374" height="718"/>
+                                        <rect key="frame" x="20" y="65" width="374" height="714"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemsTableViewCell" id="FDl-cu-Oe4" customClass="ItemsTableViewCell" customModule="RapidRx" customModuleProvider="target">
@@ -2669,7 +2672,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxg-P3-mC7">
-                                <rect key="frame" x="20" y="64" width="374" height="24"/>
+                                <rect key="frame" x="20" y="64" width="374" height="28"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Verified Serials" image="arrow_left.png"/>
@@ -3430,13 +3433,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRODUCT LIST" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFx-T8-Vk4">
-                                                <rect key="frame" x="20" y="77" width="374" height="19"/>
+                                                <rect key="frame" x="20" y="73.5" width="374" height="22.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
                                                 <color key="textColor" red="0.027450980392156862" green="0.12941176470588234" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select from list" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frA-b5-Qk2">
-                                                <rect key="frame" x="20" y="29.5" width="326" height="21"/>
+                                                <rect key="frame" x="20" y="27.5" width="326" height="25.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
                                                 <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -3600,7 +3603,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure you want to confirm Receiving?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vue-wD-EiK">
-                                        <rect key="frame" x="25" y="171" width="364" height="58.5"/>
+                                        <rect key="frame" x="25" y="165" width="364" height="70"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="25"/>
                                         <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -3650,13 +3653,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsF-nl-9gX">
-                                <rect key="frame" x="0.0" y="113" width="414" height="783"/>
+                                <rect key="frame" x="0.0" y="117" width="414" height="779"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oTi-sW-GW5">
-                                        <rect key="frame" x="20" y="20" width="374" height="663"/>
+                                        <rect key="frame" x="20" y="20" width="374" height="659"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usk-Ur-WKc">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="583"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="579"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgi-F8-uZ8">
                                                         <rect key="frame" x="15" y="15" width="344" height="410"/>
@@ -3982,7 +3985,7 @@
                                                 <viewLayoutGuide key="frameLayoutGuide" id="Y5h-Hc-QTJ"/>
                                             </scrollView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCz-0J-EkO">
-                                                <rect key="frame" x="20" y="598" width="334" height="50"/>
+                                                <rect key="frame" x="20" y="594" width="334" height="50"/>
                                                 <color key="backgroundColor" red="0.0" green="0.68627450980000004" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="TtE-aO-tiA"/>
@@ -4017,7 +4020,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEV-SY-FgP">
-                                <rect key="frame" x="20" y="64" width="374" height="24"/>
+                                <rect key="frame" x="20" y="64" width="374" height="28"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Manual Search" image="arrow_left.png"/>
@@ -4074,10 +4077,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MS1-EN-G4o">
-                                <rect key="frame" x="0.0" y="113" width="414" height="783"/>
+                                <rect key="frame" x="0.0" y="117" width="414" height="779"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V5d-J6-RVS">
-                                        <rect key="frame" x="20" y="20" width="374" height="763"/>
+                                        <rect key="frame" x="20" y="20" width="374" height="759"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ShipmentListCell" rowHeight="250" id="Wqo-QK-Ndf" customClass="ShipmentListCell" customModule="RapidRx" customModuleProvider="target">
@@ -4420,7 +4423,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wU-y9-wZO">
-                                <rect key="frame" x="20" y="64" width="374" height="24"/>
+                                <rect key="frame" x="20" y="64" width="374" height="28"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Shipments" image="arrow_left.png"/>
@@ -4429,7 +4432,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuB-CN-EFW">
-                                <rect key="frame" x="342.5" y="67.5" width="51.5" height="17.5"/>
+                                <rect key="frame" x="337" y="67.5" width="57" height="21"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.68627450980000004" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -4486,7 +4489,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gql-p6-BeY">
-                                                <rect key="frame" x="68" y="27.5" width="278" height="20"/>
+                                                <rect key="frame" x="68" y="25.5" width="278" height="24"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                 <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -5639,7 +5642,7 @@ Serial Scanned</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5O-t3-pFN">
-                                                <rect key="frame" x="20" y="24.5" width="80" height="19"/>
+                                                <rect key="frame" x="20" y="22.5" width="80" height="23"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="9DA-dC-Esa"/>
                                                 </constraints>
@@ -6261,13 +6264,13 @@ Serial Scanned</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G1A-of-SbD">
-                                <rect key="frame" x="0.0" y="44" width="414" height="64"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="68"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9o-0T-wg3">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkG-nE-vUP">
-                                                <rect key="frame" x="20" y="20" width="324" height="19"/>
+                                                <rect key="frame" x="20" y="20" width="324" height="23"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
                                                 <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" title="Back" image="arrow_left.png">
@@ -6278,7 +6281,7 @@ Serial Scanned</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qg1-y7-o5l">
-                                                <rect key="frame" x="354" y="12" width="40" height="40"/>
+                                                <rect key="frame" x="354" y="14" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="3EL-JC-sHc"/>
                                                     <constraint firstAttribute="height" constant="40" id="ClN-bv-8dH"/>
@@ -6289,7 +6292,7 @@ Serial Scanned</string>
                                                 </connections>
                                             </button>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1E-Ha-bav">
-                                                <rect key="frame" x="149.5" y="12" width="115" height="40"/>
+                                                <rect key="frame" x="142.5" y="10" width="129" height="48"/>
                                                 <string key="text">0
 Serial Scanned</string>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
@@ -6311,7 +6314,7 @@ Serial Scanned</string>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dHF-RX-HmB">
-                                        <rect key="frame" x="0.0" y="64" width="414" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="68" width="414" height="0.0"/>
                                         <subviews>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ovm-WJ-5av">
                                                 <rect key="frame" x="0.0" y="0.0" width="537" height="30"/>
@@ -6393,7 +6396,7 @@ Serial Scanned</string>
                                 </constraints>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dL-ej-xRK">
-                                <rect key="frame" x="0.0" y="108" width="414" height="754"/>
+                                <rect key="frame" x="0.0" y="112" width="414" height="750"/>
                                 <color key="backgroundColor" red="0.89019607840000003" green="0.91764705879999997" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -6403,7 +6406,7 @@ Serial Scanned</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8a-Cy-i87">
-                                <rect key="frame" x="67" y="138" width="130" height="30"/>
+                                <rect key="frame" x="69" y="142" width="126" height="33"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="CONTAINER SCAN">
@@ -6414,7 +6417,7 @@ Serial Scanned</string>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVb-gD-hDE">
-                                <rect key="frame" x="222" y="138" width="130" height="30"/>
+                                <rect key="frame" x="220" y="142" width="126" height="33"/>
                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="PRODUCT SCAN">
@@ -6828,24 +6831,24 @@ Serial Scanned</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NdH-3V-lnN">
-                                <rect key="frame" x="0.0" y="113" width="414" height="783"/>
+                                <rect key="frame" x="0.0" y="117" width="414" height="779"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="noY-d7-kx6">
-                                        <rect key="frame" x="20" y="20" width="374" height="675"/>
+                                        <rect key="frame" x="20" y="20" width="374" height="671"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ARMessageListTableViewCell" id="pfS-4G-nHQ" customClass="ARMessageListTableViewCell" customModule="RapidRx" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="44.5" width="374" height="81.5"/>
+                                                <rect key="frame" x="0.0" y="44.5" width="374" height="85"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pfS-4G-nHQ" id="6OD-6r-VTq">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="81.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="85"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AKF-b0-mV0">
-                                                            <rect key="frame" x="0.0" y="10" width="374" height="66.5"/>
+                                                            <rect key="frame" x="0.0" y="10" width="374" height="70"/>
                                                             <subviews>
                                                                 <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeZ-5w-iAQ">
-                                                                    <rect key="frame" x="10" y="13.5" width="40" height="40"/>
+                                                                    <rect key="frame" x="10" y="15" width="40" height="40"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="40" id="KjS-vN-EKV"/>
                                                                         <constraint firstAttribute="height" constant="40" id="jRM-KP-Ar1"/>
@@ -6854,17 +6857,17 @@ Serial Scanned</string>
                                                                     <state key="selected" image="sm_radio_active.png"/>
                                                                 </button>
                                                                 <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H6z-OK-9jc">
-                                                                    <rect key="frame" x="50" y="0.0" width="324" height="66.5"/>
+                                                                    <rect key="frame" x="50" y="0.0" width="324" height="70"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iL2-Hb-TqY">
-                                                                            <rect key="frame" x="15" y="10" width="294" height="16.5"/>
+                                                                            <rect key="frame" x="15" y="10" width="294" height="20"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
                                                                             <color key="textColor" red="0.0" green="0.68627450980000004" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="982123456785321434344223111" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJR-Zi-phv">
-                                                                            <rect key="frame" x="15" y="31.5" width="294" height="25"/>
+                                                                            <rect key="frame" x="15" y="35" width="294" height="25"/>
                                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="XwU-0s-Dsa"/>
@@ -6925,7 +6928,7 @@ Serial Scanned</string>
                                         </connections>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j2y-1V-OBc">
-                                        <rect key="frame" x="20" y="695" width="374" height="88"/>
+                                        <rect key="frame" x="20" y="691" width="374" height="88"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Wsl-Ze-9kh">
                                                 <rect key="frame" x="0.0" y="20" width="374" height="50"/>
@@ -6974,10 +6977,10 @@ Serial Scanned</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F0C-5a-2xe">
-                                <rect key="frame" x="0.0" y="44" width="414" height="69"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="73"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPG-cN-Pq2">
-                                        <rect key="frame" x="354" y="14.5" width="40" height="40"/>
+                                        <rect key="frame" x="354" y="16.5" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Cyv-KF-2U4"/>
                                             <constraint firstAttribute="width" constant="40" id="Kts-gA-13x"/>
@@ -6988,7 +6991,7 @@ Serial Scanned</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdj-xM-w5b">
-                                        <rect key="frame" x="20" y="20" width="324" height="24"/>
+                                        <rect key="frame" x="20" y="20" width="324" height="28"/>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="AR" image="arrow_left.png"/>
@@ -7590,13 +7593,13 @@ Serial Scanned</string>
                                                                                         <rect key="frame" x="15" y="68" width="354" height="860"/>
                                                                                         <subviews>
                                                                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GTIN" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lkc-oP-S3j">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="123" height="0.0"/>
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="0.0"/>
                                                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                                                                                 <color key="textColor" red="0.4431372549" green="0.59607843140000005" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30707061615345164" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jJ-a7-OrF">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="123" height="0.0"/>
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="120" height="0.0"/>
                                                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                                                                 <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                 <nil key="highlightedColor"/>
@@ -7628,13 +7631,13 @@ Serial Scanned</string>
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="384" height="60"/>
                                                                                                 <subviews>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Lot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pv1-ad-lvP">
-                                                                                                        <rect key="frame" x="15" y="8" width="354" height="17.5"/>
+                                                                                                        <rect key="frame" x="15" y="8" width="354" height="21"/>
                                                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                                                                                         <color key="textColor" red="0.4431372549" green="0.59607843140000005" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                         <nil key="highlightedColor"/>
                                                                                                     </label>
                                                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lvw-nk-evW">
-                                                                                                        <rect key="frame" x="15" y="25.5" width="354" height="23.5"/>
+                                                                                                        <rect key="frame" x="15" y="29" width="354" height="20"/>
                                                                                                         <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                                                                         <textInputTraits key="textInputTraits"/>
@@ -7763,13 +7766,13 @@ Serial Scanned</string>
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="384" height="60"/>
                                                                                                 <subviews>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMM-zs-YFi">
-                                                                                                        <rect key="frame" x="15" y="8" width="354" height="17.5"/>
+                                                                                                        <rect key="frame" x="15" y="8" width="354" height="21"/>
                                                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                                                                                         <color key="textColor" red="0.4431372549" green="0.59607843140000005" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                         <nil key="highlightedColor"/>
                                                                                                     </label>
                                                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xZP-st-Ihx">
-                                                                                                        <rect key="frame" x="15" y="25.5" width="354" height="23.5"/>
+                                                                                                        <rect key="frame" x="15" y="29" width="354" height="20"/>
                                                                                                         <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -7809,13 +7812,13 @@ Serial Scanned</string>
                                                                                                 <rect key="frame" x="0.0" y="60" width="384" height="868"/>
                                                                                                 <subviews>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expiration Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKw-S1-1mj">
-                                                                                                        <rect key="frame" x="15" y="20" width="354" height="812.5"/>
+                                                                                                        <rect key="frame" x="15" y="20" width="354" height="809"/>
                                                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                                                                                         <color key="textColor" red="0.4431372549" green="0.59607843140000005" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                         <nil key="highlightedColor"/>
                                                                                                     </label>
                                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4RQ-Bl-ODU">
-                                                                                                        <rect key="frame" x="15" y="832.5" width="313" height="16.5"/>
+                                                                                                        <rect key="frame" x="15" y="829" width="313" height="20"/>
                                                                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                                                                                         <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                         <nil key="highlightedColor"/>
@@ -8031,10 +8034,10 @@ Serial Scanned</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x7d-r0-DTm">
-                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIM-cB-tMM">
-                                        <rect key="frame" x="20" y="20" width="394" height="24"/>
+                                        <rect key="frame" x="20" y="20" width="394" height="28"/>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Product Breakdown" image="arrow_left.png"/>
@@ -8052,7 +8055,7 @@ Serial Scanned</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RhK-Df-wQ8">
-                                <rect key="frame" x="0.0" y="104" width="414" height="792"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="788"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keF-ZK-mUO">
                                         <rect key="frame" x="55" y="15" width="304" height="50"/>
@@ -8070,7 +8073,7 @@ Serial Scanned</string>
                                         </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="7nr-Iz-xXF">
-                                        <rect key="frame" x="20" y="75" width="374" height="717"/>
+                                        <rect key="frame" x="20" y="75" width="374" height="713"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MISProductLotCell" rowHeight="200" id="9sE-YF-fXh" customClass="MISProductLotCell" customModule="RapidRx" customModuleProvider="target">
@@ -8096,16 +8099,16 @@ Serial Scanned</string>
                                                                                             <rect key="frame" x="0.0" y="0.0" width="172" height="79.5"/>
                                                                                             <subviews>
                                                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WKR-QV-myO">
-                                                                                                    <rect key="frame" x="0.0" y="0.0" width="74.5" height="79.5"/>
+                                                                                                    <rect key="frame" x="0.0" y="0.0" width="80.5" height="79.5"/>
                                                                                                     <subviews>
                                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lot Number" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJG-Fp-kBt">
-                                                                                                            <rect key="frame" x="0.0" y="0.0" width="74.5" height="40"/>
+                                                                                                            <rect key="frame" x="0.0" y="0.0" width="80.5" height="40"/>
                                                                                                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                                                                                             <color key="textColor" red="0.4431372549" green="0.59607843140000005" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                             <nil key="highlightedColor"/>
                                                                                                         </label>
                                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPU-4U-eEj">
-                                                                                                            <rect key="frame" x="0.0" y="40" width="74.5" height="39.5"/>
+                                                                                                            <rect key="frame" x="0.0" y="40" width="80.5" height="39.5"/>
                                                                                                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                                                                             <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                             <nil key="highlightedColor"/>
@@ -8113,7 +8116,7 @@ Serial Scanned</string>
                                                                                                     </subviews>
                                                                                                 </stackView>
                                                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTH-2w-H2y">
-                                                                                                    <rect key="frame" x="79.5" y="0.0" width="14" height="40"/>
+                                                                                                    <rect key="frame" x="85.5" y="0.0" width="14" height="40"/>
                                                                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                     <state key="normal" image="edit_icon.png"/>
                                                                                                 </button>
@@ -8179,16 +8182,16 @@ Serial Scanned</string>
                                                                                             <rect key="frame" x="0.0" y="0.0" width="344" height="85.5"/>
                                                                                             <subviews>
                                                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qOB-Mu-Tks">
-                                                                                                    <rect key="frame" x="0.0" y="0.0" width="96" height="85.5"/>
+                                                                                                    <rect key="frame" x="0.0" y="0.0" width="105.5" height="85.5"/>
                                                                                                     <subviews>
                                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expiration Date" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBz-Q4-Sgz">
-                                                                                                            <rect key="frame" x="0.0" y="0.0" width="96" height="43"/>
+                                                                                                            <rect key="frame" x="0.0" y="0.0" width="105.5" height="43"/>
                                                                                                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                                                                                             <color key="textColor" red="0.4431372549" green="0.59607843140000005" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                             <nil key="highlightedColor"/>
                                                                                                         </label>
                                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99999999" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgk-6L-680">
-                                                                                                            <rect key="frame" x="0.0" y="43" width="96" height="42.5"/>
+                                                                                                            <rect key="frame" x="0.0" y="43" width="105.5" height="42.5"/>
                                                                                                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                                                                             <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                             <nil key="highlightedColor"/>
@@ -8196,7 +8199,7 @@ Serial Scanned</string>
                                                                                                     </subviews>
                                                                                                 </stackView>
                                                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grw-5Y-wQN">
-                                                                                                    <rect key="frame" x="101" y="10.5" width="14" height="22"/>
+                                                                                                    <rect key="frame" x="110.5" y="10.5" width="14" height="22"/>
                                                                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                     <state key="normal" image="edit_icon.png"/>
                                                                                                 </button>
@@ -8328,7 +8331,7 @@ Serial Scanned</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DW9-UI-ZsH">
-                                <rect key="frame" x="0.0" y="113" width="414" height="783"/>
+                                <rect key="frame" x="0.0" y="117" width="414" height="779"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m2f-FS-RjP">
                                         <rect key="frame" x="8" y="0.0" width="398" height="176"/>
@@ -8790,7 +8793,7 @@ Serial Scanned</string>
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C26-J2-gv8">
-                                        <rect key="frame" x="8" y="264.5" width="398" height="416.5"/>
+                                        <rect key="frame" x="8" y="269" width="398" height="408"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AllocatedCell" rowHeight="257" id="5lt-um-e2T" customClass="AllocatedCell" customModule="RapidRx" customModuleProvider="target">
@@ -8804,13 +8807,13 @@ Serial Scanned</string>
                                                             <rect key="frame" x="0.0" y="5" width="398" height="30"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PO#" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0m5-MM-T69">
-                                                                    <rect key="frame" x="12" y="2" width="26" height="26"/>
+                                                                    <rect key="frame" x="12" y="2" width="28.5" height="26"/>
                                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                                     <color key="textColor" red="0.44313725490196076" green="0.59607843137254901" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PO3237148252352" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfW-PE-trL">
-                                                                    <rect key="frame" x="43" y="2" width="121" height="26"/>
+                                                                    <rect key="frame" x="45.5" y="2" width="123" height="26"/>
                                                                     <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
                                                                     <color key="textColor" red="0.027450980392156862" green="0.12941176470588234" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -9019,7 +9022,7 @@ Serial Scanned</string>
                                                                             <rect key="frame" x="0.0" y="0.0" width="398" height="40"/>
                                                                             <subviews>
                                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6K-ab-PiH">
-                                                                                    <rect key="frame" x="0.0" y="12" width="398" height="16"/>
+                                                                                    <rect key="frame" x="0.0" y="10.5" width="398" height="19"/>
                                                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                                                     <color key="tintColor" red="0.0" green="0.68627450980000004" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -9042,7 +9045,7 @@ Serial Scanned</string>
                                                                             <rect key="frame" x="0.0" y="0.0" width="0.0" height="40"/>
                                                                             <subviews>
                                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmO-cw-RgA">
-                                                                                    <rect key="frame" x="0.0" y="12" width="0.0" height="16"/>
+                                                                                    <rect key="frame" x="0.0" y="10.5" width="0.0" height="19"/>
                                                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -9292,7 +9295,7 @@ Serial Scanned</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnt-bK-2P9">
-                                        <rect key="frame" x="314" y="691" width="62" height="62"/>
+                                        <rect key="frame" x="314" y="687" width="62" height="62"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="62" id="Tsr-Dx-EPF"/>
                                             <constraint firstAttribute="width" constant="62" id="wQa-aG-nGi"/>
@@ -9304,7 +9307,7 @@ Serial Scanned</string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gfe-j7-2t2">
-                                        <rect key="frame" x="8" y="236" width="398" height="23.5"/>
+                                        <rect key="frame" x="8" y="236" width="398" height="28"/>
                                         <string key="text">There are some un-allocated item(s) present in the shipment. Please allocate them to purchase orders before receiving the shipment</string>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="10"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
@@ -9331,7 +9334,7 @@ Serial Scanned</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8B-Me-pjH">
-                                <rect key="frame" x="20" y="64" width="374" height="24"/>
+                                <rect key="frame" x="20" y="64" width="374" height="28"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Receiving" image="arrow_left.png"/>
@@ -9390,7 +9393,7 @@ Serial Scanned</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Okm-F9-eVp">
-                                <rect key="frame" x="0.0" y="113" width="414" height="783"/>
+                                <rect key="frame" x="0.0" y="117" width="414" height="779"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ya5-gm-yQS">
                                         <rect key="frame" x="15" y="20" width="384" height="110.5"/>
@@ -9399,13 +9402,13 @@ Serial Scanned</string>
                                                 <rect key="frame" x="0.0" y="5" width="384" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PO#" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIW-30-NR9">
-                                                        <rect key="frame" x="12" y="2" width="26" height="26"/>
+                                                        <rect key="frame" x="12" y="2" width="28.5" height="26"/>
                                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                         <color key="textColor" red="0.4431372549" green="0.59607843140000005" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PO3237148252352" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Lg-2R-K0K">
-                                                        <rect key="frame" x="43" y="2" width="121" height="26"/>
+                                                        <rect key="frame" x="45.5" y="2" width="123" height="26"/>
                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
                                                         <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -9517,7 +9520,7 @@ Serial Scanned</string>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OFs-1w-ILw">
-                                        <rect key="frame" x="15" y="145.5" width="384" height="535.5"/>
+                                        <rect key="frame" x="15" y="145.5" width="384" height="531.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AllocatationCell" rowHeight="286" id="9ZF-0U-Fvf" customClass="AllocatationCell" customModule="RapidRx" customModuleProvider="target">
@@ -9733,13 +9736,13 @@ Serial Scanned</string>
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="360" height="76.5"/>
                                                                                                     <subviews>
                                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qty. Allocated" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGz-iO-4eV">
-                                                                                                            <rect key="frame" x="0.0" y="0.0" width="81.5" height="76.5"/>
+                                                                                                            <rect key="frame" x="0.0" y="0.0" width="90" height="76.5"/>
                                                                                                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                                                                             <color key="textColor" red="0.4431372549" green="0.59607843140000005" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                             <nil key="highlightedColor"/>
                                                                                                         </label>
                                                                                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oHa-Yu-uq7">
-                                                                                                            <rect key="frame" x="81.5" y="0.0" width="278.5" height="76.5"/>
+                                                                                                            <rect key="frame" x="90" y="0.0" width="270" height="76.5"/>
                                                                                                             <subviews>
                                                                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAW-mg-t3c">
                                                                                                                     <rect key="frame" x="10" y="25.5" width="75" height="25"/>
@@ -9851,7 +9854,7 @@ Serial Scanned</string>
                                         </connections>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aS2-oN-cXr">
-                                        <rect key="frame" x="322" y="691" width="62" height="62"/>
+                                        <rect key="frame" x="322" y="687" width="62" height="62"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="62" id="2qx-5o-LlE"/>
                                             <constraint firstAttribute="height" constant="62" id="mnY-bZ-gRE"/>
@@ -9877,7 +9880,7 @@ Serial Scanned</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAq-5C-3f0">
-                                <rect key="frame" x="20" y="64" width="374" height="24"/>
+                                <rect key="frame" x="20" y="64" width="374" height="28"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Item Allocation for P.O." image="arrow_left.png"/>
@@ -9921,10 +9924,10 @@ Serial Scanned</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2tO-ge-fke">
-                                <rect key="frame" x="0.0" y="44" width="414" height="69"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="73"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7U-sE-1fk">
-                                        <rect key="frame" x="20" y="20" width="329" height="24"/>
+                                        <rect key="frame" x="20" y="20" width="329" height="28"/>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                         <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Select An Existing P.O." image="arrow_left.png"/>
@@ -9933,7 +9936,7 @@ Serial Scanned</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZp-Nh-yk8">
-                                        <rect key="frame" x="359" y="0.0" width="35" height="69"/>
+                                        <rect key="frame" x="359" y="0.0" width="35" height="73"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="dtI-cb-akq"/>
                                         </constraints>
@@ -9962,10 +9965,10 @@ Serial Scanned</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ak-HK-QoH">
-                                <rect key="frame" x="0.0" y="113" width="414" height="783"/>
+                                <rect key="frame" x="0.0" y="117" width="414" height="779"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="IQT-eA-Fp1">
-                                        <rect key="frame" x="15" y="20" width="384" height="763"/>
+                                        <rect key="frame" x="15" y="20" width="384" height="759"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="POCell" rowHeight="204" id="RSV-O6-FLn" customClass="POCell" customModule="RapidRx" customModuleProvider="target">
@@ -9979,13 +9982,13 @@ Serial Scanned</string>
                                                             <rect key="frame" x="0.0" y="8" width="384" height="30"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PO#" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxR-kb-kNl">
-                                                                    <rect key="frame" x="12" y="2" width="26" height="26"/>
+                                                                    <rect key="frame" x="12" y="2" width="28.5" height="26"/>
                                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                                     <color key="textColor" red="0.4431372549" green="0.59607843140000005" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PO3237148252352" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLP-iD-VBU">
-                                                                    <rect key="frame" x="43" y="2" width="121" height="26"/>
+                                                                    <rect key="frame" x="45.5" y="2" width="123" height="26"/>
                                                                     <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
                                                                     <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -10233,13 +10236,13 @@ Serial Scanned</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y2N-G7-n4M">
-                                <rect key="frame" x="0.0" y="113" width="414" height="783"/>
+                                <rect key="frame" x="0.0" y="117" width="414" height="779"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bY-RO-z2u">
-                                        <rect key="frame" x="20" y="20" width="374" height="663"/>
+                                        <rect key="frame" x="20" y="20" width="374" height="659"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLF-Bb-Rjw">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="583"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="579"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qq6-5U-oab">
                                                         <rect key="frame" x="15" y="15" width="344" height="170"/>
@@ -10395,7 +10398,7 @@ Serial Scanned</string>
                                                 <viewLayoutGuide key="frameLayoutGuide" id="wsE-Zr-z7d"/>
                                             </scrollView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="h6m-95-sl5">
-                                                <rect key="frame" x="10" y="598" width="354" height="50"/>
+                                                <rect key="frame" x="10" y="594" width="354" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nE0-10-uFy">
                                                         <rect key="frame" x="0.0" y="0.0" width="172" height="50"/>
@@ -10449,7 +10452,7 @@ Serial Scanned</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHf-86-SdP">
-                                <rect key="frame" x="20" y="64" width="374" height="24"/>
+                                <rect key="frame" x="20" y="64" width="374" height="28"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Search Filter" image="arrow_left.png"/>
@@ -11735,10 +11738,10 @@ Serial Scanned</string>
                                                         <rect key="frame" x="0.0" y="59" width="398" height="0.0"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaC-cz-Y8E">
-                                                                <rect key="frame" x="15" y="0.0" width="368" height="787.5"/>
+                                                                <rect key="frame" x="15" y="0.0" width="368" height="794.5"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jx4-i9-Ev0">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="368" height="779.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="368" height="786.5"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ecR-cN-XLO">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="368" height="50"/>
@@ -12099,19 +12102,19 @@ Serial Scanned</string>
                                                                                 </constraints>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o0F-gO-fB6">
-                                                                                <rect key="frame" x="0.0" y="348" width="368" height="212"/>
+                                                                                <rect key="frame" x="0.0" y="348" width="368" height="215.5"/>
                                                                                 <subviews>
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="SBF-ek-Qi4">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="368" height="212"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="368" height="215.5"/>
                                                                                         <subviews>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ship From" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cya-5i-aoi">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="368" height="16.5"/>
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="368" height="20"/>
                                                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                                                                                 <color key="textColor" red="0.4431372549" green="0.59607843140000005" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zxq-Pj-ACc">
-                                                                                                <rect key="frame" x="0.0" y="18.5" width="368" height="193.5"/>
+                                                                                                <rect key="frame" x="0.0" y="22" width="368" height="193.5"/>
                                                                                                 <subviews>
                                                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="tQS-YJ-jyU">
                                                                                                         <rect key="frame" x="0.0" y="0.0" width="368" height="193.5"/>
@@ -12151,19 +12154,19 @@ Serial Scanned</string>
                                                                                 </constraints>
                                                                             </view>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmb-1L-JS6">
-                                                                                <rect key="frame" x="0.0" y="568" width="368" height="211.5"/>
+                                                                                <rect key="frame" x="0.0" y="571.5" width="368" height="215"/>
                                                                                 <subviews>
                                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="AMe-5o-8Be">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="368" height="211.5"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="368" height="215"/>
                                                                                         <subviews>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ship To" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNz-W4-Fzf">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="368" height="16.5"/>
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="368" height="20"/>
                                                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                                                                                 <color key="textColor" red="0.4431372549" green="0.59607843140000005" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYk-JP-LaJ">
-                                                                                                <rect key="frame" x="0.0" y="18.5" width="368" height="193"/>
+                                                                                                <rect key="frame" x="0.0" y="22" width="368" height="193"/>
                                                                                                 <subviews>
                                                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="bzk-P2-CCf">
                                                                                                         <rect key="frame" x="0.0" y="0.0" width="368" height="193"/>
@@ -12283,7 +12286,7 @@ Serial Scanned</string>
                                                                 </connections>
                                                             </button>
                                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use this function to send the whole shipment to quarantine." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xmo-0e-GNT">
-                                                                <rect key="frame" x="26" y="95" width="346.5" height="0.0"/>
+                                                                <rect key="frame" x="7" y="95" width="384" height="0.0"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                                 <color key="textColor" red="0.4431372549" green="0.59607843140000005" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -12382,10 +12385,10 @@ Serial Scanned</string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jfr-Va-5iZ">
-                                        <rect key="frame" x="20" y="227" width="374" height="442.5"/>
+                                        <rect key="frame" x="20" y="205" width="374" height="486.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RWZ-nX-Wcs">
-                                                <rect key="frame" x="10" y="10" width="354" height="422.5"/>
+                                                <rect key="frame" x="10" y="10" width="354" height="466.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUF-ff-sUA">
                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
@@ -12406,14 +12409,14 @@ Serial Scanned</string>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete Inbound Shipment" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4A-gv-a98">
-                                                        <rect key="frame" x="0.0" y="70" width="354" height="21"/>
+                                                        <rect key="frame" x="0.0" y="70" width="354" height="25.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
                                                         <color key="textColor" red="0.0" green="0.68627450980000004" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o07-vn-aox">
-                                                        <rect key="frame" x="0.0" y="111" width="354" height="45.5"/>
+                                                        <rect key="frame" x="0.0" y="115.5" width="354" height="55"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <string key="text">Deleting this inbound transaction will unload the content of this shipment from the data, and remove the shipment. The sender of the data won't be notified.</string>
                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
@@ -12421,7 +12424,7 @@ Serial Scanned</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOx-wb-58D">
-                                                        <rect key="frame" x="0.0" y="176.5" width="354" height="35"/>
+                                                        <rect key="frame" x="0.0" y="190.5" width="354" height="35"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="b1b-sa-Ydq"/>
@@ -12438,7 +12441,7 @@ Serial Scanned</string>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAs-qn-DtY">
-                                                        <rect key="frame" x="0.0" y="231.5" width="354" height="61"/>
+                                                        <rect key="frame" x="0.0" y="245.5" width="354" height="91"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <string key="text">Check this box to delete the inbound transaction associated to this shipment. The shipment must have only one transaction, and the transaction must have no other inbound shipments, otherwise the option will be rejected.</string>
                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
@@ -12446,7 +12449,7 @@ Serial Scanned</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xFq-CZ-ggh">
-                                                        <rect key="frame" x="0.0" y="312.5" width="354" height="40"/>
+                                                        <rect key="frame" x="0.0" y="356.5" width="354" height="40"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAV-gk-1lO">
                                                                 <rect key="frame" x="77" y="0.0" width="200" height="40"/>
@@ -12473,7 +12476,7 @@ Serial Scanned</string>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZ6-ch-ycN">
-                                                        <rect key="frame" x="0.0" y="372.5" width="354" height="50"/>
+                                                        <rect key="frame" x="0.0" y="416.5" width="354" height="50"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXo-2M-786">
                                                                 <rect key="frame" x="77" y="0.0" width="200" height="40"/>
@@ -12618,22 +12621,22 @@ Serial Scanned</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Byk-Et-QCg">
-                                <rect key="frame" x="20" y="118" width="281" height="0.0"/>
+                                <rect key="frame" x="20" y="122" width="281" height="0.0"/>
                                 <subviews>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEe-Tn-5fY">
-                                        <rect key="frame" x="0.0" y="0.0" width="6.5" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="4.5" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
                                         <color key="textColor" red="0.41176470590000003" green="0.75686274509999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpp-v7-oFW">
-                                        <rect key="frame" x="0.0" y="0.0" width="6.5" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="4.5" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjx-Gu-t5l">
-                                        <rect key="frame" x="0.0" y="0.0" width="6.5" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="4.5" height="0.0"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
                                         <color key="textColor" red="0.41176470590000003" green="0.75686274509999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -12641,19 +12644,19 @@ Serial Scanned</string>
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VtD-l6-CGt">
-                                <rect key="frame" x="0.0" y="118" width="414" height="778"/>
+                                <rect key="frame" x="0.0" y="122" width="414" height="774"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7KJ-IN-V3j">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="778"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYA-TY-AaY">
-                                                <rect key="frame" x="20" y="30" width="322" height="21"/>
+                                                <rect key="frame" x="20" y="30" width="322" height="25.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="18"/>
                                                 <color key="textColor" red="0.4431372549" green="0.59607843140000005" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfU-p3-zIj">
-                                                <rect key="frame" x="362" y="21" width="39" height="39"/>
+                                                <rect key="frame" x="362" y="23.5" width="39" height="39"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="39" id="gfE-e4-kVd"/>
                                                     <constraint firstAttribute="width" constant="39" id="rJx-NS-Rot"/>
@@ -12664,16 +12667,16 @@ Serial Scanned</string>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IuN-4D-bYO">
-                                                <rect key="frame" x="20" y="66" width="374" height="77"/>
+                                                <rect key="frame" x="20" y="70.5" width="374" height="77"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="aMu-9H-Tns">
                                                         <rect key="frame" x="10" y="20" width="364" height="37"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finder.png" translatesAutoresizingMaskIntoConstraints="NO" id="yU4-s2-4nJ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="150.5" height="37"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="138.5" height="37"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmS-Om-K8T">
-                                                                <rect key="frame" x="150.5" y="0.0" width="213.5" height="37"/>
+                                                                <rect key="frame" x="138.5" y="0.0" width="225.5" height="37"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="18"/>
                                                                 <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -12701,13 +12704,13 @@ Serial Scanned</string>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transaction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weu-I3-Bn5">
-                                                <rect key="frame" x="20" y="168" width="374" height="21"/>
+                                                <rect key="frame" x="20" y="172.5" width="374" height="25.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="18"/>
                                                 <color key="textColor" red="0.4431372549" green="0.59607843140000005" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Otq-4J-xZD">
-                                                <rect key="frame" x="20" y="204" width="374" height="1817.5"/>
+                                                <rect key="frame" x="20" y="213" width="374" height="1817.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="GTt-pT-Pen">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="246.5"/>
@@ -12719,11 +12722,11 @@ Serial Scanned</string>
                                                                         <rect key="frame" x="0.0" y="20" width="179.5" height="206.5"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEk-aW-zrc">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="177.5"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="174"/>
                                                                                 <state key="normal" image="receiving_icon.png"/>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receiving" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLW-sd-uEd">
-                                                                                <rect key="frame" x="0.0" y="187.5" width="179.5" height="19"/>
+                                                                                <rect key="frame" x="0.0" y="184" width="179.5" height="22.5"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
                                                                                 <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -12756,11 +12759,11 @@ Serial Scanned</string>
                                                                         <rect key="frame" x="0.0" y="20" width="179.5" height="206.5"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSs-lm-DMk">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="177.5"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="174"/>
                                                                                 <state key="normal" image="picking_icon.png"/>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Picking" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jji-Lg-i1q">
-                                                                                <rect key="frame" x="0.0" y="187.5" width="179.5" height="19"/>
+                                                                                <rect key="frame" x="0.0" y="184" width="179.5" height="22.5"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
                                                                                 <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -12798,11 +12801,11 @@ Serial Scanned</string>
                                                                         <rect key="frame" x="0.0" y="20" width="179.5" height="207"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBN-rg-Zie">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="178"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="174.5"/>
                                                                                 <state key="normal" image="shipment.png"/>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shipment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEL-fz-2gM">
-                                                                                <rect key="frame" x="0.0" y="188" width="179.5" height="19"/>
+                                                                                <rect key="frame" x="0.0" y="184.5" width="179.5" height="22.5"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
                                                                                 <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -12835,11 +12838,11 @@ Serial Scanned</string>
                                                                         <rect key="frame" x="0.0" y="20" width="179.5" height="207"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tlr-bT-cpi">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="178"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="174.5"/>
                                                                                 <state key="normal" image="returns_icon.png"/>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Returns (VRS)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCX-a9-oYo">
-                                                                                <rect key="frame" x="0.0" y="188" width="179.5" height="19"/>
+                                                                                <rect key="frame" x="0.0" y="184.5" width="179.5" height="22.5"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
                                                                                 <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -12877,11 +12880,11 @@ Serial Scanned</string>
                                                                         <rect key="frame" x="0.0" y="20" width="179.5" height="206.5"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdO-1p-qOC">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="177.5"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="174"/>
                                                                                 <state key="normal" image="inventory_icon.png"/>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inventory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uso-KO-bry">
-                                                                                <rect key="frame" x="0.0" y="187.5" width="179.5" height="19"/>
+                                                                                <rect key="frame" x="0.0" y="184" width="179.5" height="22.5"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
                                                                                 <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -12914,11 +12917,11 @@ Serial Scanned</string>
                                                                         <rect key="frame" x="0.0" y="20" width="179.5" height="206.5"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhC-DU-aVW">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="177.5"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="174"/>
                                                                                 <state key="normal" image="transfer.png"/>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7K-Wb-NTe">
-                                                                                <rect key="frame" x="0.0" y="187.5" width="179.5" height="19"/>
+                                                                                <rect key="frame" x="0.0" y="184" width="179.5" height="22.5"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
                                                                                 <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -12956,11 +12959,11 @@ Serial Scanned</string>
                                                                         <rect key="frame" x="0.0" y="20" width="179.5" height="206.5"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXz-uF-aAZ">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="177.5"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="174"/>
                                                                                 <state key="normal" image="quarantine_icon.png"/>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quarantine" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yA-vC-MaN">
-                                                                                <rect key="frame" x="0.0" y="187.5" width="179.5" height="19"/>
+                                                                                <rect key="frame" x="0.0" y="184" width="179.5" height="22.5"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
                                                                                 <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -12993,11 +12996,11 @@ Serial Scanned</string>
                                                                         <rect key="frame" x="0.0" y="20" width="179.5" height="206.5"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoj-6u-HFU">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="177.5"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="174"/>
                                                                                 <state key="normal" image="destruction_icon.png"/>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destruction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GeR-Xd-KmO">
-                                                                                <rect key="frame" x="0.0" y="187.5" width="179.5" height="19"/>
+                                                                                <rect key="frame" x="0.0" y="184" width="179.5" height="22.5"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
                                                                                 <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -13035,11 +13038,11 @@ Serial Scanned</string>
                                                                         <rect key="frame" x="0.0" y="20" width="179.5" height="207"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cd4-Hn-RGt">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="178"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="174.5"/>
                                                                                 <state key="normal" image="dispense_icon.png"/>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dispense" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TU0-F7-bcu">
-                                                                                <rect key="frame" x="0.0" y="188" width="179.5" height="19"/>
+                                                                                <rect key="frame" x="0.0" y="184.5" width="179.5" height="22.5"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
                                                                                 <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -13072,11 +13075,11 @@ Serial Scanned</string>
                                                                         <rect key="frame" x="0.0" y="20" width="179.5" height="207"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5B-Mm-dCg">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="178"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="174.5"/>
                                                                                 <state key="normal" image="destruction_icon.png"/>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Missing / Stolen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uzr-fj-REI">
-                                                                                <rect key="frame" x="0.0" y="188" width="179.5" height="19"/>
+                                                                                <rect key="frame" x="0.0" y="184.5" width="179.5" height="22.5"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
                                                                                 <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -13114,11 +13117,11 @@ Serial Scanned</string>
                                                                         <rect key="frame" x="0.0" y="20" width="179.5" height="207"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2M-wX-kCv">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="178"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="174.5"/>
                                                                                 <state key="normal" image="manufacturer.png"/>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manufacturer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1T-f7-Sf9">
-                                                                                <rect key="frame" x="0.0" y="188" width="179.5" height="19"/>
+                                                                                <rect key="frame" x="0.0" y="184.5" width="179.5" height="22.5"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
                                                                                 <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -13151,11 +13154,11 @@ Serial Scanned</string>
                                                                         <rect key="frame" x="0.0" y="20" width="179.5" height="207"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNd-EP-TEe">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="178"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="174.5"/>
                                                                                 <state key="normal" image="receiving_icon.png"/>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commission Serials" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fks-Rr-W6G">
-                                                                                <rect key="frame" x="0.0" y="188" width="179.5" height="19"/>
+                                                                                <rect key="frame" x="0.0" y="184.5" width="179.5" height="22.5"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
                                                                                 <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -13197,11 +13200,11 @@ Serial Scanned</string>
                                                                         <rect key="frame" x="0.0" y="20" width="179.5" height="207"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGH-lT-n6P">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="178"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="174.5"/>
                                                                                 <state key="normal" image="account.png"/>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Account" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGO-7p-LKZ">
-                                                                                <rect key="frame" x="0.0" y="188" width="179.5" height="19"/>
+                                                                                <rect key="frame" x="0.0" y="184.5" width="179.5" height="22.5"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
                                                                                 <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -13234,11 +13237,11 @@ Serial Scanned</string>
                                                                         <rect key="frame" x="0.0" y="20" width="179.5" height="207"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wab-vm-5WE">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="178"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="179.5" height="174.5"/>
                                                                                 <state key="normal" image="event.png"/>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uuj-ev-sAe">
-                                                                                <rect key="frame" x="0.0" y="188" width="179.5" height="19"/>
+                                                                                <rect key="frame" x="0.0" y="184.5" width="179.5" height="22.5"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="16"/>
                                                                                 <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <nil key="highlightedColor"/>
@@ -13298,13 +13301,13 @@ Serial Scanned</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oND-QN-K09">
-                                <rect key="frame" x="20" y="64" width="281" height="24"/>
+                                <rect key="frame" x="20" y="64" width="281" height="28"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Dashboard" image="menu_icon.png"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFH-KO-fxR">
-                                <rect key="frame" x="311" y="56" width="40" height="40"/>
+                                <rect key="frame" x="311" y="58" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="DPE-Qy-9WD"/>
                                     <constraint firstAttribute="width" constant="40" id="Dhx-Ok-2qR"/>
@@ -13319,7 +13322,7 @@ Serial Scanned</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4FO-5c-XGl">
-                                <rect key="frame" x="359" y="56" width="40" height="40"/>
+                                <rect key="frame" x="359" y="58" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="YGU-Wo-5eb"/>
                                     <constraint firstAttribute="width" constant="40" id="bEC-sG-iXU"/>
@@ -13408,10 +13411,10 @@ Serial Scanned</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Usz-7q-DA1">
-                                <rect key="frame" x="0.0" y="113" width="414" height="783"/>
+                                <rect key="frame" x="0.0" y="117" width="414" height="779"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Iab-O9-ldx">
-                                        <rect key="frame" x="20" y="0.0" width="374" height="783"/>
+                                        <rect key="frame" x="20" y="0.0" width="374" height="779"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemsTableViewCell" rowHeight="300" id="Poh-vP-FPa" customClass="ItemsTableViewCell" customModule="RapidRx" customModuleProvider="target">
@@ -13438,7 +13441,7 @@ Serial Scanned</string>
                                                                             <rect key="frame" x="0.0" y="0.0" width="350" height="60"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYI-zm-ehP">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="84.5" height="30"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="93.5" height="30"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="30" id="aum-Bs-jHb"/>
                                                                                     </constraints>
@@ -13767,7 +13770,7 @@ Serial Scanned</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbn-dl-pVf">
-                                <rect key="frame" x="20" y="64" width="264" height="24"/>
+                                <rect key="frame" x="20" y="64" width="264" height="28"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Failed Items" image="arrow_left.png"/>
@@ -13776,7 +13779,7 @@ Serial Scanned</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lB7-mt-BZq">
-                                <rect key="frame" x="349" y="55.5" width="45" height="45"/>
+                                <rect key="frame" x="349" y="57.5" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Kch-6z-uvs"/>
                                     <constraint firstAttribute="width" constant="45" id="dN7-fF-Pmw"/>
@@ -13789,7 +13792,7 @@ Serial Scanned</string>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcq-ii-Aqj">
-                                <rect key="frame" x="294" y="53.5" width="45" height="45"/>
+                                <rect key="frame" x="294" y="55.5" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="TUM-Yf-fS3"/>
                                     <constraint firstAttribute="width" constant="45" id="lH2-RB-j5R"/>
@@ -13839,13 +13842,13 @@ Serial Scanned</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vp6-15-CCK">
-                                <rect key="frame" x="0.0" y="113" width="414" height="783"/>
+                                <rect key="frame" x="0.0" y="117" width="414" height="779"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ff-HS-XVi">
-                                        <rect key="frame" x="20" y="50" width="374" height="633"/>
+                                        <rect key="frame" x="20" y="50" width="374" height="629"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1Q-mU-kiH">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="553"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="549"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J4K-2B-Zyf">
                                                         <rect key="frame" x="15" y="10" width="344" height="350"/>
@@ -14099,7 +14102,7 @@ Serial Scanned</string>
                                                 <viewLayoutGuide key="frameLayoutGuide" id="uag-T1-Etj"/>
                                             </scrollView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vq5-mS-qGy">
-                                                <rect key="frame" x="10" y="568" width="354" height="50"/>
+                                                <rect key="frame" x="10" y="564" width="354" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UE-0f-Knn">
                                                         <rect key="frame" x="0.0" y="0.0" width="172" height="50"/>
@@ -14144,7 +14147,7 @@ Serial Scanned</string>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPW-bI-2ZN">
-                                        <rect key="frame" x="274" y="25" width="120" height="15"/>
+                                        <rect key="frame" x="274" y="24" width="120" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="FXM-dd-ild"/>
                                         </constraints>
@@ -14170,7 +14173,7 @@ Serial Scanned</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wD2-Rc-P3J">
-                                <rect key="frame" x="20" y="64" width="374" height="24"/>
+                                <rect key="frame" x="20" y="64" width="374" height="28"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Search Filter" image="arrow_left.png"/>
@@ -14223,37 +14226,37 @@ Serial Scanned</string>
                                         <rect key="frame" x="30" y="286" width="354" height="280"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZ6-w3-Cxq">
-                                                <rect key="frame" x="116.5" y="10" width="121" height="26"/>
+                                                <rect key="frame" x="111.5" y="10" width="131" height="31"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="22"/>
                                                 <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Me3-6w-Akg">
-                                                <rect key="frame" x="177" y="64" width="0.0" height="0.0"/>
+                                                <rect key="frame" x="177" y="69" width="0.0" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                                 <color key="textColor" red="0.4431372549" green="0.59607843140000005" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koJ-3B-eFu">
-                                                <rect key="frame" x="15" y="79" width="324" height="0.0"/>
+                                                <rect key="frame" x="15" y="84" width="324" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
                                                 <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33g-aM-4UU">
-                                                <rect key="frame" x="15" y="94" width="324" height="0.0"/>
+                                                <rect key="frame" x="15" y="99" width="324" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="20"/>
                                                 <color key="textColor" red="0.0" green="0.68627450980000004" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahk-31-amH">
-                                                <rect key="frame" x="15" y="109" width="324" height="0.0"/>
+                                                <rect key="frame" x="15" y="114" width="324" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                                 <color key="textColor" red="0.027450980390000001" green="0.12941176469999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZa-lk-tPh">
-                                                <rect key="frame" x="177" y="124" width="0.0" height="0.0"/>
+                                                <rect key="frame" x="177" y="129" width="0.0" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                                 <color key="textColor" red="0.4431372549" green="0.59607843140000005" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -14359,7 +14362,7 @@ Serial Scanned</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wOD-yE-oJy">
-                                <rect key="frame" x="0.0" y="113" width="414" height="749"/>
+                                <rect key="frame" x="0.0" y="117" width="414" height="745"/>
                                 <subviews>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DpM-ma-HI9">
                                         <rect key="frame" x="107" y="0.0" width="200" height="0.0"/>
@@ -14379,7 +14382,7 @@ Serial Scanned</string>
                                         </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Tu5-Nc-Ej2">
-                                        <rect key="frame" x="7" y="0.0" width="400" height="659"/>
+                                        <rect key="frame" x="7" y="0.0" width="400" height="655"/>
                                         <color key="backgroundColor" red="0.89019607840000003" green="0.91764705879999997" blue="0.95294117649999999" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SettingsTableViewCell" rowHeight="317" id="Eah-F8-Ia1" customClass="SettingsTableViewCell" customModule="RapidRx" customModuleProvider="target">
@@ -14630,7 +14633,7 @@ Serial Scanned</string>
                                         </connections>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56N-7o-0ps">
-                                        <rect key="frame" x="30" y="679" width="354" height="50"/>
+                                        <rect key="frame" x="30" y="675" width="354" height="50"/>
                                         <color key="backgroundColor" red="0.15294117647058825" green="0.41568627450980389" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="WfE-e4-Rjd"/>
@@ -14659,7 +14662,7 @@ Serial Scanned</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pub-LU-6nd">
-                                <rect key="frame" x="20" y="64" width="374" height="24"/>
+                                <rect key="frame" x="20" y="64" width="374" height="28"/>
                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                 <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Credentials" image="arrow_left.png">
