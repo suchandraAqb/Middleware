@@ -266,8 +266,11 @@ class ThirdViewController: BaseViewController, UIScrollViewDelegate {
                        let statusCode = responseDict["status_code"] as? Bool
                         
                         if statusCode! {
-                            let int: Int = Int(self.deviceDetails.currentDeviceId) ?? 0
-                            let data = Data(from: int)
+                            
+//                            let int: Int = (self.deviceDetails.currentDeviceId as NSString).integerValue
+                            let data = NSKeyedArchiver.archivedData(withRootObject: self.deviceDetails.currentDeviceId)
+
+//                            let data = Data(from: int)
                             let status = KeyChain.save(key: "deviceID", data: data)
                             
                             let dict = Utility.convertToDictionary(text: responseDict["data"] as! String) as NSDictionary?
