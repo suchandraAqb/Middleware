@@ -250,10 +250,29 @@ class ThirdViewController: BaseViewController, UIScrollViewDelegate {
         requestDict["os"] = deviceDetails.deviceType
         
         if let receivedData = KeyChain.load(key: "deviceID") {
-            let result = receivedData.to(type: Int.self)
-            requestDict["device_id"] = "[\"BF476C95-1BD8-4638-B30B-ADE9DBD03610\"]" //deviceDetails.currentDeviceId
-
+//            let result = receivedData.to(type: Int.self)
         }
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecMatchLimit as String: kSecMatchLimitOne,
+            kSecReturnAttributes as String: true,
+            kSecReturnData as String: true,
+        ]
+        var item: CFTypeRef?
+
+        if SecItemCopyMatching(query as CFDictionary, &item) == noErr {
+            
+            // Extract result
+            if let existingItem = item as? [String: Any],
+               let passwordData = existingItem[kSecValueData as String] as? Data,
+               let password = String(data: passwordData, encoding: .utf8)
+            {
+              
+            }
+        } else {
+        }
+        
+        
         requestDict["device_id"] = "[\"BF476C95-1BD8-4638-B30B-ADE9DBD03610\"]" //deviceDetails.currentDeviceId
         
         self.showSpinner(onView: self.view)
@@ -268,10 +287,16 @@ class ThirdViewController: BaseViewController, UIScrollViewDelegate {
                         if statusCode! {
                             
 //                            let int: Int = (self.deviceDetails.currentDeviceId as NSString).integerValue
-                            let data = NSKeyedArchiver.archivedData(withRootObject: self.deviceDetails.currentDeviceId)
+//                            let data = NSKeyedArchiver.archivedData(withRootObject: self.deviceDetails.currentDeviceId)
 
 //                            let data = Data(from: int)
-                            let status = KeyChain.save(key: "deviceID", data: data)
+//                            let status = KeyChain.save(key: "deviceID", data: data)
+                            
+                            let attributes: [String: Any] = [
+                                kSecClass as String: kSecClassGenericPassword,
+                                kSecValueData as String: self.deviceDetails.currentDeviceId.data(using: .utf8)!,
+                            ]
+                            
                             
                             let dict = Utility.convertToDictionary(text: responseDict["data"] as! String) as NSDictionary?
                             if let session = dict?["session"] as? String,!session.isEmpty{
