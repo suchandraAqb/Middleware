@@ -252,6 +252,7 @@ class ThirdViewController: BaseViewController, UIScrollViewDelegate {
         
         if let receivedData = Utility.load(key: "MyNumber") {
             let str = String(decoding: receivedData, as: UTF8.self)
+            deviceArr.removeAllObjects()
             deviceArr.add(str)
             requestDict["device_id"] = Utility.json(from: deviceArr)
         }
@@ -271,7 +272,7 @@ class ThirdViewController: BaseViewController, UIScrollViewDelegate {
                                 deviceArr.add(str)
                             }
                             let str1 = Utility.json(from: deviceArr)
-                            let data = str1.data(using: .utf8)
+                            let data = str1!.data(using: .utf8)
                             let status = Utility.save(key: "MyNumber", data: data!)
 
 
