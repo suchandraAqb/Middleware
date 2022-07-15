@@ -142,7 +142,7 @@
 		5B57971C26AC5B27003520D5 /* OutboundShipmentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B57971626AC5B27003520D5 /* OutboundShipmentListViewController.swift */; };
 		5B57971D26AC5B27003520D5 /* OutboundShipmentSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B57971726AC5B27003520D5 /* OutboundShipmentSearchViewController.swift */; };
 		5B57972226AC5B3B003520D5 /* Shipments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B57972126AC5B3B003520D5 /* Shipments.storyboard */; };
-		5B62205D28805CEE00FD6508 /* keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62205C28805CEE00FD6508 /* keychain.swift */; };
+		5B62205D28805CEE00FD6508 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62205C28805CEE00FD6508 /* KeychainService.swift */; };
 		5B62B4262695E6E7004C2BFA /* removed_legend@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B62B4242695E6E6004C2BFA /* removed_legend@3x.png */; };
 		5B62B4272695E6E7004C2BFA /* removed_legend@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B62B4252695E6E7004C2BFA /* removed_legend@2x.png */; };
 		5B640C472742401600BA704F /* ItemsInInventoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B640C442742401500BA704F /* ItemsInInventoryListViewController.swift */; };
@@ -800,7 +800,7 @@
 		5B57971626AC5B27003520D5 /* OutboundShipmentListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutboundShipmentListViewController.swift; sourceTree = "<group>"; };
 		5B57971726AC5B27003520D5 /* OutboundShipmentSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutboundShipmentSearchViewController.swift; sourceTree = "<group>"; };
 		5B57972126AC5B3B003520D5 /* Shipments.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Shipments.storyboard; sourceTree = "<group>"; };
-		5B62205C28805CEE00FD6508 /* keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = keychain.swift; sourceTree = "<group>"; };
+		5B62205C28805CEE00FD6508 /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		5B62B4242695E6E6004C2BFA /* removed_legend@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "removed_legend@3x.png"; sourceTree = "<group>"; };
 		5B62B4252695E6E7004C2BFA /* removed_legend@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "removed_legend@2x.png"; sourceTree = "<group>"; };
 		5B640C442742401500BA704F /* ItemsInInventoryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsInInventoryListViewController.swift; sourceTree = "<group>"; };
@@ -2464,7 +2464,7 @@
 				3068DB41258A4DA5003103F3 /* CustomAlert.swift */,
 				301C383A263ABE84009CF943 /* Utility.swift */,
 				A911FB1E246550A5009105C3 /* UserInfosModel.swift */,
-				5B62205C28805CEE00FD6508 /* keychain.swift */,
+				5B62205C28805CEE00FD6508 /* KeychainService.swift */,
 				6FFD1FF2248BB9AD000D9B86 /* AllProductsModel.swift */,
 			);
 			path = Utility;
@@ -3418,7 +3418,7 @@
 				30710E0126579BEA00D7BD3E /* MISAddAggregationScanViewController.swift in Sources */,
 				A9318F1424F6B9D300F82DAC /* ContainerScanViewController.swift in Sources */,
 				5B483EF026E1E1C800CE7F24 /* AddProductViewController.swift in Sources */,
-				5B62205D28805CEE00FD6508 /* keychain.swift in Sources */,
+				5B62205D28805CEE00FD6508 /* KeychainService.swift in Sources */,
 				A904A6E825306257006A2416 /* EditLotViewController.swift in Sources */,
 				5B57971826AC5B27003520D5 /* InboundShipmentListViewController.swift in Sources */,
 				A988A9552497928F00B78CCC /* ReturnGeneralInfoViewController.swift in Sources */,

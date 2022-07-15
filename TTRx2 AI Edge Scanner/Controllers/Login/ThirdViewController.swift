@@ -244,36 +244,17 @@ class ThirdViewController: BaseViewController, UIScrollViewDelegate {
     func loginWebServiceCall(){
         
         var requestDict = [String:Any]()
+        let deviceArr = NSMutableArray()
         requestDict["action_uuid"] = Utility.getActionId(type:"Login")
         requestDict["email"] = userNameTextField.text
         requestDict["password"] = passwordTextField.text
         requestDict["os"] = deviceDetails.deviceType
         
-        if let receivedData = KeyChain.load(key: "deviceID") {
-//            let result = receivedData.to(type: Int.self)
+        if let receivedData = Utility.load(key: "MyNumber") {
+            let str = String(decoding: receivedData, as: UTF8.self)
+            deviceArr.add(str)
+            requestDict["device_id"] = Utility.json(from: deviceArr)
         }
-        let query: [String: Any] = [
-            kSecClass as String: kSecClassGenericPassword,
-            kSecMatchLimit as String: kSecMatchLimitOne,
-            kSecReturnAttributes as String: true,
-            kSecReturnData as String: true,
-        ]
-        var item: CFTypeRef?
-
-        if SecItemCopyMatching(query as CFDictionary, &item) == noErr {
-            
-            // Extract result
-            if let existingItem = item as? [String: Any],
-               let passwordData = existingItem[kSecValueData as String] as? Data,
-               let password = String(data: passwordData, encoding: .utf8)
-            {
-              
-            }
-        } else {
-        }
-        
-        
-        requestDict["device_id"] = "[\"BF476C95-1BD8-4638-B30B-ADE9DBD03610\"]" //deviceDetails.currentDeviceId
         
         self.showSpinner(onView: self.view)
         Utility.POSTServiceCall(type: "Login", serviceParam: requestDict as NSDictionary, parentViewC: self, willShowLoader: false, viewController: self,appendStr: "") { (responseData:Any?, isDone:Bool?, message:String?) in
@@ -285,19 +266,15 @@ class ThirdViewController: BaseViewController, UIScrollViewDelegate {
                        let statusCode = responseDict["status_code"] as? Bool
                         
                         if statusCode! {
-                            
-//                            let int: Int = (self.deviceDetails.currentDeviceId as NSString).integerValue
-//                            let data = NSKeyedArchiver.archivedData(withRootObject: self.deviceDetails.currentDeviceId)
+                            let str = self.deviceDetails.currentDeviceId
+                            if !deviceArr.contains(str){
+                                deviceArr.add(str)
+                            }
+                            let str1 = Utility.json(from: deviceArr)
+                            let data = str1.data(using: .utf8)
+                            let status = Utility.save(key: "MyNumber", data: data!)
 
-//                            let data = Data(from: int)
-//                            let status = KeyChain.save(key: "deviceID", data: data)
-                            
-                            let attributes: [String: Any] = [
-                                kSecClass as String: kSecClassGenericPassword,
-                                kSecValueData as String: self.deviceDetails.currentDeviceId.data(using: .utf8)!,
-                            ]
-                            
-                            
+
                             let dict = Utility.convertToDictionary(text: responseDict["data"] as! String) as NSDictionary?
                             if let session = dict?["session"] as? String,!session.isEmpty{
                                 self.updatePasswordView.isHidden = false
