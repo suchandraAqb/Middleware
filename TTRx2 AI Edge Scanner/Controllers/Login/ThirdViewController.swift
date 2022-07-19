@@ -249,12 +249,16 @@ class ThirdViewController: BaseViewController, UIScrollViewDelegate {
         requestDict["email"] = userNameTextField.text
         requestDict["password"] = passwordTextField.text
         requestDict["os"] = deviceDetails.deviceType
-        requestDict["device_id"] = "[\"26DC22A6-8221-4F48-B511-4857876CBF8C\"]" //deviceDetails.currentDeviceId
+//        requestDict["device_id"] = "[\"26DC22A6-8221-4F48-B511-4857876CBF8C\"]" //deviceDetails.currentDeviceId
   
         var deviceStr = ""
         if let receivedData = Utility.load(key: "MyNumber") {
             let str = String(decoding: receivedData, as: UTF8.self)
             deviceStr = str
+            if !deviceArr.contains(str){
+                deviceArr.add(str)
+            }
+            requestDict["device_id"] = deviceStr
         }
         if deviceStr.isEmpty {
             requestDict["device_id"] = Utility.json(from:deviceDetails.currentDeviceId)
