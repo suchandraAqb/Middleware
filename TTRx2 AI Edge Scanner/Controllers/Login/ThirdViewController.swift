@@ -251,10 +251,13 @@ class ThirdViewController: BaseViewController, UIScrollViewDelegate {
         requestDict["os"] = deviceDetails.deviceType
         requestDict["device_id"] = "[\"26DC22A6-8221-4F48-B511-4857876CBF8C\"]" //deviceDetails.currentDeviceId
   
-        
+        var deviceStr = ""
         if let receivedData = Utility.load(key: "MyNumber") {
             let str = String(decoding: receivedData, as: UTF8.self)
-            requestDict["device_id"] = str
+            deviceStr = str
+        }
+        if deviceStr.isEmpty {
+            requestDict["device_id"] = Utility.json(from:deviceDetails.currentDeviceId)
         }
         
         self.showSpinner(onView: self.view)
