@@ -249,12 +249,12 @@ class ThirdViewController: BaseViewController, UIScrollViewDelegate {
         requestDict["email"] = userNameTextField.text
         requestDict["password"] = passwordTextField.text
         requestDict["os"] = deviceDetails.deviceType
+        requestDict["device_id"] = "[\"26DC22A6-8221-4F48-B511-4857876CBF8C\"]" //deviceDetails.currentDeviceId
+  
         
         if let receivedData = Utility.load(key: "MyNumber") {
             let str = String(decoding: receivedData, as: UTF8.self)
-            deviceArr.removeAllObjects()
-            deviceArr.add(str)
-            requestDict["device_id"] = Utility.json(from: deviceArr)
+            requestDict["device_id"] = str
         }
         
         self.showSpinner(onView: self.view)
@@ -271,9 +271,9 @@ class ThirdViewController: BaseViewController, UIScrollViewDelegate {
                             if !deviceArr.contains(str){
                                 deviceArr.add(str)
                             }
-                            let str1 = Utility.json(from: deviceArr)
-                            let data = str1!.data(using: .utf8)
-                            let status = Utility.save(key: "MyNumber", data: data!)
+                            let str3 = Utility.json(from: deviceArr)
+                            let data = str3!.data(using: .utf8)
+                            _ = Utility.save(key: "MyNumber", data: data!)
 
 
                             let dict = Utility.convertToDictionary(text: responseDict["data"] as! String) as NSDictionary?
