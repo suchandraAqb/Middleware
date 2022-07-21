@@ -202,6 +202,8 @@ class Utility: NSObject {
         }
         return String(data: data, encoding: String.Encoding.utf8)
     }
+    
+    
     class func stringArrayToData(stringArray: [String]) -> Data? {
       return try? JSONSerialization.data(withJSONObject: stringArray, options: [])
     }

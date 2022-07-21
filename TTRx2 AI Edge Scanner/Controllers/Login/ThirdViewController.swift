@@ -244,26 +244,27 @@ class ThirdViewController: BaseViewController, UIScrollViewDelegate {
     func loginWebServiceCall(){
         
         var requestDict = [String:Any]()
-        let deviceArr = NSMutableArray()
         requestDict["action_uuid"] = Utility.getActionId(type:"Login")
         requestDict["email"] = userNameTextField.text
         requestDict["password"] = passwordTextField.text
         requestDict["os"] = deviceDetails.deviceType
-//        requestDict["device_id"] = "[\"26DC22A6-8221-4F48-B511-4857876CBF8C\"]" //deviceDetails.currentDeviceId
   
         var deviceStr = ""
         if let receivedData = Utility.load(key: "MyNumber") {
             let str = String(decoding: receivedData, as: UTF8.self)
-            deviceStr = str
-            if !deviceArr.contains(str){
-                deviceArr.add(str)
+            if !str.isEmpty{
+                let arr = str.components(separatedBy: "\n")
+                deviceStr = str
+                requestDict["device_id"] =  Utility.json(from: arr)!
             }
-            requestDict["device_id"] = deviceStr
         }
         if deviceStr.isEmpty {
-            requestDict["device_id"] = Utility.json(from:deviceDetails.currentDeviceId)
+            let arr = NSMutableArray()
+            arr.add(deviceDetails.currentDeviceId)
+            requestDict["device_id"] = Utility.json(from:arr)
         }
-        
+//        requestDict["device_id"] = "[\"26DC22A6-8221-4F48-B511-4857876CBF8C\"]" //deviceDetails.currentDeviceId
+
         self.showSpinner(onView: self.view)
         Utility.POSTServiceCall(type: "Login", serviceParam: requestDict as NSDictionary, parentViewC: self, willShowLoader: false, viewController: self,appendStr: "") { (responseData:Any?, isDone:Bool?, message:String?) in
             DispatchQueue.main.async{
@@ -275,11 +276,16 @@ class ThirdViewController: BaseViewController, UIScrollViewDelegate {
                         
                         if statusCode! {
                             let str = self.deviceDetails.currentDeviceId
-                            if !deviceArr.contains(str){
-                                deviceArr.add(str)
+                              if deviceStr.isEmpty{
+                                  deviceStr.append(str)
+                            }else{
+                            if !deviceStr.contains(str){
+                                deviceStr.append("\n" + str)
+                                }
                             }
-                            let str3 = Utility.json(from: deviceArr)
-                            let data = str3!.data(using: .utf8)
+//                            let str3 = Utility.json(from: deviceArr)
+//                            deviceStr = ""
+                            let data = deviceStr.data(using: .utf8)
                             _ = Utility.save(key: "MyNumber", data: data!)
 
 
