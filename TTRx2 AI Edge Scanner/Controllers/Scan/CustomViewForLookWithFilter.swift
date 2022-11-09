@@ -117,6 +117,9 @@ class CustomViewForLookWithFilter: UIView {
                         }
                     }
                 }
+                if let gtin14 = details["01"]?["value"] as? String{
+                    productGtin14 = gtin14
+                }
                 if(details.keys.contains("10")){
                     if let lot = details["10"]?["value"] as? String{
                         lotNumber = lot

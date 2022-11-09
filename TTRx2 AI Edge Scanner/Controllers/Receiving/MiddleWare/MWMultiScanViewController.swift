@@ -67,6 +67,7 @@ class MWMultiScanViewController: BaseViewController {
     var isContainerScanEnable:Bool = false
     var sectionName:String = "" //,,,sb16-1
     private var parser: Parser!
+    var barcodetype : String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,6 +91,8 @@ class MWMultiScanViewController: BaseViewController {
         
         containerButton.isHidden = true
         productButton.isHidden = true
+        
+        barcodetype = defaults.object(forKey: "barcode_format") as? String ?? ""
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -206,7 +209,12 @@ class MWMultiScanViewController: BaseViewController {
         captureView.logoOffset = PointWithUnit(x: FloatWithUnit(value: captureView.frame.size.width - 10, unit: .pixel),
         y: FloatWithUnit(value: captureView.frame.size.height - 10, unit: .pixel))
         
-        parser = try! Parser(context: context, format: .gs1AI)
+        if barcodetype == "HIBC"{
+            parser = try! Parser(context: context, format: .hibc)
+        }else{
+            parser = try! Parser(context: context, format: .gs1AI)
+
+        }
 
         // Add a barcode tracking overlay to the data capture view to render the tracked barcodes on top of the video
         // preview. This is optional, but recommended for better visual feedback. The overlay is automatically added
@@ -630,7 +638,29 @@ extension MWMultiScanViewController: BarcodeTrackingAdvancedOverlayDelegate {
             return nil
         }
         let overlayTemp = customOverlayForLookWithFilter(for: trackedBarcode)
-                
+        if barcodetype == "HIBC"{
+            do {
+               let parsedData = try parser.parseString(code)
+               /*
+                * Extract the fields relevant to your use case. Below, for example, we extract a label,
+                * which has the type String, and an expiry date, which is represented as a map with keys
+                * "year", "month", "day".
+               */
+               guard let serialNumber = parsedData.fieldsByName["lic"]?.parsed as? String,
+                     let pcnNumber = parsedData.fieldsByName["pcn"]?.parsed as? String,
+                     let uomNumber = parsedData.fieldsByName["uom"]?.parsed as? String,
+                     let expiryDate = parsedData.fieldsByName["expiryDate"]?.parsed as? [String: AnyObject],
+                     let year = expiryDate["year"] as? String,
+                     let month = expiryDate["month"] as? String,
+                     let day = expiryDate["day"] as? String else { return overlayTemp }
+
+               // Do something with the extracted fields.
+
+           } catch {
+               // Handle the parser error
+               print(error)
+           }
+        }else{
         let details = UtilityScanning(with:code).decoded_info
         if details.count <= 0 {
             return nil
@@ -737,7 +767,7 @@ extension MWMultiScanViewController: BarcodeTrackingAdvancedOverlayDelegate {
 //               }
 //            }
 //        }
-
+        }
         if self.isForReceivingSerialVerificationScan {
             self.populateItemsCount(isRemove: false)
         }

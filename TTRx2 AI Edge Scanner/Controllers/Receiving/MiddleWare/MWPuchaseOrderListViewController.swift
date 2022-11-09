@@ -157,6 +157,8 @@ class MWPuchaseOrderListViewController: BaseViewController {
                                     //,,,sbm1 temp
 //                                    self.erpUUID = source_erp
                                     self.erpUUID = MWStaticData.ERP_UUID.odoo.rawValue
+                                    let barcodeType = dataDict["barcode_format"] as? String
+                                    defaults.setValue("GS1", forKey: "barcode_format")
                                     //,,,sbm1 temp
 
                                     
