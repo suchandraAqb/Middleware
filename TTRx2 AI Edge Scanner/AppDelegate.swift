@@ -55,6 +55,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                appDel.window?.makeKeyAndVisible()
 //            }
 //        }
+        
+        print("Documents Directory: ", FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last ?? "Not Found!") //,,,sbm2
         return true
     }
     func applicationWillResignActive(_ application: UIApplication) {

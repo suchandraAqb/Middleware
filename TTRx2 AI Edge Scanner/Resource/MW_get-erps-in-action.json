@@ -1,0 +1,6 @@
+{
+          "status_code": 1,
+          "status": "success",
+          "message": "Action ERPs fetched successfully.",
+          "data": "{\"source_erp\": \"f6cd53e9-ebc6-4aad-820d-117c52cec266\", \"barcode_format\": \"GS1\", \"target_erps\": [{\"erp_uuid\": \"f6cd53e9-ebc6-4aad-820d-117c52cec266\", \"erp_name\": \"Odoo\"}, {\"erp_uuid\": \"41afff72-2eac-4f2e-ab2f-9adab4323d0d\", \"erp_name\": \"TTRx\"}]}"
+}

@@ -11,4 +11,5 @@ ${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework
 ${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework
 ${PODS_ROOT}/ScanditBarcodeCapture/ScanditBarcodeCapture.framework
 ${PODS_ROOT}/ScanditCaptureCore/ScanditCaptureCore.framework
+${PODS_ROOT}/ScanditParser/ScanditParser.framework
 ${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework

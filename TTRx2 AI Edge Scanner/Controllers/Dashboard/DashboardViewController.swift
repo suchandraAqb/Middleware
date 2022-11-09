@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class DashboardViewController: BaseViewController,ConfirmationViewDelegate {
+class DashboardViewController: BaseViewController, ConfirmationViewDelegate/*, MWPuchaseOrderListViewControllerDelegate*/ {
     
     @IBOutlet weak var serialFinderView: UIView!
     @IBOutlet weak var receivingView: UIView!
@@ -379,10 +379,104 @@ extension DashboardViewController {
         self.navigationController?.pushViewController(controller, animated: true)
     }
     @IBAction func ReceivingButtonPressed(_ sender: UIButton) {
+        //,,,sbm1
+        /*
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "ReceivingSelectionViewController") as! ReceivingSelectionViewController
         controller.delegate = self
         controller.modalPresentationStyle = .custom
         self.present(controller, animated: true, completion: nil)
+        */
+        
+        /*
+        let storyboard = UIStoryboard.init(name: "MWReceiving", bundle: .main)
+        let controller = storyboard.instantiateViewController(withIdentifier: "MWERPListViewController") as! MWERPListViewController
+        self.navigationController?.pushViewController(controller, animated: true)
+        */
+        
+        
+        
+        
+        
+        //,,,sbm2
+        var directSerialLineItemsListArray : [MWViewItemsModel] = []
+        do{
+            let predicate = NSPredicate(format:"erp_uuid='\(MWStaticData.ERP_UUID.odoo.rawValue)' and product_flow_type='directSerialScanEntry' and is_edited=true")
+
+            let fetchRequestResultArray = try PersistenceService.context.fetch(MWReceivingLineItem.fetchRequestWithPredicate(predicate: predicate))
+            if fetchRequestResultArray.isEmpty {
+                directSerialLineItemsListArray = []
+            }else {
+                fetchRequestResultArray.forEach({ (cdModel) in
+                    directSerialLineItemsListArray.append(cdModel.convertCoreDataRequestsToMWViewItemsModel())
+                })
+            }
+        }catch let error{
+            print(error.localizedDescription)
+            directSerialLineItemsListArray = []
+        }
+        //,,,sbm2
+        
+        //,,,sbm2
+        var directLotLineItemsListArray : [MWViewItemsModel] = []
+        do{
+            let predicate = NSPredicate(format:"erp_uuid='\(MWStaticData.ERP_UUID.odoo.rawValue)' and product_flow_type='directManualLotEntry' and is_edited=true")
+
+            let fetchRequestResultArray = try PersistenceService.context.fetch(MWReceivingLineItem.fetchRequestWithPredicate(predicate: predicate))
+            if fetchRequestResultArray.isEmpty {
+                directLotLineItemsListArray = []
+            }else {
+                fetchRequestResultArray.forEach({ (cdModel) in
+                    directLotLineItemsListArray.append(cdModel.convertCoreDataRequestsToMWViewItemsModel())
+                })
+            }
+        }catch let error{
+            print(error.localizedDescription)
+            directLotLineItemsListArray = []
+        }
+        //,,,sbm2
+        
+        
+        if directSerialLineItemsListArray.count > 0 {
+            let lineItem = directSerialLineItemsListArray[0]
+            let selectedPuchaseOrderDict = MWPuchaseOrderModel(erpUUID: lineItem.erpUUID,
+                                                          erpName: lineItem.erpName,
+                                                          uniqueID: lineItem.poUniqueID,
+                                                          poNumber: lineItem.poNumber,
+                                                          createdOn: "",
+                                                          vendor: "",
+                                                          location: "")
+
+            let storyboard = UIStoryboard(name: "MWReceiving", bundle: Bundle.main)
+            let controller = storyboard.instantiateViewController(withIdentifier: "MWReceivingSerialListViewController") as! MWReceivingSerialListViewController
+            controller.flowType = "directSerialScan"
+            controller.selectedPuchaseOrderDict = selectedPuchaseOrderDict
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+        else if directLotLineItemsListArray.count > 0 {
+            let lineItem = directLotLineItemsListArray[0]
+            let selectedPuchaseOrderDict = MWPuchaseOrderModel(erpUUID: lineItem.erpUUID,
+                                                          erpName: lineItem.erpName,
+                                                          uniqueID: lineItem.poUniqueID,
+                                                          poNumber: lineItem.poNumber,
+                                                          createdOn: "",
+                                                          vendor: "",
+                                                          location: "")
+            
+            let storyboard = UIStoryboard.init(name: "MWReceiving", bundle: .main)
+            let controller = storyboard.instantiateViewController(withIdentifier: "MWReceivingManuallyViewController") as! MWReceivingManuallyViewController
+            controller.flowType = "directManualLot"
+            controller.selectedPuchaseOrderDict = selectedPuchaseOrderDict
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+        else {
+            //        let dict = erpListArray[indexPath.section]
+                    let storyboard = UIStoryboard.init(name: "MWReceiving", bundle: .main)
+                    let controller = storyboard.instantiateViewController(withIdentifier: "MWPuchaseOrderListViewController") as! MWPuchaseOrderListViewController
+            //        controller.delegate = self
+            //        controller.erpDict = dict
+                    self.navigationController?.pushViewController(controller, animated: true)
+        }
+        //,,,sbm1
     }
     @IBAction func PickingButtonPressed(_ sender: UIButton) {
         let storyboard = UIStoryboard.init(name: "Picking", bundle: .main)

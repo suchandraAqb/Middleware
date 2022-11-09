@@ -1809,6 +1809,10 @@ Copyright 2019- Scandit
 
 Copyright 2019- Scandit
 
+## ScanditParser
+
+Copyright 2019- Scandit
+
 ## nanopb
 
 Copyright (c) 2011 Petteri Aimonen <jpa at nanopb.mail.kapsi.fi>

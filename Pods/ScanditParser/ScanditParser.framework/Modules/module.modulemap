@@ -1,0 +1,6 @@
+framework module ScanditParser {
+  umbrella header "ScanditParser.h"
+
+  export *
+  module * { export * }
+}

@@ -122,8 +122,6 @@ class ThirdViewController: BaseViewController, UIScrollViewDelegate {
     //MARK: - IBAction
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        
-     
         guard let tempUserName = userNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),!tempUserName.isEmpty else{
             Utility.showPopup(Title: App_Title, Message: "Enter User Email", InViewC: self)
             return
@@ -134,7 +132,6 @@ class ThirdViewController: BaseViewController, UIScrollViewDelegate {
         }
         
         loginWebServiceCall()
-        
     }
     @IBAction func rememberMeButtonPressed(_ sender:UIButton){
         rememberMeButton.isSelected = !rememberMeButton.isSelected
@@ -248,13 +245,19 @@ class ThirdViewController: BaseViewController, UIScrollViewDelegate {
         requestDict["email"] = userNameTextField.text
         requestDict["password"] = passwordTextField.text
         requestDict["os"] = deviceDetails.deviceType
-  
+        
         var deviceStr = ""
-        if let receivedData = Utility.load(key: "MyNumber") {
+        if let receivedData = Utility.load(key: "DeviceID") {
             let str = String(decoding: receivedData, as: UTF8.self)
             if !str.isEmpty{
-                let arr = str.components(separatedBy: "\n")
                 deviceStr = str
+                let str1 = self.deviceDetails.currentDeviceId
+
+                if !deviceStr.contains(str1){
+                    deviceStr.append("\n" + str1)
+                }
+                let arr = deviceStr.components(separatedBy: "\n")
+
                 requestDict["device_id"] =  Utility.json(from: arr)!
             }
         }
@@ -263,7 +266,6 @@ class ThirdViewController: BaseViewController, UIScrollViewDelegate {
             arr.add(deviceDetails.currentDeviceId)
             requestDict["device_id"] = Utility.json(from:arr)
         }
-//        requestDict["device_id"] = "[\"26DC22A6-8221-4F48-B511-4857876CBF8C\"]" //deviceDetails.currentDeviceId
 
         self.showSpinner(onView: self.view)
         Utility.POSTServiceCall(type: "Login", serviceParam: requestDict as NSDictionary, parentViewC: self, willShowLoader: false, viewController: self,appendStr: "") { (responseData:Any?, isDone:Bool?, message:String?) in
@@ -279,16 +281,15 @@ class ThirdViewController: BaseViewController, UIScrollViewDelegate {
                               if deviceStr.isEmpty{
                                   deviceStr.append(str)
                             }else{
-                            if !deviceStr.contains(str){
-                                deviceStr.append("\n" + str)
+                                if !deviceStr.contains(str){
+                                    deviceStr.append("\n" + str)
                                 }
                             }
-//                            let str3 = Utility.json(from: deviceArr)
-//                            deviceStr = ""
                             let data = deviceStr.data(using: .utf8)
-                            _ = Utility.save(key: "MyNumber", data: data!)
+                            _ = Utility.save(key: "DeviceID", data: data!)
 
 
+                            
                             let dict = Utility.convertToDictionary(text: responseDict["data"] as! String) as NSDictionary?
                             if let session = dict?["session"] as? String,!session.isEmpty{
                                 self.updatePasswordView.isHidden = false
@@ -404,10 +405,13 @@ class ThirdViewController: BaseViewController, UIScrollViewDelegate {
             }
             
             if let isconfig = userDict["is_configured"] as? Bool{
+                // is_configured = true, go to dashboard
+                // is_configured = false, go to settings
+                
                 if isconfig {
-                    self.moveToSettingsView()
-                }else{
                     Utility.moveToHomeAsRoot()
+                }else{
+                    self.moveToSettingsView()
                 }
             }
         }

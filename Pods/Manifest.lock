@@ -93,6 +93,8 @@ PODS:
   - ScanditBarcodeCapture (6.9.0):
     - ScanditCaptureCore (= 6.9.0)
   - ScanditCaptureCore (6.9.0)
+  - ScanditParser (6.9.0):
+    - ScanditCaptureCore (= 6.9.0)
 
 DEPENDENCIES:
   - AFNetworking (= 4.0.0)
@@ -101,6 +103,7 @@ DEPENDENCIES:
   - LinearProgressView (~> 2.0)
   - Localize-Swift (~> 2.0)
   - ScanditBarcodeCapture (= 6.9)
+  - ScanditParser (= 6.9)
 
 SPEC REPOS:
   trunk:
@@ -120,6 +123,7 @@ SPEC REPOS:
     - PromisesObjC
     - ScanditBarcodeCapture
     - ScanditCaptureCore
+    - ScanditParser
 
 SPEC CHECKSUMS:
   AFNetworking: d9fdf484a3c723ec3c558a41cc5754c7e845ee77
@@ -138,7 +142,8 @@ SPEC CHECKSUMS:
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   ScanditBarcodeCapture: c88703799651acfae261a9cd31e8ce561b376913
   ScanditCaptureCore: 1260bb8d05d8817d4673ce368011e29dddf5ac3e
+  ScanditParser: e2027f2129cd59d843282e9848362944529b4069
 
-PODFILE CHECKSUM: 22ece475f47137d58d6401facb069eb2439ce3b6
+PODFILE CHECKSUM: f6db6d6785863dbbeed0eb86599c894d56fe77da
 
 COCOAPODS: 1.11.2

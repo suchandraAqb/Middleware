@@ -181,7 +181,7 @@ extension BaseViewController{
         Utility.openSacnDetails(controller: self)
     }
  
-    //MARK: - Implement Loader -
+    //MARK: - Implement Loader -    
     func showSpinner(onView : UIView) {
         self.removeSpinner()
         let spinnerView = UIView.init(frame: onView.bounds)
@@ -213,11 +213,18 @@ extension BaseViewController{
     
     func removeSpinner() {
         DispatchQueue.main.async{
+            //,,,sbm1
+            /*
             UIView.animate(withDuration: 0.2, animations: {self.vSpinner?.alpha = 0.0},
                                        completion: {(value: Bool) in
                                         self.vSpinner?.removeFromSuperview()
                                         self.vSpinner = nil
                                        })
+            */
+            
+            self.vSpinner?.removeFromSuperview()
+            self.vSpinner = nil
+            //,,,sbm1
         }
     }
     //MARK: - End -

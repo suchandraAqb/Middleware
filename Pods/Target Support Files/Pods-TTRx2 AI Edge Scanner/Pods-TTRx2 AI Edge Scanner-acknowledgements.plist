@@ -1912,6 +1912,16 @@ THE SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>Copyright 2019- Scandit</string>
+			<key>License</key>
+			<string>Commercial</string>
+			<key>Title</key>
+			<string>ScanditParser</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>Copyright (c) 2011 Petteri Aimonen &lt;jpa at nanopb.mail.kapsi.fi&gt;
 
 This software is provided 'as-is', without any express or 

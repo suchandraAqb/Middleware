@@ -26,7 +26,6 @@ class CustomViewForLookWithFilter: UIView {
 
     @IBOutlet weak var scannedCodeLabel: UILabel!
  
-
     @IBOutlet weak var valueName1: UILabel!
     @IBOutlet weak var valueName2: UILabel!
     @IBOutlet weak var valueName3: UILabel!
@@ -77,12 +76,21 @@ class CustomViewForLookWithFilter: UIView {
         self.trackedBarcode = barCode
         let details = barCode.barcode.decodedInfo
         print("================================\(details as NSDictionary)")
-        if details.count > 0 {
-            var containerSerialNumber = ""
-            var productName = ""
-            var productGtin14 = ""
-            var serialNumber = ""
-            var lotNumber = ""
+        
+        //,,,sb11-16
+        self.scannedCodeLabel.text = ""
+        self.valueName1.text = ""
+        self.valueName2.text = ""
+        self.valueName3.text = ""
+        //,,,sb11-16
+        
+      
+            if details.count > 0 {
+                var containerSerialNumber = ""
+                var productName = ""
+                var productGtin14 = ""
+                var serialNumber = ""
+                var lotNumber = ""
             if(details.keys.contains("00")){
                 if let cSerial = details["00"]?["value"] as? String{
                     containerSerialNumber = cSerial
@@ -153,6 +161,7 @@ class CustomViewForLookWithFilter: UIView {
         }else{
             self.scannedCodeLabel.text = "Code is not valid."
         }
+      
         return self
     }
 //    func loadView(barCode : TrackedBarcode) -> CustomViewForLookWithFilter{

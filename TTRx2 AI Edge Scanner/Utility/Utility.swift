@@ -29,7 +29,9 @@ let Warning :String! = "Warning!".localized()
 let Info :String! = "Information!".localized()
 let No_Internet_Msg:String! = "NoInternet".localized()
 let No_Data_Msg:String! = "NoDataFound".localized()
+
 let ServiceTimeout:Double = 120.0
+
 let defaults = UserDefaults.standard
 let stdTimeFormat = (defaults.object(forKey: "timeFormat") as? String) ?? "hh:mm a"
 var BaseUrl:String! = "https://cxi3hpbeyg.execute-api.us-east-1.amazonaws.com/prod/"
@@ -190,7 +192,10 @@ extension UIView {
 class Utility: NSObject {
     class func color(from isActive:Bool, defaultColorCode:String = "072144") -> UIColor? {
         if isActive {
-            return Utility.hexStringToUIColor(hex: "00AFEF")
+            //,,,sbm1
+//            return Utility.hexStringToUIColor(hex: "00AFEF")
+            return Utility.hexStringToUIColor(hex: "276A44")
+            //,,,sbm1
         }else{
             return Utility.hexStringToUIColor(hex:defaultColorCode )
         }
@@ -201,11 +206,6 @@ class Utility: NSObject {
             return nil
         }
         return String(data: data, encoding: String.Encoding.utf8)
-    }
-    
-    
-    class func stringArrayToData(stringArray: [String]) -> Data? {
-      return try? JSONSerialization.data(withJSONObject: stringArray, options: [])
     }
     class func dropShadow(viewDrop:UIView!)
     {
@@ -341,7 +341,17 @@ class Utility: NSObject {
             finalUrlStr = BaseUrl + "list-erps"
         }else if type == "ErpAction"{
             finalUrlStr = BaseUrl + "get-erps-in-action"
-        }else  if type == "ShipmentDetails"{
+        }else if type == "ListPurchaseOrders"{
+            finalUrlStr = BaseUrl + "list-purchase-orders"
+        }//,,,sbm1
+        else if type == "ListLineItemsByPurchaseOrder"{
+            finalUrlStr = BaseUrl + "list-line-items-by-purchase-order"
+        }//,,,sbm1
+        else if type == "PurchaseOrderReceiving"{
+            finalUrlStr = BaseUrl + "purchase-order-receiving"
+        }//,,,sbm1
+        
+        else  if type == "ShipmentDetails"{
             finalUrlStr = BaseUrl + "shipments/receiving/"
         }else  if type == "GetInboundSerials"{
             finalUrlStr = BaseUrl + "shipments/Inbound/"
@@ -501,23 +511,37 @@ class Utility: NSObject {
     }
     class func getActionId(type:String)->String{
         var finalIdStr = ""
-            if type == "Login"{
-                finalIdStr = "25236406-acab-4c64-8baa-356f1398f483"
-            }else if type == "NewPasswordRequird"{
-                finalIdStr = "f25a363c-d4aa-471b-8889-acae4591ef6e"
-            }else if type == "Logout"{
-                finalIdStr = "cd86196c-47c6-498c-8358-ed5671c2c2dc"
-            }else if type == "revalidateAccessToken"{
-                finalIdStr = "3b82ddb7-e456-4627-8e9d-083bc2686839"
-            }else if type == "erpList"{
-                finalIdStr = "9d111570-82b0-439b-8108-d7fbfc47b4c8"
-            }else if type == "erpAction"{
-                finalIdStr = "18a6c216-5320-4ab8-bec7-61a4eb2a9997"
-            }else if type == "getuserSettings"{
-                finalIdStr = "0206493c-0747-49c6-b27f-eacf9c7b35c1"
-            }else if type == "saveusersettings"{
-                finalIdStr = "a1141524-b22b-4304-bbe5-620b54612db1"
-            }
+        if type == "Login"{
+            finalIdStr = "25236406-acab-4c64-8baa-356f1398f483"
+        }else if type == "NewPasswordRequird"{
+            finalIdStr = "f25a363c-d4aa-471b-8889-acae4591ef6e"
+        }else if type == "Logout"{
+            finalIdStr = "cd86196c-47c6-498c-8358-ed5671c2c2dc"
+        }else if type == "revalidateAccessToken"{
+            finalIdStr = "3b82ddb7-e456-4627-8e9d-083bc2686839"
+        }else if type == "erpList"{
+            finalIdStr = "9d111570-82b0-439b-8108-d7fbfc47b4c8"
+        }else if type == "erpAction"{
+            finalIdStr = "18a6c216-5320-4ab8-bec7-61a4eb2a9997"
+        }else if type == "getuserSettings"{
+            finalIdStr = "0206493c-0747-49c6-b27f-eacf9c7b35c1"
+        }else if type == "saveusersettings"{
+            finalIdStr = "a1141524-b22b-4304-bbe5-620b54612db1"
+        }else if type == "erpTargetAction"{
+            finalIdStr = "185eb551-cb71-4d11-bfa3-31693d06163f"
+        }//,,,sbm1
+        else if type == "listPurchaseOrdersAction"{
+            finalIdStr = "ae4d2fcb-e77c-4c65-814f-2c8000bc6e1a"
+        }//,,,sbm1
+        else if type == "listLineItemsByPurchaseOrder"{
+            finalIdStr = "4032b2bb-3b29-4fe1-b384-4a76b30101eb"
+        }//,,,sbm1
+        else if type == "purchaseOrderReceiving"{
+            finalIdStr = "185eb551-cb71-4d11-bfa3-31693d06163f"
+        }//,,,sbm1
+        
+        
+        
         return finalIdStr
     }
     //MARK: - Suffix String to Date
@@ -545,6 +569,37 @@ class Utility: NSObject {
         Localize.setCurrentLanguage(language)
     }
     //MARK: End -
+    
+    //MARK: Keychain Load & Save
+    class func save(key: String, data: Data) -> OSStatus {
+            let query = [
+                kSecClass as String       : kSecClassGenericPassword as String,
+                kSecAttrAccount as String : key,
+                kSecValueData as String   : data ] as [String : Any]
+
+            SecItemDelete(query as CFDictionary)
+
+            return SecItemAdd(query as CFDictionary, nil)
+        }
+
+        class func load(key: String) -> Data? {
+            let query = [
+                kSecClass as String       : kSecClassGenericPassword,
+                kSecAttrAccount as String : key,
+                kSecReturnData as String  : kCFBooleanTrue!,
+                kSecMatchLimit as String  : kSecMatchLimitOne ] as [String : Any]
+
+            var dataTypeRef: AnyObject? = nil
+
+            let status: OSStatus = SecItemCopyMatching(query as CFDictionary, &dataTypeRef)
+
+            if status == noErr {
+                return dataTypeRef as! Data?
+            } else {
+                return nil
+            }
+        }
+    //MARK: End
     
     //MARK: - Custom Date
     class func getDateFromString(sourceformat:String,outputFormat:String,dateStr:String )->String?{
@@ -668,7 +723,8 @@ class Utility: NSObject {
                 if parentViewC != nil && willShowLoader == true {
                     MBProgressHUD.hide(for: (parentViewC?.view)!, animated: true)
                 }
-                print(error.localizedDescription)
+                print("......",error.localizedDescription)
+                print("......>>>>",error)
                 ServiceCompletion(nil, false, error.localizedDescription)
             }
             
@@ -676,34 +732,7 @@ class Utility: NSObject {
             ServiceCompletion(nil, false, No_Internet_Msg)
         }
     }
-    class func save(key: String, data: Data) -> OSStatus {
-            let query = [
-                kSecClass as String       : kSecClassGenericPassword as String,
-                kSecAttrAccount as String : key,
-                kSecValueData as String   : data ] as [String : Any]
-
-            SecItemDelete(query as CFDictionary)
-
-            return SecItemAdd(query as CFDictionary, nil)
-        }
-
-        class func load(key: String) -> Data? {
-            let query = [
-                kSecClass as String       : kSecClassGenericPassword,
-                kSecAttrAccount as String : key,
-                kSecReturnData as String  : kCFBooleanTrue!,
-                kSecMatchLimit as String  : kSecMatchLimitOne ] as [String : Any]
-
-            var dataTypeRef: AnyObject? = nil
-
-            let status: OSStatus = SecItemCopyMatching(query as CFDictionary, &dataTypeRef)
-
-            if status == noErr {
-                return dataTypeRef as! Data?
-            } else {
-                return nil
-            }
-        }
+    
     class func GETServiceCall(type:String, serviceParam:Any, parentViewC:UIViewController?, willShowLoader:Bool?,viewController:BaseViewController,appendStr:String?,isOpt:Bool = false, ServiceCompletion:@escaping (_ response:Any?, _ isDone:Bool?, _ errMessage:String?) -> Void) {
         
         var serviceUrl = self.getURL(type: type, isOpt: isOpt)
@@ -1149,6 +1178,23 @@ class Utility: NSObject {
         }
         return nil
     }
+    class func converJsonToArray(string : String)-> [Any]{
+        var jsonArray: [[String: Any]] = []
+
+        let data = string.data(using: .utf8)!
+        do {
+            if let arr = try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? [Dictionary<String,Any>]
+            {
+               jsonArray = arr
+               print(jsonArray) // use the json here
+            } else {
+                print("bad json")
+            }
+        } catch let error as NSError {
+            print(error)
+        }
+        return jsonArray
+    }
     class func getDictFromdefaults(key:String)->NSDictionary?{
         var dataDict:NSDictionary?
         if let data = defaults.object(forKey: key){
@@ -1323,23 +1369,6 @@ class Utility: NSObject {
         
         return count
     }
-    class func converJsonToArray(string : String)-> [Any]{
-        var jsonArray: [[String: Any]] = []
-
-        let data = string.data(using: .utf8)!
-        do {
-            if let arr = try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? [Dictionary<String,Any>]
-            {
-               jsonArray = arr
-               print(jsonArray) // use the json here
-            } else {
-                print("bad json")
-            }
-        } catch let error as NSError {
-            print(error)
-        }
-        return jsonArray
-    }
     class func convertCoreDataRequestsToJSONArray(moArray: [NSManagedObject]) -> [Any] {
         var jsonArray: [[String: Any]] = []
         for item in moArray {
@@ -1423,6 +1452,216 @@ class Utility: NSObject {
             label.attributedText = descText
         }
     }
+    
+    //MARK: - Create Temporary Data
+    class  func createSampleScanProduct()->[[String: Any]] {
+        //,,,sbm0 temp
+        
+        
+         //Static Data from API
+//         View Line Item
+//        [
+//          {
+//            "product_id": "1405",
+//            "product_code": "00303160123016",
+//            "product_name": "00303160123016 - Lot Product",
+//            "product_tracking": "lot",
+//            "product_demand_quantity": "100.0",
+//            "product_received_quantity": "5.0",
+//            "product_qty_to_receive": "95.0"
+//          },
+//          {
+//            "product_id": "1406",
+//            "product_code": "00303160123801",
+//            "product_name": "00303160123801 - Serial Product",
+//            "product_tracking": "serial",
+//            "product_demand_quantity": "100.0",
+//            "product_received_quantity": "5.0",
+//            "product_qty_to_receive": "95.0"
+//          }
+//        ]
+        
+        
+        // not found in line item
+        var dict11 = ["GTIN":"1000000004", "indicator":"1"]
+        var dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict1: [String: Any] = ["01":dict11, "21":"220508383877299111", "17":dict22, "10":"0F147660"]
+
+        
+        // found in line item
+        dict11 = ["GTIN":"00303160123801", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict2: [String: Any] = ["01":dict11, "21":"2205083838772981114510", "17":dict22, "10":"0F147661"]
+
+        dict11 = ["GTIN":"00303160123801", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict3: [String: Any] = ["01":dict11, "21":"22050838387729711111", "17":dict22, "10":"0F147662"] //dict2 , dict3 same product, different lot, different serial
+        
+        dict11 = ["GTIN":"00303160123801", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict33: [String: Any] = ["01":dict11, "21":"2205083838772911112", "17":dict22, "10":"0F147662"] //dict3, dict33 same product, same lot, different serial
+        
+        
+        // found in line item in Lot Based Product which is ignored
+        dict11 = ["GTIN":"00303160123016", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict9: [String: Any] = ["01":dict11, "21":"220508383877293111", "17":dict22, "10":"0F147666"] //Lot based
+        
+        
+        var scanProductArray = [[String: Any]]()
+        scanProductArray.append(dict1)
+        scanProductArray.append(dict2)
+        scanProductArray.append(dict3)
+        scanProductArray.append(dict33)
+        scanProductArray.append(dict9)
+        
+        
+        
+        
+        /*
+        // Static Data from nsbundle file
+//         View Line Item
+//        [
+//          {
+//            "product_id": "1403",
+//            "product_code": "1000000005",
+//            "product_name": "SEP05 Serial Product 5",
+//            "product_uom_id": "1",
+//            "product_tracking": "serial",
+//            "product_demand_quantity": "24.0",
+//            "product_received_quantity": "3.0",
+//            "product_qty_to_receive": "21.0"
+//          },
+//          {
+//            "product_id": "1404",
+//            "product_code": "1000000006",
+//            "product_name": "SEP05 SERIAL Product 6",
+//            "product_uom_id": "1",
+//            "product_tracking": "serial",
+//            "product_demand_quantity": "5.0",
+//            "product_received_quantity": "2.0",
+//            "product_qty_to_receive": "3.0"
+//          },
+//          {
+//            "product_id": "1405",
+//            "product_code": "1000000007",
+//            "product_name": "SEP05 Serial Product 7",
+//            "product_uom_id": "1",
+//            "product_tracking": "serial",
+//            "product_demand_quantity": "20.0",
+//            "product_received_quantity": "3.0",
+//            "product_qty_to_receive": "17.0"
+//          },
+//          {
+//            "product_id": "1406",
+//            "product_code": "1000000008",
+//            "product_name": "SEP05 Serial Product 8",
+//            "product_uom_id": "1",
+//            "product_tracking": "serial",
+//            "product_demand_quantity": "20.0",
+//            "product_received_quantity": "20.0",
+//            "product_qty_to_receive": "0.0"
+//          },
+//          {
+//            "product_id": "1407",
+//            "product_code": "1000000009",
+//            "product_name": "SEP05 Lot Product 9",
+//            "product_uom_id": "1",
+//            "product_tracking": "lot",
+//            "product_demand_quantity": "20.0",
+//            "product_received_quantity": "19.0",
+//            "product_qty_to_receive": "1.0"
+//          },
+//          {
+//            "product_id": "1408",
+//            "product_code": "1000000010",
+//            "product_name": "SEP05 Lot Product 10",
+//            "product_uom_id": "1",
+//            "product_tracking": "lot",
+//            "product_demand_quantity": "20.0",
+//            "product_received_quantity": "1.0",
+//            "product_qty_to_receive": "19.0"
+//          },
+//          {
+//            "product_id": "1409",
+//            "product_code": "1000000011",
+//            "product_name": "SEP05 Lot Product 11",
+//            "product_uom_id": "1",
+//            "product_tracking": "lot",
+//            "product_demand_quantity": "20.0",
+//            "product_received_quantity": "20.0",
+//            "product_qty_to_receive": "0.0"
+//          }
+//        ]
+        
+        
+        // not found in line item
+        var dict11 = ["GTIN":"1000000004", "indicator":"1"]
+        var dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict1: [String: Any] = ["01":dict11, "21":"220508383877299", "17":dict22, "10":"0F147660"]
+
+        
+        // found in line item
+        dict11 = ["GTIN":"1000000005", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict2: [String: Any] = ["01":dict11, "21":"220508383877298", "17":dict22, "10":"0F147661"]
+
+        dict11 = ["GTIN":"1000000005", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict3: [String: Any] = ["01":dict11, "21":"220508383877297", "17":dict22, "10":"0F147662"] //dict2 , dict3 same product, different lot, different serial
+        
+        dict11 = ["GTIN":"1000000005", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict33: [String: Any] = ["01":dict11, "21":"22050838387729", "17":dict22, "10":"0F147662"] //dict3, dict33 same product, same lot, different serial
+        
+        
+        // found in line item
+        dict11 = ["GTIN":"1000000006", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict4: [String: Any] = ["01":dict11, "21":"220508383877296", "17":dict22, "10":"0F147663"]
+        
+        
+        // found in line item
+        dict11 = ["GTIN":"1000000007", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict5: [String: Any] = ["01":dict11, "21":"220508383877295", "17":dict22, "10":"0F147664"]
+
+        dict11 = ["GTIN":"1000000007", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict6: [String: Any] = ["01":dict11, "21":"220508383877294", "17":dict22, "10":"0F147665"]
+
+        dict11 = ["GTIN":"1000000007", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict7: [String: Any] = ["01":dict11, "21":"220508383877293", "17":dict22, "10":"0F147666"]
+        
+        
+        //1000000008 line item not scanned
+        
+        
+        // found in line item in Lot Based Product which is ignored
+        dict11 = ["GTIN":"1000000009", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict9: [String: Any] = ["01":dict11, "21":"220508383877293", "17":dict22, "10":"0F147666"] //Lot based
+        
+        var scanProductArray = [[String: Any]]()
+        scanProductArray.append(dict1)
+        scanProductArray.append(dict2)
+        scanProductArray.append(dict3)
+        scanProductArray.append(dict33)
+        scanProductArray.append(dict4)
+        scanProductArray.append(dict5)
+        scanProductArray.append(dict6)
+        scanProductArray.append(dict7)
+        scanProductArray.append(dict9)
+        */
+        
+        //,,,sbm0 temp
+        
+        return scanProductArray
+    }//,,,sbm2 temp
+    //MARK: - End
+    
+    
     //MARK: - Gtin14 TO NDC
     class  func gtin14ToNdc(gtin14str:String)->NSDictionary {
         let dict =  NSDictionary()

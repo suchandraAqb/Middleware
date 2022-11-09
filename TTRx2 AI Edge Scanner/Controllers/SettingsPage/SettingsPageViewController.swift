@@ -10,7 +10,6 @@ import UIKit
 
 class SettingsPageViewController: BaseViewController,UITableViewDataSource,UITableViewDelegate,SingleSelectDropdownDelegate {
     @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var addCredentialButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var settingTableView: UITableView!
     var arrCount = 1
@@ -25,9 +24,7 @@ class SettingsPageViewController: BaseViewController,UITableViewDataSource,UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addCredentialButton.setRoundCorner(cornerRadious: addCredentialButton.frame.size.height/2)
-        addCredentialButton.isHidden = true
-        saveButton.setRoundCorner(cornerRadious: addCredentialButton.frame.size.height/2)
+        saveButton.setRoundCorner(cornerRadious: saveButton.frame.size.height/2)
         sectionView.roundTopCorners(cornerRadious: 40)
         self.createInputAccessoryViewForTableView()
         self.erpActionWebServiceCall()
@@ -39,39 +36,11 @@ class SettingsPageViewController: BaseViewController,UITableViewDataSource,UITab
     //MARK: - End
     
     //MARK: - IBActions
-    @IBAction func addCredentialsButtonPressed(_ sender:UIButton){
-        self.arrCount = arrCount + 1
-        self.populateCrendentialsArr()
-        settingTableView.reloadData()
-    }
-    
-    @IBAction func crossButtonPressed(_ sender:UIButton){
-        if sender.tag > 0{
-            if credentialsArr[sender.tag] is NSDictionary{
-                arrCount = arrCount - 1
-                credentialsArr.removeObject(at: sender.tag)
-            }
-        }
-        settingTableView.reloadData()
-    }
-    
-    @IBAction func dropdownButtonPressed(_ sender:UIButton){
-        if erpList.isEmpty{
-            return
-        }
-        
-        let controller = self.storyboard?.instantiateViewController(withIdentifier: "SingleSelectDropdownView") as! SingleSelectDropdownViewController
-        controller.isDataWithDict = false
-        controller.nameKeyName = "name"
-        controller.listItems = erpList as! [[String : Any]]
-        controller.delegate = self
-        controller.type = ""
-        controller.sender = sender
-        controller.modalPresentationStyle = .custom
-        self.present(controller, animated: true, completion: nil)
-    }
-    
     @IBAction func saveButtonPressed(_ sender:UIButton){
+        if (textFieldTobeField != nil) {
+            textFieldTobeField.resignFirstResponder()
+        }//,,,sbm1
+        
         var isEmpty = false
         for i in 0..<credentialsArr.count {
             let dict = (credentialsArr[i] as? NSMutableDictionary)!
@@ -167,13 +136,26 @@ class SettingsPageViewController: BaseViewController,UITableViewDataSource,UITab
                        let statusCode = responseDict["status_code"] as? Bool
                         
                         if statusCode! {
+                            //,,,sbm1
+                            /*
                             let erpArr = Utility.converJsonToArray(string: responseDict["data"] as! String)
                                 if erpArr.count > 0 {
                                     self.erpList = erpArr
                                 }
                             self.populateCrendentialsArr()
-
-                        }else{
+                            */
+                            
+                            if let dataDict = Utility.convertToDictionary(text: responseDict["data"] as! String) {
+//                                print("dataDict.....?????",dataDict)
+                                if let erpArr = dataDict ["target_erps"] as? [Any] {
+                                    if erpArr.count > 0 {
+                                        self.erpList = erpArr
+                                    }
+                                }
+                                self.populateCrendentialsArr()
+                            }
+                            //,,,sbm1
+                        }else {
                             if responseData != nil{
                                
                                 let responseDict: NSDictionary = responseData as! NSDictionary
@@ -350,8 +332,6 @@ class SettingsPageViewController: BaseViewController,UITableViewDataSource,UITab
             
             cell.credentialsLabel.text = "\(erpvalueStr) Credentials"
         }
-//        cell.crossButton.tag = indexPath.section
-        cell.dropdownButton.tag = indexPath.section
         cell.usernameTextfield.tag = indexPath.section
         cell.passwordTextfield.tag = indexPath.section
         cell.usernameTextfield.accessibilityHint = "Username"
@@ -380,17 +360,13 @@ class SettingsPageViewController: BaseViewController,UITableViewDataSource,UITab
     @IBOutlet weak var usernameTextfield:UITextField!
     @IBOutlet weak var passwordTextfield:UITextField!
     @IBOutlet weak var dropdownButton:UIButton!
-    @IBOutlet weak var erpview:UIView!
-    @IBOutlet weak var crossButton:UIButton!
-     @IBOutlet weak var credentialsLabel:UILabel!
+    @IBOutlet weak var credentialsLabel:UILabel!
      
      override func awakeFromNib() {
          usernameTextfield.setRoundCorner(cornerRadious: 10)
          usernameTextfield.setBorder(width: 1, borderColor: Utility.hexStringToUIColor(hex: "E3EAF3"), cornerRadious: 10)
          passwordTextfield.setRoundCorner(cornerRadious: 10)
          passwordTextfield.setBorder(width: 1, borderColor: Utility.hexStringToUIColor(hex: "E3EAF3"), cornerRadious: 10)
-         erpview.setRoundCorner(cornerRadious: 10)
-         erpview.setBorder(width: 1, borderColor: Utility.hexStringToUIColor(hex: "E3EAF3"), cornerRadious: 10)
          
      }
 }

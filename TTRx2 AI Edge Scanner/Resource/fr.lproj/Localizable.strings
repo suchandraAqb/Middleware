@@ -7,6 +7,34 @@
 */
 //French
 
+//,,,sbm1
+//MWERPListViewController
+"Select Purchase Order" = "Sélectionnez Bon de commande";
+
+//MWPuchaseOrderListViewController
+"Select PO For" = "Sélectionnez le bon de commande pour";
+"Select PO for" = "Sélectionnez le bon de commande pour";
+"Search PO#" = "Rechercher le numéro de bon de commande";
+"Created On" = "Créé sur";
+"View Items" = "Afficher les articles";
+"Please select purchase order" = "Veuillez sélectionner le bon de commande";
+
+//MWReceivingSelectionViewController
+"Click camera to scan your receiving items" = "Cliquez sur l'appareil photo pour scanner vos articles de réception";
+"Single Scan" = "Numérisation unique";
+"Multiple Scan" = "Numérisation multiple";
+
+//MWViewItemsViewController
+"Product Received Quantity" = "Quantité de produits reçus";
+"Product Demand Quantity" = "Quantité de demande de produit";
+"Product Qty To Receive" = "Quantité de produit à recevoir";
+"Product Tracking" = "Suivi des produits";
+"Type" = "Type";
+"Type:" = "Type:";
+"View Items for" = "Afficher les articles pour";
+//,,,sbm1
+
+//===============================
 
 "Back" = "Arrière";
 "Welcome" = "Bienvenu";
@@ -949,3 +977,8 @@
 //Picking Scan Item
 "Please Scan Container Only." = "Veuillez scanner uniquement le conteneur.";
 "Please Scan Product Only." = "Veuillez scanner le produit uniquement.";
+
+
+//SettingsView
+"Enter Username" = "Saisissez votre nom d'utilisateur";
+"Enter Password" = "Entrer le mot de passe";

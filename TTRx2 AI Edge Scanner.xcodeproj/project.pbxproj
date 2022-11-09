@@ -142,7 +142,6 @@
 		5B57971C26AC5B27003520D5 /* OutboundShipmentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B57971626AC5B27003520D5 /* OutboundShipmentListViewController.swift */; };
 		5B57971D26AC5B27003520D5 /* OutboundShipmentSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B57971726AC5B27003520D5 /* OutboundShipmentSearchViewController.swift */; };
 		5B57972226AC5B3B003520D5 /* Shipments.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B57972126AC5B3B003520D5 /* Shipments.storyboard */; };
-		5B62205D28805CEE00FD6508 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62205C28805CEE00FD6508 /* KeychainService.swift */; };
 		5B62B4262695E6E7004C2BFA /* removed_legend@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B62B4242695E6E6004C2BFA /* removed_legend@3x.png */; };
 		5B62B4272695E6E7004C2BFA /* removed_legend@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B62B4252695E6E7004C2BFA /* removed_legend@2x.png */; };
 		5B640C472742401600BA704F /* ItemsInInventoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B640C442742401500BA704F /* ItemsInInventoryListViewController.swift */; };
@@ -551,7 +550,6 @@
 		A9318F1424F6B9D300F82DAC /* ContainerScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9318F1324F6B9D200F82DAC /* ContainerScanViewController.swift */; };
 		A9318F1624F7B19F00F82DAC /* CommissionedSerialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9318F1524F7B19F00F82DAC /* CommissionedSerialsViewController.swift */; };
 		A9318F1A24F8F2EF00F82DAC /* DeviceMgmtModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9318F1924F8F2EE00F82DAC /* DeviceMgmtModel.swift */; };
-		A949706A246174640050DAA2 /* storage_areas.json in Resources */ = {isa = PBXBuildFile; fileRef = A9497069246174640050DAA2 /* storage_areas.json */; };
 		A94F671324476FCA00ED52AA /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A94F671224476FCA00ED52AA /* MBProgressHUD.m */; };
 		A95DD6EA24B3203800287CFD /* Adjustments+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95DD6E824B3203800287CFD /* Adjustments+CoreDataClass.swift */; };
 		A95DD6EB24B3203800287CFD /* Adjustments+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95DD6E924B3203800287CFD /* Adjustments+CoreDataProperties.swift */; };
@@ -643,6 +641,70 @@
 		AFCA44694558DC77E0699648 /* Pods_TTRx2_AI_Edge_Scanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3004066B25CCF87C00131EA6 /* Pods_TTRx2_AI_Edge_Scanner.framework */; };
 		C2F1E687CF9DF7A2A70A5DBB /* Pods_TTRx2_AI_Edge_ScannerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA97559C81322614B7433AE7 /* Pods_TTRx2_AI_Edge_ScannerUITests.framework */; };
 		EEC6A3F1783470DD582852B3 /* Pods_TTRx2_AI_Edge_ScannerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86B95422C8E397AA49784C36 /* Pods_TTRx2_AI_Edge_ScannerTests.framework */; };
+		F912556428F005C5008206F3 /* MWReceivingSerialListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F912556328F005C5008206F3 /* MWReceivingSerialListViewController.swift */; };
+		F9202EB628927CC60074F863 /* MWViewItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9202EB528927CC60074F863 /* MWViewItemsViewController.swift */; };
+		F923F6A628FD566E00FD6B49 /* MW_ReceivingLineItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F923F6A428FD566D00FD6B49 /* MW_ReceivingLineItem+CoreDataClass.swift */; };
+		F923F6A728FD566E00FD6B49 /* MW_ReceivingLineItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F923F6A528FD566E00FD6B49 /* MW_ReceivingLineItem+CoreDataProperties.swift */; };
+		F92A1BB228B5FBF00062B517 /* plus_green@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F92A1BB028B5FBEF0062B517 /* plus_green@3x.png */; };
+		F92A1BB328B5FBF00062B517 /* plus_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F92A1BB128B5FBF00062B517 /* plus_green@2x.png */; };
+		F92A1BB628B647190062B517 /* MW_delete_red@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F92A1BB428B647180062B517 /* MW_delete_red@3x.png */; };
+		F92A1BB728B647190062B517 /* MW_delete_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F92A1BB528B647190062B517 /* MW_delete_red@2x.png */; };
+		F92B732E28D19D5900A7734C /* MWReceivingSummaryOfMappedLotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92B732D28D19D5900A7734C /* MWReceivingSummaryOfMappedLotsViewController.swift */; };
+		F92B733128D19FF000A7734C /* MWReceivingSummaryLotHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92B732F28D19FF000A7734C /* MWReceivingSummaryLotHeaderView.xib */; };
+		F92B733228D19FF000A7734C /* MWReceivingSummaryLotHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92B733028D19FF000A7734C /* MWReceivingSummaryLotHeaderView.swift */; };
+		F92BE9C92907E377006005A4 /* MWStaticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92BE9C82907E377006005A4 /* MWStaticData.swift */; };
+		F92E4D5928F9659000807589 /* MWReceiving.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92E4D5828F9659000807589 /* MWReceiving.swift */; };
+		F92EE38B28E6B20100E07E79 /* MWReceivingSerialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92EE38A28E6B20100E07E79 /* MWReceivingSerialViewController.swift */; };
+		F930095728AE5EBB00170B8C /* MWReceivingManuallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F930095628AE5EBB00170B8C /* MWReceivingManuallyViewController.swift */; };
+		F930095A28AE98B000170B8C /* MWReceivingManuallyHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F930095828AE98B000170B8C /* MWReceivingManuallyHeaderView.xib */; };
+		F930095B28AE98B000170B8C /* MWReceivingManuallyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F930095928AE98B000170B8C /* MWReceivingManuallyHeaderView.swift */; };
+		F94096E0290BC78100472E54 /* MW_ReceivingScanProduct+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94096DE290BC78100472E54 /* MW_ReceivingScanProduct+CoreDataProperties.swift */; };
+		F94096E1290BC78100472E54 /* MW_ReceivingScanProduct+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94096DF290BC78100472E54 /* MW_ReceivingScanProduct+CoreDataClass.swift */; };
+		F947089D28E1563800D3BA2F /* MW_list-line-items-by-purchase-order_odoo_Serial.json in Resources */ = {isa = PBXBuildFile; fileRef = F947089C28E1563800D3BA2F /* MW_list-line-items-by-purchase-order_odoo_Serial.json */; };
+		F948C82028D86EAE00466CDD /* MW_list-purchase-orders_odoo.json in Resources */ = {isa = PBXBuildFile; fileRef = F948C81F28D86EAE00466CDD /* MW_list-purchase-orders_odoo.json */; };
+		F948C82228D86EF900466CDD /* MW_list-line-items-by-purchase-order_odoo.json in Resources */ = {isa = PBXBuildFile; fileRef = F948C82128D86EF900466CDD /* MW_list-line-items-by-purchase-order_odoo.json */; };
+		F94C7CEB288E93A400937FFF /* MWMultiScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94C7CEA288E93A400937FFF /* MWMultiScanViewController.swift */; };
+		F94EBA56288AA4F6006126CC /* MWConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94EBA55288AA4F6006126CC /* MWConfirmationViewController.swift */; };
+		F94EBA59288AC1A6006126CC /* tick_circle_lg_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F94EBA57288AC1A6006126CC /* tick_circle_lg_green@2x.png */; };
+		F94EBA5A288AC1A6006126CC /* tick_circle_lg_green@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F94EBA58288AC1A6006126CC /* tick_circle_lg_green@3x.png */; };
+		F950C87C2889760C0068449C /* MWERPListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F950C8792889760C0068449C /* MWERPListViewController.swift */; };
+		F950C87D2889760C0068449C /* MWReceivingSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F950C87A2889760C0068449C /* MWReceivingSelectionViewController.swift */; };
+		F950C87E2889760C0068449C /* MWPuchaseOrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F950C87B2889760C0068449C /* MWPuchaseOrderListViewController.swift */; };
+		F950C8812889767B0068449C /* MWReceiving.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F950C8802889767B0068449C /* MWReceiving.storyboard */; };
+		F950C897288976990068449C /* single_scan_green@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F950C883288976990068449C /* single_scan_green@3x.png */; };
+		F950C898288976990068449C /* next_icon_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F950C884288976990068449C /* next_icon_green@2x.png */; };
+		F950C899288976990068449C /* next_icon_green@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F950C885288976990068449C /* next_icon_green@3x.png */; };
+		F950C89A288976990068449C /* single_scan_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F950C886288976990068449C /* single_scan_green@2x.png */; };
+		F950C89B288976990068449C /* multiple_scan_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F950C887288976990068449C /* multiple_scan_green@2x.png */; };
+		F950C89C288976990068449C /* switch_left_green@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F950C888288976990068449C /* switch_left_green@3x.png */; };
+		F950C89D288976990068449C /* search_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F950C889288976990068449C /* search_white@3x.png */; };
+		F950C89E288976990068449C /* search_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F950C88A288976990068449C /* search_white@2x.png */; };
+		F950C89F288976990068449C /* switch_left_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F950C88B288976990068449C /* switch_left_green@2x.png */; };
+		F950C8A0288976990068449C /* multiple_scan_green@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F950C88C288976990068449C /* multiple_scan_green@3x.png */; };
+		F950C8A1288976990068449C /* radio_active_green@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F950C88D288976990068449C /* radio_active_green@3x.png */; };
+		F950C8A2288976990068449C /* switch_right_green@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F950C88E288976990068449C /* switch_right_green@3x.png */; };
+		F950C8A3288976990068449C /* arrow_green@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F950C88F288976990068449C /* arrow_green@3x.png */; };
+		F950C8A4288976990068449C /* camera_verify_green@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F950C890288976990068449C /* camera_verify_green@3x.png */; };
+		F950C8A5288976990068449C /* camera_verify_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F950C891288976990068449C /* camera_verify_green@2x.png */; };
+		F950C8A6288976990068449C /* arrow_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F950C892288976990068449C /* arrow_green@2x.png */; };
+		F950C8A7288976990068449C /* switch_right_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F950C893288976990068449C /* switch_right_green@2x.png */; };
+		F950C8A8288976990068449C /* radio_active_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F950C894288976990068449C /* radio_active_green@2x.png */; };
+		F950C8A9288976990068449C /* check_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F950C895288976990068449C /* check_white@3x.png */; };
+		F950C8AA288976990068449C /* check_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F950C896288976990068449C /* check_white@2x.png */; };
+		F950C8AE288976BC0068449C /* MWListPurchaseOrders_ttrx.json in Resources */ = {isa = PBXBuildFile; fileRef = F950C8AC288976BC0068449C /* MWListPurchaseOrders_ttrx.json */; };
+		F950C8B0288989640068449C /* MWSingleScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F950C8AF288989640068449C /* MWSingleScanViewController.swift */; };
+		F95F87AA28DC2BDC00963114 /* MW_get-erps-in-action.json in Resources */ = {isa = PBXBuildFile; fileRef = F95F87A928DC2BDC00963114 /* MW_get-erps-in-action.json */; };
+		F9656FEC290F923E008DF5A8 /* MWReceivingCancelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9656FEB290F923E008DF5A8 /* MWReceivingCancelViewController.swift */; };
+		F9A0D14A28A3FD0D00DD82B4 /* camera_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A0D14428A3FD0B00DD82B4 /* camera_green@2x.png */; };
+		F9A0D14C28A3FD0D00DD82B4 /* camera_green@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A0D14628A3FD0C00DD82B4 /* camera_green@3x.png */; };
+		F9A0D15428A3FF0300DD82B4 /* mw_check_green@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A0D15028A3FF0200DD82B4 /* mw_check_green@3x.png */; };
+		F9A0D15528A3FF0300DD82B4 /* mw_uncheck_green@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A0D15128A3FF0200DD82B4 /* mw_uncheck_green@3x.png */; };
+		F9A0D15628A3FF0300DD82B4 /* mw_check_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A0D15228A3FF0300DD82B4 /* mw_check_green@2x.png */; };
+		F9A0D15728A3FF0300DD82B4 /* mw_uncheck_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A0D15328A3FF0300DD82B4 /* mw_uncheck_green@2x.png */; };
+		F9C0F5202902BFBB003C6943 /* MW_ReceivingManualLotOrScanSerial+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C0F51E2902BFBB003C6943 /* MW_ReceivingManualLotOrScanSerial+CoreDataClass.swift */; };
+		F9C0F5212902BFBB003C6943 /* MW_ReceivingManualLotOrScanSerial+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C0F51F2902BFBB003C6943 /* MW_ReceivingManualLotOrScanSerial+CoreDataProperties.swift */; };
+		F9F507752899607E005F14A6 /* white_cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F507732899607E005F14A6 /* white_cross@2x.png */; };
+		F9F507762899607E005F14A6 /* white_cross@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F507742899607E005F14A6 /* white_cross@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -800,7 +862,6 @@
 		5B57971626AC5B27003520D5 /* OutboundShipmentListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutboundShipmentListViewController.swift; sourceTree = "<group>"; };
 		5B57971726AC5B27003520D5 /* OutboundShipmentSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutboundShipmentSearchViewController.swift; sourceTree = "<group>"; };
 		5B57972126AC5B3B003520D5 /* Shipments.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Shipments.storyboard; sourceTree = "<group>"; };
-		5B62205C28805CEE00FD6508 /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		5B62B4242695E6E6004C2BFA /* removed_legend@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "removed_legend@3x.png"; sourceTree = "<group>"; };
 		5B62B4252695E6E7004C2BFA /* removed_legend@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "removed_legend@2x.png"; sourceTree = "<group>"; };
 		5B640C442742401500BA704F /* ItemsInInventoryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsInInventoryListViewController.swift; sourceTree = "<group>"; };
@@ -1219,7 +1280,6 @@
 		A9318F1324F6B9D200F82DAC /* ContainerScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerScanViewController.swift; sourceTree = "<group>"; };
 		A9318F1524F7B19F00F82DAC /* CommissionedSerialsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommissionedSerialsViewController.swift; sourceTree = "<group>"; };
 		A9318F1924F8F2EE00F82DAC /* DeviceMgmtModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMgmtModel.swift; sourceTree = "<group>"; };
-		A9497069246174640050DAA2 /* storage_areas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = storage_areas.json; sourceTree = "<group>"; };
 		A94F671124476FCA00ED52AA /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		A94F671224476FCA00ED52AA /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		A94F67142447706300ED52AA /* TTRx2 AI Edge Scanner-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TTRx2 AI Edge Scanner-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -1316,6 +1376,70 @@
 		C93B15FB15590A73729DD106 /* Pods-TTRx2 AI Edge Scanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTRx2 AI Edge Scanner.debug.xcconfig"; path = "Target Support Files/Pods-TTRx2 AI Edge Scanner/Pods-TTRx2 AI Edge Scanner.debug.xcconfig"; sourceTree = "<group>"; };
 		D711212BC858881CF3880FCA /* Pods-TTRx2 AI Edge ScannerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTRx2 AI Edge ScannerTests.release.xcconfig"; path = "Target Support Files/Pods-TTRx2 AI Edge ScannerTests/Pods-TTRx2 AI Edge ScannerTests.release.xcconfig"; sourceTree = "<group>"; };
 		E15F0E37F20E9314DC951033 /* Pods-TTRx2 AI Edge ScannerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTRx2 AI Edge ScannerTests.debug.xcconfig"; path = "Target Support Files/Pods-TTRx2 AI Edge ScannerTests/Pods-TTRx2 AI Edge ScannerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F912556328F005C5008206F3 /* MWReceivingSerialListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWReceivingSerialListViewController.swift; sourceTree = "<group>"; };
+		F9202EB528927CC60074F863 /* MWViewItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWViewItemsViewController.swift; sourceTree = "<group>"; };
+		F923F6A428FD566D00FD6B49 /* MW_ReceivingLineItem+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MW_ReceivingLineItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F923F6A528FD566E00FD6B49 /* MW_ReceivingLineItem+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MW_ReceivingLineItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F92A1BB028B5FBEF0062B517 /* plus_green@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus_green@3x.png"; sourceTree = "<group>"; };
+		F92A1BB128B5FBF00062B517 /* plus_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus_green@2x.png"; sourceTree = "<group>"; };
+		F92A1BB428B647180062B517 /* MW_delete_red@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MW_delete_red@3x.png"; sourceTree = "<group>"; };
+		F92A1BB528B647190062B517 /* MW_delete_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MW_delete_red@2x.png"; sourceTree = "<group>"; };
+		F92B732D28D19D5900A7734C /* MWReceivingSummaryOfMappedLotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWReceivingSummaryOfMappedLotsViewController.swift; sourceTree = "<group>"; };
+		F92B732F28D19FF000A7734C /* MWReceivingSummaryLotHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWReceivingSummaryLotHeaderView.xib; sourceTree = "<group>"; };
+		F92B733028D19FF000A7734C /* MWReceivingSummaryLotHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWReceivingSummaryLotHeaderView.swift; sourceTree = "<group>"; };
+		F92BE9C82907E377006005A4 /* MWStaticData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWStaticData.swift; sourceTree = "<group>"; };
+		F92E4D5828F9659000807589 /* MWReceiving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWReceiving.swift; sourceTree = "<group>"; };
+		F92EE38A28E6B20100E07E79 /* MWReceivingSerialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWReceivingSerialViewController.swift; sourceTree = "<group>"; };
+		F930095628AE5EBB00170B8C /* MWReceivingManuallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWReceivingManuallyViewController.swift; sourceTree = "<group>"; };
+		F930095828AE98B000170B8C /* MWReceivingManuallyHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWReceivingManuallyHeaderView.xib; sourceTree = "<group>"; };
+		F930095928AE98B000170B8C /* MWReceivingManuallyHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWReceivingManuallyHeaderView.swift; sourceTree = "<group>"; };
+		F94096DE290BC78100472E54 /* MW_ReceivingScanProduct+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MW_ReceivingScanProduct+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F94096DF290BC78100472E54 /* MW_ReceivingScanProduct+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MW_ReceivingScanProduct+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F947089C28E1563800D3BA2F /* MW_list-line-items-by-purchase-order_odoo_Serial.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "MW_list-line-items-by-purchase-order_odoo_Serial.json"; sourceTree = "<group>"; };
+		F948C81F28D86EAE00466CDD /* MW_list-purchase-orders_odoo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "MW_list-purchase-orders_odoo.json"; sourceTree = "<group>"; };
+		F948C82128D86EF900466CDD /* MW_list-line-items-by-purchase-order_odoo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "MW_list-line-items-by-purchase-order_odoo.json"; sourceTree = "<group>"; };
+		F94C7CEA288E93A400937FFF /* MWMultiScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWMultiScanViewController.swift; sourceTree = "<group>"; };
+		F94EBA55288AA4F6006126CC /* MWConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWConfirmationViewController.swift; sourceTree = "<group>"; };
+		F94EBA57288AC1A6006126CC /* tick_circle_lg_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tick_circle_lg_green@2x.png"; sourceTree = "<group>"; };
+		F94EBA58288AC1A6006126CC /* tick_circle_lg_green@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tick_circle_lg_green@3x.png"; sourceTree = "<group>"; };
+		F950C8792889760C0068449C /* MWERPListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWERPListViewController.swift; sourceTree = "<group>"; };
+		F950C87A2889760C0068449C /* MWReceivingSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWReceivingSelectionViewController.swift; sourceTree = "<group>"; };
+		F950C87B2889760C0068449C /* MWPuchaseOrderListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWPuchaseOrderListViewController.swift; sourceTree = "<group>"; };
+		F950C8802889767B0068449C /* MWReceiving.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MWReceiving.storyboard; sourceTree = "<group>"; };
+		F950C883288976990068449C /* single_scan_green@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "single_scan_green@3x.png"; sourceTree = "<group>"; };
+		F950C884288976990068449C /* next_icon_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next_icon_green@2x.png"; sourceTree = "<group>"; };
+		F950C885288976990068449C /* next_icon_green@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next_icon_green@3x.png"; sourceTree = "<group>"; };
+		F950C886288976990068449C /* single_scan_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "single_scan_green@2x.png"; sourceTree = "<group>"; };
+		F950C887288976990068449C /* multiple_scan_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multiple_scan_green@2x.png"; sourceTree = "<group>"; };
+		F950C888288976990068449C /* switch_left_green@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "switch_left_green@3x.png"; sourceTree = "<group>"; };
+		F950C889288976990068449C /* search_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_white@3x.png"; sourceTree = "<group>"; };
+		F950C88A288976990068449C /* search_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_white@2x.png"; sourceTree = "<group>"; };
+		F950C88B288976990068449C /* switch_left_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "switch_left_green@2x.png"; sourceTree = "<group>"; };
+		F950C88C288976990068449C /* multiple_scan_green@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multiple_scan_green@3x.png"; sourceTree = "<group>"; };
+		F950C88D288976990068449C /* radio_active_green@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio_active_green@3x.png"; sourceTree = "<group>"; };
+		F950C88E288976990068449C /* switch_right_green@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "switch_right_green@3x.png"; sourceTree = "<group>"; };
+		F950C88F288976990068449C /* arrow_green@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_green@3x.png"; sourceTree = "<group>"; };
+		F950C890288976990068449C /* camera_verify_green@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_verify_green@3x.png"; sourceTree = "<group>"; };
+		F950C891288976990068449C /* camera_verify_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_verify_green@2x.png"; sourceTree = "<group>"; };
+		F950C892288976990068449C /* arrow_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_green@2x.png"; sourceTree = "<group>"; };
+		F950C893288976990068449C /* switch_right_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "switch_right_green@2x.png"; sourceTree = "<group>"; };
+		F950C894288976990068449C /* radio_active_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio_active_green@2x.png"; sourceTree = "<group>"; };
+		F950C895288976990068449C /* check_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check_white@3x.png"; sourceTree = "<group>"; };
+		F950C896288976990068449C /* check_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check_white@2x.png"; sourceTree = "<group>"; };
+		F950C8AC288976BC0068449C /* MWListPurchaseOrders_ttrx.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MWListPurchaseOrders_ttrx.json; sourceTree = "<group>"; };
+		F950C8AF288989640068449C /* MWSingleScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWSingleScanViewController.swift; sourceTree = "<group>"; };
+		F95F87A928DC2BDC00963114 /* MW_get-erps-in-action.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "MW_get-erps-in-action.json"; sourceTree = "<group>"; };
+		F9656FEB290F923E008DF5A8 /* MWReceivingCancelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWReceivingCancelViewController.swift; sourceTree = "<group>"; };
+		F9A0D14428A3FD0B00DD82B4 /* camera_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_green@2x.png"; sourceTree = "<group>"; };
+		F9A0D14628A3FD0C00DD82B4 /* camera_green@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_green@3x.png"; sourceTree = "<group>"; };
+		F9A0D15028A3FF0200DD82B4 /* mw_check_green@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mw_check_green@3x.png"; sourceTree = "<group>"; };
+		F9A0D15128A3FF0200DD82B4 /* mw_uncheck_green@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mw_uncheck_green@3x.png"; sourceTree = "<group>"; };
+		F9A0D15228A3FF0300DD82B4 /* mw_check_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mw_check_green@2x.png"; sourceTree = "<group>"; };
+		F9A0D15328A3FF0300DD82B4 /* mw_uncheck_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mw_uncheck_green@2x.png"; sourceTree = "<group>"; };
+		F9C0F51E2902BFBB003C6943 /* MW_ReceivingManualLotOrScanSerial+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MW_ReceivingManualLotOrScanSerial+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F9C0F51F2902BFBB003C6943 /* MW_ReceivingManualLotOrScanSerial+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MW_ReceivingManualLotOrScanSerial+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F9F507732899607E005F14A6 /* white_cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white_cross@2x.png"; sourceTree = "<group>"; };
+		F9F507742899607E005F14A6 /* white_cross@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white_cross@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1743,6 +1867,13 @@
 				30A3464D25FA4D9700230288 /* ManualInboundShipment.swift */,
 				3087B2AD260DC3A400DF3CA1 /* Receiving.swift */,
 				5B3B5C7C2820217300D975CB /* ARSerialFinder.swift */,
+				F92E4D5828F9659000807589 /* MWReceiving.swift */,
+				F923F6A428FD566D00FD6B49 /* MW_ReceivingLineItem+CoreDataClass.swift */,
+				F923F6A528FD566E00FD6B49 /* MW_ReceivingLineItem+CoreDataProperties.swift */,
+				F9C0F51E2902BFBB003C6943 /* MW_ReceivingManualLotOrScanSerial+CoreDataClass.swift */,
+				F9C0F51F2902BFBB003C6943 /* MW_ReceivingManualLotOrScanSerial+CoreDataProperties.swift */,
+				F94096DF290BC78100472E54 /* MW_ReceivingScanProduct+CoreDataClass.swift */,
+				F94096DE290BC78100472E54 /* MW_ReceivingScanProduct+CoreDataProperties.swift */,
 				6FF9338E249B6CB300E95C7C /* PersistenceService.swift */,
 				6FF36ECB24990C9D00F6B9CB /* TTRx2_AI_Edge_Scanner.xcdatamodeld */,
 			);
@@ -1889,6 +2020,7 @@
 		A90D7C1824505EE2005F88E5 /* Receiving */ = {
 			isa = PBXGroup;
 			children = (
+				F950C8782889760C0068449C /* MiddleWare */,
 				3028C201264CF35D0047F2E0 /* PurchaseOrder */,
 				A961AEE12506339A00C57FDC /* Lot List View */,
 				A911586F2464372000EFAB14 /* Lot Base Search */,
@@ -2110,7 +2242,11 @@
 		A9168A812449E36300A9A2C4 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				A9497069246174640050DAA2 /* storage_areas.json */,
+				F948C82128D86EF900466CDD /* MW_list-line-items-by-purchase-order_odoo.json */,
+				F947089C28E1563800D3BA2F /* MW_list-line-items-by-purchase-order_odoo_Serial.json */,
+				F948C81F28D86EAE00466CDD /* MW_list-purchase-orders_odoo.json */,
+				F95F87A928DC2BDC00963114 /* MW_get-erps-in-action.json */,
+				F950C8AC288976BC0068449C /* MWListPurchaseOrders_ttrx.json */,
 				A9168A862449E3F200A9A2C4 /* Localizable.strings */,
 			);
 			path = Resource;
@@ -2189,6 +2325,7 @@
 		A91D2CE02446F5BD00D42A0E /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				F950C87F2889763D0068449C /* MiddleWare */,
 				5B43BC1B26EF1AC700DF64BB /* AugmentedReality.storyboard */,
 				5B4C235F26DF8AA0008617ED /* MyAccount.storyboard */,
 				30FDBFC226304FA200E76EEB /* ManualInbound.storyboard */,
@@ -2340,6 +2477,7 @@
 		A91EEF072444C03A00E8CF66 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F950C882288976990068449C /* Middleware */,
 				5B7D220B27C74AEE00A03852 /* FailedItem */,
 				5B7987CA276B4CDD009F1A26 /* Events */,
 				5B43BBFC26EF1A7800DF64BB /* ARSerialFinderImage */,
@@ -2464,7 +2602,6 @@
 				3068DB41258A4DA5003103F3 /* CustomAlert.swift */,
 				301C383A263ABE84009CF943 /* Utility.swift */,
 				A911FB1E246550A5009105C3 /* UserInfosModel.swift */,
-				5B62205C28805CEE00FD6508 /* KeychainService.swift */,
 				6FFD1FF2248BB9AD000D9B86 /* AllProductsModel.swift */,
 			);
 			path = Utility;
@@ -2724,6 +2861,79 @@
 			path = "View Container";
 			sourceTree = "<group>";
 		};
+		F950C8782889760C0068449C /* MiddleWare */ = {
+			isa = PBXGroup;
+			children = (
+				F950C8792889760C0068449C /* MWERPListViewController.swift */,
+				F950C87A2889760C0068449C /* MWReceivingSelectionViewController.swift */,
+				F950C87B2889760C0068449C /* MWPuchaseOrderListViewController.swift */,
+				F950C8AF288989640068449C /* MWSingleScanViewController.swift */,
+				F94C7CEA288E93A400937FFF /* MWMultiScanViewController.swift */,
+				F94EBA55288AA4F6006126CC /* MWConfirmationViewController.swift */,
+				F9656FEB290F923E008DF5A8 /* MWReceivingCancelViewController.swift */,
+				F9202EB528927CC60074F863 /* MWViewItemsViewController.swift */,
+				F912556328F005C5008206F3 /* MWReceivingSerialListViewController.swift */,
+				F92EE38A28E6B20100E07E79 /* MWReceivingSerialViewController.swift */,
+				F930095628AE5EBB00170B8C /* MWReceivingManuallyViewController.swift */,
+				F930095928AE98B000170B8C /* MWReceivingManuallyHeaderView.swift */,
+				F930095828AE98B000170B8C /* MWReceivingManuallyHeaderView.xib */,
+				F92B732D28D19D5900A7734C /* MWReceivingSummaryOfMappedLotsViewController.swift */,
+				F92B733028D19FF000A7734C /* MWReceivingSummaryLotHeaderView.swift */,
+				F92B732F28D19FF000A7734C /* MWReceivingSummaryLotHeaderView.xib */,
+				F92BE9C82907E377006005A4 /* MWStaticData.swift */,
+			);
+			path = MiddleWare;
+			sourceTree = "<group>";
+		};
+		F950C87F2889763D0068449C /* MiddleWare */ = {
+			isa = PBXGroup;
+			children = (
+				F950C8802889767B0068449C /* MWReceiving.storyboard */,
+			);
+			path = MiddleWare;
+			sourceTree = "<group>";
+		};
+		F950C882288976990068449C /* Middleware */ = {
+			isa = PBXGroup;
+			children = (
+				F92A1BB528B647190062B517 /* MW_delete_red@2x.png */,
+				F92A1BB428B647180062B517 /* MW_delete_red@3x.png */,
+				F92A1BB128B5FBF00062B517 /* plus_green@2x.png */,
+				F92A1BB028B5FBEF0062B517 /* plus_green@3x.png */,
+				F9A0D15228A3FF0300DD82B4 /* mw_check_green@2x.png */,
+				F9A0D15028A3FF0200DD82B4 /* mw_check_green@3x.png */,
+				F9A0D15328A3FF0300DD82B4 /* mw_uncheck_green@2x.png */,
+				F9A0D15128A3FF0200DD82B4 /* mw_uncheck_green@3x.png */,
+				F9A0D14428A3FD0B00DD82B4 /* camera_green@2x.png */,
+				F9A0D14628A3FD0C00DD82B4 /* camera_green@3x.png */,
+				F9F507732899607E005F14A6 /* white_cross@2x.png */,
+				F9F507742899607E005F14A6 /* white_cross@3x.png */,
+				F94EBA57288AC1A6006126CC /* tick_circle_lg_green@2x.png */,
+				F94EBA58288AC1A6006126CC /* tick_circle_lg_green@3x.png */,
+				F950C883288976990068449C /* single_scan_green@3x.png */,
+				F950C884288976990068449C /* next_icon_green@2x.png */,
+				F950C885288976990068449C /* next_icon_green@3x.png */,
+				F950C886288976990068449C /* single_scan_green@2x.png */,
+				F950C887288976990068449C /* multiple_scan_green@2x.png */,
+				F950C888288976990068449C /* switch_left_green@3x.png */,
+				F950C889288976990068449C /* search_white@3x.png */,
+				F950C88A288976990068449C /* search_white@2x.png */,
+				F950C88B288976990068449C /* switch_left_green@2x.png */,
+				F950C88C288976990068449C /* multiple_scan_green@3x.png */,
+				F950C88D288976990068449C /* radio_active_green@3x.png */,
+				F950C88E288976990068449C /* switch_right_green@3x.png */,
+				F950C88F288976990068449C /* arrow_green@3x.png */,
+				F950C890288976990068449C /* camera_verify_green@3x.png */,
+				F950C891288976990068449C /* camera_verify_green@2x.png */,
+				F950C892288976990068449C /* arrow_green@2x.png */,
+				F950C893288976990068449C /* switch_right_green@2x.png */,
+				F950C894288976990068449C /* radio_active_green@2x.png */,
+				F950C895288976990068449C /* check_white@3x.png */,
+				F950C896288976990068449C /* check_white@2x.png */,
+			);
+			path = Middleware;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2840,6 +3050,7 @@
 				A912B03B249BBBD000F3C646 /* resalable_inactive@2x.png in Resources */,
 				A91EEF142444C46000E8CF66 /* next_icon@3x.png in Resources */,
 				A90D7C2E24506D5E005F88E5 /* scan_again_camera@3x.png in Resources */,
+				F950C8A0288976990068449C /* multiple_scan_green@3x.png in Resources */,
 				6FF7BF382493B2F90070BE9E /* destruction_icon@2x.png in Resources */,
 				6FFD1FE8248917D4000D9B86 /* single_scan@2x.png in Resources */,
 				5B43BC1126EF1A8D00DF64BB /* manage-access-icon@2x.png in Resources */,
@@ -2854,12 +3065,15 @@
 				A914122A246D3577007B3063 /* selection_check@3x.png in Resources */,
 				A91F47CD24DC601300FC1427 /* timeline_circle@2x.png in Resources */,
 				5B4C236C26DF8AF4008617ED /* profile@3x.png in Resources */,
+				F950C8AE288976BC0068449C /* MWListPurchaseOrders_ttrx.json in Resources */,
 				A91D2CF224471A6A00D42A0E /* picking_icon@2x.png in Resources */,
 				A92E24192445D1F600152F58 /* Merriweather-Bold.ttf in Resources */,
 				5B4C236E26DF8AF4008617ED /* profile@2x.png in Resources */,
 				A91E093524A5D7D800DB14F3 /* delete@2x.png in Resources */,
 				5B4C236D26DF8AF4008617ED /* account@3x.png in Resources */,
+				F950C89A288976990068449C /* single_scan_green@2x.png in Resources */,
 				A91B1542245816C100BF4968 /* inactive_circle@3x.png in Resources */,
+				F95F87AA28DC2BDC00963114 /* MW_get-erps-in-action.json in Resources */,
 				5B4E096C2758B6210091F652 /* minus@2x.png in Resources */,
 				A988A94E2497923F00B78CCC /* Return.storyboard in Resources */,
 				A912B03A249BBBD000F3C646 /* quarantine_inactive@2x.png in Resources */,
@@ -2879,15 +3093,19 @@
 				6F06F0C6248682E500C0BA29 /* verified_switch@2x.png in Resources */,
 				A91F47AC24D99AE900FC1427 /* product_perspective@2x.png in Resources */,
 				A911FB262465C1F9009105C3 /* calendar@3x.png in Resources */,
+				F950C8AA288976990068449C /* check_white@2x.png in Resources */,
 				5B3B5C7728201ED200D975CB /* grey_triangle@3x.png in Resources */,
 				5B4C236026DF8AA0008617ED /* MyAccount.storyboard in Resources */,
+				F950C89C288976990068449C /* switch_left_green@3x.png in Resources */,
 				A90D7C2D24506D5E005F88E5 /* items_icon_white@3x.png in Resources */,
 				6F3B4D7E248105B6003B56FA /* returns_icon@2x.png in Resources */,
 				A91E093624A5D7D800DB14F3 /* pending_legend@2x.png in Resources */,
 				A91926E62459915400652535 /* check@3x.png in Resources */,
+				F950C8A9288976990068449C /* check_white@3x.png in Resources */,
 				A9141238246D5753007B3063 /* defaul_list_active_check@2x.png in Resources */,
 				A988A9672497964100B78CCC /* clock@3x.png in Resources */,
 				A91926D9245990CB00652535 /* trash-sm@3x.png in Resources */,
+				F9F507762899607E005F14A6 /* white_cross@3x.png in Resources */,
 				A91ADD442548374600B7388A /* lock@3x.png in Resources */,
 				5BBFEAEA27CE6D790092FE2D /* trash@3x.png in Resources */,
 				5B5406A126F0BED600ED2399 /* export@2x.png in Resources */,
@@ -2895,12 +3113,15 @@
 				A91F47C124DADF4F00FC1427 /* serial_blue@3x.png in Resources */,
 				6F85815A24682814001E7DBD /* CustomView.xib in Resources */,
 				A9A93603247525FC00625C38 /* radio_active@3x.png in Resources */,
+				F94EBA59288AC1A6006126CC /* tick_circle_lg_green@2x.png in Resources */,
 				A9141237246D5753007B3063 /* defaul_list_active_check@3x.png in Resources */,
 				5B3B5C7328201EAD00D975CB /* gray_cross@2x.png in Resources */,
 				A9E0561324E3FC2D00330926 /* pdf-file@2x.png in Resources */,
 				A9115B0F2448C173005555E9 /* arrow_left@3x.png in Resources */,
 				A91E093224A5D7D800DB14F3 /* delete@3x.png in Resources */,
 				A91926E52459915400652535 /* check@2x.png in Resources */,
+				F9A0D14A28A3FD0D00DD82B4 /* camera_green@2x.png in Resources */,
+				F950C8A8288976990068449C /* radio_active_green@2x.png in Resources */,
 				6F858149246827F5001E7DBD /* play@3x.png in Resources */,
 				6F3134CB24E6D5320048CCDF /* ar_icon@3x.png in Resources */,
 				A91E093124A5D7D800DB14F3 /* filter_sm@3x.png in Resources */,
@@ -2918,11 +3139,14 @@
 				A988A96B2497964100B78CCC /* return_package_sm@2x.png in Resources */,
 				5B6D6B5727E9D075000B520C /* pick_items@2x.png in Resources */,
 				6F21ED02247546E5006D7E88 /* remove_multiple_camera@2x.png in Resources */,
+				F92B733128D19FF000A7734C /* MWReceivingSummaryLotHeaderView.xib in Resources */,
 				5B4E09672758B6140091F652 /* plus@3x.png in Resources */,
 				A911587924644A7600EFAB14 /* shipments_inactive_btn@3x.png in Resources */,
 				A91C93122480F48400ACD3F0 /* LotBasedFooterView.xib in Resources */,
 				A91C93212480F52300ACD3F0 /* remove_active@2x.png in Resources */,
+				F950C8A1288976990068449C /* radio_active_green@3x.png in Resources */,
 				6FFD1FFE249158B3000D9B86 /* triangle@3x.png in Resources */,
+				F950C8A3288976990068449C /* arrow_green@3x.png in Resources */,
 				A9E0563B24EBD1DB00330926 /* commission_serial@2x.png in Resources */,
 				5B3B5C7128201EAD00D975CB /* yelow_triangle@3x.png in Resources */,
 				6FF7BF392493B2F90070BE9E /* dispense_icon@2x.png in Resources */,
@@ -2936,8 +3160,10 @@
 				A91C93262480F52300ACD3F0 /* plus_icon_white@2x.png in Resources */,
 				A912B03E249BBBD000F3C646 /* sm_radio_inactive@2x.png in Resources */,
 				5B43BC0A26EF1A8D00DF64BB /* create-filter@2x.png in Resources */,
+				F950C89E288976990068449C /* search_white@2x.png in Resources */,
 				A914122F246D422F007B3063 /* save_button@2x.png in Resources */,
 				A91B1546245816C100BF4968 /* active_circle@3x.png in Resources */,
+				F950C897288976990068449C /* single_scan_green@3x.png in Resources */,
 				6FFD1FF824914884000D9B86 /* overlay_proceed_btn@3x.png in Resources */,
 				5B3B5C7028201EAD00D975CB /* yelow_triangle@2x.png in Resources */,
 				A904A6CE25236ABE006A2416 /* check_lot_open@3x.png in Resources */,
@@ -2952,16 +3178,20 @@
 				5B7D221627C74BEF00A03852 /* failed_item_enable@3x.png in Resources */,
 				A91F47C224DADF4F00FC1427 /* serial_blue@2x.png in Resources */,
 				6F3B4D8B2481975C003B56FA /* green_tick@3x.png in Resources */,
+				F950C899288976990068449C /* next_icon_green@3x.png in Resources */,
 				5B57970826AC5A12003520D5 /* outbond@3x.png in Resources */,
 				A91F47B324D9C7D400FC1427 /* serial_container@2x.png in Resources */,
 				6F3B4D80248105B6003B56FA /* returns_icon@3x.png in Resources */,
 				5B43BC1226EF1A8D00DF64BB /* edit-filter@2x.png in Resources */,
 				A91EEED824448A9700E8CF66 /* Assets.xcassets in Resources */,
 				A9141228246D3577007B3063 /* selection_check@2x.png in Resources */,
+				F950C8A6288976990068449C /* arrow_green@2x.png in Resources */,
 				5B6A74CF27104DFD00F54E63 /* staff@2x.png in Resources */,
 				A92E24132445D1AD00152F58 /* checked@3x.png in Resources */,
+				F9F507752899607E005F14A6 /* white_cross@2x.png in Resources */,
 				5B2791FC27AAADBE0083D299 /* file-download@2x.png in Resources */,
 				5B4C236B26DF8AF4008617ED /* change_password@3x.png in Resources */,
+				F950C89F288976990068449C /* switch_left_green@2x.png in Resources */,
 				A91EEF062444BFD700E8CF66 /* Poppins-Bold.ttf in Resources */,
 				A988A9682497964100B78CCC /* clock@2x.png in Resources */,
 				6FF7BF362493B2F90070BE9E /* quarantine_icon@2x.png in Resources */,
@@ -2978,8 +3208,10 @@
 				A9168A842449E3F200A9A2C4 /* Localizable.strings in Resources */,
 				5B33F06B281155940032B964 /* info-circle_dashboard@3x.png in Resources */,
 				5B7F0F2827FC26F900A515F5 /* pencil_edit@3x.png in Resources */,
+				F9A0D14C28A3FD0D00DD82B4 /* camera_green@3x.png in Resources */,
 				A9E0563324EBD1DB00330926 /* view_container@3x.png in Resources */,
 				5BBFEAEE27CE6D790092FE2D /* trash@2x.png in Resources */,
+				F92A1BB728B647190062B517 /* MW_delete_red@2x.png in Resources */,
 				A91F479E24D9836000FC1427 /* transfer@2x.png in Resources */,
 				A9E0561B24E446CC00330926 /* filter_sm_active@3x.png in Resources */,
 				A91926DE245990D700652535 /* all_switch@2x.png in Resources */,
@@ -2995,6 +3227,7 @@
 				A988A9662497964100B78CCC /* search@2x.png in Resources */,
 				A91D2CEA24471A5500D42A0E /* menu_icon@2x.png in Resources */,
 				6F3134C624E6D5120048CCDF /* add-circle@2x.png in Resources */,
+				F950C89B288976990068449C /* multiple_scan_green@2x.png in Resources */,
 				5BCBBF2F280D6EE500939E99 /* participent_reassign@3x.png in Resources */,
 				A9E0563724EBD1DB00330926 /* view_container@2x.png in Resources */,
 				A90D7C3224506D5E005F88E5 /* scan_again_camera@2x.png in Resources */,
@@ -3009,6 +3242,8 @@
 				A9318F1224F5302D00F82DAC /* filter_white@3x.png in Resources */,
 				6FFD1FEF248985EA000D9B86 /* single_scan_blue@2x.png in Resources */,
 				5B57970926AC5A12003520D5 /* shipment@3x.png in Resources */,
+				F950C8A5288976990068449C /* camera_verify_green@2x.png in Resources */,
+				F950C8A2288976990068449C /* switch_right_green@3x.png in Resources */,
 				A91C931F2480F52300ACD3F0 /* plus_icon_white@3x.png in Resources */,
 				A91E093424A5D7D800DB14F3 /* filter_sm@2x.png in Resources */,
 				5B679A1B276326BE00901C58 /* arrow-up@3x.png in Resources */,
@@ -3016,8 +3251,11 @@
 				5B6A74C027104DFD00F54E63 /* add-user@3x.png in Resources */,
 				5B811D5427A3E4B70028C518 /* product_not_found@3x.png in Resources */,
 				6FFD1FEE248985EA000D9B86 /* single_scan_blue@3x.png in Resources */,
+				F9A0D15628A3FF0300DD82B4 /* mw_check_green@2x.png in Resources */,
+				F948C82228D86EF900466CDD /* MW_list-line-items-by-purchase-order_odoo.json in Resources */,
 				A911FB232465BE22009105C3 /* arrow_down@3x.png in Resources */,
 				A91C93222480F52300ACD3F0 /* add_product_lg@2x.png in Resources */,
+				F950C8A4288976990068449C /* camera_verify_green@3x.png in Resources */,
 				6FFD1FE3248917D4000D9B86 /* switch_right@3x.png in Resources */,
 				5B62B4262695E6E7004C2BFA /* removed_legend@3x.png in Resources */,
 				A910F66124601BF300B07E17 /* close@3x.png in Resources */,
@@ -3045,6 +3283,7 @@
 				6FFD1FE2248917D4000D9B86 /* multiple_scan@3x.png in Resources */,
 				5B4E096B2758B6210091F652 /* minus@3x.png in Resources */,
 				5B6A74C327104DFD00F54E63 /* user-tab-active@2x.png in Resources */,
+				F9A0D15528A3FF0300DD82B4 /* mw_uncheck_green@3x.png in Resources */,
 				A91E094424A60CDA00DB14F3 /* quarantine_active@2x.png in Resources */,
 				A91926D22459909C00652535 /* error@3x.png in Resources */,
 				A91926EC245ACFB900652535 /* arrow_right@3x.png in Resources */,
@@ -3066,7 +3305,6 @@
 				A9E0563424EBD1DB00330926 /* items_inventory@2x.png in Resources */,
 				A91926F1245C003500652535 /* check-circle@2x.png in Resources */,
 				6FF7BF2C2493A3120070BE9E /* container_sm@2x.png in Resources */,
-				A949706A246174640050DAA2 /* storage_areas.json in Resources */,
 				6FFD1FFF249158B3000D9B86 /* triangle@2x.png in Resources */,
 				6FF7BF3B2493B2F90070BE9E /* transfer_icon@3x.png in Resources */,
 				A91B1545245816C100BF4968 /* completed_circle@2x.png in Resources */,
@@ -3074,6 +3312,7 @@
 				5B57970B26AC5A12003520D5 /* inbound@3x.png in Resources */,
 				5B43BC0D26EF1A8D00DF64BB /* manage-access-icon@3x.png in Resources */,
 				A91D2CF024471A6A00D42A0E /* receiving_icon@2x.png in Resources */,
+				F947089D28E1563800D3BA2F /* MW_list-line-items-by-purchase-order_odoo_Serial.json in Resources */,
 				5B4C237026DF8AF4008617ED /* account@2x.png in Resources */,
 				5B679A1F276326D400901C58 /* arrow-down@3x.png in Resources */,
 				5B57972226AC5B3B003520D5 /* Shipments.storyboard in Resources */,
@@ -3101,18 +3340,22 @@
 				A9E0561624E3FCA700330926 /* share@3x.png in Resources */,
 				5B6A74C627104DFD00F54E63 /* user@2x.png in Resources */,
 				A9318F1124F5302D00F82DAC /* filter_white@2x.png in Resources */,
+				F92A1BB328B5FBF00062B517 /* plus_green@2x.png in Resources */,
 				6F3134CA24E6D5320048CCDF /* ar_icon@2x.png in Resources */,
 				A9A93606247525FC00625C38 /* radio_active@2x.png in Resources */,
 				5B5406A226F0BED600ED2399 /* export@3x.png in Resources */,
 				5B43BC0926EF1A8D00DF64BB /* create-preset@2x.png in Resources */,
 				5B6A74C827104DFD00F54E63 /* roles-tab-inactive@3x.png in Resources */,
 				A9A93605247525FC00625C38 /* radio_inactive@2x.png in Resources */,
+				F92A1BB628B647190062B517 /* MW_delete_red@3x.png in Resources */,
 				5B2791FD27AAADBE0083D299 /* file-download@3x.png in Resources */,
 				A9E0561724E3FCA700330926 /* share@2x.png in Resources */,
 				A9E0561D24EA9B0000330926 /* Inventory.storyboard in Resources */,
+				F948C82028D86EAE00466CDD /* MW_list-purchase-orders_odoo.json in Resources */,
 				A9115B0E2448C173005555E9 /* arrow_left@2x.png in Resources */,
 				A988A96D2497964100B78CCC /* note@2x.png in Resources */,
 				A91E094324A60CDA00DB14F3 /* quarantine_active@3x.png in Resources */,
+				F950C8812889767B0068449C /* MWReceiving.storyboard in Resources */,
 				A9CB33E22446044E002E0FDC /* password_icon@2x.png in Resources */,
 				6F3134C224E6D5120048CCDF /* cross@2x.png in Resources */,
 				A91926D5245990B600652535 /* failed_switch@2x.png in Resources */,
@@ -3121,6 +3364,7 @@
 				A9E0563524EBD1DB00330926 /* replace_container@3x.png in Resources */,
 				A914122C246D3577007B3063 /* plus_icon@2x.png in Resources */,
 				A91EEF132444C46000E8CF66 /* next_icon@2x.png in Resources */,
+				F950C89D288976990068449C /* search_white@3x.png in Resources */,
 				A9E0564724EFB6DC00330926 /* delete_red@2x.png in Resources */,
 				A91B1543245816C100BF4968 /* active_circle@2x.png in Resources */,
 				A91C93232480F52300ACD3F0 /* remove_active@3x.png in Resources */,
@@ -3133,6 +3377,7 @@
 				5B6A74C927104DFD00F54E63 /* user-tab-inactive@2x.png in Resources */,
 				A90D7C3024506D5E005F88E5 /* items_icon_white@2x.png in Resources */,
 				5B811D5527A3E4B70028C518 /* product_not_found@2x.png in Resources */,
+				F930095A28AE98B000170B8C /* MWReceivingManuallyHeaderView.xib in Resources */,
 				A91F47B824DAD67200FC1427 /* ProductHeaderView.xib in Resources */,
 				6FF7BF3C2493B2F90070BE9E /* transfer_icon@2x.png in Resources */,
 				A91F479F24D9836000FC1427 /* transfer@3x.png in Resources */,
@@ -3157,8 +3402,10 @@
 				6F21ED01247546E5006D7E88 /* remove_multiple_camera@3x.png in Resources */,
 				A91E093724A5D7D800DB14F3 /* errors_legend@3x.png in Resources */,
 				A96F7DFB24E19B2200B88A76 /* manufacturer@2x.png in Resources */,
+				F94EBA5A288AC1A6006126CC /* tick_circle_lg_green@3x.png in Resources */,
 				A91EEF032444BFD700E8CF66 /* Poppins-Regular.ttf in Resources */,
 				A91ADD472548398E00B7388A /* delete_white@2x.png in Resources */,
+				F92A1BB228B5FBF00062B517 /* plus_green@3x.png in Resources */,
 				A961AEE3250633D400C57FDC /* LotDetailsView.xib in Resources */,
 				A904A6CC25236ABE006A2416 /* uncheck_lot_open@3x.png in Resources */,
 				A914122B246D3577007B3063 /* edit_icon@2x.png in Resources */,
@@ -3174,6 +3421,7 @@
 				A9E0561224E3FC2D00330926 /* pdf-file@3x.png in Resources */,
 				6F21ED05247546F1006D7E88 /* trash-alt@3x.png in Resources */,
 				A910F66224601BF300B07E17 /* close@2x.png in Resources */,
+				F950C8A7288976990068449C /* switch_right_green@2x.png in Resources */,
 				A9141236246D5753007B3063 /* defaul_list_inactive_check@2x.png in Resources */,
 				A92E24162445D1BC00152F58 /* user_icon@2x.png in Resources */,
 				6F85814A246827F5001E7DBD /* pause@2x.png in Resources */,
@@ -3186,6 +3434,7 @@
 				A91D2CF324471A6A00D42A0E /* picking_icon@3x.png in Resources */,
 				5B6A74CA27104DFD00F54E63 /* company-level-preset@3x.png in Resources */,
 				A91B154D245871AA00BF4968 /* view_verified_serial@2x.png in Resources */,
+				F950C898288976990068449C /* next_icon_green@2x.png in Resources */,
 				5B3B5C7228201EAD00D975CB /* gray_cross@3x.png in Resources */,
 				A91E094524A60CDA00DB14F3 /* notresalable-active@3x.png in Resources */,
 				5B43BC0F26EF1A8D00DF64BB /* delete_circle@3x.png in Resources */,
@@ -3198,6 +3447,7 @@
 				30FDBFC326304FA200E76EEB /* ManualInbound.storyboard in Resources */,
 				5B3B5C7B2820202500D975CB /* CustomViewForLookWithFilter.xib in Resources */,
 				6FFD1FFA24914884000D9B86 /* overlay_product@2x.png in Resources */,
+				F9A0D15728A3FF0300DD82B4 /* mw_uncheck_green@2x.png in Resources */,
 				A91926E2245990EF00652535 /* product-sm@2x.png in Resources */,
 				A995C925245724420035CDFE /* SectionHeaderView.xib in Resources */,
 				A91EEF042444BFD700E8CF66 /* Poppins-Medium.ttf in Resources */,
@@ -3206,6 +3456,7 @@
 				5B4721D826BAB5C300D61F5C /* info@2x.png in Resources */,
 				6F3134C424E6D5120048CCDF /* cross@3x.png in Resources */,
 				6F3B4D7F248105B6003B56FA /* inventory_icon@2x.png in Resources */,
+				F9A0D15428A3FF0300DD82B4 /* mw_check_green@3x.png in Resources */,
 				5B7987D5276B4CEC009F1A26 /* event@2x.png in Resources */,
 				30EF94A525592C1F005BD5C9 /* GoogleService-Info.plist in Resources */,
 				A90D7C3124506D5E005F88E5 /* camera_verify@2x.png in Resources */,
@@ -3341,6 +3592,8 @@
 			files = (
 				6F21ECFE24753981006D7E88 /* PickingSerialListViewController.swift in Sources */,
 				5B33F060281146270032B964 /* SessionInfoViewController.swift in Sources */,
+				F9C0F5212902BFBB003C6943 /* MW_ReceivingManualLotOrScanSerial+CoreDataProperties.swift in Sources */,
+				F950C8B0288989640068449C /* MWSingleScanViewController.swift in Sources */,
 				6FFD1FF3248BB9AD000D9B86 /* AllProductsModel.swift in Sources */,
 				A91CCA4D2445CE4900697E9C /* SecondViewController.swift in Sources */,
 				A91F475324D032E900FC1427 /* DPConfirmationViewController.swift in Sources */,
@@ -3353,7 +3606,9 @@
 				A9055E9225401B1000F75138 /* LotsCommissionSearchViewController.swift in Sources */,
 				305E533B25C9A67C009CEC4C /* ReturnProductListVC.swift in Sources */,
 				30FDBFE626304FDF00E76EEB /* MISPurchaceOrderSearchViewController.swift in Sources */,
+				F923F6A728FD566E00FD6B49 /* MW_ReceivingLineItem+CoreDataProperties.swift in Sources */,
 				6F122698247D7A0A003D0C66 /* ReceivingSelectionViewController.swift in Sources */,
+				F9C0F5202902BFBB003C6943 /* MW_ReceivingManualLotOrScanSerial+CoreDataClass.swift in Sources */,
 				A961AEEB250778ED00C57FDC /* ReplaceFirstViewController.swift in Sources */,
 				A96F7DFD24E2D6FE00B88A76 /* PPShipmentDetailsViewController.swift in Sources */,
 				A912B02B249BBB9600F3C646 /* ReturnConfirmationViewController.swift in Sources */,
@@ -3379,11 +3634,13 @@
 				3060EAA526414CAA003301A2 /* UnQuarantineSearchViewController.swift in Sources */,
 				5B43BBE126EF1A3C00DF64BB /* ARExportProductThirdViewController.swift in Sources */,
 				30FDBFE926304FDF00E76EEB /* MISAddressDetailsViewController.swift in Sources */,
+				F950C87D2889760C0068449C /* MWReceivingSelectionViewController.swift in Sources */,
 				A904A6E425306256006A2416 /* LotInventoryViewController.swift in Sources */,
 				30FDBFED26304FDF00E76EEB /* MISConfirmViewController.swift in Sources */,
 				A91F47BA24DAD74000FC1427 /* ProductHeaderView.swift in Sources */,
 				6F85815F24682814001E7DBD /* StockOverlay.swift in Sources */,
 				A9B7FC7624AF4F71000BCB9D /* AdjustmentAddLotBasedViewController.swift in Sources */,
+				F92B732E28D19D5900A7734C /* MWReceivingSummaryOfMappedLotsViewController.swift in Sources */,
 				A961AEEC250778ED00C57FDC /* ReplaceSecondViewController.swift in Sources */,
 				6F3134BA24E6D4B50048CCDF /* HSBColorPicker.swift in Sources */,
 				5B43BBF626EF1A4F00DF64BB /* ARSFCreateNewFilterViewController.swift in Sources */,
@@ -3401,6 +3658,7 @@
 				A9E0561F24EAA18E00330926 /* InventoryHomeViewController.swift in Sources */,
 				A914121C246D3429007B3063 /* PickingConfirmationViewController.swift in Sources */,
 				3029282325D29D72006C07CD /* ReturnShipmentList.swift in Sources */,
+				F92B733228D19FF000A7734C /* MWReceivingSummaryLotHeaderView.swift in Sources */,
 				5B68993D26BBCE2700CA7AED /* InboundShipmentStorageSelectionViewController.swift in Sources */,
 				5B43BBF726EF1A4F00DF64BB /* ARSFBooleanBasedCriteriaViewController.swift in Sources */,
 				A91158482462F90100EFAB14 /* ConfirmationViewController.swift in Sources */,
@@ -3415,12 +3673,13 @@
 				A914121A246D3429007B3063 /* PickingScanItemsViewController.swift in Sources */,
 				6F85815E24682814001E7DBD /* DataCaptureContext+Licensed.swift in Sources */,
 				A9FBDDCA24F4ED89002DDD8D /* ContainerSearchViewController.swift in Sources */,
+				F9202EB628927CC60074F863 /* MWViewItemsViewController.swift in Sources */,
 				30710E0126579BEA00D7BD3E /* MISAddAggregationScanViewController.swift in Sources */,
 				A9318F1424F6B9D300F82DAC /* ContainerScanViewController.swift in Sources */,
 				5B483EF026E1E1C800CE7F24 /* AddProductViewController.swift in Sources */,
-				5B62205D28805CEE00FD6508 /* KeychainService.swift in Sources */,
 				A904A6E825306257006A2416 /* EditLotViewController.swift in Sources */,
 				5B57971826AC5B27003520D5 /* InboundShipmentListViewController.swift in Sources */,
+				F9656FEC290F923E008DF5A8 /* MWReceivingCancelViewController.swift in Sources */,
 				A988A9552497928F00B78CCC /* ReturnGeneralInfoViewController.swift in Sources */,
 				6F85816024682814001E7DBD /* UtilityScanning.swift in Sources */,
 				A910DC42245338B3009656C1 /* ItemsViewController.swift in Sources */,
@@ -3447,6 +3706,7 @@
 				5B43BBDF26EF1A3C00DF64BB /* ARSFAddCriteriaSelectionViewController.swift in Sources */,
 				A91C93152480F48400ACD3F0 /* PickingLotBasedViewController.swift in Sources */,
 				5B7987C8276B4CB6009F1A26 /* EventsOptionViewController.swift in Sources */,
+				F92E4D5928F9659000807589 /* MWReceiving.swift in Sources */,
 				A914121E246D3429007B3063 /* SelectCustomerViewController.swift in Sources */,
 				A9115875246443F800EFAB14 /* ShipmentsListViewController.swift in Sources */,
 				5B43BBF526EF1A4F00DF64BB /* ARSFProductFoundListViewController.swift in Sources */,
@@ -3456,10 +3716,13 @@
 				A90D7C1A24505F5E005F88E5 /* ShipmentDetailsViewController.swift in Sources */,
 				5B43BBF326EF1A4F00DF64BB /* ARSFFilterViewController.swift in Sources */,
 				A9E0562224EAD31900330926 /* ContainerMgmtHomeViewController.swift in Sources */,
+				F930095B28AE98B000170B8C /* MWReceivingManuallyHeaderView.swift in Sources */,
 				3087B2AE260DC3A400DF3CA1 /* Receiving.swift in Sources */,
+				F92EE38B28E6B20100E07E79 /* MWReceivingSerialViewController.swift in Sources */,
 				306EB3A9263941140052902D /* AdjustmentConfirmViewController.swift in Sources */,
 				30FDBFF026304FDF00E76EEB /* MISAddCustomAddressViewController.swift in Sources */,
 				5B4C237A26DF8B62008617ED /* MyAccountOptionViewController.swift in Sources */,
+				F94096E0290BC78100472E54 /* MW_ReceivingScanProduct+CoreDataProperties.swift in Sources */,
 				A904A6C2251DCF32006A2416 /* ManufacturerProductSearchViewController.swift in Sources */,
 				5B7F0F2527FC0F6300A515F5 /* PickingFilterItemsViewController.swift in Sources */,
 				5B57971926AC5B27003520D5 /* InboundShipmentSearchViewController.swift in Sources */,
@@ -3467,13 +3730,16 @@
 				5BBFEAF327CE6DE30092FE2D /* ARExportProductDownloadableSearchViewController.swift in Sources */,
 				5B811D4F27A3C05B0028C518 /* FailedItemsViewController.swift in Sources */,
 				300E8B80260B3492009FE395 /* ReceivingEditLotVC.swift in Sources */,
+				F950C87C2889760C0068449C /* MWERPListViewController.swift in Sources */,
 				6F85815D24682814001E7DBD /* Quadrilateral+Width.swift in Sources */,
 				3060EAA626414CAA003301A2 /* UnQuarantineGeneralViewController.swift in Sources */,
+				F912556428F005C5008206F3 /* MWReceivingSerialListViewController.swift in Sources */,
 				30FDBFEA26304FDF00E76EEB /* MISInitialViewController.swift in Sources */,
 				A904A6D125238F40006A2416 /* LotAddConfirmationViewController.swift in Sources */,
 				A9B7FC7D24AF56CD000BCB9D /* AdjustmentItemsLotViewController.swift in Sources */,
 				A9FBDDC624F400B8002DDD8D /* GenerateSerialsViewController.swift in Sources */,
 				30FDBFEE26304FDF00E76EEB /* MISPurchaseOrderItemsViewController.swift in Sources */,
+				F94096E1290BC78100472E54 /* MW_ReceivingScanProduct+CoreDataClass.swift in Sources */,
 				30710E062657EC0F00D7BD3E /* MISAggregationViewController.swift in Sources */,
 				A91F47C424DC000100FC1427 /* SFSerialsViewController.swift in Sources */,
 				5B4C237926DF8B62008617ED /* ChangePasswordViewController.swift in Sources */,
@@ -3516,8 +3782,10 @@
 				5B7987C3276B4B7D009F1A26 /* InboundFailedSerials+CoreDataClass.swift in Sources */,
 				6F3134B324E6D42D0048CCDF /* CustomViewForMessageAR.swift in Sources */,
 				5B769DEB279EF44800EDE6C7 /* ARExportProductDownloadViewController.swift in Sources */,
+				F930095728AE5EBB00170B8C /* MWReceivingManuallyViewController.swift in Sources */,
 				A91F475024CF30A700FC1427 /* DPViewItemsViewController.swift in Sources */,
 				A95DD6EB24B3203800287CFD /* Adjustments+CoreDataProperties.swift in Sources */,
+				F92BE9C92907E377006005A4 /* MWStaticData.swift in Sources */,
 				A904A6D42525DB05006A2416 /* LotSerialRequestListViewController.swift in Sources */,
 				A995C9202457219D0035CDFE /* SerialsViewController.swift in Sources */,
 				A914121B246D3429007B3063 /* CustomerAddressesModel.swift in Sources */,
@@ -3526,6 +3794,7 @@
 				A961AEEA250778ED00C57FDC /* ReplaceConfirmViewController.swift in Sources */,
 				30FDBFDF26304FDF00E76EEB /* MISShipmentDetailsViewController.swift in Sources */,
 				30C2081225C7FA4A00B9A966 /* ReturnProductTypeSelectionVC.swift in Sources */,
+				F950C87E2889760C0068449C /* MWPuchaseOrderListViewController.swift in Sources */,
 				3068DB42258A4DA6003103F3 /* CustomAlert.swift in Sources */,
 				5B3AB43027F7345F009809BB /* DPViewPickedItemsViewController.swift in Sources */,
 				A91F0F262500D2CB0050A92F /* ItemsDeleteViewController.swift in Sources */,
@@ -3533,6 +3802,7 @@
 				A910804A24C883E5008AD143 /* PickingListViewController.swift in Sources */,
 				5B640C472742401600BA704F /* ItemsInInventoryListViewController.swift in Sources */,
 				30FDBFE026304FDF00E76EEB /* MISPurchaceOrderListViewController.swift in Sources */,
+				F94C7CEB288E93A400937FFF /* MWMultiScanViewController.swift in Sources */,
 				A96F7DE824E156C100B88A76 /* PPSearchViewController.swift in Sources */,
 				A910F134246E7A1800554C10 /* AddCustomAddressViewController.swift in Sources */,
 				A91926EE245B26FC00652535 /* ReceivingConfirmationViewController.swift in Sources */,
@@ -3573,6 +3843,7 @@
 				3060EAA326414CA9003301A2 /* UnQuarantineConfirmViewController.swift in Sources */,
 				6F3134B924E6D4B50048CCDF /* AddARMessageViewController.swift in Sources */,
 				A961AEE5250633F100C57FDC /* LotDetailsView.swift in Sources */,
+				F94EBA56288AA4F6006126CC /* MWConfirmationViewController.swift in Sources */,
 				30FDBFEC26304FDF00E76EEB /* MISPurchaseOrderDetailsViewController.swift in Sources */,
 				A91F474A24CF07B600FC1427 /* DPAddLotBasedViewController.swift in Sources */,
 				5BBFEAF427CE6DE30092FE2D /* ARSFProductNotFoundListViewController1.swift in Sources */,
@@ -3589,6 +3860,7 @@
 				A94F671324476FCA00ED52AA /* MBProgressHUD.m in Sources */,
 				5B43BBF826EF1A4F00DF64BB /* ARSFProductFoundSerialListViewController.swift in Sources */,
 				A9318F1624F7B19F00F82DAC /* CommissionedSerialsViewController.swift in Sources */,
+				F923F6A628FD566E00FD6B49 /* MW_ReceivingLineItem+CoreDataClass.swift in Sources */,
 				A91F474424CEF46500FC1427 /* DirectPicking+CoreDataProperties.swift in Sources */,
 				A91E092424A26B3800DB14F3 /* Return_Serials+CoreDataProperties.swift in Sources */,
 				A961AEEF250A0EC800C57FDC /* ContainerEditConfirmViewController.swift in Sources */,
@@ -3812,7 +4084,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 25;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tracktracerx.rapidrx;
+				PRODUCT_BUNDLE_IDENTIFIER = com.scandit.;
 				PRODUCT_NAME = RapidRx;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TTRx2 AI Edge Scanner/TTRx2 AI Edge Scanner-Bridging-Header.h";
@@ -3860,7 +4132,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 25;
-				PRODUCT_BUNDLE_IDENTIFIER = com.tracktracerx.rapidrx;
+				PRODUCT_BUNDLE_IDENTIFIER = com.scandit.;
 				PRODUCT_NAME = RapidRx;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TTRx2 AI Edge Scanner/TTRx2 AI Edge Scanner-Bridging-Header.h";

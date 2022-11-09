@@ -1,0 +1,6 @@
+{
+        "status_code": 1,
+        "status": "success",
+        "message": "Successfully executed.",
+        "data": "[{\"product_id\": \"1403\", \"product_code\": \"1000000005\", \"product_name\": \"SEP05 LOT Product 4\", \"product_uom_id\": \"1\", \"product_tracking\": \"lot\", \"product_demand_quantity\": \"15.0\", \"product_received_quantity\": \"3.0\", \"product_qty_to_receive\": \"12.0\"}, {\"product_id\": \"1404\", \"product_code\": \"1000000006\", \"product_name\": \"SEP05 SERIAL Product 4\", \"product_uom_id\": \"1\", \"product_tracking\": \"serial\", \"product_demand_quantity\": \"5.0\", \"product_received_quantity\": \"2.0\", \"product_qty_to_receive\": \"3.0\"}, {\"product_id\": \"1405\", \"product_code\": \"1000000007\", \"product_name\": \"SEP05 LOT Product 5\", \"product_uom_id\": \"1\", \"product_tracking\": \"lot\", \"product_demand_quantity\": \"20.0\", \"product_received_quantity\": \"3.0\", \"product_qty_to_receive\": \"17.0\"}, {\"product_id\": \"1406\", \"product_code\": \"1000000008\", \"product_name\": \"SEP05 LOT Product 6\", \"product_uom_id\": \"1\", \"product_tracking\": \"lot\", \"product_demand_quantity\": \"20.0\", \"product_received_quantity\": \"20.0\", \"product_qty_to_receive\": \"0.0\"}]"
+}

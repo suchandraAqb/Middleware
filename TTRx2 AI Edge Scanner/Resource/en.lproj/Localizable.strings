@@ -7,6 +7,34 @@
 */
 
 
+//,,,sbm1
+//MWERPListViewController
+"Select Purchase Order" = "Select Purchase Order";
+
+//MWPuchaseOrderListViewController
+"Select PO For" = "Select PO For";
+"Select PO for" = "Select PO for";
+"Search PO#" = "Search PO#";
+"Created On" = "Created On";
+"View Items" = "View Items";
+"Please select purchase order" = "Please select purchase order";
+
+//MWReceivingSelectionViewController
+"Click camera to scan your receiving items" = "Click camera to scan your receiving items";
+"Single Scan" = "Single Scan";
+"Multiple Scan" = "Multiple Scan";
+
+//MWViewItemsViewController
+"Product Received Quantity" = "Product Received Quantity";
+"Product Demand Quantity" = "Product Demand Quantity";
+"Product Qty To Receive" = "Product Qty To Receive";
+"Product Tracking" = "Product Tracking";
+"Type" = "Type";
+"Type:" = "Type:";
+"View Items for" = "View Items for";
+//,,,sbm1
+
+//===============================
 
 "Back" = "Back";
 "Welcome" = "Welcome";
@@ -949,3 +977,7 @@
 //Picking Scan Item
 "Please Scan Container Only." = "Please Scan Container Only.";
 "Please Scan Product Only." = "Please Scan Product Only.";
+
+//SettingsView
+"Enter Username" = "Enter Username";
+"Enter Password" = "Enter Password";

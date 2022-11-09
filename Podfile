@@ -11,6 +11,7 @@ target 'TTRx2 AI Edge Scanner' do
   pod 'LinearProgressView', '~> 2.0'
   pod 'AFNetworking', '4.0.0'
   pod 'ScanditBarcodeCapture', '6.9'
+  pod 'ScanditParser' ,'6.9'
 
   pod 'Firebase/Crashlytics'
   pod 'Firebase/Analytics'
