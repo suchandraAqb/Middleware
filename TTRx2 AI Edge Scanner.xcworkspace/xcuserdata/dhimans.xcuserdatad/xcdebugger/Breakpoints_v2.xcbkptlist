@@ -7,112 +7,256 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FE142465-B4F4-4F5C-935C-B2488B363A7C"
+            uuid = "D8646D32-C209-423F-96DD-BBD3ABC3BF88"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TTRx2 AI Edge Scanner/Controllers/Scan/CustomViewForLookWithFilter.swift"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/MiddleWare/MWMultiScanViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
-            landmarkName = "prepareView(barCode:)"
+            startingLineNumber = "574"
+            endingLineNumber = "574"
+            landmarkName = "doneButtonPressed(alertStatus:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "ED1707A8-AFD2-411F-A3C4-EE70556BFC76"
+            uuid = "E41FBFEB-4B44-4A91-A91B-A9B331E23062"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TTRx2 AI Edge Scanner/Controllers/Scan/CustomViewForLookWithFilter.swift"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/MiddleWare/MWMultiScanViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
-            landmarkName = "prepareView(barCode:)"
+            startingLineNumber = "562"
+            endingLineNumber = "562"
+            landmarkName = "showConfirmationViewController(confirmationMsg:alertStatus:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8F82D4FA-C37C-438C-8821-027D8BFF00C6"
+            uuid = "C773514E-FBD3-42D9-A50C-AF376420E756"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TTRx2 AI Edge Scanner/Controllers/Scan/CustomViewForLookWithFilter.swift"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/MiddleWare/MWMultiScanViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
-            landmarkName = "prepareView(barCode:)"
+            startingLineNumber = "573"
+            endingLineNumber = "573"
+            landmarkName = "doneButtonPressed(alertStatus:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C5DC0E0D-B111-4FDA-9F6B-4E3E16ED180B"
+            uuid = "6D4650F3-76C2-41A5-A043-EC8D4B30B3F4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TTRx2 AI Edge Scanner/Controllers/Scan/CustomViewForLookWithFilter.swift"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/MiddleWare/MWMultiScanViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
-            landmarkName = "prepareView(barCode:)"
+            startingLineNumber = "397"
+            endingLineNumber = "397"
+            landmarkName = "doneButtonPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2046D600-98D1-47F9-9D1D-F663FB21D993"
+            uuid = "C713E0A4-EE67-41D2-BCE1-CDE1A1D41ED7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TTRx2 AI Edge Scanner/Controllers/Scan/CustomViewForLookWithFilter.swift"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/MiddleWare/MWMultiScanViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
-            landmarkName = "prepareView(barCode:)"
+            startingLineNumber = "403"
+            endingLineNumber = "403"
+            landmarkName = "doneButtonPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F916DB59-A7FD-49C7-87E2-C3580AF57FFC"
+            uuid = "F39E3486-0C5C-4FEB-BCBE-06D89718A695"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TTRx2 AI Edge Scanner/Controllers/Scan/CustomViewForLookWithFilter.swift"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/MiddleWare/MWMultiScanViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "prepareView(barCode:)"
+            startingLineNumber = "416"
+            endingLineNumber = "416"
+            landmarkName = "doneButtonPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F695583F-8D36-4459-8CCC-141788BFA4AA"
+            uuid = "10B863EC-F38A-4500-9B1D-1C0922C529DF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TTRx2 AI Edge Scanner/Controllers/Scan/CustomViewForLookWithFilter.swift"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/MiddleWare/MWPuchaseOrderListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
-            landmarkName = "prepareView(barCode:)"
+            startingLineNumber = "558"
+            endingLineNumber = "558"
+            landmarkName = "didScanCodeForReceiveSerialVerification(scannedCode:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B56AAC65-6848-4EE3-A00B-A5EC79628E43"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/MiddleWare/MWPuchaseOrderListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "561"
+            endingLineNumber = "561"
+            landmarkName = "didScanCodeForReceiveSerialVerification(scannedCode:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ECA7F7F2-DD9F-4212-85B0-3ECCD20368D0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/MiddleWare/MWPuchaseOrderListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "641"
+            endingLineNumber = "641"
+            landmarkName = "didSingleScanCodeForReceiveSerialVerification(scannedCode:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0115C0B3-717C-4EB7-A106-E55D2FEDC06A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/MiddleWare/MWPuchaseOrderListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "638"
+            endingLineNumber = "638"
+            landmarkName = "didSingleScanCodeForReceiveSerialVerification(scannedCode:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B52954C2-1CEB-4BC6-BCBF-708C5AB6CE0B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/MiddleWare/MWPuchaseOrderListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "636"
+            endingLineNumber = "636"
+            landmarkName = "didSingleScanCodeForReceiveSerialVerification(scannedCode:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "68EA61F5-2250-4712-B4FE-606DB2D373FD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/MiddleWare/MWPuchaseOrderListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "651"
+            endingLineNumber = "651"
+            landmarkName = "didSingleScanCodeForReceiveSerialVerification(scannedCode:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "80CC9ADC-F8FC-4303-851A-EBA247E317C4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/MiddleWare/MWReceivingSerialListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "getDBData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5DA164E4-DC26-45E4-953A-9AE561342622"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/MiddleWare/MWReceivingSerialListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
+            landmarkName = "getDBData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "180CC1AB-594C-48A1-B5BA-6A0DE49B801E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/MiddleWare/MWReceivingSerialListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "getDBData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "15C5698E-D951-45A5-AD89-3561B220FD60"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/MiddleWare/MWReceivingSerialListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "getDBData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

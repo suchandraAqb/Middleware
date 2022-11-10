@@ -646,13 +646,13 @@ extension MWMultiScanViewController: BarcodeTrackingAdvancedOverlayDelegate {
                 * which has the type String, and an expiry date, which is represented as a map with keys
                 * "year", "month", "day".
                */
-               guard let serialNumber = parsedData.fieldsByName["lic"]?.parsed as? String,
-                     let pcnNumber = parsedData.fieldsByName["pcn"]?.parsed as? String,
-                     let uomNumber = parsedData.fieldsByName["uom"]?.parsed as? String,
-                     let expiryDate = parsedData.fieldsByName["expiryDate"]?.parsed as? [String: AnyObject],
-                     let year = expiryDate["year"] as? String,
-                     let month = expiryDate["month"] as? String,
-                     let day = expiryDate["day"] as? String else { return overlayTemp }
+//               guard let serialNumber = parsedData.fieldsByName["lic"]?.parsed as? String,
+//                     let pcnNumber = parsedData.fieldsByName["pcn"]?.parsed as? String,
+//                     let uomNumber = parsedData.fieldsByName["uom"]?.parsed as? String,
+//                     let expiryDate = parsedData.fieldsByName["expiryDate"]?.parsed as? [String: AnyObject],
+//                     let year = expiryDate["year"] as? String,
+//                     let month = expiryDate["month"] as? String,
+//                     let day = expiryDate["day"] as? String else { return overlayTemp }
 
                // Do something with the extracted fields.
 

@@ -84,10 +84,9 @@ class CustomViewForLookWithFilter: UIView {
         self.valueName3.text = ""
         //,,,sb11-16
         
-      
             if details.count > 0 {
                 var containerSerialNumber = ""
-                var productName = ""
+//                var productName = ""
                 var productGtin14 = ""
                 var serialNumber = ""
                 var lotNumber = ""
@@ -103,54 +102,55 @@ class CustomViewForLookWithFilter: UIView {
                 self.valueName3.text = ""
             }else{
                 self.productIcon.image = UIImage(named: "overlay_product")
-                if let  allproducts = AllProductsModel.getAllProducts() as? [[String: Any]]{
-                    if !allproducts.isEmpty  {
-                        if(details.keys.contains("01")){
-                            if let gtin14 = details["01"]?["value"] as? String{
-                                productGtin14 = gtin14
-                                let filteredArray = allproducts.filter { $0["gtin14"] as? String == gtin14 }
-                                print(filteredArray as Any)
-                                if filteredArray.count > 0 {
-                                    productName = (filteredArray.first?["name"] as? String)!
-                                }
-                            }
-                        }
-                    }
-                }
-                if let gtin14 = details["01"]?["value"] as? String{
+//                if let  allproducts = AllProductsModel.getAllProducts() as? [[String: Any]]{
+//                    if !allproducts.isEmpty  {
+//                        if(details.keys.contains("01")){
+//                            if let gtin14 = details["01"]?["value"] as? String{
+//                                productGtin14 = gtin14
+//                                let filteredArray = allproducts.filter { $0["gtin14"] as? String == gtin14 }
+//                                print(filteredArray as Any)
+//                                if filteredArray.count > 0 {
+//                                    productName = (filteredArray.first?["name"] as? String)!
+//                                }
+//                            }
+//                        }
+//                    }
+//                }
+                if (details.keys.contains("01")){
+                    if let gtin14 = details["01"]?["value"] as? String{
                     productGtin14 = gtin14
-                }
-                if(details.keys.contains("10")){
-                    if let lot = details["10"]?["value"] as? String{
-                        lotNumber = lot
                     }
                 }
-                if(details.keys.contains("21")){
-                    if let serial = details["21"]?["value"] as? String{
-                        serialNumber = serial
-                    }
+                    if(details.keys.contains("10")){
+                        if let lot = details["10"]?["value"] as? String{
+                            lotNumber = lot
+                        }
+                }
+                    if(details.keys.contains("21")){
+                        if let serial = details["21"]?["value"] as? String{
+                            serialNumber = serial
+                        }
                 }
             }
             if containerSerialNumber.isEmpty{
-                if(!productName.isEmpty){
-                    self.scannedCodeLabel.text = productName
-                    if(!serialNumber.isEmpty){
-                        self.valueName1.text = "Sl.No. - \(serialNumber)"
+//                if(!productName.isEmpty){
+//                    self.scannedCodeLabel.text = productName
+//                    if(!serialNumber.isEmpty){
+//                        self.valueName1.text = "Sl.No. - \(serialNumber)"
+//                    }else{
+//                       self.valueName1.text = ""
+//                    }
+//                }else{
+                    if(!productGtin14.isEmpty){
+                        self.scannedCodeLabel.text = "GTIN. - \(productGtin14)"
                     }else{
-                       self.valueName1.text = ""
+                       self.scannedCodeLabel.text = ""
                     }
+//                }
+                if(!serialNumber.isEmpty){
+                    self.valueName1.text = "Sl.No : \(serialNumber)"
                 }else{
-                    if(!serialNumber.isEmpty){
-                        self.scannedCodeLabel.text = "Product Sl.No : \(serialNumber)"
-                    }else{
-                       self.scannedCodeLabel.text = "Product Serial Missing"
-                    }
                     self.valueName1.text = ""
-                }
-                if(!productGtin14.isEmpty){
-                    self.valueName2.text = "GTIN. - \(productGtin14)"
-                }else{
-                    self.valueName2.text = ""
                 }
                 
                 if(!lotNumber.isEmpty){

@@ -227,6 +227,7 @@ class MWPuchaseOrderListViewController: BaseViewController {
                     //,,,sbm0 temp
                     
                     //API
+               
                     if let responseDict: NSDictionary = responseData as? NSDictionary {
                         let statusCode = responseDict["status_code"] as? Bool
                         
@@ -314,12 +315,12 @@ class MWPuchaseOrderListViewController: BaseViewController {
                             }
                         }
                     }
-                    
+               
                     
                     
                     
                         
-                /*
+            /*
                 //Local File
                 var path = ""
                 if self.erpUUID == "41afff72-2eac-4f2e-ab2f-9adab4323d0d" {
@@ -422,7 +423,7 @@ class MWPuchaseOrderListViewController: BaseViewController {
                 } catch {
                    print("JSON parsing Error")
                 }
-                */
+               */
                 //,,,sbm0 temp
                     
             }else {
@@ -436,6 +437,7 @@ class MWPuchaseOrderListViewController: BaseViewController {
                 }
             }
         }
+           
     }
 }
     //MARK: - End
@@ -584,7 +586,78 @@ extension MWPuchaseOrderListViewController : MWSingleScanViewControllerDelegate 
         10: 0F147660
         */
         
-        let scanProductArray = Utility.createSampleScanProduct()//,,,sbm2 temp
+        for code in scannedCode{
+            let details = UtilityScanning(with:code).decoded_info
+            if details.count > 0 {
+                var gtin = ""
+                var indicator = ""
+                var serial = ""
+                var lot = ""
+                var year = ""
+                var day = ""
+                var month = ""
+                
+                if(details.keys.contains("00")){
+                    if let cSerial = details["00"]?["value"] as? String{
+                        //containerSerialNumber = cSerial
+                    }else if let cSerial = details["00"]?["value"] as? NSNumber{
+                        //containerSerialNumber = "\(cSerial)"
+                    }
+                }else{
+                    if(details.keys.contains("01")){
+                        if let gtin14Value = details["01"]?["value"] as? String{
+                            gtin = gtin14Value
+                        }
+                    }
+                    if(details.keys.contains("10")){
+                        if let lotdetails = details["10"]?["value"] as? String{
+                            lot = lotdetails
+                        }
+                    }
+                    if(details.keys.contains("21")){
+                        if let serialdetails = details["21"]?["value"] as? String{
+                            serial = serialdetails
+                        }
+                    }
+                    if (details.keys.contains("17")) {
+                        if let expiration = details["17"]?["value"] as? String{
+                            let splitarr = expiration.split(separator: "T")
+                            if splitarr.count>0{
+                               let expirationDate = String(splitarr[0])
+                                let arr = expirationDate.components(separatedBy: "-")
+                                year = arr[0]
+                                month = arr[1]
+                                day = arr[2]
+                            }
+                        }
+                    }
+                        do{
+                            let predicate = NSPredicate(format:"erp_uuid='\(MWStaticData.ERP_UUID.odoo.rawValue)' and po_number='\(self.selectedPuchaseOrderDict!.poNumber!)' and gtin='\(gtin)' and serial_number='\(serial)' and lot_number='\(lot)'")
+                            let fetchRequestResultArray = try PersistenceService.context.fetch(MWReceivingScanProduct.fetchRequestWithPredicate(predicate: predicate))
+                            if fetchRequestResultArray.isEmpty {
+                                let obj = MW_ReceivingScanProduct(context: PersistenceService.context)
+                                obj.id = MWReceivingScanProduct.getAutoIncrementId()
+                                obj.erp_uuid = self.selectedPuchaseOrderDict?.erpUUID
+                                obj.erp_name = self.selectedPuchaseOrderDict?.erpName
+                                obj.po_number = self.selectedPuchaseOrderDict?.poNumber
+                                obj.po_unique_id = self.selectedPuchaseOrderDict?.uniqueID
+                                obj.gtin = gtin
+                                obj.indicator = indicator
+                                obj.serial_number = serial
+                                obj.day = day
+                                obj.month = month
+                                obj.year = year
+                                obj.lot_number = lot
+                                PersistenceService.saveContext()
+                            }
+                        }catch let error {
+                            print(error.localizedDescription)
+                        }
+                    }
+                }
+            }
+        /*
+        let scanProductArray = Utility.createSampleScanProduct()//,,,sbm2 temp//
         
         //,,,sbm2
         for scanProductDict in scanProductArray {
@@ -646,8 +719,8 @@ extension MWPuchaseOrderListViewController : MWSingleScanViewControllerDelegate 
             }
         }
         //,,,sbm2
-        
-        if scanProductArray.count > 0 {
+        */
+        if scannedCode.count > 0 {
             let storyboard = UIStoryboard(name: "MWReceiving", bundle: Bundle.main)
             let controller = storyboard.instantiateViewController(withIdentifier: "MWReceivingSerialListViewController") as! MWReceivingSerialListViewController
             controller.flowType = "directSerialScan"
