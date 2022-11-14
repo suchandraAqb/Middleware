@@ -142,8 +142,8 @@
             filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/MiddleWare/MWPuchaseOrderListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "641"
-            endingLineNumber = "641"
+            startingLineNumber = "648"
+            endingLineNumber = "648"
             landmarkName = "didSingleScanCodeForReceiveSerialVerification(scannedCode:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -158,8 +158,8 @@
             filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/MiddleWare/MWPuchaseOrderListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "638"
-            endingLineNumber = "638"
+            startingLineNumber = "645"
+            endingLineNumber = "645"
             landmarkName = "didSingleScanCodeForReceiveSerialVerification(scannedCode:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -174,8 +174,8 @@
             filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/MiddleWare/MWPuchaseOrderListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "636"
-            endingLineNumber = "636"
+            startingLineNumber = "643"
+            endingLineNumber = "643"
             landmarkName = "didSingleScanCodeForReceiveSerialVerification(scannedCode:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -190,8 +190,8 @@
             filePath = "TTRx2 AI Edge Scanner/Controllers/Receiving/MiddleWare/MWPuchaseOrderListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "651"
-            endingLineNumber = "651"
+            startingLineNumber = "659"
+            endingLineNumber = "659"
             landmarkName = "didSingleScanCodeForReceiveSerialVerification(scannedCode:)"
             landmarkType = "7">
          </BreakpointContent>

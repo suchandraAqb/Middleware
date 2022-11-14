@@ -863,7 +863,12 @@ extension MWReceivingSerialListViewController : MWSingleScanViewControllerDelega
                     month = MONTH
                 }
             }
-            
+            //,,,sbm2-1
+                        var product_tracking = "serial"
+                        if serial == "" {
+                            product_tracking = "lot"
+                        }
+                        //,,,sbm2-1
             do{
                 let predicate = NSPredicate(format:"erp_uuid='\(MWStaticData.ERP_UUID.odoo.rawValue)' and po_number='\(self.selectedPuchaseOrderDict!.poNumber!)' and gtin='\(gtin)' and serial_number='\(serial)' and lot_number='\(lot)'")
                 let fetchRequestResultArray = try PersistenceService.context.fetch(MWReceivingScanProduct.fetchRequestWithPredicate(predicate: predicate))
@@ -881,6 +886,7 @@ extension MWReceivingSerialListViewController : MWSingleScanViewControllerDelega
                     obj.month = month
                     obj.year = year
                     obj.lot_number = lot
+                    obj.product_tracking = product_tracking //,,,sbm2-1
                     PersistenceService.saveContext()
                 }
             }catch let error {

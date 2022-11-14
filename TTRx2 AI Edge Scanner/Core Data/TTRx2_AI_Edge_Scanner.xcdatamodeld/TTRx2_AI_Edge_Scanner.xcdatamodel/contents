@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Adjustments" representedClassName="Adjustments" syncable="YES">
         <attribute name="adjustment_type" optional="YES" attributeType="String"/>
         <attribute name="barcode" optional="YES" attributeType="String"/>
@@ -151,6 +151,7 @@
         <attribute name="month" optional="YES" attributeType="String"/>
         <attribute name="po_number" optional="YES" attributeType="String"/>
         <attribute name="po_unique_id" optional="YES" attributeType="String"/>
+        <attribute name="product_tracking" optional="YES" attributeType="String"/>
         <attribute name="serial_number" optional="YES" attributeType="String"/>
         <attribute name="year" optional="YES" attributeType="String"/>
     </entity>
@@ -229,7 +230,7 @@
         <element name="MISLotItem" positionX="-36" positionY="153" width="128" height="179"/>
         <element name="MW_ReceivingLineItem" positionX="-18" positionY="171" width="128" height="269"/>
         <element name="MW_ReceivingManualLotOrScanSerial" positionX="-36" positionY="144" width="128" height="359"/>
-        <element name="MW_ReceivingScanProduct" positionX="-36" positionY="144" width="128" height="209"/>
+        <element name="MW_ReceivingScanProduct" positionX="-36" positionY="144" width="128" height="224"/>
         <element name="ReceiveLineItem" positionX="-45" positionY="144" width="128" height="179"/>
         <element name="ReceiveLotEdit" positionX="-45" positionY="144" width="128" height="134"/>
         <element name="Return" positionX="-63" positionY="-18" width="128" height="118"/>

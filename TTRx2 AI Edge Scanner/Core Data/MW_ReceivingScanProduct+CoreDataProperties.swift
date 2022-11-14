@@ -28,7 +28,8 @@ extension MW_ReceivingScanProduct {
     @NSManaged public var month: String?
     @NSManaged public var year: String?
     @NSManaged public var lot_number: String?
-    
+    @NSManaged public var product_tracking: String?//,,,sbm2-1
+
     func convertCoreDataRequestsToMWReceivingScanProductModel() -> MWReceivingScanProductModel {
         return MWReceivingScanProductModel(primaryID: id,
                                            erpUUID: self.erp_uuid,
@@ -41,6 +42,7 @@ extension MW_ReceivingScanProduct {
                                            day: self.day,
                                            month: self.month,
                                            year: self.year,
-                                           lotNumber: self.lot_number)
+                                           lotNumber: self.lot_number,
+                                           productTracking: self.product_tracking)//,,,sbm2-1)
     }//,,,sbm2
 }
