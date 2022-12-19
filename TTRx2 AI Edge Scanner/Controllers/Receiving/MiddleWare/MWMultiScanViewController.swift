@@ -16,7 +16,6 @@
 import ScanditBarcodeCapture
 import ScanditCaptureCore
 import ScanditParser
-
 import UIKit
 
 @objc protocol MWMultiScanViewControllerDelegate: AnyObject {
@@ -56,8 +55,6 @@ class MWMultiScanViewController: BaseViewController {
     private var overlays: [Int: StockOverlay] = [:]
 
     private var overlaysCustomAll: [Int: UIImageView] = [:]
-    private var overlaysCustomForLookWithFilter: [Int: CustomViewForLookWithFilter] = [:]//,,,sb11-2
-
     private var arrLotProductList : [ProductListModel]?
     var isTriggerEnableNotFound :Bool = false
     var failedItems = Array<Dictionary<String,Any>>()
@@ -68,12 +65,14 @@ class MWMultiScanViewController: BaseViewController {
     var sectionName:String = "" //,,,sb16-1
     private var parser: Parser!
     var barcodetype : String = ""
+    private var overlaysCustomForLookWithFilter: [Int: CustomViewForLookWithFilter] = [:]//,,,sb11-2
 
     override func viewDidLoad() {
         super.viewDidLoad()
         scannedCodes = []
         setupRecognition()
         sectionView.roundTopCorners(cornerRadious: 40)
+        defaults.setValue(true, forKey: "collect_result")
         
         serialScanLabelWidthConstant.constant = 129
         
@@ -93,6 +92,7 @@ class MWMultiScanViewController: BaseViewController {
         productButton.isHidden = true
         
         barcodetype = defaults.object(forKey: "barcode_format") as? String ?? ""
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -179,7 +179,8 @@ class MWMultiScanViewController: BaseViewController {
         settings.set(symbology: .ean13UPCA, enabled: true)
         settings.set(symbology: .ean8, enabled: true)
         settings.set(symbology: .upce, enabled: true)
-
+        settings.set(symbology: .gs1DatabarExpanded, enabled:true)
+        
 //        let symbologySettings = settings.settings(for: .dataMatrix)
 //        symbologySettings.isColorInvertedEnabled = true
         
@@ -213,7 +214,6 @@ class MWMultiScanViewController: BaseViewController {
             parser = try! Parser(context: context, format: .hibc)
         }else{
             parser = try! Parser(context: context, format: .gs1AI)
-
         }
 
         // Add a barcode tracking overlay to the data capture view to render the tracked barcodes on top of the video
@@ -583,7 +583,7 @@ extension MWMultiScanViewController: MWConfirmationViewDelegate {
 // MARK: - BarcodeTrackingListener
 
 extension MWMultiScanViewController: BarcodeTrackingListener {
-
+    
     // This function is called whenever objects are updated and it's the right place to react to the tracking results.
     func barcodeTracking(_ barcodeTracking: BarcodeTracking,
                          didUpdate session: BarcodeTrackingSession,

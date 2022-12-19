@@ -1,23 +1,23 @@
 //
-//  MWReceivingSummaryOfMappedLotsViewController.swift
+//  MWPickingSummaryOfMappedLotsViewController.swift
 //  TTRx2 AI Edge Scanner
 //
-//  Created by aqbsol on 14/09/22.
+//  Created by aqbsol on 08/11/22.
 //  Copyright © 2022 AQB Solutions Private Limited. All rights reserved.
-//,,,sbm1
+//,,,sbm3
 
 import UIKit
 
-class MWReceivingSummaryOfMappedLotsViewController: BaseViewController {
+class MWPickingSummaryOfMappedLotsViewController: BaseViewController {
     @IBOutlet weak var headerButton: UIButton!
-    @IBOutlet weak var poNumberButton: UIButton!
+    @IBOutlet weak var soNumberButton: UIButton!
     @IBOutlet weak var listTable: UITableView!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var submitButton: UIButton!
     
-    var selectedPuchaseOrderDict: MWPuchaseOrderModel?
-    var selectedLineItemsListArray : [MWViewItemsModel] = []
-    var selectedItemsListArray : [[MWReceivingManuallyLotOrScanSerialBaseModel]] = []
+    var selectedSaleOrderDict: MWSaleOrderModel?
+    var selectedLineItemsListArray : [MWPickingViewItemsModel] = []
+    var selectedItemsListArray : [[MWPickingManuallyLotOrScanSerialBaseModel]] = []
 
     //MARK: - IBAction
     @IBAction func submitButtonPressed(_ sender: UIButton) {
@@ -26,7 +26,7 @@ class MWReceivingSummaryOfMappedLotsViewController: BaseViewController {
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
         if let viewControllers = self.navigationController?.viewControllers {
             for viewController in viewControllers {
-                if viewController is MWPuchaseOrderListViewController {
+                if viewController is MWSaleOrderListViewController {
                     self.navigationController?.popToViewController(viewController, animated: true)
                     return
                 }
@@ -43,21 +43,21 @@ class MWReceivingSummaryOfMappedLotsViewController: BaseViewController {
         cancelButton.setBorder(width: 1, borderColor: Utility.hexStringToUIColor(hex: "276A44"), cornerRadious: cancelButton.frame.height/2)
         submitButton.setBorder(width: 1, borderColor: UIColor.white, cornerRadious: submitButton.frame.height/2)
 
-        poNumberButton.backgroundColor = UIColor.clear
-        poNumberButton.setTitleColor(Utility.hexStringToUIColor(hex: "276A44"), for: UIControl.State.normal)
-        poNumberButton.setTitle("PO: \(selectedPuchaseOrderDict?.poNumber ?? "")", for: UIControl.State.normal)
+        soNumberButton.backgroundColor = UIColor.clear
+        soNumberButton.setTitleColor(Utility.hexStringToUIColor(hex: "276A44"), for: UIControl.State.normal)
+        soNumberButton.setTitle("SO: \(selectedSaleOrderDict?.soNumber ?? "")", for: UIControl.State.normal)
         
         // NON EDITED
         do{
             //,,,sbm5
-//            let predicate = NSPredicate(format: "erp_uuid='\(self.selectedPuchaseOrderDict!.erpUUID!)' and po_number='\(self.selectedPuchaseOrderDict!.poNumber!)' and is_edited == false")
-            let predicate = NSPredicate(format: "po_number='\(self.selectedPuchaseOrderDict!.poNumber!)' and is_edited == false")
+//            let predicate = NSPredicate(format: "erp_uuid='\(self.selectedSaleOrderDict!.erpUUID!)' and so_number='\(self.selectedSaleOrderDict!.soNumber!)' and is_edited == false")
+            let predicate = NSPredicate(format: "so_number='\(self.selectedSaleOrderDict!.soNumber!)' and is_edited == false")
             //,,,sbm5
             
-            let fetchRequestResultArray = try PersistenceService.context.fetch(MWReceivingLineItem.fetchRequestWithPredicate(predicate: predicate))
+            let fetchRequestResultArray = try PersistenceService.context.fetch(MWPickingLineItem.fetchRequestWithPredicate(predicate: predicate))
             if !fetchRequestResultArray.isEmpty {
                 fetchRequestResultArray.forEach({ (cdModel) in
-                    selectedLineItemsListArray.append(cdModel.convertCoreDataRequestsToMWViewItemsModel())
+                    selectedLineItemsListArray.append(cdModel.convertCoreDataRequestsToMWPickingViewItemsModel())
                 })
             }else{
                 selectedLineItemsListArray = []
@@ -71,17 +71,17 @@ class MWReceivingSummaryOfMappedLotsViewController: BaseViewController {
         
         
         //SERIAL
-        var selectedSerialLineItemsListArray : [MWViewItemsModel] = []
+        var selectedSerialLineItemsListArray : [MWPickingViewItemsModel] = []
         do{
             //,,,sbm5
-//            let predicate = NSPredicate(format: "erp_uuid='\(self.selectedPuchaseOrderDict!.erpUUID!)' and po_number='\(self.selectedPuchaseOrderDict!.poNumber!)' and is_edited == true and product_tracking='serial'")
-            let predicate = NSPredicate(format: "po_number='\(self.selectedPuchaseOrderDict!.poNumber!)' and is_edited == true and product_tracking='serial'")
+//            let predicate = NSPredicate(format: "erp_uuid='\(self.selectedSaleOrderDict!.erpUUID!)' and so_number='\(self.selectedSaleOrderDict!.soNumber!)' and is_edited == true and product_tracking='serial'")
+            let predicate = NSPredicate(format: "so_number='\(self.selectedSaleOrderDict!.soNumber!)' and is_edited == true and product_tracking='serial'")
             //,,,sbm5
-            
-            let fetchRequestResultArray = try PersistenceService.context.fetch(MWReceivingLineItem.fetchRequestWithPredicate(predicate: predicate))
+
+            let fetchRequestResultArray = try PersistenceService.context.fetch(MWPickingLineItem.fetchRequestWithPredicate(predicate: predicate))
             if !fetchRequestResultArray.isEmpty {
                 fetchRequestResultArray.forEach({ (cdModel) in
-                    selectedSerialLineItemsListArray.append(cdModel.convertCoreDataRequestsToMWViewItemsModel())
+                    selectedSerialLineItemsListArray.append(cdModel.convertCoreDataRequestsToMWPickingViewItemsModel())
                 })
             }else{
                 selectedSerialLineItemsListArray = []
@@ -91,19 +91,19 @@ class MWReceivingSummaryOfMappedLotsViewController: BaseViewController {
             selectedSerialLineItemsListArray = []
         }
         
-        var filterSerialItemsListArray : [[MWReceivingManuallyLotOrScanSerialBaseModel]] = []//,,,sbm2
+        var filterSerialItemsListArray : [[MWPickingManuallyLotOrScanSerialBaseModel]] = []//,,,sbm2
         for lineItemModel in selectedSerialLineItemsListArray {
-            var arr : [MWReceivingManuallyLotOrScanSerialBaseModel] = []
+            var arr : [MWPickingManuallyLotOrScanSerialBaseModel] = []
             do{
                 //,,,sbm5
-//                let predicate = NSPredicate(format: "erp_uuid='\(self.selectedPuchaseOrderDict!.erpUUID!)' and po_number='\(self.selectedPuchaseOrderDict!.poNumber!)' and is_edited == true and product_tracking='serial' and product_code='\(lineItemModel.productCode!)'")
-                let predicate = NSPredicate(format: "po_number='\(self.selectedPuchaseOrderDict!.poNumber!)' and is_edited == true and product_tracking='serial' and product_code='\(lineItemModel.productCode!)'")
+//                let predicate = NSPredicate(format: "erp_uuid='\(self.selectedSaleOrderDict!.erpUUID!)' and so_number='\(self.selectedSaleOrderDict!.soNumber!)' and is_edited == true and product_tracking='serial' and product_code='\(lineItemModel.productCode!)'")
+                let predicate = NSPredicate(format: "so_number='\(self.selectedSaleOrderDict!.soNumber!)' and is_edited == true and product_tracking='serial' and product_code='\(lineItemModel.productCode!)'")
                 //,,,sbm5
                 
-                let fetchRequestResultArray = try PersistenceService.context.fetch(MWReceivingManualLotOrScanSerial.fetchRequestWithPredicate(predicate: predicate))
+                let fetchRequestResultArray = try PersistenceService.context.fetch(MWPickingManualLotOrScanSerial.fetchRequestWithPredicate(predicate: predicate))
                 if !fetchRequestResultArray.isEmpty {
                     fetchRequestResultArray.forEach({ (cdModel) in
-                        arr.append(cdModel.convertCoreDataRequestsToMWReceivingManuallyLotOrScanSerialBaseModel())
+                        arr.append(cdModel.convertCoreDataRequestsToMWPickingManuallyLotOrScanSerialBaseModel())
                     })
                 }else{
                     arr = []
@@ -120,17 +120,17 @@ class MWReceivingSummaryOfMappedLotsViewController: BaseViewController {
         
         
         //LOT
-        var selectedLotLineItemsListArray : [MWViewItemsModel] = []
+        var selectedLotLineItemsListArray : [MWPickingViewItemsModel] = []
         do{
             //,,,sbm5
-//            let predicate = NSPredicate(format: "erp_uuid='\(self.selectedPuchaseOrderDict!.erpUUID!)' and po_number='\(self.selectedPuchaseOrderDict!.poNumber!)' and is_edited == true and product_tracking='lot'")
-            let predicate = NSPredicate(format: "po_number='\(self.selectedPuchaseOrderDict!.poNumber!)' and is_edited == true and product_tracking='lot'")
+//            let predicate = NSPredicate(format: "erp_uuid='\(self.selectedSaleOrderDict!.erpUUID!)' and so_number='\(self.selectedSaleOrderDict!.soNumber!)' and is_edited == true and product_tracking='lot'")
+            let predicate = NSPredicate(format: "so_number='\(self.selectedSaleOrderDict!.soNumber!)' and is_edited == true and product_tracking='lot'")
             //,,,sbm5
-            
-            let fetchRequestResultArray = try PersistenceService.context.fetch(MWReceivingLineItem.fetchRequestWithPredicate(predicate: predicate))
+
+            let fetchRequestResultArray = try PersistenceService.context.fetch(MWPickingLineItem.fetchRequestWithPredicate(predicate: predicate))
             if !fetchRequestResultArray.isEmpty {
                 fetchRequestResultArray.forEach({ (cdModel) in
-                    selectedLotLineItemsListArray.append(cdModel.convertCoreDataRequestsToMWViewItemsModel())
+                    selectedLotLineItemsListArray.append(cdModel.convertCoreDataRequestsToMWPickingViewItemsModel())
                 })
             }else{
                 selectedLotLineItemsListArray = []
@@ -140,19 +140,19 @@ class MWReceivingSummaryOfMappedLotsViewController: BaseViewController {
             selectedLotLineItemsListArray = []
         }
         
-        var filterLotItemsListArray : [[MWReceivingManuallyLotOrScanSerialBaseModel]] = []//,,,sbm2
+        var filterLotItemsListArray : [[MWPickingManuallyLotOrScanSerialBaseModel]] = []//,,,sbm2
         for lineItemModel in selectedLotLineItemsListArray {
-            var arr : [MWReceivingManuallyLotOrScanSerialBaseModel] = []
+            var arr : [MWPickingManuallyLotOrScanSerialBaseModel] = []
             do{
                 //,,,sbm5
-//                let predicate = NSPredicate(format: "erp_uuid='\(self.selectedPuchaseOrderDict!.erpUUID!)' and po_number='\(self.selectedPuchaseOrderDict!.poNumber!)' and is_edited == true and product_tracking='lot' and product_code='\(lineItemModel.productCode!)'")
-                let predicate = NSPredicate(format: "po_number='\(self.selectedPuchaseOrderDict!.poNumber!)' and is_edited == true and product_tracking='lot' and product_code='\(lineItemModel.productCode!)'")
+//                let predicate = NSPredicate(format: "erp_uuid='\(self.selectedSaleOrderDict!.erpUUID!)' and so_number='\(self.selectedSaleOrderDict!.soNumber!)' and is_edited == true and product_tracking='lot' and product_code='\(lineItemModel.productCode!)'")
+                let predicate = NSPredicate(format: "so_number='\(self.selectedSaleOrderDict!.soNumber!)' and is_edited == true and product_tracking='lot' and product_code='\(lineItemModel.productCode!)'")
                 //,,,sbm5
                 
-                let fetchRequestResultArray = try PersistenceService.context.fetch(MWReceivingManualLotOrScanSerial.fetchRequestWithPredicate(predicate: predicate))
+                let fetchRequestResultArray = try PersistenceService.context.fetch(MWPickingManualLotOrScanSerial.fetchRequestWithPredicate(predicate: predicate))
                 if !fetchRequestResultArray.isEmpty {
                     fetchRequestResultArray.forEach({ (cdModel) in
-                        arr.append(cdModel.convertCoreDataRequestsToMWReceivingManuallyLotOrScanSerialBaseModel())
+                        arr.append(cdModel.convertCoreDataRequestsToMWPickingManuallyLotOrScanSerialBaseModel())
                     })
                 }else{
                     arr = []
@@ -193,26 +193,26 @@ class MWReceivingSummaryOfMappedLotsViewController: BaseViewController {
         }
         
         
-        let headerNib = UINib.init(nibName: "MWReceivingSummaryLotHeaderView", bundle: Bundle.main)
-        listTable.register(headerNib, forHeaderFooterViewReuseIdentifier: "MWReceivingSummaryLotHeaderView")
+        let headerNib = UINib.init(nibName: "MWPickingSummaryLotHeaderView", bundle: Bundle.main)
+        listTable.register(headerNib, forHeaderFooterViewReuseIdentifier: "MWPickingSummaryLotHeaderView")
         listTable.reloadData()
     }
     //MARK: - End
     
     //MARK: - Webservice call
-    func purchaseOrderReceivingWebServiceCall() {
+    func saleOrderPickingWebServiceCall() {
         /*
-         Receiving By Purchase Order
+         Picking By Sale Order
          185eb551-cb71-4d11-bfa3-31693d06163f
-         https://cxi3hpbeyg.execute-api.us-east-1.amazonaws.com/prod/purchase-order-receiving
+         https://cxi3hpbeyg.execute-api.us-east-1.amazonaws.com/prod/sale-order-picking
          
         POST
          {
                  "action_uuid": "185eb551-cb71-4d11-bfa3-31693d06163f",
                  "sub": "e54c3361-4c43-400b-a1c1-c3f0cb28cf43",
                  "source_erp": "f6cd53e9-ebc6-4aad-820d-117c52cec266",
-                 "po_name": "P00176",
-                 "po_id": "184",
+                 "so_name": "P00176",
+                 "so_id": "184",
                  "line_items": "[{\"product_code\": \"1000000005\", \"product_name\": \"SEP05 LOT Product 4\", \"product_id\": \"1403\", \"product_tracking\": \"lot\", \"ordered_qty\": 5, \"quantity\": 3, \"lots\": [{\"lot_number\": \"SEP05-LOT-P2-15\", \"quantity\": 3, \"is_container\": false, \"c_serial\": \"\", \"c_gs1_serial\": \"\", \"c_gs1_barcode\": \"\", \"p_serials\": [], \"p_gs1_serials\": [], \"p_gs1_barcodes\": []}]}, {\"product_code\": \"1000000006\", \"product_name\": \"SEP05 SERIAL Product 4\", \"product_id\": \"1404\", \"product_tracking\": \"serial\", \"ordered_qty\": 5, \"quantity\": 2, \"lots\": [{\"lot_number\": \"SEP05-LOT-P2-16\", \"quantity\": 2, \"is_container\": false, \"c_serial\": \"\", \"c_gs1_serial\": \"\", \"c_gs1_barcode\": \"\", \"p_serials\": [\"SEP05-SERIAL-P2-15\", \"SEP05-SERIAL-P2-16\"], \"p_gs1_serials\": [], \"p_gs1_barcodes\": []}]}]"
          }
         */
@@ -224,8 +224,8 @@ class MWReceivingSummaryOfMappedLotsViewController: BaseViewController {
                  "action_uuid": "185eb551-cb71-4d11-bfa3-31693d06163f",
                  "sub": "e54c3361-4c43-400b-a1c1-c3f0cb28cf43",
                  "source_erp": "f6cd53e9-ebc6-4aad-820d-117c52cec266",
-                 "po_name": "P00176",
-                 "po_id": "184",
+                 "so_name": "P00176",
+                 "so_id": "184",
                  "line_items": "[{\"product_code\": \"1000000005\", \"product_name\": \"SEP05 LOT Product 4\", \"product_id\": \"1403\", \"product_tracking\": \"lot\", \"ordered_qty\": 5, \"quantity\": 3, \"lots\": [{\"lot_number\": \"SEP05-LOT-P2-15\", \"quantity\": 3, \"is_container\": false, \"c_serial\": \"\", \"c_gtin\": \"\" \"p_serials\": [], \"p_gtins\": []}]}, {\"product_code\": \"1000000006\", \"product_name\": \"SEP05 SERIAL Product 4\", \"product_id\": \"1404\", \"product_tracking\": \"serial\", \"ordered_qty\": 5, \"quantity\": 2, \"lots\": [{\"lot_number\": \"SEP05-LOT-P2-16\", \"quantity\": 2, \"is_container\": false, \"c_serial\": \"\", \"c_gtin\": \"\", \"p_serials\": [\"SEP05-SERIAL-P2-15\", \"SEP05-SERIAL-P2-16\"], \"p_gtins\": []}]}]"
          }
          
@@ -238,14 +238,14 @@ class MWReceivingSummaryOfMappedLotsViewController: BaseViewController {
                  "action_uuid": "185eb551-cb71-4d11-bfa3-31693d06163f",
                  "sub": "e54c3361-4c43-400b-a1c1-c3f0cb28cf43",
                  "source_erp": "f6cd53e9-ebc6-4aad-820d-117c52cec266",
-                 "po_name": "P00176",
-                 "po_id": "184",
+                 "so_name": "P00176",
+                 "so_id": "184",
                  "line_items": "[{\"product_code\": \"1000000005\", \"product_name\": \"SEP05 LOT Product 4\", \"product_id\": \"1403\", \"product_tracking\": \"lot\", \"ordered_qty\": 5, \"quantity\": 3, \"lots\": [{\"lot_number\": \"SEP05-LOT-P2-15\", \"quantity\": 3, \"is_container\": false, \"c_serial\": \"\", \"c_gtin\": \"\" \"p_serials\": []}]}, {\"product_code\": \"1000000006\", \"product_name\": \"SEP05 SERIAL Product 4\", \"product_id\": \"1404\", \"product_tracking\": \"serial\", \"ordered_qty\": 5, \"quantity\": 2, \"lots\": [{\"lot_number\": \"SEP05-LOT-P2-16\", \"quantity\": 2, \"is_container\": false, \"c_serial\": \"\", \"c_gtin\": \"\", \"p_serials\": [\"SEP05-SERIAL-P2-15\", \"SEP05-SERIAL-P2-16\"]}]}]"
          }
          */
         
         var requestDict = [String:Any]()
-        requestDict["action_uuid"] = Utility.getActionId(type:"purchaseOrderReceiving")
+        requestDict["action_uuid"] = Utility.getActionId(type:"saleOrderPicking")
         requestDict["sub"] = defaults.object(forKey:"sub")
         if selectedItemsListArray.count > 0 {
             var arr = [[String:Any]]()
@@ -261,11 +261,11 @@ class MWReceivingSummaryOfMappedLotsViewController: BaseViewController {
                         if let erpUUID = productsModel.erpUUID {
                             requestDict["source_erp"] = erpUUID
                         }
-                        if let poNumber = productsModel.poNumber {
-                            requestDict["po_name"] = poNumber
+                        if let soNumber = productsModel.soNumber {
+                            requestDict["so_name"] = soNumber
                         }
-                        if let poUniqueID = productsModel.poUniqueID {
-                            requestDict["po_id"] = poUniqueID
+                        if let soUniqueID = productsModel.soUniqueID {
+                            requestDict["so_id"] = soUniqueID
                         }
                     }
                     
@@ -428,30 +428,12 @@ class MWReceivingSummaryOfMappedLotsViewController: BaseViewController {
         
         print("requestDict...",requestDict)
         
-        //,,,sbm2-2
-        /*
-        //old response
-        {
-                "status_code": 1,
-                "status": "success",
-                "message": "Middleware execution successful.",
-                "data": "{\"f6cd53e9-ebc6-4aad-820d-117c52cec266\": {\"status_code\": 1, \"status\": \"success\", \"message\": \"Successfully executed.\", \"data\": {}}, \"41afff72-2eac-4f2e-ab2f-9adab4323d0d\": {\"status_code\": 1, \"status\": \"success\", \"message\": \"Successfully executed.\", \"data\": {\"uuid\": \"7a7c0322-cffd-4e9b-9403-77a277273815\", \"queue_url\": \"https://api.pre-test.tracktraceweb.com/2.0/queue/946b9e4a-972a-4487-a3a2-095810da6b4c\", \"queue_uuid\": \"946b9e4a-972a-4487-a3a2-095810da6b4c\"}}}"
-        }
         
-        //new response
-        Response Data: Optional({
-            data = "{\"tracking_uuid\": \"fd0f33e4-faa2-4580-b50c-ae6e9d8ccd4a\"}";
-            message = "The execution is in progress! You need to check the status later.";
-            status = success;
-            "status_code" = 1;
-        })
-        */
-        //,,,sbm2-2
         
         //,,,sbm0 temp
-    
+   
         self.showSpinner(onView: self.view)
-        Utility.POSTServiceCall(type: "PurchaseOrderReceiving", serviceParam: requestDict as NSDictionary, parentViewC: self, willShowLoader: false, viewController: self,appendStr: "") { (responseData:Any?, isDone:Bool?, message:String?) in
+        Utility.POSTServiceCall(type: "SaleOrderPicking", serviceParam: requestDict as NSDictionary, parentViewC: self, willShowLoader: false, viewController: self,appendStr: "") { (responseData:Any?, isDone:Bool?, message:String?) in
             DispatchQueue.main.async{
                 self.removeSpinner()
                 if isDone! {
@@ -492,7 +474,7 @@ class MWReceivingSummaryOfMappedLotsViewController: BaseViewController {
                                             if let viewControllers = self.navigationController?.viewControllers {
                                                 for viewController in viewControllers {
                                                     if viewController is DashboardViewController {
-                                                         MWReceiving.removeAllMW_ReceivingEntityDataFromDB()//,,,sbm2
+                                                         MWPicking.removeAllMW_PickingEntityDataFromDB()//,,,sbm2
                                                         self.navigationController?.popToViewController(viewController, animated: true)
                                                         return
                                                     }
@@ -537,14 +519,14 @@ class MWReceivingSummaryOfMappedLotsViewController: BaseViewController {
                 }
             }
         }
-       
+   
         //,,,sbm0 temp
     }
     //MARK: - End
 }
 
 // MARK: - MWConfirmationView
-extension MWReceivingSummaryOfMappedLotsViewController: MWConfirmationViewDelegate {
+extension MWPickingSummaryOfMappedLotsViewController: MWConfirmationViewDelegate {
     func showConfirmationViewController(confirmationMsg:String, alertStatus:String) {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "MWConfirmationViewController") as! MWConfirmationViewController
         controller.confirmationMsg = confirmationMsg
@@ -558,7 +540,7 @@ extension MWReceivingSummaryOfMappedLotsViewController: MWConfirmationViewDelega
     
     //MARK: - MWConfirmationViewDelegate
     func doneButtonPressed(alertStatus:String) {
-        self.purchaseOrderReceivingWebServiceCall()
+        self.saleOrderPickingWebServiceCall()
     }
     func cancelButtonPressed(alertStatus:String) {
     }
@@ -566,7 +548,7 @@ extension MWReceivingSummaryOfMappedLotsViewController: MWConfirmationViewDelega
 }
 // MARK: - End
 
-extension MWReceivingSummaryOfMappedLotsViewController: UITableViewDataSource, UITableViewDelegate {
+extension MWPickingSummaryOfMappedLotsViewController: UITableViewDataSource, UITableViewDelegate {
     
     //MARK: - Tableview Delegate and Datasource
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -586,7 +568,7 @@ extension MWReceivingSummaryOfMappedLotsViewController: UITableViewDataSource, U
     }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "MWReceivingSummaryLotHeaderView") as! MWReceivingSummaryLotHeaderView
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "MWPickingSummaryLotHeaderView") as! MWPickingSummaryLotHeaderView
         headerView.clipsToBounds = true
         headerView.layer.cornerRadius = 15
         headerView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
@@ -597,7 +579,7 @@ extension MWReceivingSummaryOfMappedLotsViewController: UITableViewDataSource, U
         
         let productsModelArray = selectedItemsListArray[section]
         if productsModelArray.count > 0 {
-            let productsModel:MWReceivingManuallyLotOrScanSerialBaseModel = productsModelArray[0]
+            let productsModel:MWPickingManuallyLotOrScanSerialBaseModel = productsModelArray[0]
             
             headerView.productNameLabel.text = ""
             if let productName = productsModel.productName {
@@ -626,25 +608,25 @@ extension MWReceivingSummaryOfMappedLotsViewController: UITableViewDataSource, U
             }
             headerView.demandQuantityLabel.text = "Demand Qty:".localized() + "  " + String(demandQty)
             
-            var productReceivedQty = 0
-            var productReceivedQuantityStr = ""
-            if let val = productsModel.productReceivedQuantity {
-                productReceivedQuantityStr = val
+            var productDeliveredQty = 0
+            var productDeliveredQuantityStr = ""
+            if let val = productsModel.productDeliveredQuantity {
+                productDeliveredQuantityStr = val
             }
 
-            if productReceivedQuantityStr.contains(".") {
-                if let productReceivedQtyDouble = Double(productReceivedQuantityStr) {
-                    productReceivedQty = Int(productReceivedQtyDouble)
+            if productDeliveredQuantityStr.contains(".") {
+                if let productDeliveredQtyDouble = Double(productDeliveredQuantityStr) {
+                    productDeliveredQty = Int(productDeliveredQtyDouble)
                 }
             }else {
-                if let productReceivedQtyInt = Int(productReceivedQuantityStr) {
-                    productReceivedQty = productReceivedQtyInt
+                if let productDeliveredQtyInt = Int(productDeliveredQuantityStr) {
+                    productDeliveredQty = productDeliveredQtyInt
                 }
             }
-            headerView.alreadyReceivedQuantityLabel.text = "Already Received Qty:".localized() + "  " + String(productReceivedQty)
+            headerView.alreadyDeliveredQuantityLabel.text = "Already Picked Qty:".localized() + "  " + String(productDeliveredQty)
             
-            let quantityToReceive = demandQty - productReceivedQty
-            headerView.quantityToReceiveLabel.text = "Qty to be Received:".localized() + "  " + String(quantityToReceive)
+            let quantityToDeliver = demandQty - productDeliveredQty
+            headerView.quantityToDeliverLabel.text = "Qty to be Picked:".localized() + "  " + String(quantityToDeliver)
         }
         
         return headerView
@@ -670,7 +652,7 @@ extension MWReceivingSummaryOfMappedLotsViewController: UITableViewDataSource, U
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let productsModelArray = selectedItemsListArray[indexPath.section]
-        let productsModel:MWReceivingManuallyLotOrScanSerialBaseModel = productsModelArray[indexPath.row]
+        let productsModel:MWPickingManuallyLotOrScanSerialBaseModel = productsModelArray[indexPath.row]
         
         var productTracking = ""
         if let val = productsModel.productTracking {
@@ -678,7 +660,7 @@ extension MWReceivingSummaryOfMappedLotsViewController: UITableViewDataSource, U
         }
         
         if productTracking == "lot" {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MWReceivingSummaryLotTableViewCell") as! MWReceivingSummaryLotTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MWPickingSummaryLotTableViewCell") as! MWPickingSummaryLotTableViewCell
             cell.bulletButton.setBorder(width: 1, borderColor: cell.bulletButton.backgroundColor!, cornerRadious: cell.bulletButton.frame.height/2)
             cell.mainView.backgroundColor = Utility.hexStringToUIColor(hex: "eaf8ea") //E8EEE6
             
@@ -701,7 +683,7 @@ extension MWReceivingSummaryOfMappedLotsViewController: UITableViewDataSource, U
             return cell
         }
         else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MWReceivingSummaryTableViewCell") as! MWReceivingSummaryTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MWPickingSummaryTableViewCell") as! MWPickingSummaryTableViewCell
             cell.bulletButton.setBorder(width: 1, borderColor: cell.bulletButton.backgroundColor!, cornerRadious: cell.bulletButton.frame.height/2)
             cell.mainView.backgroundColor = Utility.hexStringToUIColor(hex: "eaf8ea") //E8EEE6
             
@@ -727,7 +709,7 @@ extension MWReceivingSummaryOfMappedLotsViewController: UITableViewDataSource, U
     //MARK: - End
 }
 
-class MWReceivingSummaryLotTableViewCell: UITableViewCell {
+class MWPickingSummaryLotTableViewCell: UITableViewCell {
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var bulletButton: UIButton!
     @IBOutlet weak var lotNumberLabel: UILabel!
@@ -748,7 +730,7 @@ class MWReceivingSummaryLotTableViewCell: UITableViewCell {
     }
 }
 
-class MWReceivingSummaryTableViewCell: UITableViewCell {
+class MWPickingSummaryTableViewCell: UITableViewCell {
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var bulletButton: UIButton!
     @IBOutlet weak var serialNumberLabel: UILabel!
@@ -768,3 +750,4 @@ class MWReceivingSummaryTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 }
+

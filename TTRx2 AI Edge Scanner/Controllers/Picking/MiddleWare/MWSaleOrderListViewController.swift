@@ -1,20 +1,14 @@
 //
-//  MWPuchaseOrderListViewController.swift
+//  MWSaleOrderListViewController.swift
 //  TTRx2 AI Edge Scanner
 //
-//  Created by aqbsol on 18/07/22.
+//  Created by aqbsol on 01/11/22.
 //  Copyright © 2022 AQB Solutions Private Limited. All rights reserved.
-//,,,sbm1
+//,,,sbm3
 
 import UIKit
 
-/*
-protocol MWPuchaseOrderListViewControllerDelegate: AnyObject {
-    func didSelectMWPuchaseOrder(detailsDict:MWPuchaseOrderModel?, erpUUID:String)
-}
-*/
-
-class MWPuchaseOrderListViewController: BaseViewController {
+class MWSaleOrderListViewController: BaseViewController {
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var headerTitleButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
@@ -22,16 +16,14 @@ class MWPuchaseOrderListViewController: BaseViewController {
     @IBOutlet weak var searchCloseButton: UIButton!
     @IBOutlet weak var clearSearchButton: UIButton!
     @IBOutlet weak var searchTextField: UITextField!
-    @IBOutlet weak var purchaseOrderListTableView: UITableView!
+    @IBOutlet weak var saleOrderListTableView: UITableView!
     @IBOutlet weak var nextButton: UIButton!
     
-//    weak var delegate: MWPuchaseOrderListViewControllerDelegate?
-//    var erpDict = [String: Any]()
     var erpUUID = ""
     var erpName = ""
-    var itemsListArray : [MWPuchaseOrderModel] = []
-    var filterItemsListArray : [MWPuchaseOrderModel] = []
-    var selectedPuchaseOrderDict: MWPuchaseOrderModel?
+    var itemsListArray : [MWSaleOrderModel] = []
+    var filterItemsListArray : [MWSaleOrderModel] = []
+    var selectedSaleOrderDict: MWSaleOrderModel?
     
     //,,,sbm2-2
     var loadMoreButton = UIButton()
@@ -46,7 +38,7 @@ class MWPuchaseOrderListViewController: BaseViewController {
             clearSearchButton.isHidden = true
             searchTextField.text = ""
             filterItemsListArray = itemsListArray
-            purchaseOrderListTableView.reloadData()
+            saleOrderListTableView.reloadData()
         }
     }
     @IBAction func searchCloseButtonPressed(_ sender: UIButton) {
@@ -73,37 +65,26 @@ class MWPuchaseOrderListViewController: BaseViewController {
         loadMoreButton.isHidden = true //,,,sbm2-2
     }
     @IBAction func nextButtonPressed(_ sender: UIButton) {
-        /*
-        if selectedPuchaseOrderDict != nil {
-            self.navigationController?.popViewController(animated: true)
-            
-            self.delegate?.didSelectMWPuchaseOrder(detailsDict: selectedPuchaseOrderDict, erpUUID:erpUUID)
-        }
-        else {
-            Utility.showPopup(Title: App_Title, Message: "Please select purchase order".localized(), InViewC: self)
-        }
-        */
-        
-        if selectedPuchaseOrderDict != nil {
-            let storyboard = UIStoryboard.init(name: "MWReceiving", bundle: .main)
-            let controller = storyboard.instantiateViewController(withIdentifier: "MWReceivingSelectionViewController") as! MWReceivingSelectionViewController
+        if selectedSaleOrderDict != nil {
+            let storyboard = UIStoryboard.init(name: "MWPicking", bundle: .main)
+            let controller = storyboard.instantiateViewController(withIdentifier: "MWPickingSelectionViewController") as! MWPickingSelectionViewController
             controller.delegate = self
-            controller.previousController = "MWPuchaseOrderListViewController"
+            controller.previousController = "MWSaleOrderListViewController"
             controller.modalTransitionStyle = .flipHorizontal
             self.present(controller, animated: true, completion: nil)
         }
         else {
-            Utility.showPopup(Title: Warning, Message: "Please select purchase order".localized(), InViewC: self)
+            Utility.showPopup(Title: Warning, Message: "Please select sale order".localized(), InViewC: self)
         }
     }
     @IBAction func viewItemsButtonPressed(_ sender: UIButton) {
-        if let item = filterItemsListArray[sender.tag] as MWPuchaseOrderModel? {
-            let storyboard = UIStoryboard.init(name: "MWReceiving", bundle: .main)
-            let controller = storyboard.instantiateViewController(withIdentifier: "MWViewItemsViewController") as! MWViewItemsViewController
+        if let item = filterItemsListArray[sender.tag] as MWSaleOrderModel? {
+            let storyboard = UIStoryboard.init(name: "MWPicking", bundle: .main)
+            let controller = storyboard.instantiateViewController(withIdentifier: "MWPickingViewItemsViewController") as! MWPickingViewItemsViewController
             controller.erpUUID = erpUUID
             controller.erpName = erpName
-            controller.poNumber = item.poNumber!
-            controller.poUniqueID = item.uniqueID!
+            controller.soNumber = item.soNumber!
+            controller.soUniqueID = item.uniqueID!
             self.navigationController?.pushViewController(controller, animated: true)
         }
     }
@@ -119,22 +100,9 @@ class MWPuchaseOrderListViewController: BaseViewController {
         topView.isHidden = false
         searchView.isHidden = true
         searchTextField.attributedPlaceholder = NSAttributedString(
-            string: "Search PO#".localized(),
+            string: "Search SO#".localized(),
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
         )
-        
-        /*
-        if let erp_uuid = erpDict["erp_uuid"] as? String , !erp_uuid.isEmpty {
-            erpUUID = erp_uuid
-        }
-
-        if let erp_name = erpDict["erp_name"] as? String , !erp_name.isEmpty {
-            erpName = erp_name
-        }
-        headerTitleButton.setTitle("Select PO for".localized() + " " + erpName, for: UIControl.State.normal)
-
-        self.listPurchaseOrdersWebServiceCall()
-        */
         
         self.erpActionWebServiceCall()
     }
@@ -142,21 +110,21 @@ class MWPuchaseOrderListViewController: BaseViewController {
     
     //MARK: - Privae method
     func loadMoreFooterView() {
-        loadMoreButton = UIButton(frame: CGRect(x: 0, y: -20, width: self.purchaseOrderListTableView.frame.width, height: 50))
+        loadMoreButton = UIButton(frame: CGRect(x: 0, y: -20, width: self.saleOrderListTableView.frame.width, height: 50))
         //UIButton(frame: CGRect(origin: .zero, size: CGSize(width: self.listTable.frame.width, height: 40)))
         loadMoreButton.titleLabel?.textAlignment = .center
         loadMoreButton.setTitleColor(#colorLiteral(red: 0.02745098039, green: 0.1294117647, blue: 0.2666666667, alpha: 1), for: .normal)
         loadMoreButton.titleLabel?.font =  UIFont(name: "Poppins-Regular", size: 16.0)
         loadMoreButton.setTitle("Load more".localized(), for: .normal)
         loadMoreButton.backgroundColor = .clear
-        self.purchaseOrderListTableView.tableFooterView?.backgroundColor = .clear
+        self.saleOrderListTableView.tableFooterView?.backgroundColor = .clear
         loadMoreButton.addTarget(self, action:#selector(loadMoreButtonPressed), for: .touchUpInside)
-        self.purchaseOrderListTableView.tableFooterView = loadMoreButton
+        self.saleOrderListTableView.tableFooterView = loadMoreButton
     }//,,,sbm2-2
     @objc func loadMoreButtonPressed(sender: UIButton){
         currentPage += 1
         sender.isUserInteractionEnabled = false
-        self.listPurchaseOrdersWebServiceCall(callType: "loadMore")
+        self.listSaleOrdersWebServiceCall(callType: "loadMore")
     }//,,,sbm2-2
     //MARK: - End
     
@@ -183,6 +151,7 @@ class MWPuchaseOrderListViewController: BaseViewController {
         Utility.POSTServiceCall(type: "ErpAction", serviceParam: requestDict as NSDictionary, parentViewC: self, willShowLoader: false, viewController: self,appendStr: "") { (responseData:Any?, isDone:Bool?, message:String?) in
             DispatchQueue.main.async{
                 self.removeSpinner()
+                
                 if isDone! {
                     if let responseDict: NSDictionary = responseData as? NSDictionary {
                        let statusCode = responseDict["status_code"] as? Bool
@@ -196,9 +165,6 @@ class MWPuchaseOrderListViewController: BaseViewController {
 //                                    self.erpUUID = MWStaticData.ERP_UUID.odoo.rawValue
 //                                    self.erpName = "odoo"
                                     //,,,sbm0 temp
-                                    
-                                    let barcodeType = dataDict["barcode_format"] as? String
-                                    defaults.setValue(barcodeType, forKey: "barcode_format")
 
                                     
                                     if let target_erps = dataDict ["target_erps"] as? [[String:Any]] {
@@ -206,12 +172,11 @@ class MWPuchaseOrderListViewController: BaseViewController {
                                          if filteredArray.count > 0 {
                                              let dict = filteredArray.first
                                              self.erpName = dict!["erp_name"] as? String ?? ""
-//                                             self.headerTitleButton.setTitle("Select PO for".localized() + " " + self.erpName, for: UIControl.State.normal)
-                                             self.headerTitleButton.setTitle("Select PO".localized(), for: UIControl.State.normal)
+                                             self.headerTitleButton.setTitle("Select SO".localized(), for: UIControl.State.normal)
                                          }
                                     }
                             
-                                    self.listPurchaseOrdersWebServiceCall(callType: "firstLoad") //,,,sbm2-2
+                                    self.listSaleOrdersWebServiceCall(callType: "firstLoad") //,,,sbm2-2
                                 }
                             }
                         }else {
@@ -239,14 +204,14 @@ class MWPuchaseOrderListViewController: BaseViewController {
         }
     }
     
-    func listPurchaseOrdersWebServiceCall(callType:String) { //,,,sbm2-2
+    func listSaleOrdersWebServiceCall(callType:String) { //,,,sbm2-2
         /*
-        List Purchase Orders
-        ae4d2fcb-e77c-4c65-814f-2c8000bc6e1a
-        https://cxi3hpbeyg.execute-api.us-east-1.amazonaws.com/prod/list-purchase-orders
+        List Sale Orders
+         293b88e0-8a91-48c2-884b-8d56b5d2d57c
+         https://cxi3hpbeyg.execute-api.us-east-1.amazonaws.com/prod/list-sale-orders
         POST
          {
-                 "action_uuid": "ae4d2fcb-e77c-4c65-814f-2c8000bc6e1a",
+                 "action_uuid": "293b88e0-8a91-48c2-884b-8d56b5d2d57c",
                  "sub": "e54c3361-4c43-400b-a1c1-c3f0cb28cf43",
                  "source_erp": "f6cd53e9-ebc6-4aad-820d-117c52cec266"
          }
@@ -254,7 +219,7 @@ class MWPuchaseOrderListViewController: BaseViewController {
          //,,,sbm2-2
          New POST
          {
-                 "action_uuid": "ae4d2fcb-e77c-4c65-814f-2c8000bc6e1a",
+                 "action_uuid": "293b88e0-8a91-48c2-884b-8d56b5d2d57c",
                  "sub": "e54c3361-4c43-400b-a1c1-c3f0cb28cf43",
                  "source_erp": "f6cd53e9-ebc6-4aad-820d-117c52cec266",
                  "page": 1
@@ -263,19 +228,19 @@ class MWPuchaseOrderListViewController: BaseViewController {
         */
                 
         var requestDict = [String:Any]()
-        requestDict["action_uuid"] = Utility.getActionId(type:"listPurchaseOrdersAction")
+        requestDict["action_uuid"] = Utility.getActionId(type:"listSaleOrders")
         requestDict["sub"] = defaults.object(forKey:"sub")
         requestDict["source_erp"] = erpUUID
         requestDict["page"] = currentPage //,,,sbm2-2
 
         self.showSpinner(onView: self.view)
-        Utility.POSTServiceCall(type: "ListPurchaseOrders", serviceParam: requestDict as NSDictionary, parentViewC: self, willShowLoader: false, viewController: self,appendStr: "") { (responseData:Any?, isDone:Bool?, message:String?) in
+        Utility.POSTServiceCall(type: "ListSaleOrders", serviceParam: requestDict as NSDictionary, parentViewC: self, willShowLoader: false, viewController: self,appendStr: "") { (responseData:Any?, isDone:Bool?, message:String?) in
             DispatchQueue.main.async{
                 self.removeSpinner()
                 self.loadMoreButton.isUserInteractionEnabled = true //,,,sbm2-2
-
-                if isDone! {
                 
+                if isDone! {
+                    
                     //,,,sbm0 temp
                     
                     //API
@@ -295,7 +260,7 @@ class MWPuchaseOrderListViewController: BaseViewController {
                                     self.loadMoreActive = true
                                 }
                                 //,,,sbm2-2
-                                
+                     
                                 let dataArray = dataArr as! [[String:Any]]
 //                                if self.erpName == "odoo" { //,,,sbm5
                                     for dict in dataArray {
@@ -305,82 +270,85 @@ class MWPuchaseOrderListViewController: BaseViewController {
 //                                            uniqueID = String(value)
                                             uniqueID = value
                                         }
-                                        var poNumber = ""
+                                        var soNumber = ""
                                         if let value = dict["name"] as? String {
-                                            poNumber = value
+                                            soNumber = value
                                         }
                                         var createdOn = ""
                                         if let value = dict["created_on"] as? String {
                                             createdOn = value
                                         }
-                                        var vendor = ""
-                                        if let value = dict["vendor"] as? String {
-                                            vendor = value
+                                        var customer = ""
+                                        if let value = dict["customer"] as? String {
+                                            customer = value
                                         }
                                         var location = ""
                                         if let value = dict["location"] as? String {
                                             location = value
                                         }
                                         
-                                        let mwPuchaseOrderModel = MWPuchaseOrderModel(erpUUID: self.erpUUID,
+                                        let mwSaleOrderModel = MWSaleOrderModel(erpUUID: self.erpUUID,
                                                                                       erpName: self.erpName,
                                                                                       uniqueID: uniqueID,
-                                                                                      poNumber: poNumber,
+                                                                                      soNumber: soNumber,
                                                                                       createdOn: createdOn,
-                                                                                      vendor: vendor,
+                                                                                      customer: customer,
                                                                                       location: location)
                                         
-                                        self.itemsListArray.append(mwPuchaseOrderModel)
-                                        self.filterItemsListArray.append(mwPuchaseOrderModel)
+                                        self.itemsListArray.append(mwSaleOrderModel)
+                                        self.filterItemsListArray.append(mwSaleOrderModel)
                                     }
                                 //,,,sbm5
                                 /*
                                 }
                                 else if self.erpName == "ttrx" {
-                                     for dict in dataArray {
+                                    for dict in dataArray {
                                          var uniqueID = ""
+                    //                                        if let value = dict["id"] as? Int {
                                          if let value = dict["id"] as? String {
+                    //                                            uniqueID = String(value)
                                              uniqueID = value
                                          }
-                                         var poNumber = ""
+                                         var soNumber = ""
                                          if let value = dict["name"] as? String {
-                                             poNumber = value
+                                             soNumber = value
                                          }
                                          var createdOn = ""
                                          if let value = dict["created_on"] as? String {
                                              createdOn = value
                                          }
-                                         var vendor = ""
-                                         if let value = dict["vendor"] as? String {
-                                             vendor = value
+                                         var customer = ""
+                                         if let value = dict["customer"] as? String {
+                                             customer = value
                                          }
                                          var location = ""
                                          if let value = dict["location"] as? String {
                                              location = value
                                          }
-                                         
-                                         let mwPuchaseOrderModel = MWPuchaseOrderModel(erpUUID: self.erpUUID,
-                                                                                       erpName: self.erpName,
-                                                                                       uniqueID: uniqueID,
-                                                                                       poNumber: poNumber,
-                                                                                       createdOn: createdOn,
-                                                                                       vendor: vendor,
-                                                                                       location: location)
-                                         
-                                         self.itemsListArray.append(mwPuchaseOrderModel)
-                                         self.filterItemsListArray.append(mwPuchaseOrderModel)
-                                     }
-                                 }*/
+                                        
+                                        let mwSaleOrderModel = MWSaleOrderModel(erpUUID: self.erpUUID,
+                                                                                      erpName: self.erpName,
+                                                                                      uniqueID: uniqueID,
+                                                                                      soNumber: soNumber,
+                                                                                      createdOn: createdOn,
+                                                                                      customer: customer,
+                                                                                      location: location)
+                                        
+                                        self.itemsListArray.append(mwSaleOrderModel)
+                                        self.filterItemsListArray.append(mwSaleOrderModel)
+                                    }
+                                }*/
                                 //,,,sbm5
-//                                                self.populateSelectedPO()
-                                self.purchaseOrderListTableView.reloadData()
-                            }else {
+//                                                self.populateSelectedSO()
+                                self.saleOrderListTableView.reloadData()
+                            }
+                            else {
                                 self.loadMoreButton.isHidden = true
                                 self.loadMoreActive = false
                             }//,,,sbm2-2
                         }else {
                             self.currentPage -= 1 //,,,sbm2-2
-                            
+                         
                             if responseData != nil {
                                 let responseDict: NSDictionary = responseData as! NSDictionary
                                 let errorMsg = responseDict["message"] as! String
@@ -400,19 +368,17 @@ class MWPuchaseOrderListViewController: BaseViewController {
                 //Local File
                 //,,,sbm5
                 /*
-                var path = ""
-                if self.erpUUID == "41afff72-2eac-4f2e-ab2f-9adab4323d0d" {
+                 var path = ""
+                 if self.erpUUID == "41afff72-2eac-4f2e-ab2f-9adab4323d0d" {
                     //TTRx
-                    path = Bundle.main.path(forResource: "MWListPurchaseOrders_ttrx", ofType: "json")!
-                }else {
-                    path = Bundle.main.path(forResource: "MW_list-purchase-orders_odoo", ofType: "json")!
-                }
-                
+                    path = Bundle.main.path(forResource: "MWListSaleOrders_ttrx", ofType: "json")!
+                 }else {
+                    path = Bundle.main.path(forResource: "MW_list-sale-orders_odoo", ofType: "json")!
+                 }
                 */
-                
-                let path = Bundle.main.path(forResource: "MW_list-purchase-orders_odoo", ofType: "json")!
+                    
+                let path = Bundle.main.path(forResource: "MW_list-sale-orders_odoo", ofType: "json")!
                 //,,,sbm5
-                 
                 do {
                     let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                     let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
@@ -434,33 +400,33 @@ class MWPuchaseOrderListViewController: BaseViewController {
 //                                            uniqueID = String(value)
                                             uniqueID = value
                                         }
-                                        var poNumber = ""
+                                        var soNumber = ""
                                         if let value = dict["name"] as? String {
-                                            poNumber = value
+                                            soNumber = value
                                         }
                                         var createdOn = ""
                                         if let value = dict["created_on"] as? String {
                                             createdOn = value
                                         }
-                                        var vendor = ""
-                                        if let value = dict["vendor"] as? String {
-                                            vendor = value
+                                        var customer = ""
+                                        if let value = dict["customer"] as? String {
+                                            customer = value
                                         }
                                         var location = ""
                                         if let value = dict["location"] as? String {
                                             location = value
                                         }
                                         
-                                        let mwPuchaseOrderModel = MWPuchaseOrderModel(erpUUID: self.erpUUID,
+                                        let mwSaleOrderModel = MWSaleOrderModel(erpUUID: self.erpUUID,
                                                                                       erpName: self.erpName,
                                                                                       uniqueID: uniqueID,
-                                                                                      poNumber: poNumber,
+                                                                                      soNumber: soNumber,
                                                                                       createdOn: createdOn,
-                                                                                      vendor: vendor,
+                                                                                      customer: customer,
                                                                                       location: location)
                                         
-                                        self.itemsListArray.append(mwPuchaseOrderModel)
-                                        self.filterItemsListArray.append(mwPuchaseOrderModel)
+                                        self.itemsListArray.append(mwSaleOrderModel)
+                                        self.filterItemsListArray.append(mwSaleOrderModel)
                                     }
                                     
                                     //,,,sbm5
@@ -469,41 +435,43 @@ class MWPuchaseOrderListViewController: BaseViewController {
                                 else if self.erpName == "ttrx" {
                                     for dict in dataArray {
                                         var uniqueID = ""
+//                                        if let value = dict["id"] as? Int {
                                         if let value = dict["id"] as? String {
+//                                            uniqueID = String(value)
                                             uniqueID = value
                                         }
-                                        var poNumber = ""
+                                        var soNumber = ""
                                         if let value = dict["name"] as? String {
-                                            poNumber = value
+                                            soNumber = value
                                         }
                                         var createdOn = ""
                                         if let value = dict["created_on"] as? String {
                                             createdOn = value
                                         }
-                                        var vendor = ""
-                                        if let value = dict["vendor"] as? String {
-                                            vendor = value
+                                        var customer = ""
+                                        if let value = dict["customer"] as? String {
+                                            customer = value
                                         }
                                         var location = ""
                                         if let value = dict["location"] as? String {
                                             location = value
                                         }
                                         
-                                        let mwPuchaseOrderModel = MWPuchaseOrderModel(erpUUID: self.erpUUID,
+                                        let mwSaleOrderModel = MWSaleOrderModel(erpUUID: self.erpUUID,
                                                                                       erpName: self.erpName,
                                                                                       uniqueID: uniqueID,
-                                                                                      poNumber: poNumber,
+                                                                                      soNumber: soNumber,
                                                                                       createdOn: createdOn,
-                                                                                      vendor: vendor,
+                                                                                      customer: customer,
                                                                                       location: location)
                                         
-                                        self.itemsListArray.append(mwPuchaseOrderModel)
-                                        self.filterItemsListArray.append(mwPuchaseOrderModel)
+                                        self.itemsListArray.append(mwSaleOrderModel)
+                                        self.filterItemsListArray.append(mwSaleOrderModel)
                                     }
                                 }*/
                                 //,,,sbm5
-    //                                                self.populateSelectedPO()
-                                self.purchaseOrderListTableView.reloadData()
+    //                                                self.populateSelectedSO()
+                                self.saleOrderListTableView.reloadData()
                             }
                         }else {
                             if responseData != nil {
@@ -521,14 +489,14 @@ class MWPuchaseOrderListViewController: BaseViewController {
                 }
                 */
                 //,,,sbm0 temp
-                
+                    
             }else {
                 self.currentPage -= 1 //,,,sbm2-2
                 if responseData != nil{
                     let responseDict: NSDictionary = responseData as! NSDictionary
                     let errorMsg = responseDict["message"] as! String
                     Utility.showPopup(Title: App_Title, Message: errorMsg , InViewC: self)
-
+                    
                 }else{
                     Utility.showPopup(Title: App_Title, Message: message ?? "", InViewC: self)
                 }
@@ -569,7 +537,7 @@ class MWPuchaseOrderListViewController: BaseViewController {
             clearSearchButton.isHidden = false
         }
         
-        let filteredArray = self.itemsListArray.filter { $0.poNumber!.localizedCaseInsensitiveContains(searchStr!) }
+        let filteredArray = self.itemsListArray.filter { $0.soNumber!.localizedCaseInsensitiveContains(searchStr!) }
         if filteredArray.count>0 {
             filterItemsListArray = filteredArray
         }
@@ -579,7 +547,7 @@ class MWPuchaseOrderListViewController: BaseViewController {
                 filterItemsListArray = itemsListArray
             }
         }
-        purchaseOrderListTableView.reloadData()
+        saleOrderListTableView.reloadData()
     }
     //MARK: - End
     
@@ -610,35 +578,36 @@ class MWPuchaseOrderListViewController: BaseViewController {
     //MARK: - End
 }
 
-//MARK: - MWReceivingSelectionViewControllerDelegate
-extension MWPuchaseOrderListViewController: MWReceivingSelectionViewControllerDelegate {
+//MARK: - MWPickingSelectionViewControllerDelegate
+extension MWSaleOrderListViewController: MWPickingSelectionViewControllerDelegate {
     func didClickOnCamera(){
         //,,,sbm2 temp
-      
+        /*
         if(defaults.bool(forKey: "IsMultiScan")){
-            let storyboard = UIStoryboard.init(name: "MWReceiving", bundle: .main)
+            let storyboard = UIStoryboard.init(name: "MWPicking", bundle: .main)
             let controller = storyboard.instantiateViewController(withIdentifier: "MWMultiScanViewController") as! MWMultiScanViewController
-            controller.isForReceivingSerialVerificationScan = true
+            controller.isForPickingSerialVerificationScan = true
+            controller.isForPickingScanOption = true
             controller.delegate = self
             self.navigationController?.pushViewController(controller, animated: true)
         }else{
-            let storyboard = UIStoryboard.init(name: "MWReceiving", bundle: .main)
+            let storyboard = UIStoryboard.init(name: "MWPicking", bundle: .main)
             let controller = storyboard.instantiateViewController(withIdentifier: "MWSingleScanViewController") as! MWSingleScanViewController
             controller.delegate = self
-            controller.isForReceivingSerialVerificationScan = true
+            controller.isForPickingSerialVerificationScan = true
             self.navigationController?.pushViewController(controller, animated: true)
         }
-   
+        */
         
-     //   self.didSingleScanCodeForReceiveSerialVerification(scannedCode: [])
+        self.didSingleScanCodeForReceiveSerialVerification(scannedCode: [])
         //,,,sbm2 temp
     }
     
     func didClickManually(){
-        let storyboard = UIStoryboard.init(name: "MWReceiving", bundle: .main)
-        let controller = storyboard.instantiateViewController(withIdentifier: "MWReceivingManuallyViewController") as! MWReceivingManuallyViewController
+        let storyboard = UIStoryboard.init(name: "MWPicking", bundle: .main)
+        let controller = storyboard.instantiateViewController(withIdentifier: "MWPickingManuallyViewController") as! MWPickingManuallyViewController
         controller.flowType = "directManualLot"
-        controller.selectedPuchaseOrderDict = self.selectedPuchaseOrderDict
+        controller.selectedSaleOrderDict = self.selectedSaleOrderDict
         self.navigationController?.pushViewController(controller, animated: true)
     }
     func didClickCrossButton() {
@@ -646,8 +615,9 @@ extension MWPuchaseOrderListViewController: MWReceivingSelectionViewControllerDe
 }
 //MARK: - End
 
+
 //MARK: - MWMultiScanViewControllerDelegate
-extension MWPuchaseOrderListViewController : MWMultiScanViewControllerDelegate {
+extension MWSaleOrderListViewController : MWMultiScanViewControllerDelegate {
     
     func didScanCodeForReceiveSerialVerification(scannedCode:[String]) {
         print("didScanCodeForReceiveSerialVerification....>>",scannedCode)
@@ -661,8 +631,9 @@ extension MWPuchaseOrderListViewController : MWMultiScanViewControllerDelegate {
 }
 //MARK: - End
 
+
 //MARK: - MWSingleScanViewControllerDelegate
-extension MWPuchaseOrderListViewController : MWSingleScanViewControllerDelegate {
+extension MWSaleOrderListViewController : MWSingleScanViewControllerDelegate {
     
     func didSingleScanCodeForReceiveSerialVerification(scannedCode:[String]) {
         print("didSingleScanCodeForReceiveSerialVerification....>>",scannedCode)
@@ -682,18 +653,18 @@ extension MWPuchaseOrderListViewController : MWSingleScanViewControllerDelegate 
         */
         
         //,,,sbm2 temp
-        /*
+        
         //Local Data
         //,,,sbm5
         var scanProductArray:[[String: Any]] = []
-        if self.selectedPuchaseOrderDict?.erpName == "odoo" {
-             scanProductArray = Utility.createSampleScanProduct()
+        if self.selectedSaleOrderDict?.erpName == "odoo" {
+             scanProductArray = Utility.createSampleScanProduct()//,,,sbm2 temp
         }else {
-             scanProductArray = Utility.createSampleScanProduct_TTRX()
+             scanProductArray = Utility.createSampleScanProduct_TTRX()//,,,sbm2 temp
         }
         //,,,sbm5
-
-        //,,,sbm2
+        
+        //,,,sbm4
         for scanProductDict in scanProductArray {
             var gtin = ""
             var indicator = ""
@@ -736,181 +707,92 @@ extension MWPuchaseOrderListViewController : MWSingleScanViewControllerDelegate 
                         month = MONTH
                     }
                 }
-            */
                 
-        
-        //Scan From Device
-        for code in scannedCode {
-            let details = UtilityScanning(with:code).decoded_info
-            if details.count > 0 {
-                var gtin = ""
-                var indicator = ""
-                var serial = ""
-                var lot = ""
-                var year = ""
-                var day = ""
-                var month = ""
-                
-                if(details.keys.contains("00")){
-                    if let cSerial = details["00"]?["value"] as? String{
-                        //containerSerialNumber = cSerial
-                    }else if let cSerial = details["00"]?["value"] as? NSNumber{
-                        //containerSerialNumber = "\(cSerial)"
-                    }
-                }else{
-                    if(details.keys.contains("01")){
-                        if let gtin14Value = details["01"]?["value"] as? String{
-                            gtin = gtin14Value
-                        }
-                    }
-                    if(details.keys.contains("10")){
-                        if let lotdetails = details["10"]?["value"] as? String{
-                            lot = lotdetails
-                        }
-                    }
-                    if(details.keys.contains("21")){
-                        if let serialdetails = details["21"]?["value"] as? String{
-                            serial = serialdetails
-                        }
-                    }
-                    if (details.keys.contains("17")) {
-                        if let expiration = details["17"]?["value"] as? String{
-                            let splitarr = expiration.split(separator: "T")
-                            if splitarr.count>0{
-                               let expirationDate = String(splitarr[0])
-                                let arr = expirationDate.components(separatedBy: "-")
-                                year = arr[0]
-                                month = arr[1]
-                                day = arr[2]
-                            }
-                        }
-                    }
-                   
-                    //,,,sbm2 temp
-        
-                    //,,,sbm2-1
-                    var product_tracking = "serial"
-                    if serial == "" {
-                        product_tracking = "lot"
-                    }
-                    //,,,sbm2-1
-                
-                    //,,,sbm2-1
-                    if product_tracking == "serial" {
-                        do{
-                            //,,,sbm5
-//                            let predicate = NSPredicate(format:"erp_uuid='\(MWStaticData.ERP_UUID.odoo.rawValue)' and po_number='\(self.selectedPuchaseOrderDict!.poNumber!)' and gtin='\(gtin)' and serial_number='\(serial)' and lot_number='\(lot)'")
-                            let predicate = NSPredicate(format:"po_number='\(self.selectedPuchaseOrderDict!.poNumber!)' and gtin='\(gtin)' and serial_number='\(serial)' and lot_number='\(lot)'")
-                            //,,,sbm5
-                            
-                            let fetchRequestResultArray = try PersistenceService.context.fetch(MWReceivingScanProduct.fetchRequestWithPredicate(predicate: predicate))
-                            if fetchRequestResultArray.isEmpty {
-                                let obj = MW_ReceivingScanProduct(context: PersistenceService.context)
-                                obj.id = MWReceivingScanProduct.getAutoIncrementId()
-                                obj.erp_uuid = self.selectedPuchaseOrderDict?.erpUUID
-                                obj.erp_name = self.selectedPuchaseOrderDict?.erpName
-                                obj.po_number = self.selectedPuchaseOrderDict?.poNumber
-                                obj.po_unique_id = self.selectedPuchaseOrderDict?.uniqueID
-                                obj.gtin = gtin
-                                obj.indicator = indicator
-                                obj.serial_number = serial
-                                obj.day = day
-                                obj.month = month
-                                obj.year = year
-                                obj.lot_number = lot
-                                obj.product_tracking = product_tracking //,,,sbm2-1
-                                obj.quantity = "1" //,,,sbm2-1
-                                PersistenceService.saveContext()
-                            }
-                        }catch let error {
-                            print(error.localizedDescription)
-                        }
-                    }
-                    else {
-                        /*
-        //                do{
-        //                    let predicate = NSPredicate(format:"erp_uuid='\(MWStaticData.ERP_UUID.odoo.rawValue)' and po_number='\(self.selectedPuchaseOrderDict!.poNumber!)' and gtin='\(gtin)' and serial_number='\(serial)' and lot_number='\(lot)' and product_tracking='lot'")
-        //                    let fetchRequestResultArray = try PersistenceService.context.fetch(MWReceivingScanProduct.fetchRequestWithPredicate(predicate: predicate))
-        //                    if fetchRequestResultArray.isEmpty {
-                                let obj = MW_ReceivingScanProduct(context: PersistenceService.context)
-                                obj.id = MWReceivingScanProduct.getAutoIncrementId()
-                                obj.erp_uuid = self.selectedPuchaseOrderDict?.erpUUID
-                                obj.erp_name = self.selectedPuchaseOrderDict?.erpName
-                                obj.po_number = self.selectedPuchaseOrderDict?.poNumber
-                                obj.po_unique_id = self.selectedPuchaseOrderDict?.uniqueID
-                                obj.gtin = gtin
-                                obj.indicator = indicator
-                                obj.serial_number = serial
-                                obj.day = day
-                                obj.month = month
-                                obj.year = year
-                                obj.lot_number = lot
-                                obj.product_tracking = product_tracking //,,,sbm2-1
-                                obj.quantity = "1" //,,,sbm2-1
-                                PersistenceService.saveContext()
-        //                    }
-        //                }catch let error {
-        //                    print(error.localizedDescription)
-        //                }
-                        
-                        */
-                        
-                        do{
-                            //,,,sbm5
-//                            let predicate = NSPredicate(format:"erp_uuid='\(MWStaticData.ERP_UUID.odoo.rawValue)' and po_number='\(self.selectedPuchaseOrderDict!.poNumber!)' and gtin='\(gtin)' and serial_number='\(serial)' and lot_number='\(lot)' and product_tracking='lot'")
-                            let predicate = NSPredicate(format:"po_number='\(self.selectedPuchaseOrderDict!.poNumber!)' and gtin='\(gtin)' and serial_number='\(serial)' and lot_number='\(lot)' and product_tracking='lot'")
-                            //,,,sbm5
-                            
-                            let fetchRequestResultArray = try PersistenceService.context.fetch(MWReceivingScanProduct.fetchRequestWithPredicate(predicate: predicate))
-                            if fetchRequestResultArray.isEmpty {
-                                let obj = MW_ReceivingScanProduct(context: PersistenceService.context)
-                                obj.id = MWReceivingScanProduct.getAutoIncrementId()
-                                obj.erp_uuid = self.selectedPuchaseOrderDict?.erpUUID
-                                obj.erp_name = self.selectedPuchaseOrderDict?.erpName
-                                obj.po_number = self.selectedPuchaseOrderDict?.poNumber
-                                obj.po_unique_id = self.selectedPuchaseOrderDict?.uniqueID
-                                obj.gtin = gtin
-                                obj.indicator = indicator
-                                obj.serial_number = serial
-                                obj.day = day
-                                obj.month = month
-                                obj.year = year
-                                obj.lot_number = lot
-                                obj.product_tracking = product_tracking //,,,sbm2-1
-                                obj.quantity = "1" //,,,sbm2-1
-                                PersistenceService.saveContext()
-                            }
-                            else {
-                                if let obj = fetchRequestResultArray.first {
-                                    let qtyInt = Int(obj.quantity!)
-                                    obj.quantity = String(qtyInt! + 1)
-                                    PersistenceService.saveContext()
-                                } //,,,sbm2-1
-                            }
-                        }catch let error {
-                            print(error.localizedDescription)
-                        }
-                    }
-                   //,,,sbm2-1
+                //,,,sbm2-1
+                var product_tracking = "serial"
+                if serial == "" {
+                    product_tracking = "lot"
                 }
+                //,,,sbm2-1
                 
-            //,,,sbm2 temp
+                //,,,sbm2-1
+                if product_tracking == "serial" {
+                    do{
+                        //,,,sbm5
+//                        let predicate = NSPredicate(format:"erp_uuid='\(MWStaticData.ERP_UUID.odoo.rawValue)' and so_number='\(self.selectedSaleOrderDict!.soNumber!)' and gtin='\(gtin)' and serial_number='\(serial)' and lot_number='\(lot)'")
+                        let predicate = NSPredicate(format:"so_number='\(self.selectedSaleOrderDict!.soNumber!)' and gtin='\(gtin)' and serial_number='\(serial)' and lot_number='\(lot)'")
+                        //,,,sbm5
+
+                        let fetchRequestResultArray = try PersistenceService.context.fetch(MWPickingScanProduct.fetchRequestWithPredicate(predicate: predicate))
+                        if fetchRequestResultArray.isEmpty {
+                            let obj = MW_PickingScanProduct(context: PersistenceService.context)
+                            obj.id = MWPickingScanProduct.getAutoIncrementId()
+                            obj.erp_uuid = self.selectedSaleOrderDict?.erpUUID
+                            obj.erp_name = self.selectedSaleOrderDict?.erpName
+                            obj.so_number = self.selectedSaleOrderDict?.soNumber
+                            obj.so_unique_id = self.selectedSaleOrderDict?.uniqueID
+                            obj.gtin = gtin
+                            obj.indicator = indicator
+                            obj.serial_number = serial
+                            obj.day = day
+                            obj.month = month
+                            obj.year = year
+                            obj.lot_number = lot
+                            obj.product_tracking = product_tracking //,,,sbm2-1
+                            obj.quantity = "1" //,,,sbm2-1
+                            PersistenceService.saveContext()
+                        }
+                    }catch let error {
+                        print(error.localizedDescription)
+                    }
+                }
+                else {
+                    do{
+                        //,,,sbm5
+//                        let predicate = NSPredicate(format:"erp_uuid='\(MWStaticData.ERP_UUID.odoo.rawValue)' and so_number='\(self.selectedSaleOrderDict!.soNumber!)' and gtin='\(gtin)' and serial_number='\(serial)' and lot_number='\(lot)' and product_tracking='lot'")
+                        let predicate = NSPredicate(format:"so_number='\(self.selectedSaleOrderDict!.soNumber!)' and gtin='\(gtin)' and serial_number='\(serial)' and lot_number='\(lot)' and product_tracking='lot'")
+                        //,,,sbm5
+
+                        let fetchRequestResultArray = try PersistenceService.context.fetch(MWPickingScanProduct.fetchRequestWithPredicate(predicate: predicate))
+                        if fetchRequestResultArray.isEmpty {
+                            let obj = MW_PickingScanProduct(context: PersistenceService.context)
+                            obj.id = MWPickingScanProduct.getAutoIncrementId()
+                            obj.erp_uuid = self.selectedSaleOrderDict?.erpUUID
+                            obj.erp_name = self.selectedSaleOrderDict?.erpName
+                            obj.so_number = self.selectedSaleOrderDict?.soNumber
+                            obj.so_unique_id = self.selectedSaleOrderDict?.uniqueID
+                            obj.gtin = gtin
+                            obj.indicator = indicator
+                            obj.serial_number = serial
+                            obj.day = day
+                            obj.month = month
+                            obj.year = year
+                            obj.lot_number = lot
+                            obj.product_tracking = product_tracking //,,,sbm2-1
+                            obj.quantity = "1" //,,,sbm2-1
+                            PersistenceService.saveContext()
+                        }
+                        else {
+                            if let obj = fetchRequestResultArray.first {
+                                let qtyInt = Int(obj.quantity!)
+                                obj.quantity = String(qtyInt! + 1)
+                                PersistenceService.saveContext()
+                            } //,,,sbm2-1
+                        }
+                    }catch let error {
+                        print(error.localizedDescription)
+                    }
+                }
+                //,,,sbm2-1
             }
-            //,,,sbm2 temp
-            
         }
-        //,,,sbm2
+        //,,,sbm4
         
-        
-        //,,,sbm2 temp
-//        if scanProductArray.count > 0 {
-        if scannedCode.count > 0 {
-        //,,,sbm2 temp
-            
-            let storyboard = UIStoryboard(name: "MWReceiving", bundle: Bundle.main)
-            let controller = storyboard.instantiateViewController(withIdentifier: "MWReceivingSerialListViewController") as! MWReceivingSerialListViewController
+        if scanProductArray.count > 0 {
+            let storyboard = UIStoryboard(name: "MWPicking", bundle: Bundle.main)
+            let controller = storyboard.instantiateViewController(withIdentifier: "MWPickingSerialListViewController") as! MWPickingSerialListViewController
             controller.flowType = "directSerialScan"
-            controller.selectedPuchaseOrderDict = self.selectedPuchaseOrderDict
+            controller.selectedSaleOrderDict = self.selectedSaleOrderDict
             self.navigationController?.pushViewController(controller, animated: true)
         }
     }
@@ -921,7 +803,7 @@ extension MWPuchaseOrderListViewController : MWSingleScanViewControllerDelegate 
 //MARK: - End
 
 //MARK: - Tableview Delegate and Datasource
-extension MWPuchaseOrderListViewController: UITableViewDelegate, UITableViewDataSource {
+extension MWSaleOrderListViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return filterItemsListArray.count
     }
@@ -929,43 +811,37 @@ extension MWPuchaseOrderListViewController: UITableViewDelegate, UITableViewData
         return 1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PurchaseOrderListTableCell") as! PurchaseOrderListTableCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SaleOrderListTableCell") as! SaleOrderListTableCell
         
         cell.setBorder(width: 1, borderColor: Utility.hexStringToUIColor(hex: "959596"), cornerRadious: 0)
         cell.viewItemsButton.setBorder(width: 1, borderColor: (cell.viewItemsButton.titleLabel?.textColor)!, cornerRadious: 2)
         
-        if let item = filterItemsListArray[indexPath.section] as MWPuchaseOrderModel? {
+        if let item = filterItemsListArray[indexPath.section] as MWSaleOrderModel? {
 
             cell.checkUncheckRadioButton.isSelected = false
-            if selectedPuchaseOrderDict != nil {
-                if let uuid = selectedPuchaseOrderDict?.uniqueID as? String , !uuid.isEmpty {
+            if selectedSaleOrderDict != nil {
+                if let uuid = selectedSaleOrderDict?.uniqueID as? String , !uuid.isEmpty {
                     if uuid == item.uniqueID {
                         cell.checkUncheckRadioButton.isSelected = true
                     }
                 }
             }
           
-            cell.poNbrLabel.text = item.poNumber
-            cell.vendorLabel.text = item.vendor
+            cell.soNbrLabel.text = item.soNumber
+            cell.customerLabel.text = item.customer
             cell.locationLabel.text = item.location
             
-            //,,,sbm5
-            /*
             if self.erpName == "odoo" {
                 cell.createdOnLabel.text = item.createdOn
             }
             else if self.erpName == "ttrx" {
-                cell.createdOnLabel.text = item.createdOn
-
 //                if let date = item.createdOn {
 //                    if let formattedDate:String = Utility.getDateFromString(sourceformat: "yyyy-MM-dd HH:mm:ss.SSSSSSZ", outputFormat: "MM-dd-yyyy \(stdTimeFormat)", dateStr: date){
 //                        cell.createdOnLabel.text = formattedDate
 //                    }
 //                }
+                cell.createdOnLabel.text = item.createdOn
             }
-             */
-            cell.createdOnLabel.text = item.createdOn
-            //,,,sbm5
         }
         
         cell.viewItemsButton.tag = indexPath.section
@@ -973,19 +849,19 @@ extension MWPuchaseOrderListViewController: UITableViewDelegate, UITableViewData
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        selectedPuchaseOrderDict = filterItemsListArray[indexPath.section]
-        purchaseOrderListTableView.reloadData()
+        selectedSaleOrderDict = filterItemsListArray[indexPath.section]
+        saleOrderListTableView.reloadData()
 
-        MWReceiving.removeAllMW_ReceivingEntityDataFromDB()//,,,sbm2
+        MWPicking.removeAllMW_PickingEntityDataFromDB()//,,,sbm4
     }
 }
 //MARK: - End
 
 //MARK: - Tableview Cell
-class PurchaseOrderListTableCell: UITableViewCell {
-    @IBOutlet weak var poNbrLabel: UILabel!
+class SaleOrderListTableCell: UITableViewCell {
+    @IBOutlet weak var soNbrLabel: UILabel!
     @IBOutlet weak var createdOnLabel: UILabel!
-    @IBOutlet weak var vendorLabel: UILabel!
+    @IBOutlet weak var customerLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     
     @IBOutlet weak var checkUncheckRadioButton: UIButton!
@@ -993,9 +869,9 @@ class PurchaseOrderListTableCell: UITableViewCell {
     @IBOutlet var multiLingualViews: [UIView]!
     
     override func awakeFromNib() {
-        poNbrLabel.text = ""
+        soNbrLabel.text = ""
         createdOnLabel.text = ""
-        vendorLabel.text = ""
+        customerLabel.text = ""
         locationLabel.text = ""
         
         if multiLingualViews != nil {
@@ -1006,23 +882,23 @@ class PurchaseOrderListTableCell: UITableViewCell {
 //MARK: - End
 
 //MARK: - Model
-struct MWPuchaseOrderModel {
+struct MWSaleOrderModel {
     var erpUUID : String!
     var erpName : String!
     
     var uniqueID: String!
-    var poNumber: String!
+    var soNumber: String!
     var createdOn: String!
-    var vendor: String!
+    var customer: String!
     var location: String!
 }
 
-struct MWReceivingScanProductModel {
+struct MWPickingScanProductModel {
     var primaryID : Int16!
     var erpUUID : String!
     var erpName : String!
-    var poUniqueID: String!
-    var poNumber : String!
+    var soUniqueID: String!
+    var soNumber : String!
     
     var GTIN: String!
     var indicator: String!
@@ -1032,6 +908,6 @@ struct MWReceivingScanProductModel {
     var year: String!
     var lotNumber: String!
     var productTracking: String!//,,,sbm2-1
-    var quantity: String!//,,,sbm2-1    
+    var quantity: String!//,,,sbm2-1
 }
 //MARK: - End

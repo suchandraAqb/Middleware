@@ -4,7 +4,7 @@
 //
 //  Created by aqbsol on 18/08/22.
 //  Copyright © 2022 AQB Solutions Private Limited. All rights reserved.
-//,,,sbm1
+//,,,sbm1 unused
 
 import UIKit
 
@@ -260,7 +260,9 @@ class MWReceivingManuallyViewController: BaseViewController {
             requestDict["po_id"] = selectedPuchaseOrderDict?.uniqueID
         }
         else if self.erpName == "ttrx" {
-            requestDict["po_uuid"] = selectedPuchaseOrderDict?.uniqueID
+            //requestDict["po_uuid"] = selectedPuchaseOrderDict?.uniqueID
+            requestDict["po_id"] = selectedPuchaseOrderDict?.uniqueID
+
         }
 
         self.showSpinner(onView: self.view)
@@ -836,7 +838,9 @@ class MWReceivingManuallyViewController: BaseViewController {
             requestDict["po_id"] = selectedPuchaseOrderDict?.uniqueID
         }
         else if self.selectedPuchaseOrderDict?.erpName == "ttrx" {
-            requestDict["po_uuid"] = selectedPuchaseOrderDict?.uniqueID
+//            requestDict["po_uuid"] = selectedPuchaseOrderDict?.uniqueID
+            requestDict["po_id"] = selectedPuchaseOrderDict?.uniqueID
+
         }
 
         self.showSpinner(onView: self.view)
@@ -1750,11 +1754,11 @@ extension MWReceivingManuallyViewController : MWSingleScanViewControllerDelegate
             }
             
             //,,,sbm2-1
-                        var product_tracking = "serial"
-                        if serial == "" {
-                            product_tracking = "lot"
-                        }
-                        //,,,sbm2-1
+            var product_tracking = "serial"
+            if serial == "" {
+                product_tracking = "lot"
+            }
+            //,,,sbm2-1
             
             do{
                 let predicate = NSPredicate(format:"erp_uuid='\(MWStaticData.ERP_UUID.odoo.rawValue)' and po_number='\(self.selectedPuchaseOrderDict!.poNumber!)' and gtin='\(gtin)' and serial_number='\(serial)' and lot_number='\(lot)'")

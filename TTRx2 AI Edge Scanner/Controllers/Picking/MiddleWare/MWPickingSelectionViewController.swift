@@ -1,20 +1,20 @@
 //
-//  MWReceivingSelectionViewController.swift
+//  MWPickingSelectionViewController.swift
 //  TTRx2 AI Edge Scanner
 //
-//  Created by aqbsol on 20/07/22.
+//  Created by aqbsol on 02/11/22.
 //  Copyright © 2022 AQB Solutions Private Limited. All rights reserved.
-//,,,sbm1
+//,,,sbm3
 
 import UIKit
 
-@objc protocol MWReceivingSelectionViewControllerDelegate: AnyObject {
+@objc protocol MWPickingSelectionViewControllerDelegate: AnyObject {
     @objc optional func didClickOnCamera()
     @objc optional func didClickManually()
     @objc optional func didClickCrossButton()
 }
 
-class MWReceivingSelectionViewController: BaseViewController {
+class MWPickingSelectionViewController: BaseViewController {
     @IBOutlet weak var singleMultiScanButton: UIButton!
     @IBOutlet weak var singleButton: UIButton!
     @IBOutlet weak var multiButton: UIButton!
@@ -24,7 +24,7 @@ class MWReceivingSelectionViewController: BaseViewController {
     @IBOutlet weak var multiLabel: UILabel!
     @IBOutlet var multiLingualView: [UIView]!
     
-    weak var delegate: MWReceivingSelectionViewControllerDelegate?
+    weak var delegate: MWPickingSelectionViewControllerDelegate?
     
     var previousController = ""
     
@@ -40,17 +40,17 @@ class MWReceivingSelectionViewController: BaseViewController {
         }
     }
     
-    @IBAction func startReceivingScanButtonPressed(_ sender: Any){
+    @IBAction func startPickingScanButtonPressed(_ sender: Any){
         self.view.backgroundColor = UIColor.clear
         self.dismiss(animated: true) {
             self.delegate?.didClickOnCamera?()
         }
     }
     
-    @IBAction func closeReceivingSelectionView(_ sender: UIButton) {
+    @IBAction func closePickingSelectionView(_ sender: UIButton) {
         self.view.backgroundColor = UIColor.clear
         self.dismiss(animated: true) {
-            if self.previousController == "MWReceivingManuallyViewController" || self.previousController == "MWReceivingSerialListViewController" {
+            if self.previousController == "MWPickingManuallyViewController" || self.previousController == "MWPickingSerialListViewController" {
                 self.delegate?.didClickCrossButton?()
             }
         }
@@ -78,9 +78,9 @@ class MWReceivingSelectionViewController: BaseViewController {
         /*
         orLabel.isHidden = false
         manuallyButton.isHidden = false
-        if previousController == "MWReceivingManuallyViewController" || self.previousController == "MWReceivingSerialListViewController"{
-            orLabel.isHidden = true
-            manuallyButton.isHidden = true
+        if previousController == "MWPickingManuallyViewController" || self.previousController == "MWPickingSerialListViewController"{
+             orLabel.isHidden = true
+             manuallyButton.isHidden = true
         }
         */
         
@@ -101,3 +101,4 @@ class MWReceivingSelectionViewController: BaseViewController {
     }
     // MARK: - END
 }
+

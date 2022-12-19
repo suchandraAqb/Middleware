@@ -8,6 +8,9 @@
 
 import UIKit
 import ScanditBarcodeCapture
+import ScanditCaptureCore
+import ScanditParser
+
 
 @objc protocol MWSingleScanViewControllerDelegate: AnyObject {
     @objc optional func didSingleScanCodeForReceiveSerialVerification(scannedCode:[String])
@@ -37,6 +40,8 @@ class MWSingleScanViewController: BaseViewController {
     var isForReceivingSerialVerificationScan: Bool = false
     var containerProductCheckingArr = NSMutableArray()
     var isContainerScanEnable:Bool = false
+    private var parser: Parser!
+    var barcodetype : String = ""
         
     //MARK: - ViewLifeCycle
     override func viewDidLoad() {
@@ -59,17 +64,18 @@ class MWSingleScanViewController: BaseViewController {
         
         containerButton.isHidden = true
         productButton.isHidden = true
+        
+        barcodetype = defaults.object(forKey: "barcode_format") as? String ?? ""
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-          
         unfreeze()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        
         freeze()
     }
     
@@ -180,20 +186,34 @@ class MWSingleScanViewController: BaseViewController {
             // sample we enable a very generous set of symbologies. In your own app ensure that you only enable the
             // symbologies that your app requires as every additional enabled symbology has an impact on processing times.
 
+//            settings.set(symbology: .code128, enabled: true)
+//            settings.set(symbology: .dataMatrix, enabled: true)
+//            settings.set(symbology: .ean13UPCA, enabled: true)
+//            settings.set(symbology: .ean8, enabled: true)
+//            settings.set(symbology: .interleavedTwoOfFive, enabled: true)
+//            settings.set(symbology: .upce, enabled: true)
+//            settings.set(symbology: .qr, enabled: true)
+//            settings.locationSelection = RadiusLocationSelection(radius:.zero)
+//            settings.codeDuplicateFilter = 1
+////            settings.codeDuplicateFilter = -1
+//
+//            let symbologySettings = settings.settings(for: .dataMatrix)
+//            symbologySettings.isColorInvertedEnabled = true
+
+            
             settings.set(symbology: .code128, enabled: true)
             settings.set(symbology: .dataMatrix, enabled: true)
+            settings.set(symbology: .code39, enabled: true)
+            settings.set(symbology: .interleavedTwoOfFive, enabled: true) //ITF
+            settings.set(symbology: .qr, enabled: true) //QR
+            settings.set(symbology: .gs1Databar, enabled: true)
             settings.set(symbology: .ean13UPCA, enabled: true)
             settings.set(symbology: .ean8, enabled: true)
-            settings.set(symbology: .interleavedTwoOfFive, enabled: true)
             settings.set(symbology: .upce, enabled: true)
-            settings.set(symbology: .qr, enabled: true)
             settings.locationSelection = RadiusLocationSelection(radius:.zero)
-            settings.codeDuplicateFilter = 1
-//            settings.codeDuplicateFilter = -1
-                
-            let symbologySettings = settings.settings(for: .dataMatrix)
-            symbologySettings.isColorInvertedEnabled = true
+            settings.codeDuplicateFilter = -1
 
+            
             // Some linear/1d barcode symbologies allow you to encode variable-length data. By default, the Scandit
             // Data Capture SDK only scans barcodes in a certain length range. If your application requires scanning of one
             // of these symbologies, and the length is falling outside the default range, you may need to adjust the "active
@@ -222,6 +242,12 @@ class MWSingleScanViewController: BaseViewController {
             overlay.shouldShowScanAreaGuides = false
             overlay.viewfinder = LaserlineViewfinder()
             captureView.addOverlay(overlay)
+            
+            if barcodetype == "HIBC"{
+                parser = try! Parser(context: context, format: .hibc)
+            }else{
+                parser = try! Parser(context: context, format: .gs1AI)
+            }
 
             if (isForReceivingSerialVerificationScan) {
                 self.doneButton.isHidden = false
@@ -266,7 +292,6 @@ class MWSingleScanViewController: BaseViewController {
     
     private func freeze() {
         // First, disable barcode tracking to stop processing frames.
-//        if(!isForReceivingSerialVerificationScan && !isForOnlyReceive){
         if(!isForReceivingSerialVerificationScan){
             barcodeCapture.isEnabled = false
         }
@@ -329,6 +354,12 @@ extension MWSingleScanViewController: BarcodeCaptureListener {
 
             if (self.isForReceivingSerialVerificationScan) {
                 
+                if !self.scannedCodes.contains(code) {
+                    self.scannedCodes.insert(code)
+                }
+                self.populateItemsCount(isRemove: false)
+
+                /*
                 let details = UtilityScanning(with:code).decoded_info
                 if details.count > 0 {
                     var containerSerialNumber = ""
@@ -429,6 +460,7 @@ extension MWSingleScanViewController: BarcodeCaptureListener {
                         self.populateItemsCount(isRemove: false)
                     }
                 }
+                */
             }
         }
     }

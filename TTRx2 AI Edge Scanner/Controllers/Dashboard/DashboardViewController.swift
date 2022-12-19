@@ -360,9 +360,11 @@ extension DashboardViewController {
     
     
     @IBAction func arButtonPressed(_ sender: UIButton) {
+        /*
         let storyboard = UIStoryboard.init(name: "Main", bundle: .main)
         let controller = storyboard.instantiateViewController(withIdentifier: "ARMessageListViewController") as! ARMessageListViewController
         self.navigationController?.pushViewController(controller, animated: true)
+         */
     }
     
     @IBAction func logoutButtonPressed(_ sender: UIButton) {
@@ -374,9 +376,11 @@ extension DashboardViewController {
     }
     
     @IBAction func SFButtonPressed(_ sender: UIButton) {
+        /*
         let storyboard = UIStoryboard.init(name: "Finder", bundle: .main)
         let controller = storyboard.instantiateViewController(withIdentifier: "FinderView") as! FinderViewController
         self.navigationController?.pushViewController(controller, animated: true)
+         */
     }
     @IBAction func ReceivingButtonPressed(_ sender: UIButton) {
         //,,,sbm1
@@ -479,14 +483,90 @@ extension DashboardViewController {
         //,,,sbm1
     }
     @IBAction func PickingButtonPressed(_ sender: UIButton) {
-        let storyboard = UIStoryboard.init(name: "Picking", bundle: .main)
-        let controller = storyboard.instantiateViewController(withIdentifier: "PickingOptionsView") as! PickingOptionsViewController
-        controller.modalPresentationStyle = .custom
-        controller.delegate = self
-        self.present(controller, animated: true, completion: nil)
+        //,,,sbm3
+        //,,,sbm2
+        var directSerialLineItemsListArray : [MWPickingViewItemsModel] = []
+        do{
+            let predicate = NSPredicate(format:"erp_uuid='\(MWStaticData.ERP_UUID.odoo.rawValue)' and product_flow_type='directSerialScanEntry' and is_edited=true")
+
+            let fetchRequestResultArray = try PersistenceService.context.fetch(MWPickingLineItem.fetchRequestWithPredicate(predicate: predicate))
+            if fetchRequestResultArray.isEmpty {
+                directSerialLineItemsListArray = []
+            }else {
+                fetchRequestResultArray.forEach({ (cdModel) in
+                    directSerialLineItemsListArray.append(cdModel.convertCoreDataRequestsToMWPickingViewItemsModel())
+                })
+            }
+        }catch let error{
+            print(error.localizedDescription)
+            directSerialLineItemsListArray = []
+        }
+        //,,,sbm2
+        
+        //,,,sbm2
+        var directLotLineItemsListArray : [MWPickingViewItemsModel] = []
+        do{
+            let predicate = NSPredicate(format:"erp_uuid='\(MWStaticData.ERP_UUID.odoo.rawValue)' and product_flow_type='directManualLotEntry' and is_edited=true")
+
+            let fetchRequestResultArray = try PersistenceService.context.fetch(MWPickingLineItem.fetchRequestWithPredicate(predicate: predicate))
+            if fetchRequestResultArray.isEmpty {
+                directLotLineItemsListArray = []
+            }else {
+                fetchRequestResultArray.forEach({ (cdModel) in
+                    directLotLineItemsListArray.append(cdModel.convertCoreDataRequestsToMWPickingViewItemsModel())
+                })
+            }
+        }catch let error{
+            print(error.localizedDescription)
+            directLotLineItemsListArray = []
+        }
+        //,,,sbm2
+        
+        
+        if directSerialLineItemsListArray.count > 0 {
+            let lineItem = directSerialLineItemsListArray[0]
+            let selectedSaleOrderDict = MWSaleOrderModel(erpUUID: lineItem.erpUUID,
+                                                          erpName: lineItem.erpName,
+                                                          uniqueID: lineItem.soUniqueID,
+                                                          soNumber: lineItem.soNumber,
+                                                          createdOn: "",
+                                                          customer: "",
+                                                          location: "")
+
+            let storyboard = UIStoryboard(name: "MWPicking", bundle: Bundle.main)
+            let controller = storyboard.instantiateViewController(withIdentifier: "MWPickingSerialListViewController") as! MWPickingSerialListViewController
+            controller.flowType = "directSerialScan"
+            controller.selectedSaleOrderDict = selectedSaleOrderDict
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+        else if directLotLineItemsListArray.count > 0 {
+            let lineItem = directLotLineItemsListArray[0]
+            let selectedSaleOrderDict = MWSaleOrderModel(erpUUID: lineItem.erpUUID,
+                                                          erpName: lineItem.erpName,
+                                                          uniqueID: lineItem.soUniqueID,
+                                                          soNumber: lineItem.soNumber,
+                                                          createdOn: "",
+                                                          customer: "",
+                                                          location: "")
+            
+            let storyboard = UIStoryboard.init(name: "MWPicking", bundle: .main)
+            let controller = storyboard.instantiateViewController(withIdentifier: "MWPickingManuallyViewController") as! MWPickingManuallyViewController
+            controller.flowType = "directManualLot"
+            controller.selectedSaleOrderDict = selectedSaleOrderDict
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+        else {
+            //,,,sbm3
+            let storyboard = UIStoryboard.init(name: "MWPicking", bundle: .main)
+            let controller = storyboard.instantiateViewController(withIdentifier: "MWSaleOrderListViewController") as! MWSaleOrderListViewController
+            self.navigationController?.pushViewController(controller, animated: true)
+            //,,,sbm3
+        }
+        //,,,sbm3
     }
     
     @IBAction func InventoryButtonPressed(_ sender: UIButton) {
+        /*
         //let msg = "Please confirm your scanning option."
         let storyboard = UIStoryboard.init(name: "Inventory", bundle: .main)
         let controller = storyboard.instantiateViewController(withIdentifier: "InventoryHomeView") as! InventoryHomeViewController
@@ -511,9 +591,10 @@ extension DashboardViewController {
          confirmAlert.addAction(singleAction)
          confirmAlert.addAction(multiAction)
          self.navigationController?.present(confirmAlert, animated: true, completion: nil)*/
-        
+        */
     }
     @IBAction func ReturnsButtonPressed(_ sender: UIButton) {
+        /*
         let storyboard = UIStoryboard(name: "Return", bundle: .main)
         do{
             let return_obj = try PersistenceService.context.fetch(Return.activeFetchRequest)
@@ -563,8 +644,10 @@ extension DashboardViewController {
             }
             self.present(controller, animated: true, completion: nil)
         }
+         */
     }
     @IBAction func transferButtonPressed(_ sender: UIButton) {
+        /*
 //            let storyboard = UIStoryboard.init(name: "Adjustments", bundle: .main)
 //            let controller = storyboard.instantiateViewController(withIdentifier: "AdjustmentScanView") as! AdjustmentScanViewController
 //            controller.adjustmentType = Adjustments_Types.Transfer.rawValue
@@ -574,17 +657,20 @@ extension DashboardViewController {
         let controller = storyboard.instantiateViewController(withIdentifier: "AdjustmentGeneralView") as! AdjustmentGeneralViewController
         controller.adjustmentType = Adjustments_Types.Transfer.rawValue
         self.navigationController?.pushViewController(controller, animated: true)
-
+*/
     }
     @IBAction func quarantineButtonPressed(_ sender: UIButton) {
+        /*
         let storyboard = UIStoryboard.init(name: "Adjustments", bundle: .main)
         let controller = storyboard.instantiateViewController(withIdentifier: "QuarantineOptionView") as! QuarantineOptionViewController
         controller.modalPresentationStyle = .custom
         controller.delegate = self
         self.present(controller, animated: true, completion: nil)
+         */
         
     }
     @IBAction func destructionButtonPressed(_ sender: UIButton) {
+        /*
 //        let storyboard = UIStoryboard.init(name: "Adjustments", bundle: .main)
 //        let controller = storyboard.instantiateViewController(withIdentifier: "AdjustmentScanView") as! AdjustmentScanViewController
 //        controller.adjustmentType = Adjustments_Types.Destruction.rawValue
@@ -593,9 +679,11 @@ extension DashboardViewController {
         let controller = storyboard.instantiateViewController(withIdentifier: "AdjustmentGeneralView") as! AdjustmentGeneralViewController
         controller.adjustmentType = Adjustments_Types.Destruction.rawValue
         self.navigationController?.pushViewController(controller, animated: true)
+         */
 //
     }
     @IBAction func dispenseButtonPressed(_ sender: UIButton) {
+        /*
 //        let storyboard = UIStoryboard.init(name: "Adjustments", bundle: .main)
 //        let controller = storyboard.instantiateViewController(withIdentifier: "AdjustmentScanView") as! AdjustmentScanViewController
 //        controller.adjustmentType = Adjustments_Types.Dispense.rawValue
@@ -604,39 +692,47 @@ extension DashboardViewController {
         let controller = storyboard.instantiateViewController(withIdentifier: "AdjustmentGeneralView") as! AdjustmentGeneralViewController
         controller.adjustmentType = Adjustments_Types.Dispense.rawValue
         self.navigationController?.pushViewController(controller, animated: true)
-        
+        */
     }
     @IBAction func missingStolenButtonPressed(_ sender: UIButton) {
+        /*
         let storyboard = UIStoryboard.init(name: "Adjustments", bundle: .main)
         let controller = storyboard.instantiateViewController(withIdentifier: "AdjustmentGeneralView") as! AdjustmentGeneralViewController
         controller.adjustmentType = Adjustments_Types.MissingStolen.rawValue
         self.navigationController?.pushViewController(controller, animated: true)
-        
+        */
     }
     @IBAction func manufacturerButtonPressed(_ sender: UIButton) {
+        /*
         let storyboard = UIStoryboard.init(name: "Manufacturer", bundle: .main)
         let controller = storyboard.instantiateViewController(withIdentifier: "ManufacturerProductListView") as! ManufacturerProductListViewController
         self.navigationController?.pushViewController(controller, animated: true)
+         */
     }
     
     @IBAction func commissionSerialsButtonPressed(_ sender: UIButton) {
-        
+        /*
         let storyboard = UIStoryboard.init(name: "CommisionsSerials", bundle: .main)
         let controller = storyboard.instantiateViewController(withIdentifier: "LotsCommissionListView") as! LotsCommissionListViewController
         self.navigationController?.pushViewController(controller, animated: true)
+         */
     }
     
     @IBAction func myAccountButtonPressed(_ sender: UIButton){
+        /*
         let storyboard = UIStoryboard.init(name: "MyAccount", bundle: .main)
         let controller = storyboard.instantiateViewController(withIdentifier: "MyAccountOption") as! MyAccountOptionViewController
         self.navigationController?.pushViewController(controller, animated: true)
+         */
     }
     
     
     @IBAction func eventsButtonPressed(_ sender: UIButton){
+        /*
         let storyboard = UIStoryboard.init(name: "Shipments", bundle: .main)
         let controller = storyboard.instantiateViewController(withIdentifier: "EventsOptionView") as! EventsOptionViewController
         self.navigationController?.pushViewController(controller, animated: true)
+         */
     }
     
     @IBAction func sessionInfoPressed(_ sender:UIButton){

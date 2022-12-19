@@ -1,80 +1,77 @@
 //
-//  MWViewItemsViewController.swift
+//  MWPickingViewItemsViewController.swift
 //  TTRx2 AI Edge Scanner
 //
-//  Created by aqbsol on 28/07/22.
+//  Created by aqbsol on 02/11/22.
 //  Copyright © 2022 AQB Solutions Private Limited. All rights reserved.
-//,,,sbm1
+//,,,sbm3
 
 import UIKit
 
-class MWViewItemsViewController: BaseViewController {
+class MWPickingViewItemsViewController: BaseViewController {
     @IBOutlet weak var headerTitleButton: UIButton!
     @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var poNumberButton: UIButton!
+    @IBOutlet weak var soNumberButton: UIButton!
     @IBOutlet weak var viewItemsTableView: UITableView!
     
     var erpUUID = ""
     var erpName = ""
-    var poNumber = ""
-    var poUniqueID = ""
+    var soNumber = ""
+    var soUniqueID = ""
     
-    var itemsListArray : [MWViewItemsModel] = []
+    var itemsListArray : [MWPickingViewItemsModel] = []
     
     //MARK: - ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         sectionView.roundTopCorners(cornerRadious: 40)
         mainView.layer.cornerRadius = 10
-        poNumberButton.setTitle("PO: \(poNumber)", for: UIControl.State.normal)
+        soNumberButton.setTitle("SO: \(soNumber)", for: UIControl.State.normal)
         
-//        poNumberButton.layer.cornerRadius = poNumberButton.frame.height/4
-        poNumberButton.backgroundColor = UIColor.white
-        poNumberButton.setTitleColor(Utility.hexStringToUIColor(hex: "276A44"), for: UIControl.State.normal)
-//        poNumberButton.setBorder(width: 1, borderColor: Utility.hexStringToUIColor(hex: "276A44"), cornerRadious: poNumberButton.frame.height/4)
+        soNumberButton.backgroundColor = UIColor.white
+        soNumberButton.setTitleColor(Utility.hexStringToUIColor(hex: "276A44"), for: UIControl.State.normal)
         
-        
-        headerTitleButton.setTitle("View Line Items For".localized() + " " + erpName.uppercased(), for: UIControl.State.normal)
-        self.listLineItemsByPurchaseOrderWebServiceCall()
+        headerTitleButton.setTitle("View Items for".localized() + " " + erpName, for: UIControl.State.normal)
+        self.listLineItemsBySaleOrderWebServiceCall()
     }
     //MARK: - End
     
     //MARK: - Webservice call
-    func listLineItemsByPurchaseOrderWebServiceCall() {
+    func listLineItemsBySaleOrderWebServiceCall() {
         /*
-         List Line Items By Purchase Order
-         4032b2bb-3b29-4fe1-b384-4a76b30101eb
-         https://cxi3hpbeyg.execute-api.us-east-1.amazonaws.com/prod/list-line-items-by-purchase-order
+         List Line Items By Sale Order
+         05e1919a-20a5-4acc-b7e8-9caf1f8ba799
+         https://cxi3hpbeyg.execute-api.us-east-1.amazonaws.com/prod/list-line-items-by-sale-order
          
         POST
          {
-                 "action_uuid": "4032b2bb-3b29-4fe1-b384-4a76b30101eb",
+                 "action_uuid": "05e1919a-20a5-4acc-b7e8-9caf1f8ba799",
                  "sub": "e54c3361-4c43-400b-a1c1-c3f0cb28cf43",
                  "source_erp": "f6cd53e9-ebc6-4aad-820d-117c52cec266",
-                 "po_id": "184"
+                 "so_id": "20"
          }
         */
                 
         var requestDict = [String:Any]()
-        requestDict["action_uuid"] = Utility.getActionId(type:"listLineItemsByPurchaseOrder")
+        requestDict["action_uuid"] = Utility.getActionId(type:"listLineItemsBySaleOrder")
         requestDict["sub"] = defaults.object(forKey:"sub")
         requestDict["source_erp"] = erpUUID
         
         //,,,sbm5
         /*
         if self.erpName == "odoo" {
-            requestDict["po_id"] = poUniqueID
+            requestDict["so_id"] = soUniqueID
         }
         else if self.erpName == "ttrx" {
-//            requestDict["po_uuid"] = poUniqueID
-            requestDict["po_id"] = poUniqueID
+//            requestDict["so_uuid"] = soUniqueID
+            requestDict["so_id"] = soUniqueID
         }
          */
-        requestDict["po_id"] = poUniqueID
+        requestDict["so_id"] = soUniqueID
         //,,,sbm5
 
         self.showSpinner(onView: self.view)
-        Utility.POSTServiceCall(type: "ListLineItemsByPurchaseOrder", serviceParam: requestDict as NSDictionary, parentViewC: self, willShowLoader: false, viewController: self,appendStr: "") { (responseData:Any?, isDone:Bool?, message:String?) in
+        Utility.POSTServiceCall(type: "ListLineItemsBySaleOrder", serviceParam: requestDict as NSDictionary, parentViewC: self, willShowLoader: false, viewController: self,appendStr: "") { (responseData:Any?, isDone:Bool?, message:String?) in
             DispatchQueue.main.async{
                 self.removeSpinner()
                 if isDone! {
@@ -84,32 +81,24 @@ class MWViewItemsViewController: BaseViewController {
                             let dataArr = Utility.converJsonToArray(string: responseDict["data"] as! String)
                             if dataArr.count > 0 {
                                 let dataArray = dataArr as! [[String:Any]]
-                                //                                                print("dataArray....>>>>>",dataArray)
-//                                if self.erpName == "odoo" {//,,,sbm5
+//                                                print("dataArray....>>>>>",dataArray)
+//                                if self.erpName == "odoo" { //,,,sbm5
                                     for dict in dataArray {
                                         var product_id = ""
-//                                        if let value = dict["product_id"] as? Int {
                                         if let value = dict["product_id"] as? String {
-//                                            product_id = String(value)
                                             product_id = value
                                         }
                                         var product_demand_quantity = ""
-//                                        if let value = dict["product_demand_quantity"] as? Int {
                                         if let value = dict["product_demand_quantity"] as? String {
-//                                            product_demand_quantity = String(value)
                                             product_demand_quantity = value
                                         }
-                                        var product_received_quantity = ""
-//                                        if let value = dict["product_received_quantity"] as? Int {
-                                        if let value = dict["product_received_quantity"] as? String {
-//                                            product_received_quantity = String(value)
-                                            product_received_quantity = value
+                                        var product_delivered_quantity = ""
+                                        if let value = dict["product_delivered_quantity"] as? String {
+                                            product_delivered_quantity = value
                                         }
-                                        var product_qty_to_receive = ""
-//                                        if let value = dict["product_qty_to_receive"] as? Int {
-                                        if let value = dict["product_qty_to_receive"] as? String {
-//                                            product_qty_to_receive = String(value)
-                                            product_qty_to_receive = value
+                                        var product_qty_to_deliver = ""
+                                        if let value = dict["product_qty_to_deliver"] as? String {
+                                            product_qty_to_deliver = value
                                         }
                                         var product_code = ""
                                         if let value = dict["product_code"] as? String {
@@ -123,29 +112,25 @@ class MWViewItemsViewController: BaseViewController {
                                         if let value = dict["product_tracking"] as? String {
                                             product_tracking = value
                                         }
-                                        
-                                        var product_uom_id = ""
-//                                        if let value = dict["product_uom_id"] as? Int {
-                                        if let value = dict["product_uom_id"] as? String {
-//                                            product_uom_id = String(value)
-                                            product_uom_id = value
+                                        var transaction_type = ""
+                                        if let value = dict["transaction_type"] as? String {
+                                            transaction_type = value
                                         }
                                                                                 
-                                        let mwViewItemsModel = MWViewItemsModel(erpUUID: self.erpUUID,
+                                        let mwPickingViewItemsModel = MWPickingViewItemsModel(erpUUID: self.erpUUID,
                                                                                 erpName: self.erpName,
-                                                                                poNumber: self.poNumber,
-                                                                                poUniqueID: self.poUniqueID,
+                                                                                soNumber: self.soNumber,
+                                                                                soUniqueID: self.soUniqueID,
                                                                                 productUniqueID: product_id,
                                                                                 productName: product_name,
                                                                                 productCode: product_code,
-                                                                                productReceivedQuantity: product_received_quantity,
+                                                                                productDeliveredQuantity: product_delivered_quantity,
                                                                                 productDemandQuantity: product_demand_quantity,
-                                                                                productQtyToReceive: product_qty_to_receive,
+                                                                                productQtyToDeliver: product_qty_to_deliver,
                                                                                 productTracking: product_tracking,
-                                                                                lineItemUUID: "",
-                                                                                productUomID: product_uom_id)
+                                                                                transactionType: transaction_type)
                                         
-                                        self.itemsListArray.append(mwViewItemsModel)
+                                        self.itemsListArray.append(mwPickingViewItemsModel)
                                     }
                                     
                                     //,,,sbm5
@@ -161,13 +146,13 @@ class MWViewItemsViewController: BaseViewController {
                                         if let value = dict["product_demand_quantity"] as? String {
                                             product_demand_quantity = value
                                         }
-                                        var product_received_quantity = ""
-                                        if let value = dict["product_received_quantity"] as? String {
-                                            product_received_quantity = value
+                                        var product_delivered_quantity = ""
+                                        if let value = dict["product_delivered_quantity"] as? String {
+                                            product_delivered_quantity = value
                                         }
-                                        var product_qty_to_receive = ""
-                                        if let value = dict["product_qty_to_receive"] as? Int {
-                                            product_qty_to_receive = String(value)
+                                        var product_qty_to_deliver = ""
+                                        if let value = dict["product_qty_to_deliver"] as? Int {
+                                            product_qty_to_deliver = String(value)
                                         }
                                         var product_code = ""
                                         if let value = dict["product_code"] as? String {
@@ -181,27 +166,25 @@ class MWViewItemsViewController: BaseViewController {
                                         if let value = dict["product_tracking"] as? String {
                                             product_tracking = value
                                         }
-                                        
-                                        var line_item_uuid = ""
-                                        if let value = dict["line_item_uuid"] as? String {
-                                            line_item_uuid = value
+                                        var transaction_type = ""
+                                        if let value = dict["transaction_type"] as? String {
+                                            transaction_type = value
                                         }
-                                        
-                                        let mwViewItemsModel = MWViewItemsModel(erpUUID: self.erpUUID,
+
+                                        let mwPickingViewItemsModel = MWPickingViewItemsModel(erpUUID: self.erpUUID,
                                                                                 erpName: self.erpName,
-                                                                                poNumber: self.poNumber,
-                                                                                poUniqueID: self.poUniqueID,
+                                                                                soNumber: self.soNumber,
+                                                                                soUniqueID: self.soUniqueID,
                                                                                 productUniqueID: product_id,
                                                                                 productName: product_name,
                                                                                 productCode:product_code,
-                                                                                productReceivedQuantity: product_received_quantity,
+                                                                                productDeliveredQuantity: product_delivered_quantity,
                                                                                 productDemandQuantity: product_demand_quantity,
-                                                                                productQtyToReceive: product_qty_to_receive,
+                                                                                productQtyToDeliver: product_qty_to_deliver,
                                                                                 productTracking: product_tracking,
-                                                                                lineItemUUID: line_item_uuid,
-                                                                                productUomID: "")
+                                                                                transactionType: transaction_type)
                                         
-                                        self.itemsListArray.append(mwViewItemsModel)
+                                        self.itemsListArray.append(mwPickingViewItemsModel)
                                     }
                                 }*/
                                 //,,,sbm5
@@ -234,7 +217,7 @@ class MWViewItemsViewController: BaseViewController {
 }
 
 //MARK: - Tableview Delegate and Datasource
-extension MWViewItemsViewController: UITableViewDelegate, UITableViewDataSource {
+extension MWPickingViewItemsViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return itemsListArray.count
     }
@@ -242,17 +225,17 @@ extension MWViewItemsViewController: UITableViewDelegate, UITableViewDataSource 
         return 1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MWViewItemsTableCell") as! MWViewItemsTableCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MWPickingViewItemsTableCell") as! MWPickingViewItemsTableCell
         
         cell.setBorder(width: 1, borderColor: Utility.hexStringToUIColor(hex: "959596"), cornerRadious: 0)
         
-        if let item = itemsListArray[indexPath.section] as MWViewItemsModel? {
+        if let item = itemsListArray[indexPath.section] as MWPickingViewItemsModel? {
             cell.productNameLabel.text = item.productName
             cell.productCodeLabel.text = item.productCode
-            cell.productReceivedQuantityLabel.text = item.productReceivedQuantity
+            cell.productDeliveredQuantityLabel.text = item.productDeliveredQuantity
             cell.productDemandQuantityLabel.text = item.productDemandQuantity
-            cell.productQtyToReceiveLabel.text = item.productQtyToReceive
-//            cell.productTrackingLabel.text = item.productTracking
+            cell.productQtyToDeliverLabel.text = item.productQtyToDeliver
+            cell.productTrackingLabel.text = item.productTracking
         }
                 
         return cell
@@ -264,12 +247,12 @@ extension MWViewItemsViewController: UITableViewDelegate, UITableViewDataSource 
 //MARK: - End
 
 //MARK: - Tableview Cell
-class MWViewItemsTableCell: UITableViewCell {
+class MWPickingViewItemsTableCell: UITableViewCell {
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productCodeLabel: UILabel!
-    @IBOutlet weak var productReceivedQuantityLabel: UILabel!
+    @IBOutlet weak var productDeliveredQuantityLabel: UILabel!
     @IBOutlet weak var productDemandQuantityLabel: UILabel!
-    @IBOutlet weak var productQtyToReceiveLabel: UILabel!
+    @IBOutlet weak var productQtyToDeliverLabel: UILabel!
     @IBOutlet weak var productTrackingLabel: UILabel!
 
     @IBOutlet var multiLingualViews: [UIView]!
@@ -277,9 +260,9 @@ class MWViewItemsTableCell: UITableViewCell {
     override func awakeFromNib() {
         productNameLabel.text = ""
         productCodeLabel.text = ""
-        productReceivedQuantityLabel.text = ""
+        productDeliveredQuantityLabel.text = ""
         productDemandQuantityLabel.text = ""
-        productQtyToReceiveLabel.text = ""
+        productQtyToDeliverLabel.text = ""
         productTrackingLabel.text = ""
         
         if multiLingualViews != nil {
@@ -290,23 +273,22 @@ class MWViewItemsTableCell: UITableViewCell {
 //MARK: - End
 
 //MARK: - Model
-struct MWViewItemsModel {
+struct MWPickingViewItemsModel {
     var primaryID : Int16!
     var erpUUID : String!
     var erpName : String!
-    var poNumber : String!
-    var poUniqueID: String!
+    var soNumber : String!
+    var soUniqueID: String!
     
     var productUniqueID : String!
     var productName: String!
     var productCode : String!
-    var productReceivedQuantity: String!
+    var productDeliveredQuantity: String!
     var productDemandQuantity: String!
-    var productQtyToReceive: String!
+    var productQtyToDeliver: String!
     var productTracking: String!
-    var lineItemUUID: String! //For TTRx
-    var productUomID: String! //For odoo
-    var productFlowType: String! //For odoo
+    var transactionType: String!
+    var productFlowType: String!
     var isEdited: Bool!
 }
 //MARK: - End

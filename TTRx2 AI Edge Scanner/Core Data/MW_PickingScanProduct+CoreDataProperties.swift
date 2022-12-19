@@ -1,26 +1,26 @@
 //
-//  MW_ReceivingScanProduct+CoreDataProperties.swift
+//  MW_PickingScanProduct+CoreDataProperties.swift
 //  
 //
-//  Created by aqbsol on 28/10/22.
+//  Created by aqbsol on 04/11/22.
 //
-//,,,sbm2
+//,,,sbm4
 
 import Foundation
 import CoreData
 
 
-extension MW_ReceivingScanProduct {
+extension MW_PickingScanProduct {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<MW_ReceivingScanProduct> {
-        return NSFetchRequest<MW_ReceivingScanProduct>(entityName: "MW_ReceivingScanProduct")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<MW_PickingScanProduct> {
+        return NSFetchRequest<MW_PickingScanProduct>(entityName: "MW_PickingScanProduct")
     }
 
     @NSManaged public var id: Int16
     @NSManaged public var erp_uuid: String?
     @NSManaged public var erp_name: String?
-    @NSManaged public var po_number: String?
-    @NSManaged public var po_unique_id: String?
+    @NSManaged public var so_number: String?
+    @NSManaged public var so_unique_id: String?
     @NSManaged public var gtin: String?
     @NSManaged public var indicator: String?
     @NSManaged public var serial_number: String?
@@ -31,12 +31,12 @@ extension MW_ReceivingScanProduct {
     @NSManaged public var product_tracking: String?//,,,sbm2-1
     @NSManaged public var quantity: String?//,,,sbm2-1
     
-    func convertCoreDataRequestsToMWReceivingScanProductModel() -> MWReceivingScanProductModel {
-        return MWReceivingScanProductModel(primaryID: id,
+    func convertCoreDataRequestsToMWPickingScanProductModel() -> MWPickingScanProductModel {
+        return MWPickingScanProductModel(primaryID: id,
                                            erpUUID: self.erp_uuid,
                                            erpName: self.erp_name,
-                                           poUniqueID: self.po_unique_id,
-                                           poNumber: self.po_number,
+                                           soUniqueID: self.so_unique_id,
+                                           soNumber: self.so_number,
                                            GTIN: self.gtin,
                                            indicator: self.indicator,
                                            serialNumber: self.serial_number,

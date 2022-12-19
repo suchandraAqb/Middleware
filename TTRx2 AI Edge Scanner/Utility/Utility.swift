@@ -350,6 +350,12 @@ class Utility: NSObject {
         else if type == "PurchaseOrderReceiving"{
             finalUrlStr = BaseUrl + "purchase-order-receiving"
         }//,,,sbm1
+        else if type == "ListSaleOrders"{
+            finalUrlStr = BaseUrl + "list-sale-orders"
+        }//,,,sbm3
+        else if type == "ListLineItemsBySaleOrder"{
+            finalUrlStr = BaseUrl + "list-line-items-by-sale-order"
+        }//,,,sbm3
         
         else  if type == "ShipmentDetails"{
             finalUrlStr = BaseUrl + "shipments/receiving/"
@@ -507,6 +513,12 @@ class Utility: NSObject {
         }else if type == "saveuserSettings"{
             finalUrlStr = BaseUrl + "save-user-settings"
         }
+        else if type == "SaleOrderPicking"{
+            finalUrlStr = BaseUrl + "sale-order-picking"
+        }
+        else if type == "validateReceivingLotSerials"{
+            finalUrlStr = BaseUrl + "validate-receiving-lot-serial"
+        }
         return finalUrlStr
     }
     class func getActionId(type:String)->String{
@@ -540,6 +552,19 @@ class Utility: NSObject {
             finalIdStr = "185eb551-cb71-4d11-bfa3-31693d06163f"
         }//,,,sbm1
         
+        else if type == "listSaleOrders"{
+            finalIdStr = "293b88e0-8a91-48c2-884b-8d56b5d2d57c"
+        }//,,,sbm3
+        else if type == "listLineItemsBySaleOrder"{
+            finalIdStr = "05e1919a-20a5-4acc-b7e8-9caf1f8ba799"
+        }//,,,sbm3
+        
+        else if type == "saleOrderPicking"{
+            finalIdStr = "e71e8e42-4eb4-4a35-ab92-89ce8b3ad008"
+        }
+        else if type == "validateReceivingLotSerials"{
+            finalIdStr = "751f2cf9-bcd8-4ef6-938b-09eaaa990618"
+        }
         
         
         return finalIdStr
@@ -657,6 +682,9 @@ class Utility: NSObject {
       
             var headers = [String : String]()
             headers["Content-Type"] = "application/json"
+//            headers["X-Amz-Invocation-Type"] = "RequestResponse"
+            
+            
             let authToken = (defaults.value(forKey: "accesstoken") ?? "") as! String
 
             if !authToken.isEmpty{
@@ -1454,7 +1482,7 @@ class Utility: NSObject {
     }
     
     //MARK: - Create Temporary Data
-    class  func createSampleScanProduct()->[[String: Any]] {
+    class  func createSampleScanProduct_TTRX()->[[String: Any]] {
         //,,,sbm0 temp
         
         
@@ -1462,22 +1490,24 @@ class Utility: NSObject {
 //         View Line Item
 //        [
 //          {
-//            "product_id": "1405",
-//            "product_code": "00303160123016",
-//            "product_name": "00303160123016 - Lot Product",
-//            "product_tracking": "lot",
-//            "product_demand_quantity": "100.0",
-//            "product_received_quantity": "5.0",
-//            "product_qty_to_receive": "95.0"
+//            "transaction_type": "purchase",
+//            "product_id": "496a4bcc-789b-49a4-84a4-ce45f30f1f06",
+//            "product_code": "10707070010102",
+//            "product_name": "MEGACLOX",
+//            "product_tracking": "serial",
+//            "product_demand_quantity": "100.0000",
+//            "product_received_quantity": "0.0000",
+//            "product_qty_to_receive": 100.0
 //          },
 //          {
-//            "product_id": "1406",
-//            "product_code": "00303160123801",
-//            "product_name": "00303160123801 - Serial Product",
+//            "transaction_type": "purchase",
+//            "product_id": "b044fb5b-0627-4a04-9cb5-c2484436241a",
+//            "product_code": "00834913105008",
+//            "product_name": "Acetaminophen 500MG USP 250 TABS",
 //            "product_tracking": "serial",
-//            "product_demand_quantity": "100.0",
-//            "product_received_quantity": "5.0",
-//            "product_qty_to_receive": "95.0"
+//            "product_demand_quantity": "100.0000",
+//            "product_received_quantity": "0.0000",
+//            "product_qty_to_receive": 100.0
 //          }
 //        ]
         
@@ -1485,27 +1515,42 @@ class Utility: NSObject {
         // not found in line item
         var dict11 = ["GTIN":"1000000004", "indicator":"1"]
         var dict22 = ["day":"25", "month":"7", "year":"2024"]
-        let dict1: [String: Any] = ["01":dict11, "21":"220508383877299111", "17":dict22, "10":"0F147660"]
+        let dict1: [String: Any] = ["01":dict11, "21":"2205083838771", "17":dict22, "10":"0F147660"]
 
         
         // found in line item
-        dict11 = ["GTIN":"00303160123801", "indicator":"1"]
+        dict11 = ["GTIN":"00834913105008", "indicator":"1"]
         dict22 = ["day":"25", "month":"7", "year":"2024"]
-        let dict2: [String: Any] = ["01":dict11, "21":"2205083838772981114510", "17":dict22, "10":"0F147661"]
+        let dict2: [String: Any] = ["01":dict11, "21":"22050838387723", "17":dict22, "10":"0F147661"]
 
-        dict11 = ["GTIN":"00303160123801", "indicator":"1"]
+        dict11 = ["GTIN":"00834913105008", "indicator":"1"]
         dict22 = ["day":"25", "month":"7", "year":"2024"]
-        let dict3: [String: Any] = ["01":dict11, "21":"22050838387729711111", "17":dict22, "10":"0F147662"] //dict2 , dict3 same product, different lot, different serial
+        let dict3: [String: Any] = ["01":dict11, "21":"22050838387732", "17":dict22, "10":"0F147662"] //dict2 , dict3 same product, different lot, different serial
         
-        dict11 = ["GTIN":"00303160123801", "indicator":"1"]
+        dict11 = ["GTIN":"00834913105008", "indicator":"1"]
         dict22 = ["day":"25", "month":"7", "year":"2024"]
-        let dict33: [String: Any] = ["01":dict11, "21":"2205083838772911112", "17":dict22, "10":"0F147662"] //dict3, dict33 same product, same lot, different serial
+        let dict33: [String: Any] = ["01":dict11, "21":"22050838387741", "17":dict22, "10":"0F147662"] //dict3, dict33 same product, same lot, different serial
         
         
         // found in line item in Lot Based Product which is ignored
-        dict11 = ["GTIN":"00303160123016", "indicator":"1"]
+        dict11 = ["GTIN":"10707070010102", "indicator":"1"]
         dict22 = ["day":"25", "month":"7", "year":"2024"]
-        let dict9: [String: Any] = ["01":dict11, "21":"220508383877293111", "17":dict22, "10":"0F147666"] //Lot based
+        let dict9: [String: Any] = ["01":dict11, "21":"2205083838775", "17":dict22, "10":"0F147666"] //Serial based
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"10707070010102", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict10: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147666"] //Lot based
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"10707070010102", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict111: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147666"] //Lot based
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"10707070010102", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict12: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147667"] //Lot based
         
         
         var scanProductArray = [[String: Any]]()
@@ -1514,10 +1559,13 @@ class Utility: NSObject {
         scanProductArray.append(dict3)
         scanProductArray.append(dict33)
         scanProductArray.append(dict9)
+        scanProductArray.append(dict10)
+        scanProductArray.append(dict111)
+        scanProductArray.append(dict12)
+
         
         
-        
-        
+        //==================================***************==================================//
         /*
         // Static Data from nsbundle file
 //         View Line Item
@@ -1594,7 +1642,7 @@ class Utility: NSObject {
 //          }
 //        ]
         
-        
+        /*
         // not found in line item
         var dict11 = ["GTIN":"1000000004", "indicator":"1"]
         var dict22 = ["day":"25", "month":"7", "year":"2024"]
@@ -1655,6 +1703,490 @@ class Utility: NSObject {
         scanProductArray.append(dict9)
         */
         
+        // not found in line item
+        var dict11 = ["GTIN":"1000000004", "indicator":"1"]
+        var dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict1: [String: Any] = ["01":dict11, "21":"2205083838772991", "17":dict22, "10":"0F147660"]
+
+        
+        // found in line item
+        dict11 = ["GTIN":"1000000005", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict2: [String: Any] = ["01":dict11, "21":"2205083838772982", "17":dict22, "10":"0F147661"]
+
+        dict11 = ["GTIN":"1000000005", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict3: [String: Any] = ["01":dict11, "21":"2205083838772973", "17":dict22, "10":"0F147662"] //dict2 , dict3 same product, different lot, different serial
+        
+        dict11 = ["GTIN":"1000000005", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict33: [String: Any] = ["01":dict11, "21":"220508383877294", "17":dict22, "10":"0F147662"] //dict3, dict33 same product, same lot, different serial
+        
+        
+        // found in line item
+        dict11 = ["GTIN":"1000000006", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict4: [String: Any] = ["01":dict11, "21":"2205083838772965", "17":dict22, "10":"0F147663"]
+        
+        
+        // found in line item
+        dict11 = ["GTIN":"1000000007", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict5: [String: Any] = ["01":dict11, "21":"2205083838772956", "17":dict22, "10":"0F147664"]
+
+        dict11 = ["GTIN":"1000000007", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict6: [String: Any] = ["01":dict11, "21":"2205083838772947", "17":dict22, "10":"0F147665"]
+
+        dict11 = ["GTIN":"1000000007", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict7: [String: Any] = ["01":dict11, "21":"2205083838772938", "17":dict22, "10":"0F147666"]
+        
+        
+        //1000000008 serial based line item not scanned
+        
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"1000000009", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict9: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147667"] //Lot based
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"1000000009", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict10: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147667"] //Lot based
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"1000000009", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict111: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147667"] //Lot based
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"1000000009", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict12: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147668"] //Lot based
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"1000000010", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict13: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147669"] //Lot based
+        
+        // not found in line item in Lot Based Product. But this product is serial based product in line item
+        dict11 = ["GTIN":"1000000005", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict14: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147661"] //Lot based
+        
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"1000000010", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict15: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147669"] //Lot based
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"1000000010", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict16: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147669"] //Lot based
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"1000000010", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict17: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147669"] //Lot based
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"1000000010", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict18: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147669"] //Lot based
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"1000000010", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict19: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147669"] //Lot based
+        
+        //not found in line item in Serial Based Product. But this product is lot based product in line item
+        dict11 = ["GTIN":"1000000010", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict20: [String: Any] = ["01":dict11, "21":"1234567890", "17":dict22, "10":"0F147669"] //Serial based
+        
+        //1000000011 lot based line item not scanned
+        
+        var scanProductArray = [[String: Any]]()
+        scanProductArray.append(dict1)
+        scanProductArray.append(dict2)
+        scanProductArray.append(dict3)
+        scanProductArray.append(dict33)
+        scanProductArray.append(dict4)
+        scanProductArray.append(dict5)
+        scanProductArray.append(dict6)
+        scanProductArray.append(dict7)
+        scanProductArray.append(dict9)
+        scanProductArray.append(dict10)
+        scanProductArray.append(dict111)
+        scanProductArray.append(dict12)
+        scanProductArray.append(dict13)
+        scanProductArray.append(dict14)
+        scanProductArray.append(dict15)
+        scanProductArray.append(dict16)
+        scanProductArray.append(dict17)
+        scanProductArray.append(dict18)
+        scanProductArray.append(dict19)
+        scanProductArray.append(dict20)
+
+        print("scanProductArray....>>>>>....",scanProductArray)
+        */
+        //,,,sbm0 temp
+        
+        return scanProductArray
+    }//,,,sbm5
+    
+    class  func createSampleScanProduct()->[[String: Any]] {
+        //,,,sbm0 temp
+        
+        
+         //Static Data from API
+//         View Line Item
+//        [
+//          {
+//            "product_id": "1405",
+//            "product_code": "00303160123016",
+//            "product_name": "00303160123016 - Lot Product",
+//            "product_tracking": "lot",
+//            "product_demand_quantity": "100.0",
+//            "product_received_quantity": "5.0",
+//            "product_qty_to_receive": "95.0"
+//          },
+//          {
+//            "product_id": "1406",
+//            "product_code": "00303160123801",
+//            "product_name": "00303160123801 - Serial Product",
+//            "product_tracking": "serial",
+//            "product_demand_quantity": "100.0",
+//            "product_received_quantity": "5.0",
+//            "product_qty_to_receive": "95.0"
+//          }
+//        ]
+        
+        
+        // not found in line item
+        var dict11 = ["GTIN":"1000000004", "indicator":"1"]
+        var dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict1: [String: Any] = ["01":dict11, "21":"2205083838771", "17":dict22, "10":"0F147660"]
+
+        
+        // found in line item
+        dict11 = ["GTIN":"00303160123801", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict2: [String: Any] = ["01":dict11, "21":"22050838387723", "17":dict22, "10":"0F147661"]
+
+        dict11 = ["GTIN":"00303160123801", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict3: [String: Any] = ["01":dict11, "21":"22050838387732", "17":dict22, "10":"0F147662"] //dict2 , dict3 same product, different lot, different serial
+        
+        dict11 = ["GTIN":"00303160123801", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict33: [String: Any] = ["01":dict11, "21":"22050838387741", "17":dict22, "10":"0F147662"] //dict3, dict33 same product, same lot, different serial
+        
+        
+        // found in line item in Lot Based Product which is ignored
+        dict11 = ["GTIN":"00303160123016", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict9: [String: Any] = ["01":dict11, "21":"2205083838775", "17":dict22, "10":"0F147666"] //Serial based
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"00303160123016", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict10: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147666"] //Lot based
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"00303160123016", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict111: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147666"] //Lot based
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"00303160123016", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict12: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147667"] //Lot based
+        
+        
+        var scanProductArray = [[String: Any]]()
+        scanProductArray.append(dict1)
+        scanProductArray.append(dict2)
+        scanProductArray.append(dict3)
+        scanProductArray.append(dict33)
+        scanProductArray.append(dict9)
+        scanProductArray.append(dict10)
+        scanProductArray.append(dict111)
+        scanProductArray.append(dict12)
+
+        
+        
+        //==================================***************==================================//
+        /*
+        // Static Data from nsbundle file
+//         View Line Item
+//        [
+//          {
+//            "product_id": "1403",
+//            "product_code": "1000000005",
+//            "product_name": "SEP05 Serial Product 5",
+//            "product_uom_id": "1",
+//            "product_tracking": "serial",
+//            "product_demand_quantity": "24.0",
+//            "product_received_quantity": "3.0",
+//            "product_qty_to_receive": "21.0"
+//          },
+//          {
+//            "product_id": "1404",
+//            "product_code": "1000000006",
+//            "product_name": "SEP05 SERIAL Product 6",
+//            "product_uom_id": "1",
+//            "product_tracking": "serial",
+//            "product_demand_quantity": "5.0",
+//            "product_received_quantity": "2.0",
+//            "product_qty_to_receive": "3.0"
+//          },
+//          {
+//            "product_id": "1405",
+//            "product_code": "1000000007",
+//            "product_name": "SEP05 Serial Product 7",
+//            "product_uom_id": "1",
+//            "product_tracking": "serial",
+//            "product_demand_quantity": "20.0",
+//            "product_received_quantity": "3.0",
+//            "product_qty_to_receive": "17.0"
+//          },
+//          {
+//            "product_id": "1406",
+//            "product_code": "1000000008",
+//            "product_name": "SEP05 Serial Product 8",
+//            "product_uom_id": "1",
+//            "product_tracking": "serial",
+//            "product_demand_quantity": "20.0",
+//            "product_received_quantity": "20.0",
+//            "product_qty_to_receive": "0.0"
+//          },
+//          {
+//            "product_id": "1407",
+//            "product_code": "1000000009",
+//            "product_name": "SEP05 Lot Product 9",
+//            "product_uom_id": "1",
+//            "product_tracking": "lot",
+//            "product_demand_quantity": "20.0",
+//            "product_received_quantity": "19.0",
+//            "product_qty_to_receive": "1.0"
+//          },
+//          {
+//            "product_id": "1408",
+//            "product_code": "1000000010",
+//            "product_name": "SEP05 Lot Product 10",
+//            "product_uom_id": "1",
+//            "product_tracking": "lot",
+//            "product_demand_quantity": "20.0",
+//            "product_received_quantity": "1.0",
+//            "product_qty_to_receive": "19.0"
+//          },
+//          {
+//            "product_id": "1409",
+//            "product_code": "1000000011",
+//            "product_name": "SEP05 Lot Product 11",
+//            "product_uom_id": "1",
+//            "product_tracking": "lot",
+//            "product_demand_quantity": "20.0",
+//            "product_received_quantity": "20.0",
+//            "product_qty_to_receive": "0.0"
+//          }
+//        ]
+        
+        /*
+        // not found in line item
+        var dict11 = ["GTIN":"1000000004", "indicator":"1"]
+        var dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict1: [String: Any] = ["01":dict11, "21":"220508383877299", "17":dict22, "10":"0F147660"]
+
+        
+        // found in line item
+        dict11 = ["GTIN":"1000000005", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict2: [String: Any] = ["01":dict11, "21":"220508383877298", "17":dict22, "10":"0F147661"]
+
+        dict11 = ["GTIN":"1000000005", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict3: [String: Any] = ["01":dict11, "21":"220508383877297", "17":dict22, "10":"0F147662"] //dict2 , dict3 same product, different lot, different serial
+        
+        dict11 = ["GTIN":"1000000005", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict33: [String: Any] = ["01":dict11, "21":"22050838387729", "17":dict22, "10":"0F147662"] //dict3, dict33 same product, same lot, different serial
+        
+        
+        // found in line item
+        dict11 = ["GTIN":"1000000006", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict4: [String: Any] = ["01":dict11, "21":"220508383877296", "17":dict22, "10":"0F147663"]
+        
+        
+        // found in line item
+        dict11 = ["GTIN":"1000000007", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict5: [String: Any] = ["01":dict11, "21":"220508383877295", "17":dict22, "10":"0F147664"]
+
+        dict11 = ["GTIN":"1000000007", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict6: [String: Any] = ["01":dict11, "21":"220508383877294", "17":dict22, "10":"0F147665"]
+
+        dict11 = ["GTIN":"1000000007", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict7: [String: Any] = ["01":dict11, "21":"220508383877293", "17":dict22, "10":"0F147666"]
+        
+        
+        //1000000008 line item not scanned
+        
+        
+        // found in line item in Lot Based Product which is ignored
+        dict11 = ["GTIN":"1000000009", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict9: [String: Any] = ["01":dict11, "21":"220508383877293", "17":dict22, "10":"0F147666"] //Lot based
+        
+        var scanProductArray = [[String: Any]]()
+        scanProductArray.append(dict1)
+        scanProductArray.append(dict2)
+        scanProductArray.append(dict3)
+        scanProductArray.append(dict33)
+        scanProductArray.append(dict4)
+        scanProductArray.append(dict5)
+        scanProductArray.append(dict6)
+        scanProductArray.append(dict7)
+        scanProductArray.append(dict9)
+        */
+        
+        // not found in line item
+        var dict11 = ["GTIN":"1000000004", "indicator":"1"]
+        var dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict1: [String: Any] = ["01":dict11, "21":"2205083838772991", "17":dict22, "10":"0F147660"]
+
+        
+        // found in line item
+        dict11 = ["GTIN":"1000000005", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict2: [String: Any] = ["01":dict11, "21":"2205083838772982", "17":dict22, "10":"0F147661"]
+
+        dict11 = ["GTIN":"1000000005", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict3: [String: Any] = ["01":dict11, "21":"2205083838772973", "17":dict22, "10":"0F147662"] //dict2 , dict3 same product, different lot, different serial
+        
+        dict11 = ["GTIN":"1000000005", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict33: [String: Any] = ["01":dict11, "21":"220508383877294", "17":dict22, "10":"0F147662"] //dict3, dict33 same product, same lot, different serial
+        
+        
+        // found in line item
+        dict11 = ["GTIN":"1000000006", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict4: [String: Any] = ["01":dict11, "21":"2205083838772965", "17":dict22, "10":"0F147663"]
+        
+        
+        // found in line item
+        dict11 = ["GTIN":"1000000007", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict5: [String: Any] = ["01":dict11, "21":"2205083838772956", "17":dict22, "10":"0F147664"]
+
+        dict11 = ["GTIN":"1000000007", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict6: [String: Any] = ["01":dict11, "21":"2205083838772947", "17":dict22, "10":"0F147665"]
+
+        dict11 = ["GTIN":"1000000007", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict7: [String: Any] = ["01":dict11, "21":"2205083838772938", "17":dict22, "10":"0F147666"]
+        
+        
+        //1000000008 serial based line item not scanned
+        
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"1000000009", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict9: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147667"] //Lot based
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"1000000009", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict10: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147667"] //Lot based
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"1000000009", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict111: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147667"] //Lot based
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"1000000009", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict12: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147668"] //Lot based
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"1000000010", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict13: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147669"] //Lot based
+        
+        // not found in line item in Lot Based Product. But this product is serial based product in line item
+        dict11 = ["GTIN":"1000000005", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict14: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147661"] //Lot based
+        
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"1000000010", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict15: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147669"] //Lot based
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"1000000010", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict16: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147669"] //Lot based
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"1000000010", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict17: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147669"] //Lot based
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"1000000010", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict18: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147669"] //Lot based
+        
+        // found in line item in Lot Based Product
+        dict11 = ["GTIN":"1000000010", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict19: [String: Any] = ["01":dict11, "21":"", "17":dict22, "10":"0F147669"] //Lot based
+        
+        //not found in line item in Serial Based Product. But this product is lot based product in line item
+        dict11 = ["GTIN":"1000000010", "indicator":"1"]
+        dict22 = ["day":"25", "month":"7", "year":"2024"]
+        let dict20: [String: Any] = ["01":dict11, "21":"1234567890", "17":dict22, "10":"0F147669"] //Serial based
+        
+        //1000000011 lot based line item not scanned
+        
+        var scanProductArray = [[String: Any]]()
+        scanProductArray.append(dict1)
+        scanProductArray.append(dict2)
+        scanProductArray.append(dict3)
+        scanProductArray.append(dict33)
+        scanProductArray.append(dict4)
+        scanProductArray.append(dict5)
+        scanProductArray.append(dict6)
+        scanProductArray.append(dict7)
+        scanProductArray.append(dict9)
+        scanProductArray.append(dict10)
+        scanProductArray.append(dict111)
+        scanProductArray.append(dict12)
+        scanProductArray.append(dict13)
+        scanProductArray.append(dict14)
+        scanProductArray.append(dict15)
+        scanProductArray.append(dict16)
+        scanProductArray.append(dict17)
+        scanProductArray.append(dict18)
+        scanProductArray.append(dict19)
+        scanProductArray.append(dict20)
+
+        print("scanProductArray....>>>>>....",scanProductArray)
+        */
         //,,,sbm0 temp
         
         return scanProductArray

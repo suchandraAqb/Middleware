@@ -641,6 +641,9 @@
 		AFCA44694558DC77E0699648 /* Pods_TTRx2_AI_Edge_Scanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3004066B25CCF87C00131EA6 /* Pods_TTRx2_AI_Edge_Scanner.framework */; };
 		C2F1E687CF9DF7A2A70A5DBB /* Pods_TTRx2_AI_Edge_ScannerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA97559C81322614B7433AE7 /* Pods_TTRx2_AI_Edge_ScannerUITests.framework */; };
 		EEC6A3F1783470DD582852B3 /* Pods_TTRx2_AI_Edge_ScannerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86B95422C8E397AA49784C36 /* Pods_TTRx2_AI_Edge_ScannerTests.framework */; };
+		F905736B2911279600BA568F /* MWSaleOrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F905736A2911279600BA568F /* MWSaleOrderListViewController.swift */; };
+		F905736D29112BAD00BA568F /* MW_list-sale-orders_odoo.json in Resources */ = {isa = PBXBuildFile; fileRef = F905736C29112BAD00BA568F /* MW_list-sale-orders_odoo.json */; };
+		F905736F2911450F00BA568F /* MWPicking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F905736E2911450F00BA568F /* MWPicking.storyboard */; };
 		F912556428F005C5008206F3 /* MWReceivingSerialListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F912556328F005C5008206F3 /* MWReceivingSerialListViewController.swift */; };
 		F9202EB628927CC60074F863 /* MWViewItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9202EB528927CC60074F863 /* MWViewItemsViewController.swift */; };
 		F923F6A628FD566E00FD6B49 /* MW_ReceivingLineItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F923F6A428FD566D00FD6B49 /* MW_ReceivingLineItem+CoreDataClass.swift */; };
@@ -653,11 +656,29 @@
 		F92B733128D19FF000A7734C /* MWReceivingSummaryLotHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F92B732F28D19FF000A7734C /* MWReceivingSummaryLotHeaderView.xib */; };
 		F92B733228D19FF000A7734C /* MWReceivingSummaryLotHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92B733028D19FF000A7734C /* MWReceivingSummaryLotHeaderView.swift */; };
 		F92BE9C92907E377006005A4 /* MWStaticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92BE9C82907E377006005A4 /* MWStaticData.swift */; };
+		F92C323B291532E200935925 /* MW_PickingLineItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92C3235291532E200935925 /* MW_PickingLineItem+CoreDataProperties.swift */; };
+		F92C323C291532E200935925 /* MW_PickingScanProduct+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92C3236291532E200935925 /* MW_PickingScanProduct+CoreDataClass.swift */; };
+		F92C323D291532E200935925 /* MW_PickingScanProduct+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92C3237291532E200935925 /* MW_PickingScanProduct+CoreDataProperties.swift */; };
+		F92C323E291532E200935925 /* MW_PickingLineItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92C3238291532E200935925 /* MW_PickingLineItem+CoreDataClass.swift */; };
+		F92C323F291532E200935925 /* MW_PickingManualLotOrScanSerial+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92C3239291532E200935925 /* MW_PickingManualLotOrScanSerial+CoreDataClass.swift */; };
+		F92C3240291532E200935925 /* MW_PickingManualLotOrScanSerial+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92C323A291532E200935925 /* MW_PickingManualLotOrScanSerial+CoreDataProperties.swift */; };
+		F92C32422915332600935925 /* MWPicking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92C32412915332600935925 /* MWPicking.swift */; };
 		F92E4D5928F9659000807589 /* MWReceiving.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92E4D5828F9659000807589 /* MWReceiving.swift */; };
 		F92EE38B28E6B20100E07E79 /* MWReceivingSerialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92EE38A28E6B20100E07E79 /* MWReceivingSerialViewController.swift */; };
 		F930095728AE5EBB00170B8C /* MWReceivingManuallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F930095628AE5EBB00170B8C /* MWReceivingManuallyViewController.swift */; };
 		F930095A28AE98B000170B8C /* MWReceivingManuallyHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F930095828AE98B000170B8C /* MWReceivingManuallyHeaderView.xib */; };
 		F930095B28AE98B000170B8C /* MWReceivingManuallyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F930095928AE98B000170B8C /* MWReceivingManuallyHeaderView.swift */; };
+		F93379B129124B670069043B /* MWPickingViewItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93379B029124B670069043B /* MWPickingViewItemsViewController.swift */; };
+		F93379B32912824B0069043B /* MWPickingSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93379B22912824B0069043B /* MWPickingSelectionViewController.swift */; };
+		F93379B52912833D0069043B /* MWPickingManuallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93379B42912833D0069043B /* MWPickingManuallyViewController.swift */; };
+		F9341AB0291A2FD000C42BED /* MWPickingSerialListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9341AAF291A2FD000C42BED /* MWPickingSerialListViewController.swift */; };
+		F9341AB2291A3A9000C42BED /* MWPickingSummaryOfMappedLotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9341AB1291A3A9000C42BED /* MWPickingSummaryOfMappedLotsViewController.swift */; };
+		F9341AB4291A5B9B00C42BED /* MWPickingCancelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9341AB3291A5B9B00C42BED /* MWPickingCancelViewController.swift */; };
+		F9341AB6291A5C1300C42BED /* MWPickingSerialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9341AB5291A5C1300C42BED /* MWPickingSerialViewController.swift */; };
+		F9341AB9291A60FB00C42BED /* MWPickingManuallyHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9341AB7291A60FB00C42BED /* MWPickingManuallyHeaderView.xib */; };
+		F9341ABA291A60FB00C42BED /* MWPickingManuallyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9341AB8291A60FB00C42BED /* MWPickingManuallyHeaderView.swift */; };
+		F9341ABD291A622500C42BED /* MWPickingSummaryLotHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9341ABB291A622500C42BED /* MWPickingSummaryLotHeaderView.swift */; };
+		F9341ABE291A622500C42BED /* MWPickingSummaryLotHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9341ABC291A622500C42BED /* MWPickingSummaryLotHeaderView.xib */; };
 		F94096E0290BC78100472E54 /* MW_ReceivingScanProduct+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94096DE290BC78100472E54 /* MW_ReceivingScanProduct+CoreDataProperties.swift */; };
 		F94096E1290BC78100472E54 /* MW_ReceivingScanProduct+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94096DF290BC78100472E54 /* MW_ReceivingScanProduct+CoreDataClass.swift */; };
 		F947089D28E1563800D3BA2F /* MW_list-line-items-by-purchase-order_odoo_Serial.json in Resources */ = {isa = PBXBuildFile; fileRef = F947089C28E1563800D3BA2F /* MW_list-line-items-by-purchase-order_odoo_Serial.json */; };
@@ -1376,6 +1397,9 @@
 		C93B15FB15590A73729DD106 /* Pods-TTRx2 AI Edge Scanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTRx2 AI Edge Scanner.debug.xcconfig"; path = "Target Support Files/Pods-TTRx2 AI Edge Scanner/Pods-TTRx2 AI Edge Scanner.debug.xcconfig"; sourceTree = "<group>"; };
 		D711212BC858881CF3880FCA /* Pods-TTRx2 AI Edge ScannerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTRx2 AI Edge ScannerTests.release.xcconfig"; path = "Target Support Files/Pods-TTRx2 AI Edge ScannerTests/Pods-TTRx2 AI Edge ScannerTests.release.xcconfig"; sourceTree = "<group>"; };
 		E15F0E37F20E9314DC951033 /* Pods-TTRx2 AI Edge ScannerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TTRx2 AI Edge ScannerTests.debug.xcconfig"; path = "Target Support Files/Pods-TTRx2 AI Edge ScannerTests/Pods-TTRx2 AI Edge ScannerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F905736A2911279600BA568F /* MWSaleOrderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWSaleOrderListViewController.swift; sourceTree = "<group>"; };
+		F905736C29112BAD00BA568F /* MW_list-sale-orders_odoo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "MW_list-sale-orders_odoo.json"; sourceTree = "<group>"; };
+		F905736E2911450F00BA568F /* MWPicking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MWPicking.storyboard; sourceTree = "<group>"; };
 		F912556328F005C5008206F3 /* MWReceivingSerialListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWReceivingSerialListViewController.swift; sourceTree = "<group>"; };
 		F9202EB528927CC60074F863 /* MWViewItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWViewItemsViewController.swift; sourceTree = "<group>"; };
 		F923F6A428FD566D00FD6B49 /* MW_ReceivingLineItem+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MW_ReceivingLineItem+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -1388,11 +1412,29 @@
 		F92B732F28D19FF000A7734C /* MWReceivingSummaryLotHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWReceivingSummaryLotHeaderView.xib; sourceTree = "<group>"; };
 		F92B733028D19FF000A7734C /* MWReceivingSummaryLotHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWReceivingSummaryLotHeaderView.swift; sourceTree = "<group>"; };
 		F92BE9C82907E377006005A4 /* MWStaticData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWStaticData.swift; sourceTree = "<group>"; };
+		F92C3235291532E200935925 /* MW_PickingLineItem+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MW_PickingLineItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F92C3236291532E200935925 /* MW_PickingScanProduct+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MW_PickingScanProduct+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F92C3237291532E200935925 /* MW_PickingScanProduct+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MW_PickingScanProduct+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F92C3238291532E200935925 /* MW_PickingLineItem+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MW_PickingLineItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F92C3239291532E200935925 /* MW_PickingManualLotOrScanSerial+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MW_PickingManualLotOrScanSerial+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F92C323A291532E200935925 /* MW_PickingManualLotOrScanSerial+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MW_PickingManualLotOrScanSerial+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F92C32412915332600935925 /* MWPicking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWPicking.swift; sourceTree = "<group>"; };
 		F92E4D5828F9659000807589 /* MWReceiving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWReceiving.swift; sourceTree = "<group>"; };
 		F92EE38A28E6B20100E07E79 /* MWReceivingSerialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWReceivingSerialViewController.swift; sourceTree = "<group>"; };
 		F930095628AE5EBB00170B8C /* MWReceivingManuallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWReceivingManuallyViewController.swift; sourceTree = "<group>"; };
 		F930095828AE98B000170B8C /* MWReceivingManuallyHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWReceivingManuallyHeaderView.xib; sourceTree = "<group>"; };
 		F930095928AE98B000170B8C /* MWReceivingManuallyHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWReceivingManuallyHeaderView.swift; sourceTree = "<group>"; };
+		F93379B029124B670069043B /* MWPickingViewItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWPickingViewItemsViewController.swift; sourceTree = "<group>"; };
+		F93379B22912824B0069043B /* MWPickingSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWPickingSelectionViewController.swift; sourceTree = "<group>"; };
+		F93379B42912833D0069043B /* MWPickingManuallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWPickingManuallyViewController.swift; sourceTree = "<group>"; };
+		F9341AAF291A2FD000C42BED /* MWPickingSerialListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWPickingSerialListViewController.swift; sourceTree = "<group>"; };
+		F9341AB1291A3A9000C42BED /* MWPickingSummaryOfMappedLotsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWPickingSummaryOfMappedLotsViewController.swift; sourceTree = "<group>"; };
+		F9341AB3291A5B9B00C42BED /* MWPickingCancelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWPickingCancelViewController.swift; sourceTree = "<group>"; };
+		F9341AB5291A5C1300C42BED /* MWPickingSerialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWPickingSerialViewController.swift; sourceTree = "<group>"; };
+		F9341AB7291A60FB00C42BED /* MWPickingManuallyHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWPickingManuallyHeaderView.xib; sourceTree = "<group>"; };
+		F9341AB8291A60FB00C42BED /* MWPickingManuallyHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWPickingManuallyHeaderView.swift; sourceTree = "<group>"; };
+		F9341ABB291A622500C42BED /* MWPickingSummaryLotHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MWPickingSummaryLotHeaderView.swift; sourceTree = "<group>"; };
+		F9341ABC291A622500C42BED /* MWPickingSummaryLotHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MWPickingSummaryLotHeaderView.xib; sourceTree = "<group>"; };
 		F94096DE290BC78100472E54 /* MW_ReceivingScanProduct+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MW_ReceivingScanProduct+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F94096DF290BC78100472E54 /* MW_ReceivingScanProduct+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MW_ReceivingScanProduct+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F947089C28E1563800D3BA2F /* MW_list-line-items-by-purchase-order_odoo_Serial.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "MW_list-line-items-by-purchase-order_odoo_Serial.json"; sourceTree = "<group>"; };
@@ -1867,6 +1909,13 @@
 				30A3464D25FA4D9700230288 /* ManualInboundShipment.swift */,
 				3087B2AD260DC3A400DF3CA1 /* Receiving.swift */,
 				5B3B5C7C2820217300D975CB /* ARSerialFinder.swift */,
+				F92C32412915332600935925 /* MWPicking.swift */,
+				F92C3239291532E200935925 /* MW_PickingManualLotOrScanSerial+CoreDataClass.swift */,
+				F92C323A291532E200935925 /* MW_PickingManualLotOrScanSerial+CoreDataProperties.swift */,
+				F92C3238291532E200935925 /* MW_PickingLineItem+CoreDataClass.swift */,
+				F92C3235291532E200935925 /* MW_PickingLineItem+CoreDataProperties.swift */,
+				F92C3236291532E200935925 /* MW_PickingScanProduct+CoreDataClass.swift */,
+				F92C3237291532E200935925 /* MW_PickingScanProduct+CoreDataProperties.swift */,
 				F92E4D5828F9659000807589 /* MWReceiving.swift */,
 				F923F6A428FD566D00FD6B49 /* MW_ReceivingLineItem+CoreDataClass.swift */,
 				F923F6A528FD566E00FD6B49 /* MW_ReceivingLineItem+CoreDataProperties.swift */,
@@ -2172,6 +2221,7 @@
 		A9141213246D33EF007B3063 /* Picking */ = {
 			isa = PBXGroup;
 			children = (
+				F9057369291124FE00BA568F /* MiddleWare */,
 				A910804524C6E771008AD143 /* PickingOptionsViewController.swift */,
 				A910804424C6E5F9008AD143 /* Direct Picking */,
 				A91C932C24855DC900ACD3F0 /* Items */,
@@ -2242,6 +2292,7 @@
 		A9168A812449E36300A9A2C4 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				F905736C29112BAD00BA568F /* MW_list-sale-orders_odoo.json */,
 				F948C82128D86EF900466CDD /* MW_list-line-items-by-purchase-order_odoo.json */,
 				F947089C28E1563800D3BA2F /* MW_list-line-items-by-purchase-order_odoo_Serial.json */,
 				F948C81F28D86EAE00466CDD /* MW_list-purchase-orders_odoo.json */,
@@ -2861,6 +2912,25 @@
 			path = "View Container";
 			sourceTree = "<group>";
 		};
+		F9057369291124FE00BA568F /* MiddleWare */ = {
+			isa = PBXGroup;
+			children = (
+				F93379B22912824B0069043B /* MWPickingSelectionViewController.swift */,
+				F905736A2911279600BA568F /* MWSaleOrderListViewController.swift */,
+				F9341AB3291A5B9B00C42BED /* MWPickingCancelViewController.swift */,
+				F93379B029124B670069043B /* MWPickingViewItemsViewController.swift */,
+				F9341AAF291A2FD000C42BED /* MWPickingSerialListViewController.swift */,
+				F9341AB5291A5C1300C42BED /* MWPickingSerialViewController.swift */,
+				F93379B42912833D0069043B /* MWPickingManuallyViewController.swift */,
+				F9341AB8291A60FB00C42BED /* MWPickingManuallyHeaderView.swift */,
+				F9341AB7291A60FB00C42BED /* MWPickingManuallyHeaderView.xib */,
+				F9341AB1291A3A9000C42BED /* MWPickingSummaryOfMappedLotsViewController.swift */,
+				F9341ABB291A622500C42BED /* MWPickingSummaryLotHeaderView.swift */,
+				F9341ABC291A622500C42BED /* MWPickingSummaryLotHeaderView.xib */,
+			);
+			path = MiddleWare;
+			sourceTree = "<group>";
+		};
 		F950C8782889760C0068449C /* MiddleWare */ = {
 			isa = PBXGroup;
 			children = (
@@ -2889,6 +2959,7 @@
 			isa = PBXGroup;
 			children = (
 				F950C8802889767B0068449C /* MWReceiving.storyboard */,
+				F905736E2911450F00BA568F /* MWPicking.storyboard */,
 			);
 			path = MiddleWare;
 			sourceTree = "<group>";
@@ -3079,6 +3150,7 @@
 				A912B03A249BBBD000F3C646 /* quarantine_inactive@2x.png in Resources */,
 				6FFD1FE5248917D4000D9B86 /* switch_left@3x.png in Resources */,
 				A9141220246D3518007B3063 /* Picking.storyboard in Resources */,
+				F9341AB9291A60FB00C42BED /* MWPickingManuallyHeaderView.xib in Resources */,
 				A988A96C2497964100B78CCC /* return_package_sm@3x.png in Resources */,
 				5BBFEAE927CE6D790092FE2D /* view_event@2x.png in Resources */,
 				6FFD1FF0248985EA000D9B86 /* multiple_scan_blue@2x.png in Resources */,
@@ -3192,6 +3264,7 @@
 				5B2791FC27AAADBE0083D299 /* file-download@2x.png in Resources */,
 				5B4C236B26DF8AF4008617ED /* change_password@3x.png in Resources */,
 				F950C89F288976990068449C /* switch_left_green@2x.png in Resources */,
+				F905736F2911450F00BA568F /* MWPicking.storyboard in Resources */,
 				A91EEF062444BFD700E8CF66 /* Poppins-Bold.ttf in Resources */,
 				A988A9682497964100B78CCC /* clock@2x.png in Resources */,
 				6FF7BF362493B2F90070BE9E /* quarantine_icon@2x.png in Resources */,
@@ -3304,6 +3377,7 @@
 				5B6A74D127104DFD00F54E63 /* delete-user@2x.png in Resources */,
 				A9E0563424EBD1DB00330926 /* items_inventory@2x.png in Resources */,
 				A91926F1245C003500652535 /* check-circle@2x.png in Resources */,
+				F9341ABE291A622500C42BED /* MWPickingSummaryLotHeaderView.xib in Resources */,
 				6FF7BF2C2493A3120070BE9E /* container_sm@2x.png in Resources */,
 				6FFD1FFF249158B3000D9B86 /* triangle@2x.png in Resources */,
 				6FF7BF3B2493B2F90070BE9E /* transfer_icon@3x.png in Resources */,
@@ -3368,6 +3442,7 @@
 				A9E0564724EFB6DC00330926 /* delete_red@2x.png in Resources */,
 				A91B1543245816C100BF4968 /* active_circle@2x.png in Resources */,
 				A91C93232480F52300ACD3F0 /* remove_active@3x.png in Resources */,
+				F905736D29112BAD00BA568F /* MW_list-sale-orders_odoo.json in Resources */,
 				A91EEF052444BFD700E8CF66 /* Poppins-SemiBold.ttf in Resources */,
 				5BBFEAED27CE6D790092FE2D /* not_found@2x.png in Resources */,
 				A912B03F249BBBD000F3C646 /* notresalable-inactive@3x.png in Resources */,
@@ -3593,14 +3668,17 @@
 				6F21ECFE24753981006D7E88 /* PickingSerialListViewController.swift in Sources */,
 				5B33F060281146270032B964 /* SessionInfoViewController.swift in Sources */,
 				F9C0F5212902BFBB003C6943 /* MW_ReceivingManualLotOrScanSerial+CoreDataProperties.swift in Sources */,
+				F93379B52912833D0069043B /* MWPickingManuallyViewController.swift in Sources */,
 				F950C8B0288989640068449C /* MWSingleScanViewController.swift in Sources */,
 				6FFD1FF3248BB9AD000D9B86 /* AllProductsModel.swift in Sources */,
+				F92C323D291532E200935925 /* MW_PickingScanProduct+CoreDataProperties.swift in Sources */,
 				A91CCA4D2445CE4900697E9C /* SecondViewController.swift in Sources */,
 				A91F475324D032E900FC1427 /* DPConfirmationViewController.swift in Sources */,
 				A9FBDDCB24F4ED89002DDD8D /* ContainerListViewController.swift in Sources */,
 				5B2753EA283F93AA00ECD9B8 /* DPMultipleScanViewController.swift in Sources */,
 				A9FBDDCF24F4EDA3002DDD8D /* ItemsListViewController.swift in Sources */,
 				A904A6EA25306257006A2416 /* InventorySearchViewController.swift in Sources */,
+				F92C323C291532E200935925 /* MW_PickingScanProduct+CoreDataClass.swift in Sources */,
 				A91D2CE22446F62B00D42A0E /* DashboardViewController.swift in Sources */,
 				A91F474C24CF07B600FC1427 /* DPProductLotStorageViewController.swift in Sources */,
 				A9055E9225401B1000F75138 /* LotsCommissionSearchViewController.swift in Sources */,
@@ -3623,6 +3701,7 @@
 				A95FE28E2541731300017124 /* Scanner.swift in Sources */,
 				A96F7DE924E156C100B88A76 /* PPListViewController.swift in Sources */,
 				A9752DCA24AC70F4008200C2 /* QuarantineOptionViewController.swift in Sources */,
+				F905736B2911279600BA568F /* MWSaleOrderListViewController.swift in Sources */,
 				5B3B5C7D2820217300D975CB /* ARSerialFinder.swift in Sources */,
 				5B6D6B5E27EA0094000B520C /* DPPickingItemsViewController.swift in Sources */,
 				30710E032657BAAD00D7BD3E /* MISLineItemViewController.swift in Sources */,
@@ -3633,6 +3712,7 @@
 				5B6A74A927104D8500F54E63 /* ARSFAddAccessViewController.swift in Sources */,
 				3060EAA526414CAA003301A2 /* UnQuarantineSearchViewController.swift in Sources */,
 				5B43BBE126EF1A3C00DF64BB /* ARExportProductThirdViewController.swift in Sources */,
+				F9341ABD291A622500C42BED /* MWPickingSummaryLotHeaderView.swift in Sources */,
 				30FDBFE926304FDF00E76EEB /* MISAddressDetailsViewController.swift in Sources */,
 				F950C87D2889760C0068449C /* MWReceivingSelectionViewController.swift in Sources */,
 				A904A6E425306256006A2416 /* LotInventoryViewController.swift in Sources */,
@@ -3642,6 +3722,7 @@
 				A9B7FC7624AF4F71000BCB9D /* AdjustmentAddLotBasedViewController.swift in Sources */,
 				F92B732E28D19D5900A7734C /* MWReceivingSummaryOfMappedLotsViewController.swift in Sources */,
 				A961AEEC250778ED00C57FDC /* ReplaceSecondViewController.swift in Sources */,
+				F92C323E291532E200935925 /* MW_PickingLineItem+CoreDataClass.swift in Sources */,
 				6F3134BA24E6D4B50048CCDF /* HSBColorPicker.swift in Sources */,
 				5B43BBF626EF1A4F00DF64BB /* ARSFCreateNewFilterViewController.swift in Sources */,
 				5B7B630127CF61050094AA6C /* FailedItemsFilterViewController.swift in Sources */,
@@ -3669,6 +3750,7 @@
 				5B4AF276272684AC00C4E8E9 /* LotListViewController.swift in Sources */,
 				3060EAA426414CAA003301A2 /* UnQuarantineItemViewController.swift in Sources */,
 				5B3B5C7A2820202500D975CB /* CustomViewForLookWithFilter.swift in Sources */,
+				F9341ABA291A60FB00C42BED /* MWPickingManuallyHeaderView.swift in Sources */,
 				6FF93395249B811200E95C7C /* CoreDataManager.swift in Sources */,
 				A914121A246D3429007B3063 /* PickingScanItemsViewController.swift in Sources */,
 				6F85815E24682814001E7DBD /* DataCaptureContext+Licensed.swift in Sources */,
@@ -3681,9 +3763,11 @@
 				5B57971826AC5B27003520D5 /* InboundShipmentListViewController.swift in Sources */,
 				F9656FEC290F923E008DF5A8 /* MWReceivingCancelViewController.swift in Sources */,
 				A988A9552497928F00B78CCC /* ReturnGeneralInfoViewController.swift in Sources */,
+				F9341AB4291A5B9B00C42BED /* MWPickingCancelViewController.swift in Sources */,
 				6F85816024682814001E7DBD /* UtilityScanning.swift in Sources */,
 				A910DC42245338B3009656C1 /* ItemsViewController.swift in Sources */,
 				A95DD6EA24B3203800287CFD /* Adjustments+CoreDataClass.swift in Sources */,
+				F92C3240291532E200935925 /* MW_PickingManualLotOrScanSerial+CoreDataProperties.swift in Sources */,
 				A91C933024855DE100ACD3F0 /* PickingItemsViewController.swift in Sources */,
 				A9FBDDD024F4EDA3002DDD8D /* ContainerDetailsViewController.swift in Sources */,
 				30A3464E25FA4D9800230288 /* ManualInboundShipment.swift in Sources */,
@@ -3695,6 +3779,7 @@
 				A904A6E925306257006A2416 /* InventoryListViewController.swift in Sources */,
 				6F85815C24682814001E7DBD /* Brush+Highlighted.swift in Sources */,
 				6F85815824682814001E7DBD /* CustomView.swift in Sources */,
+				F9341AB6291A5C1300C42BED /* MWPickingSerialViewController.swift in Sources */,
 				30FDBFE826304FDF00E76EEB /* MISSelectSellerViewController.swift in Sources */,
 				A9E0564224EEDF0000330926 /* CommisionSerialsListViewController.swift in Sources */,
 				A904A6E725306257006A2416 /* ShipmentListViewController.swift in Sources */,
@@ -3728,6 +3813,7 @@
 				5B57971926AC5B27003520D5 /* InboundShipmentSearchViewController.swift in Sources */,
 				A91F475524D188D900FC1427 /* DPStorageSelectionViewController.swift in Sources */,
 				5BBFEAF327CE6DE30092FE2D /* ARExportProductDownloadableSearchViewController.swift in Sources */,
+				F9341AB2291A3A9000C42BED /* MWPickingSummaryOfMappedLotsViewController.swift in Sources */,
 				5B811D4F27A3C05B0028C518 /* FailedItemsViewController.swift in Sources */,
 				300E8B80260B3492009FE395 /* ReceivingEditLotVC.swift in Sources */,
 				F950C87C2889760C0068449C /* MWERPListViewController.swift in Sources */,
@@ -3739,6 +3825,7 @@
 				A9B7FC7D24AF56CD000BCB9D /* AdjustmentItemsLotViewController.swift in Sources */,
 				A9FBDDC624F400B8002DDD8D /* GenerateSerialsViewController.swift in Sources */,
 				30FDBFEE26304FDF00E76EEB /* MISPurchaseOrderItemsViewController.swift in Sources */,
+				F93379B129124B670069043B /* MWPickingViewItemsViewController.swift in Sources */,
 				F94096E1290BC78100472E54 /* MW_ReceivingScanProduct+CoreDataClass.swift in Sources */,
 				30710E062657EC0F00D7BD3E /* MISAggregationViewController.swift in Sources */,
 				A91F47C424DC000100FC1427 /* SFSerialsViewController.swift in Sources */,
@@ -3760,6 +3847,7 @@
 				6F85815924682814001E7DBD /* StockModel.swift in Sources */,
 				6F3B4D8324812211003B56FA /* InventorySerialListViewController.swift in Sources */,
 				A910804824C84A94008AD143 /* PickingSearchViewController.swift in Sources */,
+				F92C323F291532E200935925 /* MW_PickingManualLotOrScanSerial+CoreDataClass.swift in Sources */,
 				A95DD6ED24B4A42500287CFD /* ProductLotStorageViewController.swift in Sources */,
 				A91F47C624DC36E600FC1427 /* SFSerialDetailsViewController.swift in Sources */,
 				A988A9562497928F00B78CCC /* ReturnSerialVerificationViewController.swift in Sources */,
@@ -3790,6 +3878,7 @@
 				A995C9202457219D0035CDFE /* SerialsViewController.swift in Sources */,
 				A914121B246D3429007B3063 /* CustomerAddressesModel.swift in Sources */,
 				30FDBFDE26304FDF00E76EEB /* MISSerialsViewController.swift in Sources */,
+				F92C32422915332600935925 /* MWPicking.swift in Sources */,
 				A91D2CF624474ADA00D42A0E /* BaseViewController.swift in Sources */,
 				A961AEEA250778ED00C57FDC /* ReplaceConfirmViewController.swift in Sources */,
 				30FDBFDF26304FDF00E76EEB /* MISShipmentDetailsViewController.swift in Sources */,
@@ -3811,6 +3900,7 @@
 				6FF9338F249B6CB300E95C7C /* PersistenceService.swift in Sources */,
 				6F858162246892A0001E7DBD /* CustomViewOverlayForEndPointUrl.swift in Sources */,
 				A91F474624CEFD4D00FC1427 /* DirectPickingScannedSerialsViewController.swift in Sources */,
+				F9341AB0291A2FD000C42BED /* MWPickingSerialListViewController.swift in Sources */,
 				A91C93142480F48400ACD3F0 /* AddPickingLotBasedProductViewController.swift in Sources */,
 				305C33E8265423DF0062FE82 /* AdjustmentGeneralViewController.swift in Sources */,
 				5B6A74AA27104D8500F54E63 /* ARSFManageAccessViewController.swift in Sources */,
@@ -3844,6 +3934,7 @@
 				6F3134B924E6D4B50048CCDF /* AddARMessageViewController.swift in Sources */,
 				A961AEE5250633F100C57FDC /* LotDetailsView.swift in Sources */,
 				F94EBA56288AA4F6006126CC /* MWConfirmationViewController.swift in Sources */,
+				F92C323B291532E200935925 /* MW_PickingLineItem+CoreDataProperties.swift in Sources */,
 				30FDBFEC26304FDF00E76EEB /* MISPurchaseOrderDetailsViewController.swift in Sources */,
 				A91F474A24CF07B600FC1427 /* DPAddLotBasedViewController.swift in Sources */,
 				5BBFEAF427CE6DE30092FE2D /* ARSFProductNotFoundListViewController1.swift in Sources */,
@@ -3864,6 +3955,7 @@
 				A91F474424CEF46500FC1427 /* DirectPicking+CoreDataProperties.swift in Sources */,
 				A91E092424A26B3800DB14F3 /* Return_Serials+CoreDataProperties.swift in Sources */,
 				A961AEEF250A0EC800C57FDC /* ContainerEditConfirmViewController.swift in Sources */,
+				F93379B32912824B0069043B /* MWPickingSelectionViewController.swift in Sources */,
 				A9055E9325401B1000F75138 /* LotsCommissionListViewController.swift in Sources */,
 				3060EAA726414CAA003301A2 /* UnQuarantineSerialListViewController.swift in Sources */,
 			);
